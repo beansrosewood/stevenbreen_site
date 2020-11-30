@@ -1,0 +1,333 @@
+/* -----------------------------
+   colors used
+   -----------------------------
+    #000000
+    #020203
+    #4d84c4
+    #a51c30
+    #f5f5f8
+    #ebebeb
+    #ffffff
+*/
+
+/* -----------------------------
+   fonts used
+   -----------------------------
+Note that Roboto and "Roboto Condensed" are available from the linked fonts already in the HTML
+
+font-family stack for most things:
+    Roboto, Arial, sans-serif;
+
+font-family stack for 'condensed' elements, such as hX headings, header navigation, and links in the 'Explore'  section:
+    'Roboto Condensed', Arial, sans-serif;
+   -----------------------------  */
+
+/* -----------------------------
+   background images used
+   -----------------------------
+../images/hes_shield_wordmark.svg   - This is the HES Shield and HES Wordmark
+../images/campus_bridge_river.jpg   - This is the background image for the 
+                                      "Explore" section
+../images/images/arrow-right.svg    - This is the crimson arrow next to the 
+                                      hypertext links in the "Explore" sections
+../images/mortar-board.svg          - The "cap" in Student Success stories 'program'
+../images/map-marker.svg            - The map marker in Student Success 
+                                      stories 'hometown'
+
+   -----------------------------  */
+
+body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* turn off sections you aren't working on so you can focus!
+   I suggest you begin with working on the "footer"
+*/
+/* consider uncommenting this to start so that only the footer is visible! */
+
+div.explore,
+div.studentsuccess,
+header {
+    display: block;
+}
+
+
+/* -----------------------------
+   Styles for footer
+   ----------------------------- */
+footer {
+    color: #ffffff;
+    background-color: #020203;
+    padding-top: 30px;
+    padding-bottom: 50px;
+
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    display: inline;
+}
+
+footer p {
+    color: #ebebeb;
+    padding-left: 40px;
+    padding-top: 25px;
+}
+
+
+footer .contactplus ul li {
+    padding-bottom: 40px;
+}
+
+footer .contactplus ul li {
+    margin-right: 2em;
+}
+
+footer .privacyplus ul li:not(:first-child)::before {
+    content: "|";
+}
+
+footer .privacyplus a {
+    color: #ebebeb;
+    text-decoration: none;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+footer .privacyplus ul {
+    padding-left: 1.5em;
+}
+
+footer .contactplus a {
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* ----------------------------- */
+main {
+    margin-top: 160px;
+    margin-bottom: 0px;
+}
+/* -----------------------------
+   Styles for header
+   ----------------------------- */
+#top_banner {
+    font-variant: small-caps;
+    background-color: #a51c30;
+    color: #ffffff;
+    padding: 14px;
+}
+.wordmark {
+    background-image: url(..//images/hes_shield_wordmark.svg);
+    height: 106px;
+    width: 258px;
+    margin-left: 25px;
+    float: left;
+    font-size: 0px;
+}
+
+.primary ul li a:hover {
+    background-color: #4d84c4;
+    text-decoration: underline;
+}
+.secondary ul li a:hover {
+    background-color: #a51c30;
+    text-decoration: underline;
+}
+/* ----------------------------- */
+
+
+/* -----------------------------
+   Styles for header primary nav
+   ----------------------------- */
+.primary {
+    float: right;
+    clear: right;
+    margin-right: 50px;
+}
+.primary ul li {
+    display: inline;
+    }
+.primary ul li:not(:last-child):not(:first-child)::before{
+    content: "|";
+    font-size: 20px;
+    font-weight: 900; 
+}
+.primary .getinfo {
+    background-color: #a51c30;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.primary ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 900;
+    font-size: 18.5px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.primary .getinfo a {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 500;
+}
+/* ----------------------------- */
+
+
+/* -----------------------------
+   Styles for header primary nav
+   ----------------------------- */
+
+/* ----------------------------- */
+
+
+/* -----------------------------
+   Styles for header secondary nav
+   ----------------------------- */
+.secondary {
+    float: right;
+    clear: right;
+    margin-right: 50px;
+}
+.secondary ul li {
+    display: inline;
+}
+.secondary .login {
+    border-color: #4d84c4;
+    border-style: solid;
+    border-width: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.secondary ul li a {
+    padding-left: 1em;
+    padding-right: 1em;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #4d84c4;
+    
+}
+/* ----------------------------- */
+
+
+/* -----------------------------
+   Styles for "Explore"
+   ----------------------------- */
+.explore h1 {
+    color: #ffffff;
+    font-size: 60px;
+    text-align: center;
+    padding-top: 30px;
+    text-shadow: 2px 2px 1.5px #020203;
+}
+.explore {
+    background-image: url(..//images/campus_bridge_river.jpg);
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 25px;
+    margin-bottom: 0px;
+    background-size: cover;
+}
+.explore section {
+    width: 33%;
+    margin: 25px;
+    padding-left: 0px;
+    background-color: #f5f5f8;
+    border-top-color: #a51c30;
+    border-top-width: 5px;
+    border-top-style: solid;
+}
+.explore h2 {
+    font-size: 42px;
+    font-weight: 800;
+    font-variant-caps: all-small-caps;
+    background-color: #ffffff;
+    padding: 16px;
+    margin-block-start: 0em;
+}
+.upper {
+    display: flex;
+    clear: both;
+    height: 300px;
+}
+.lower {
+    display: flex;
+    clear: both;
+    height: 270px;
+}
+.explore ul li {
+    list-style-type: none;
+}
+.explore ul li a {
+    color: #a51c30;
+    text-decoration: none;
+    font-weight: 700;
+    padding-right: 2em;
+}
+.explore ul li a {
+    background-image: url(..//images/arrow-right.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.explore ul li a:hover {
+    color: #4d84c4;
+}
+/* ----------------------------- */
+
+/* -----------------------------
+   Styles for "Student Success"
+   ----------------------------- */
+.studentsuccess {
+    background-color: #ebebeb;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.studentsuccess h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-block-start: 0em;
+    padding-top: 25px;
+}
+.studentsuccess #stories {
+    margin-left: 275px;
+    margin-right: 275px;
+}
+.studentsuccess article {
+    width: 33%;
+    margin-right: 60px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+.studentsuccess img {
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 20px;       
+}
+div .articles {
+    margin-left: 60px;
+}
+.articles {
+    display: flex;
+    clear: both;
+}
+.articles p {
+    margin-right: 100px;
+}
+.program {
+    list-style-image: url(..//images/mortar-board.svg);
+}
+.hometown {
+    list-style-image: url(..//images/map-marker.svg);
+}
+.studentsuccess article h3,ul,p {
+    padding-left: 18px;
+    list-style-position: inside;
+}
+
+/* ----------------------------- */
