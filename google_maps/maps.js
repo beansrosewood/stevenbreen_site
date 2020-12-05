@@ -2,10 +2,12 @@ var harvard_yard_map;
 /* John Harvard Status
 42.374474,-71.117207 */
 
-var statue_latlng = new google.maps.LatLng(42.374474, -71.117207);
-var northwest_latlng = new google.maps.LatLng(42.3795462, -71.1156024);
 
-function initialize() {
+
+function initMap() {
+    console.log("I'm in initmap");
+    var statue_latlng = new google.maps.LatLng(42.374474, -71.117207);
+var northwest_latlng = new google.maps.LatLng(42.3795462, -71.1156024);
     var mapOptions = {
         zoom: 15,
         center: new google.maps.LatLng(42.377, -71.1164)
@@ -47,4 +49,4 @@ function initialize() {
     });
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+
