@@ -11,6 +11,40 @@
     <!-- Load font awesome icons for the social media bar-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+        /* Add a black background color to the top navigation */
+        .navbar {
+            background-color: black;
+            overflow: hidden;
+        }
+
+        /* Style the links inside the navigation bar */
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        /* Change the color of links on hover */
+        .navbar a:hover {
+            background-color: crimson;
+            color: black;
+        }
+
+        /* Add an active class to highlight the current page */
+        .navbar a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        /* Hide the link that should open and close the topnav on small screens */
+        .navbar .icon {
+            display: none;
+        }
+
         .hello {
             background-image: url(photo_gallery/BDE85E1A-9E80-4126-BDE6-C5613A2E0F75_1_105_c.jpeg);
             margin-left: 0px;
@@ -100,6 +134,7 @@
             background: #bb0000;
             color: white;
         }
+
     </style>
 </head>
 
@@ -125,11 +160,11 @@
 
         <!-- The social media icon bar -->
         <div class="icon-bar">
-            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-            <a href="#" class="google"><i class="fa fa-google"></i></a>
-            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-            <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+            <a href="https://facebook.com" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://google.com" class="google"><i class="fa fa-google"></i></a>
+            <a href="https://linkin.com" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="https://youtube.com" class="youtube"><i class="fa fa-youtube"></i></a>
         </div>
 
         <div class="container">
@@ -159,4 +194,6 @@
 
     </footer>
 
-</body></html>
+</body>
+
+</html>
