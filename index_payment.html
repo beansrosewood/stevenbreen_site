@@ -3,8 +3,48 @@
 
 <head>
     <title>Payments</title>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Load font awesome icons for the social media bar-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+        /* Add a black background color to the top navigation */
+        .navbar {
+            background-color: black;
+            overflow: hidden;
+        }
+
+        /* Style the links inside the navigation bar */
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        /* Change the color of links on hover */
+        .navbar a:hover {
+            background-color: crimson;
+            color: black;
+        }
+
+        /* Add an active class to highlight the current page */
+        .navbar a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        /* Hide the link that should open and close the topnav on small screens */
+        .navbar .icon {
+            display: none;
+        }
+    
         .credit {
             width: 100%;
 
@@ -20,6 +60,20 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="./index.html">Steven Breen- Industrial Service</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="./index.html">Home Page</a></li>
+                <li><a href="./photo_gallery/indexgallery.html">Image Gallery</a></li>
+                <li><a href="./contact_form/indexform.html">Contact Info</a></li>
+                <li><a href="./google_maps/indexmap.html">Customer Base</a></li>
+                <li class="active"><a href="index_payment.html">Payments-Thank You!</a></li>
+            </ul>
+        </div>
+    </nav>
     <h1 class="warning">Payment Page Under Construction</h1>
     <p><img class="credit" alt="mc_visa" src="photo_gallery/credit_card_site.png"></p>
 </body>
