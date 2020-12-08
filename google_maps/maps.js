@@ -21,6 +21,7 @@ function initMap() {
     var whelen_latlng = new google.maps.LatLng(43.26719, -72.40325);
     var boat_latlng = new google.maps.LatLng(44.089453, -69.812606);
     var mex_latlng = new google.maps.LatLng(19.040034, -98.212193);
+    var pei_latlng = new google.map.LatLng(42.909253, -71.480161);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.377, -71.1164)
@@ -58,15 +59,19 @@ function initMap() {
     var boat_info = "<strong>Luxury Yacht Builder</strong><br/>" + "Richmond, ME";
     
     var mex_info = "<strong>OEM Volkswagon Parts Manurfaturer</strong><br/>" + "Puebla, Mexico";
+    
+    var pei_info = "<strong>Progressive Energy</strong><br/>" + "Bedford, NH Corporate Office" + "<a href='https://progressiveenergy.com'>PEI.Com</a>";
+    
+    
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
     });
-
+    
     var northwest_infowindow = new google.maps.InfoWindow({
         content: northwest_info
     });
-
+    
     var sheridan_infowindow = new google.maps.InfoWindow({
         content: chez_sheridan_info
     });
@@ -118,6 +123,11 @@ function initMap() {
     var mex_infowindow = new google.maps.InfoWindow({
         content: mex_info
     });
+    
+    var pei_infowindow = new google.maps.InfoWindow({
+        content: pei_info
+    });
+    
 
     var fort_drum_marker = new google.maps.Marker({
         position: fort_drum_latlng,
@@ -197,7 +207,7 @@ function initMap() {
         title: 'Emergency Equipment Manurfacturer'
     });
     
-    var boat = new google.maps.Marker({
+    var boat_marker = new google.maps.Marker({
         position: boat_latlng,
         map: harvard_yard_map,
         title: 'Yacht Builder'
@@ -207,6 +217,12 @@ function initMap() {
         position: mex_latlng,
         map: harvard_yard_map,
         title: 'OEM Auto Parts Supplier'
+    });
+    
+    var pei_marker = new google.maps.Marker({
+        position: pei_latlng,
+        map: harvard_yard_map,
+        title: 'Progressive Energy Headquarters'
     });
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
@@ -267,6 +283,10 @@ function initMap() {
     
     google.maps.event.addListener(mex_marker, 'click', function () {
         mex_infowindow.open(harvard_yard_map, mex_marker);
+    });
+    
+    google.maps.event.addListener(pei_marker, 'click', function () {
+        pei_infowindow.open(harvard_yard_map, pei_marker);
     });
 
 
