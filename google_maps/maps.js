@@ -17,7 +17,9 @@ function initMap() {
     var lyndon_latlng = new google.maps.LatLng(44.468590, -71.856420);
     var design_latlng = new google.maps.LatLng(41.78459, -71.51833);
     var emtec_latlng = new google.maps.LatLng(41.20048, -73.17462);
-    var saratoga = new google.maps.LatLng(43.074051, -73.783076);
+    var saratoga_latlng = new google.maps.LatLng(43.07405, -73.783076);
+    var whelen_latlng = new google.maps.LatLng(43.26719, -72.40325);
+    var boat_latlng = new google.maps.LatLng(44.089453, -69.812606);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.377, -71.1164)
@@ -49,6 +51,10 @@ function initMap() {
     var emtec_info = "<strong>Architectural Fabricator </strong><br/>" + "Bridgeport, CT";
     
     var saratoga_info = "<strong>Job Fab Shop</strong><br/>" + "Saratoga Springs, NY";
+    
+    var whelen_info = "<strong>Emergency Equipment Manurfacturer</strong><br/>" + "Charlestown, NH";
+    
+    var boat_info = "<strong>Luxury Yacht Builder</strong><br/>" + "Richmond, ME";
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
@@ -96,6 +102,14 @@ function initMap() {
     
     var saratoga_infowindow = new google.maps.InfoWindow({
         content: saratoga_info
+    });
+    
+    var whelen_infowindow = new google.maps.InfoWindow({
+        content: whelen_info
+    });
+    
+    var boat_infowindow = new google.maps.InfoWindow({
+        content: boat_info
     });
 
     var fort_drum_marker = new google.maps.Marker({
@@ -169,6 +183,18 @@ function initMap() {
         map: harvard_yard_map,
         title: 'Jobber Shop/ Metal Fab'
     });
+    
+    var whelen_marker = new google.maps.Marker({
+        position: whelen_latlng,
+        map: harvard_yard_map,
+        title: 'Emergency Equipment Manurfacturer'
+    });
+    
+    var boat = new google.maps.Marker({
+        position: boat_latlng,
+        map: harvard_yard_map,
+        title: 'Yacht Builder'
+    });
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
@@ -216,6 +242,14 @@ function initMap() {
     
     google.maps.event.addListener(saratoga_marker, 'click', function () {
         saratoga_infowindow.open(harvard_yard_map, saratoga_marker);
+    });
+    
+    google.maps.event.addListener(whelen_marker, 'click', function () {
+        whelen_infowindow.open(harvard_yard_map, whelen_marker);
+    });
+    
+    google.maps.event.addListener(boat_marker, 'click', function () {
+        boat_infowindow.open(harvard_yard_map, boat_marker);
     });
 
 
