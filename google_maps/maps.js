@@ -15,8 +15,10 @@ function initMap() {
     var colonial_latlng = new google.maps.LatLng(41.217950, -73.077270);
     var landing_latlng = new google.maps.LatLng(43.380220, -70.504020);
     var lyndon_latlng = new google.maps.LatLng(44.468590, -71.856420);
+    var design_latlng = new google.maps.LatLng(41.78459, -71.51833);
+    var emtec_latlng = new google.maps.LatLng(41.20048, -73.17462);
     var mapOptions = {
-        zoom: 8,
+        zoom: 7,
         center: new google.maps.LatLng(42.377, -71.1164)
     };
     harvard_yard_map = new google.maps.Map(document.getElementById('map-canvas'),
@@ -40,6 +42,10 @@ function initMap() {
     var landing_info = "<strong>Composite Boat Design/Build Lab</strong><br/>" + "Arundel, ME";
     
     var lyndon_info = "<strong>Institutional Furniture Manurfactuer</strong><br/>" + "Lyndon, VT";
+    
+    var design_info = "<strong>Design/Fabrication Shop</strong><br/>" + "Cranston, RI";
+    
+    var emtec_info = "<strong>Architectural Fabricator </strong><br/>" + "Bridgeport, CT";
     
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
@@ -75,6 +81,14 @@ function initMap() {
     
      var lyndon_infowindow = new google.maps.InfoWindow({
         content: lyndon_info
+    });
+    
+    var design_infowindow = new google.maps.InfoWindow({
+        content: design_info
+    });
+    
+    var emtec_infowindow = new google.maps.InfoWindow({
+        content: emtec_info
     });
     
     var fort_drum_marker = new google.maps.Marker({
@@ -131,6 +145,18 @@ function initMap() {
         title: 'Furniture Manurfacturer'
     });
     
+    var design_marker = new google.maps.Marker({
+        position: design_latlng,
+        map: harvard_yard_map,
+        title: 'Metal Fabrication Shop'
+    });
+    
+    var emtec_marker = new google.maps.Marker({
+        position: emtec_latlng,
+        map: harvard_yard_map,
+        title: 'Architectural Fabricator'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -142,6 +168,7 @@ function initMap() {
     google.maps.event.addListener(chez_sheridan_marker, 'click', function () {
         sheridan_infowindow.open(harvard_yard_map, chez_sheridan_marker);
     });
+    
     google.maps.event.addListener(precision_coating_marker, 'click', function () {
         precision_coating_infowindow.open(harvard_yard_map, precision_coating_marker);
     });
@@ -164,6 +191,14 @@ function initMap() {
     
     google.maps.event.addListener(lyndon_marker, 'click', function () {
         lyndon_infowindow.open(harvard_yard_map, lyndon_marker);
+    });
+    
+    google.maps.event.addListener(design_marker, 'click', function () {
+        design_infowindow.open(harvard_yard_map, design_marker);
+    });
+    
+    google.maps.event.addListener(emtec_marker, 'click', function () {
+        emtec_infowindow.open(harvard_yard_map, emtec_marker);
     });
     
     
