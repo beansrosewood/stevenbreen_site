@@ -35,7 +35,7 @@ function initMap() {
     
     var cil_info = "<strong>Anodizer/Electro-Plater</strong><br/>" + "Lawrence, MA";
     
-    var colonial_info = "<strong>Aerospace/Industrial Finisher </strong><br/>" + "Milford, CT;
+    var colonial_info = "<strong>Aerospace/Industrial Finisher </strong><br/>" + "Milford, CT";
     
     var landing_info = "<strong>Composite Boat Design/Build Lab</strong><br/>" + "Arundel, ME";
     
@@ -134,6 +134,7 @@ function initMap() {
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
+    
     google.maps.event.addListener(northwest_marker, 'click', function () {
         northwest_infowindow.open(harvard_yard_map, northwest_marker);
     });
@@ -159,7 +160,9 @@ function initMap() {
     
     google.maps.event.addListener(landing_marker, 'click', function () {
         landing_infowindow.open(harvard_yard_map, landing_marker);
-    });google.maps.event.addListener(lyndon_marker, 'click', function () {
+    });
+    
+    google.maps.event.addListener(lyndon_marker, 'click', function () {
         lyndon_infowindow.open(harvard_yard_map, lyndon_marker);
     });
     
