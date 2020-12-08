@@ -20,6 +20,7 @@ function initMap() {
     var saratoga_latlng = new google.maps.LatLng(43.07405, -73.783076);
     var whelen_latlng = new google.maps.LatLng(43.26719, -72.40325);
     var boat_latlng = new google.maps.LatLng(44.089453, -69.812606);
+    var mex_latlng = new google.maps.LatLng(19.040034, -98.212193);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.377, -71.1164)
@@ -55,6 +56,8 @@ function initMap() {
     var whelen_info = "<strong>Emergency Equipment Manurfacturer</strong><br/>" + "Charlestown, NH";
     
     var boat_info = "<strong>Luxury Yacht Builder</strong><br/>" + "Richmond, ME";
+    
+    var mex_info = "<strong>OEM Volkswagon Parts Manurfaturer</strong><br/>" + "Puebla, Mexico";
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
@@ -110,6 +113,10 @@ function initMap() {
     
     var boat_infowindow = new google.maps.InfoWindow({
         content: boat_info
+    });
+    
+    var mex_infowindow = new google.maps.InfoWindow({
+        content: mex_info
     });
 
     var fort_drum_marker = new google.maps.Marker({
@@ -195,6 +202,12 @@ function initMap() {
         map: harvard_yard_map,
         title: 'Yacht Builder'
     });
+    
+     var mex_marker = new google.maps.Marker({
+        position: mex_latlng,
+        map: harvard_yard_map,
+        title: 'OEM Auto Parts Supplier'
+    });
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
@@ -250,6 +263,10 @@ function initMap() {
     
     google.maps.event.addListener(boat_marker, 'click', function () {
         boat_infowindow.open(harvard_yard_map, boat_marker);
+    });
+    
+    google.maps.event.addListener(mex_marker, 'click', function () {
+        mex_infowindow.open(harvard_yard_map, mex_marker);
     });
 
 
