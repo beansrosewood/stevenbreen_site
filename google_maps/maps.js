@@ -51,27 +51,27 @@ function initMap() {
     var design_info = "<strong>Design/Fabrication Shop</strong><br/>" + "Cranston, RI";
 
     var emtec_info = "<strong>Architectural Fabricator </strong><br/>" + "Bridgeport, CT";
-    
+
     var saratoga_info = "<strong>Job Fab Shop</strong><br/>" + "Saratoga Springs, NY";
-    
+
     var whelen_info = "<strong>Emergency Equipment Manurfacturer</strong><br/>" + "Charlestown, NH";
-    
+
     var boat_info = "<strong>Luxury Yacht Builder</strong><br/>" + "Richmond, ME";
-    
+
     var mex_info = "<strong>OEM Volkswagon Parts Manurfaturer</strong><br/>" + "Puebla, Mexico";
-    
+
     var pei_info = "<strong>Progressive Energy</strong><br/>" + "Bedford, NH Corporate Office" + "<a href='https://progressiveenergy.com'>PEI.Com</a>";
-    
-    
+
+
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
     });
-    
+
     var northwest_infowindow = new google.maps.InfoWindow({
         content: northwest_info
     });
-    
+
     var sheridan_infowindow = new google.maps.InfoWindow({
         content: chez_sheridan_info
     });
@@ -107,27 +107,27 @@ function initMap() {
     var emtec_infowindow = new google.maps.InfoWindow({
         content: emtec_info
     });
-    
+
     var saratoga_infowindow = new google.maps.InfoWindow({
         content: saratoga_info
     });
-    
+
     var whelen_infowindow = new google.maps.InfoWindow({
         content: whelen_info
     });
-    
+
     var boat_infowindow = new google.maps.InfoWindow({
         content: boat_info
     });
-    
+
     var mex_infowindow = new google.maps.InfoWindow({
         content: mex_info
     });
-    
+
     var pei_infowindow = new google.maps.InfoWindow({
         content: pei_info
     });
-    
+
 
     var fort_drum_marker = new google.maps.Marker({
         position: fort_drum_latlng,
@@ -194,31 +194,31 @@ function initMap() {
         map: harvard_yard_map,
         title: 'Architectural Fabricator'
     });
-    
+
     var saratoga_marker = new google.maps.Marker({
         position: saratoga_latlng,
         map: harvard_yard_map,
         title: 'Jobber Shop/ Metal Fab'
     });
-    
+
     var whelen_marker = new google.maps.Marker({
         position: whelen_latlng,
         map: harvard_yard_map,
         title: 'Emergency Equipment Manurfacturer'
     });
-    
+
     var boat_marker = new google.maps.Marker({
         position: boat_latlng,
         map: harvard_yard_map,
         title: 'Yacht Builder'
     });
-    
-     var mex_marker = new google.maps.Marker({
+
+    var mex_marker = new google.maps.Marker({
         position: mex_latlng,
         map: harvard_yard_map,
         title: 'OEM Auto Parts Supplier'
     });
-    
+
     var pei_marker = new google.maps.Marker({
         position: pei_latlng,
         map: harvard_yard_map,
@@ -268,23 +268,23 @@ function initMap() {
     google.maps.event.addListener(emtec_marker, 'click', function () {
         emtec_infowindow.open(harvard_yard_map, emtec_marker);
     });
-    
+
     google.maps.event.addListener(saratoga_marker, 'click', function () {
         saratoga_infowindow.open(harvard_yard_map, saratoga_marker);
     });
-    
+
     google.maps.event.addListener(whelen_marker, 'click', function () {
         whelen_infowindow.open(harvard_yard_map, whelen_marker);
     });
-    
+
     google.maps.event.addListener(boat_marker, 'click', function () {
         boat_infowindow.open(harvard_yard_map, boat_marker);
     });
-    
+
     google.maps.event.addListener(mex_marker, 'click', function () {
         mex_infowindow.open(harvard_yard_map, mex_marker);
     });
-    
+
     google.maps.event.addListener(pei_marker, 'click', function () {
         pei_infowindow.open(harvard_yard_map, pei_marker);
     });
