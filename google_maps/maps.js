@@ -21,7 +21,7 @@ function initMap() {
     var whelen_latlng = new google.maps.LatLng(43.26719, -72.40325);
     var boat_latlng = new google.maps.LatLng(44.089453, -69.812606);
     var mex_latlng = new google.maps.LatLng(19.040034, -98.212193);
-    var pei_latlng = new google.map.LatLng(42.909253, -71.480161);
+    var pei_latlng = new google.maps.LatLng(42.909253, -71.480161);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.377, -71.1164)
