@@ -23,6 +23,7 @@ function initMap() {
     var mex_latlng = new google.maps.LatLng(19.040034, -98.212193);
     var pei_latlng = new google.maps.LatLng(42.909253, -71.480161);
     var suntube_latlng = new google.maps.LatLng(42.696788, -83.239964);
+    var jfk_latlng = new google.maps.LatLng(40.653183, -73.767882);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.377, -71.1164)
@@ -64,7 +65,8 @@ function initMap() {
     var pei_info = "<strong>Progressive Energy</strong><br/>" + "Bedford, NH Corporate Office<br/>" + "<a href='https://progressiveenergy.com'>PEI.Com</a>";
     
     var suntube_info = "<strong>Solaronics, Inc</strong><br/>" + "Auburn Hills, MI<br/>" + "<a href='https://solaronicsusa.com'>Solaronics.com</a>";
-
+    
+    var jfk_info = "<strong>Pan Am Air Freight</strong><br/>" + "JFK International Airport<br/>" + "Long Island, NY";
 
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
@@ -133,6 +135,10 @@ function initMap() {
     
     var suntube_infowindow = new google.maps.InfoWindow({
         content: suntube_info
+    });
+    
+    var jfk_infowindow = new google.maps.InfoWindow({
+        content: jfk_info
     });
     
 
@@ -238,6 +244,12 @@ function initMap() {
         map: harvard_yard_map,
         title: 'Solaronics Plant'
     });
+    
+    var jfk_marker = new google.maps.Marker({
+        position: jfk_latlng,
+        map: harvard_yard_map,
+        title: 'Pan Am Air Freight'
+    });
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
@@ -305,6 +317,10 @@ function initMap() {
     
     google.maps.event.addListener(suntube_marker, 'click', function () {
         suntube_infowindow.open(harvard_yard_map, suntube_marker);
+    });
+    
+    google.maps.event.addListener(jfk_marker, 'click', function () {
+        jfk_infowindow.open(harvard_yard_map, jfk_marker);
     });
 
 
