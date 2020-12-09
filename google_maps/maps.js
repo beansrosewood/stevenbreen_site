@@ -22,6 +22,7 @@ function initMap() {
     var boat_latlng = new google.maps.LatLng(44.089453, -69.812606);
     var mex_latlng = new google.maps.LatLng(19.040034, -98.212193);
     var pei_latlng = new google.maps.LatLng(42.909253, -71.480161);
+    var suntube_latlng = new google.maps.LatLng(42.696788, -83.239964);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.377, -71.1164)
@@ -60,7 +61,9 @@ function initMap() {
 
     var mex_info = "<strong>OEM Volkswagon Parts Manurfaturer</strong><br/>" + "Puebla, Mexico";
 
-    var pei_info = "<strong>Progressive Energy</strong><br/>" + "Bedford, NH Corporate Office" + "<a href='https://progressiveenergy.com'>PEI.Com</a>";
+    var pei_info = "<strong>Progressive Energy</strong><br/>" + "Bedford, NH Corporate Office<br/>" + "<a href='https://progressiveenergy.com'>PEI.Com</a>";
+    
+    var suntube_info = "<strong>Solaronics, Inc</strong><br/>" + "Auburn Hills, MI<br/>" + "<a href='https://solaronicsusa.com'>Solaronics.com</a>";
 
 
 
@@ -127,6 +130,11 @@ function initMap() {
     var pei_infowindow = new google.maps.InfoWindow({
         content: pei_info
     });
+    
+    var suntube_infowindow = new google.maps.InfoWindow({
+        content: suntube_info
+    });
+    
 
 
     var fort_drum_marker = new google.maps.Marker({
@@ -224,6 +232,12 @@ function initMap() {
         map: harvard_yard_map,
         title: 'Progressive Energy Headquarters'
     });
+    
+    var suntube_marker = new google.maps.Marker({
+        position: suntube_latlng,
+        map: harvard_yard_map,
+        title: 'Solaronics Plant'
+    });
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
@@ -287,6 +301,10 @@ function initMap() {
 
     google.maps.event.addListener(pei_marker, 'click', function () {
         pei_infowindow.open(harvard_yard_map, pei_marker);
+    });
+    
+    google.maps.event.addListener(suntube_marker, 'click', function () {
+        suntube_infowindow.open(harvard_yard_map, suntube_marker);
     });
 
 
