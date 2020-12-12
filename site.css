@@ -141,3 +141,13 @@
     padding-bottom: 10em;
     color: blue;
 }
+
+/* Home Page buttons below photo */
+
+.pay_button {
+    margin: 1em;
+}
+    
+.store_button {
+    margin: 1em;
+}

@@ -24,6 +24,8 @@ function initMap() {
     var pei_latlng = new google.maps.LatLng(42.909253, -71.480161);
     var suntube_latlng = new google.maps.LatLng(42.696788, -83.239964);
     var jfk_latlng = new google.maps.LatLng(40.653183, -73.767882);
+    var ge_latlng = new google.maps.LatLng(42.46801328, -73.25612556);
+    var vt_ware_latlng = new google.maps.LatLng(44.379986, -73.127530);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.377, -71.1164)
@@ -67,6 +69,10 @@ function initMap() {
     var suntube_info = "<strong>Solaronics, Inc</strong><br/>" + "Auburn Hills, MI<br/>" + "<a href='https://solaronicsusa.com'>Solaronics.com</a>";
     
     var jfk_info = "<strong>Pan Am Air Freight</strong><br/>" + "JFK International Airport<br/>" + "Long Island, NY";
+    
+    var ge_info = "<strong>Plastics Research/Developement</strong><br/>" + "Pittsfield, MA";
+    
+    var vt_ware_info = "<strong>Fabrication/Jobber Shop</strong><br/>" + "St Georges, VT";
 
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
@@ -139,6 +145,14 @@ function initMap() {
     
     var jfk_infowindow = new google.maps.InfoWindow({
         content: jfk_info
+    });
+    
+    var ge_infowindow = new google.maps.InfoWindow({
+        content: ge_info
+    });
+    
+     var vt_ware_infowindow = new google.maps.InfoWindow({
+        content: vt_ware_info
     });
     
 
@@ -250,6 +264,18 @@ function initMap() {
         map: harvard_yard_map,
         title: 'Pan Am Air Freight'
     });
+    
+    var ge_marker = new google.maps.Marker({
+        position: ge_latlng,
+        map: harvard_yard_map,
+        title: 'Plastics R&D'
+    });
+    
+    var vt_ware_marker = new google.maps.Marker({
+        position: vt_ware_latlng,
+        map: harvard_yard_map,
+        title: 'Fab/Job Shop'
+    });
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
@@ -321,6 +347,14 @@ function initMap() {
     
     google.maps.event.addListener(jfk_marker, 'click', function () {
         jfk_infowindow.open(harvard_yard_map, jfk_marker);
+    });
+    
+    google.maps.event.addListener(ge_marker, 'click', function () {
+        ge_infowindow.open(harvard_yard_map, ge_marker);
+    });
+    
+    google.maps.event.addListener(vt_ware_marker, 'click', function () {
+        vt_ware_infowindow.open(harvard_yard_map, vt_ware_marker);
     });
 
 
