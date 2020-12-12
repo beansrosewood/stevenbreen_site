@@ -1,0 +1,29 @@
+ 
+.my_info, .your_info {
+    background-image: url(../photo_gallery/EE25B659-5901-48C3-8B5F-527119AC2848_1_105_c.jpeg);
+    padding-left: 12em;
+    padding-bottom: 12em;
+    padding-top: 10em;
+    padding-bottom: 10em;
+    color: blue;
+} 
+
+.my_name {
+    font-size: 4em;
+    text-shadow: 2px 2px 1.5px #020203;
+}
+
+.my_address {
+    font-size: 2em;
+    text-shadow: 1px 1px .75px #020203;
+}
+
+.my_email {
+    font-size: 2em;
+    text-shadow: 1px 1px .75px #020203;
+}
+
+.my_cell {
+    font-size: 2em;
+    text-shadow: 1px 1px .75px #020203;
+}
