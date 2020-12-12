@@ -127,7 +127,11 @@
 
 /* Style the links on the main photo */
 .where {
-    color: crimson;
+    color: crimson;    
+}
+.how a:hover {
+    color: yellow;
+    
 }
 
 /* Contact Page Styles */
@@ -139,6 +143,10 @@
     padding-bottom: 12em;
     padding-top: 10em;
     padding-bottom: 10em;
+    color: blue;
+}
+
+.my_email {
     color: blue;
 }
 

@@ -21,6 +21,11 @@
 .my_email {
     font-size: 2em;
     text-shadow: 1px 1px .75px #020203;
+    color: blue;
+}
+
+.my_email a:hover {
+    color: yellow;
 }
 
 .my_cell {

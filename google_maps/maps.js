@@ -39,7 +39,7 @@ function initMap() {
 
     var northwest_info = "<strong>Northwest Science Building</strong><br/>" + "Latitude: 42.3795462<br/>" + "Longitude: -71.1156024";
 
-    var chez_sheridan_info = "<strong>Chez Sheridan Office/Shop</strong><br/>" + "9 Sheridan St" + "Nashua, NH 03064";
+    var chez_sheridan_info = "<strong>Steven Breen's Office/Shop</strong><br/>" + "9 Sheridan St<br/>" + "Nashua, NH 03064";
 
     var precision_coating_info = "<strong>Medical Device Coater</strong><br/>";
 
@@ -179,7 +179,8 @@ function initMap() {
     var chez_sheridan_marker = new google.maps.Marker({
         position: chez_sheridan_latlng,
         map: harvard_yard_map,
-        title: 'Chez Sheridan Office/Shop'
+        title: 'Steven Breen-Office/Shop',
+        icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
     });
 
     var precision_coating_marker = new google.maps.Marker({
