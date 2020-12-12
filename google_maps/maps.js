@@ -29,7 +29,7 @@ function initMap() {
     var steel_latlng = new google.maps.LatLng(40.650405, -75.465472);
     var mapOptions = {
         zoom: 7,
-        center: new google.maps.LatLng(42.377, -71.1164)
+        center: new google.maps.LatLng(42.623404, -75.820153)
     };
     harvard_yard_map = new google.maps.Map(document.getElementById('map-canvas'),
         mapOptions);
@@ -51,7 +51,7 @@ function initMap() {
 
     var landing_info = "<strong>Composite Boat Design/Build Lab</strong><br/>" + "Arundel, ME";
 
-    var lyndon_info = "<strong>Institutional Furniture Manurfactuer</strong><br/>" + "Lyndon, VT";
+    var lyndon_info = "<strong>Institutional Furniture Manufacturer</strong><br/>" + "Lyndon, VT";
 
     var design_info = "<strong>Design/Fabrication Shop</strong><br/>" + "Cranston, RI";
 
