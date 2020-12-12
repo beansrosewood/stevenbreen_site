@@ -26,6 +26,7 @@ function initMap() {
     var jfk_latlng = new google.maps.LatLng(40.653183, -73.767882);
     var ge_latlng = new google.maps.LatLng(42.46801328, -73.25612556);
     var vt_ware_latlng = new google.maps.LatLng(44.379986, -73.127530);
+    var steel_latlng = new google.maps.LatLng(40.650405, -75.465472);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.377, -71.1164)
@@ -73,6 +74,8 @@ function initMap() {
     var ge_info = "<strong>Plastics Research/Developement</strong><br/>" + "Pittsfield, MA";
     
     var vt_ware_info = "<strong>Fabrication/Jobber Shop</strong><br/>" + "St Georges, VT";
+    
+    var steel_info = "<strong>Steel Fabricator</strong><br/>" + "Allentown, PA";
 
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
@@ -153,6 +156,10 @@ function initMap() {
     
      var vt_ware_infowindow = new google.maps.InfoWindow({
         content: vt_ware_info
+    });
+    
+    var steel_infowindow = new google.maps.InfoWindow({
+        content: steel_info
     });
     
 
@@ -276,6 +283,12 @@ function initMap() {
         map: harvard_yard_map,
         title: 'Fab/Job Shop'
     });
+    
+    var steel_marker = new google.maps.Marker({
+        position: steel_latlng,
+        map: harvard_yard_map,
+        title: 'Steel Fabricator'
+    });
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
@@ -355,6 +368,10 @@ function initMap() {
     
     google.maps.event.addListener(vt_ware_marker, 'click', function () {
         vt_ware_infowindow.open(harvard_yard_map, vt_ware_marker);
+    });
+    
+    google.maps.event.addListener(steel_marker, 'click', function () {
+        steel_infowindow.open(harvard_yard_map, steel_marker);
     });
 
 
