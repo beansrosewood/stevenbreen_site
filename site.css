@@ -127,11 +127,12 @@
 
 /* Style the links on the main photo */
 .where {
-    color: crimson;    
+    color: crimson;
 }
+
 .how a:hover {
     color: yellow;
-    
+
 }
 
 /* Contact Page Styles */
@@ -155,7 +156,7 @@
 .pay_button {
     margin: 1em;
 }
-    
+
 .store_button {
     margin: 1em;
 }
@@ -163,5 +164,6 @@
 /* footer */
 
 .bottom {
-   text-align: center;
+    text-align: center;
+    padding-top: 1em;
 }
