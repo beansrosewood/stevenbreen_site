@@ -9,10 +9,9 @@ html,body,#map-canvas {
     text-align: center;
     color: crimson;
     font-size: 3em;
-    margin-bottom: 2em;
 }
 
-.map_notes {
+.map_note {
     text-align: center;
     margin-top: 2em;
 }
