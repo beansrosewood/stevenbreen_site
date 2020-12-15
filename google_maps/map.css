@@ -4,3 +4,15 @@ html,body,#map-canvas {
     padding: 0px;
 }
 #map-canvas { width: 100%; height: 600px;}
+
+.h1 {
+    text-align: center;
+    color: crimson;
+    font-size: 3em;
+    margin-bottom: 2em;
+}
+
+.map_notes {
+    text-align: center;
+    margin-top: 2em;
+}
