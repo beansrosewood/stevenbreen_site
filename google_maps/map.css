@@ -8,7 +8,7 @@ html,body,#map-canvas {
 .map_top {
     text-align: center;
     color: crimson;
-    text-shadow: 2px 2px 1.5px #020203;
+    text-shadow: 1px 1px 1px #020203;
     font-size: 3em;
 }
 
