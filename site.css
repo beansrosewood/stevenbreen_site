@@ -64,7 +64,7 @@
 .how {
     font-size: 2em;
     text-shadow: 2px 2px 1.5px #020203;
-}
+    list-style-type: none;}
 
 .established {
     font-size: 3em;
