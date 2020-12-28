@@ -18,14 +18,14 @@
             myFunction()
         };
 
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
+        var sticknavbar = document.getElementById("sticknavbar");
+        var sticky = sticknavbar.offsetTop;
 
         function myFunction() {
             if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
+                sticknavbar.classList.add("sticky")
             } else {
-                navbar.classList.remove("sticky");
+                sticknavbar.classList.remove("sticky");
             }
         }
 
@@ -34,6 +34,7 @@
 
 <body>
 
+    <div id="sticknavbar">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -68,6 +69,7 @@
             </ul>
         </div>
     </nav>
+    </div>    
 
     <main>
 
