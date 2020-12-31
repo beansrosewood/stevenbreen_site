@@ -167,6 +167,10 @@
   padding-top: 60px;
 }
 
+/* Bootstrap Nav Bar Fixed Padding */
+
+body { padding-top: 70px}
+
 /* Home Page buttons below photo */
 
 .pay_button {
