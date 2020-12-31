@@ -171,6 +171,10 @@
 
 body { padding-top: 70px}
 
+. search_bar {
+    padding-left: 10em
+}
+
 /* Home Page buttons below photo */
 
 .pay_button {
