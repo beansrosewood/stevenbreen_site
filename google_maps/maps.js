@@ -32,6 +32,7 @@ function initMap() {
     var united_latlng = new google.maps.LatLng(40.865728, -74.229620);
     var evs_latlng = new google.maps.LatLng(42.916349, -72.259066);
     var pfe_latlng = new google.maps.LatLng(42.563881, -72.284395);
+    var carmax_latlng = new google.maps.LatLng(41.787196, -72.663188);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.623404, -75.820153),
@@ -92,6 +93,8 @@ function initMap() {
     var evs_info = "<strong>Sheet Metal Fab</strong><br/>" + "Keene, NH";
     
     var pfe_info = "<strong>Roll Machine Shop</strong><br/>" + "Orange, MA";
+    
+    var carmax_info = "<strong>Auto Super Store</strong><br/>" + "Hartford, CT";
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
@@ -195,6 +198,10 @@ function initMap() {
     
     var pfe_infowindow = new google.maps.InfoWindow({
         content: pfe_info
+    });
+    
+    var carmax_infowindow = new google.maps.InfoWindow({
+        content: carmax_info
     });
 
 
@@ -355,6 +362,12 @@ function initMap() {
         title: 'Roll Machine Shop'
     });
     
+    var carmax_marker = new google.maps.Marker({
+        position: carmax_latlng,
+        map: harvard_yard_map,
+        title: 'Automotive Super Store'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -457,6 +470,10 @@ function initMap() {
     
     google.maps.event.addListener(pfe_marker, 'click', function () {
         pfe_infowindow.open(harvard_yard_map, pfe_marker);
+    });
+    
+    google.maps.event.addListener(carmax_marker, 'click', function () {
+        carmax_infowindow.open(harvard_yard_map, carmax_marker);
     });
 
 }
