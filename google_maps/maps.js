@@ -30,7 +30,7 @@ function initMap() {
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.623404, -75.820153),
-        mapTypeId: 'satellite'
+        mapTypeId: 'hybrid'
     };
     harvard_yard_map = new google.maps.Map(document.getElementById('map-canvas'),
         mapOptions);
