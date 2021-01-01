@@ -27,6 +27,7 @@ function initMap() {
     var ge_latlng = new google.maps.LatLng(42.46801328, -73.25612556);
     var vt_ware_latlng = new google.maps.LatLng(44.379986, -73.127530);
     var steel_latlng = new google.maps.LatLng(40.650405, -75.465472);
+    var forest_latlng = new google.maps.LatLng(43.833977, -73.055520);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.623404, -75.820153),
@@ -78,6 +79,7 @@ function initMap() {
     
     var steel_info = "<strong>Steel Fabricator</strong><br/>" + "Allentown, PA";
 
+    var forest_info = "<strong>Institutional Furniture Manurfacturer</strong><br/>" + "Forestdale, VT";
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
@@ -163,6 +165,9 @@ function initMap() {
         content: steel_info
     });
     
+    var forest_infowindow = new google.maps.InfoWindow({
+        content: forest_info
+    });
 
 
     var fort_drum_marker = new google.maps.Marker({
@@ -292,6 +297,12 @@ function initMap() {
         title: 'Steel Fabricator'
     });
 
+     var forest_marker = new google.maps.Marker({
+        position: forest_latlng,
+        map: harvard_yard_map,
+        title: 'Institutional Furniture Maker'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -375,6 +386,9 @@ function initMap() {
     google.maps.event.addListener(steel_marker, 'click', function () {
         steel_infowindow.open(harvard_yard_map, steel_marker);
     });
-
+    
+     google.maps.event.addListener(forest_marker, 'click', function () {
+        forest_infowindow.open(harvard_yard_map, forest_marker);
+    });
 
 }
