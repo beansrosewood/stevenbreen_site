@@ -173,7 +173,7 @@ body { padding-top: 70px}
 
 . search_bar {
     float:right;
-    color: darkgray;
+    background: darkgray;
 }
 
 /* Home Page buttons below photo */
