@@ -29,7 +29,8 @@ function initMap() {
     var steel_latlng = new google.maps.LatLng(40.650405, -75.465472);
     var mapOptions = {
         zoom: 7,
-        center: new google.maps.LatLng(42.623404, -75.820153)
+        center: new google.maps.LatLng(42.623404, -75.820153),
+        mapTypeId: 'satellite'
     };
     harvard_yard_map = new google.maps.Map(document.getElementById('map-canvas'),
         mapOptions);
