@@ -31,6 +31,7 @@ function initMap() {
     var geno_latlng = new google.maps.LatLng(42.162169, -72.581649);
     var united_latlng = new google.maps.LatLng(40.865728, -74.229620);
     var evs_latlng = new google.maps.LatLng(42.916349, -72.259066);
+    var pfe_latlng = new google.maps.LatLng(42.563881, -72.284395);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.623404, -75.820153),
@@ -89,6 +90,8 @@ function initMap() {
     var united_info = "<strong>Job Shop/Silk Screener</strong><br/>" + "Cedar Grove, NJ";
     
     var evs_info = "<strong>Sheet Metal Fab</strong><br/>" + "Keene, NH";
+    
+    var pfe_info = "<strong>Roll Machine Shop</strong><br/>" + "Orange, MA";
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
@@ -188,6 +191,10 @@ function initMap() {
     
     var evs_infowindow = new google.maps.InfoWindow({
         content: evs_info
+    });
+    
+    var pfe_infowindow = new google.maps.InfoWindow({
+        content: pfe_info
     });
 
 
@@ -342,6 +349,12 @@ function initMap() {
         title: 'Sheet Metal Fabrication'
     });
     
+    var pfe_marker = new google.maps.Marker({
+        position: pfe_latlng,
+        map: harvard_yard_map,
+        title: 'Roll Machine Shop'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -440,6 +453,10 @@ function initMap() {
     
      google.maps.event.addListener(evs_marker, 'click', function () {
         evs_infowindow.open(harvard_yard_map, evs_marker);
+    });
+    
+    google.maps.event.addListener(pfe_marker, 'click', function () {
+        pfe_infowindow.open(harvard_yard_map, pfe_marker);
     });
 
 }
