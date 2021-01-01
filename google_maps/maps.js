@@ -28,6 +28,7 @@ function initMap() {
     var vt_ware_latlng = new google.maps.LatLng(44.379986, -73.127530);
     var steel_latlng = new google.maps.LatLng(40.650405, -75.465472);
     var forest_latlng = new google.maps.LatLng(43.833977, -73.055520);
+    var geno_latlng = new google.maps.LatLng();
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.623404, -75.820153),
@@ -80,6 +81,8 @@ function initMap() {
     var steel_info = "<strong>Steel Fabricator</strong><br/>" + "Allentown, PA";
 
     var forest_info = "<strong>Institutional Furniture Manurfacturer</strong><br/>" + "Forestdale, VT";
+    
+    var geno_info = "<strong>Auto Body Repair</strong><br/>" + "Chicopee, MA";
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
@@ -167,6 +170,10 @@ function initMap() {
     
     var forest_infowindow = new google.maps.InfoWindow({
         content: forest_info
+    });
+    
+    var geno_infowindow = new google.maps.InfoWindow({
+        content: geno_info
     });
 
 
@@ -303,6 +310,12 @@ function initMap() {
         title: 'Institutional Furniture Maker'
     });
     
+    var geno_marker = new google.maps.Marker({
+        position: geno_latlng,
+        map: harvard_yard_map,
+        title: 'Auto Collision Repair'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -389,6 +402,10 @@ function initMap() {
     
      google.maps.event.addListener(forest_marker, 'click', function () {
         forest_infowindow.open(harvard_yard_map, forest_marker);
+    });
+    
+     google.maps.event.addListener(geno_marker, 'click', function () {
+        geno_infowindow.open(harvard_yard_map, geno_marker);
     });
 
 }
