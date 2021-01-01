@@ -28,7 +28,7 @@ function initMap() {
     var vt_ware_latlng = new google.maps.LatLng(44.379986, -73.127530);
     var steel_latlng = new google.maps.LatLng(40.650405, -75.465472);
     var forest_latlng = new google.maps.LatLng(43.833977, -73.055520);
-    var geno_latlng = new google.maps.LatLng();
+    var geno_latlng = new google.maps.LatLng(42.162169, -72.581649);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.623404, -75.820153),
