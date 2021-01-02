@@ -54,6 +54,7 @@ function initMap() {
     var radar_latlng = new google.maps.LatLng(42.418666, -71.539954);
     var jmd_latlng = new google.maps.LatLng(42.781839, -71.381889);
     var metal_latlng = new google.maps.LatLng(42.920801, -71.431559);
+    var wrta_latlng = new google.maps.LatLng(42.249439, -71.805393);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -158,6 +159,8 @@ function initMap() {
     var jmd_info = "<strong>Metal Plater</strong><br/>" + "Hudson, NH";
     
     var metal_info = "<strong>Sheet Metal Fabricator</strong><br/>" + "Londonderry, NH";
+    
+    var wrta_info = "<strong>Worcester Regional Transit Authority</strong><br/>" + "Bus Maintainance Facility<br/>" + "Worcester, MA";
 
 
 
@@ -352,6 +355,10 @@ function initMap() {
     
     var metal_infowindow = new google.maps.InfoWindow({
         content: metal_info
+    });
+    
+    var wrta_infowindow = new google.maps.InfoWindow({
+        content: wrta_info
     });
 
 
@@ -644,6 +651,12 @@ function initMap() {
         title: 'Sheet Metal Fab Shop'
     });
     
+    var wrta_marker = new google.maps.Marker({
+        position: wrta_latlng,
+        map: harvard_yard_map,
+        title: 'Transit Bus Paint Shop'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -834,6 +847,10 @@ function initMap() {
     
     google.maps.event.addListener(metal_marker, 'click', function () {
         metal_infowindow.open(harvard_yard_map, metal_marker);
+    });
+    
+    google.maps.event.addListener(wrta_marker, 'click', function () {
+        wtra_infowindow.open(harvard_yard_map, wrta_marker);
     });
 
 
