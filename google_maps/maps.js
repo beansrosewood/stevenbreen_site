@@ -36,8 +36,9 @@ function initMap() {
     var helmet_latlng = new google.maps.LatLng(44.945014, -72.181452);
     var smyth_latlng = new google.maps.LatLng(41.966103, -72.457108);
     var corcon_latlng = new google.maps.LatLng(43.898568, -71.145521);
-    var plp_latlng = new google.maps.LatLng();
-    var protk_latlng = new google.maps.LatLng();
+    var plp_latlng = new google.maps.LatLng(42.763989, -72.151933);
+    var protk_latlng = new google.maps.LatLng(43.212682, -71.724145);
+    var mag_latlng = new google.maps.LatLng(42.785904, -71.119374);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -110,6 +111,8 @@ function initMap() {
     var plp_info = "<strong>Composite Pole Fabrication</strong><br/>" + "Fitzwilliam, NH";
     
     var protk_info = "<strong>Sheet Metal Fabricator</strong><br/>" + "Contoocook, NH";
+    
+    var mag_info = "<strong>Jet Engine Manufacturer</strong><br/>" + "Haverhill, MA";
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
@@ -237,6 +240,10 @@ function initMap() {
     
     var protk_infowindow = new google.maps.InfoWindow({
         content: protk_info
+    });
+    
+    var mag_infowindow = new google.maps.InfoWindow({
+        content: mag_info
     });
 
 
@@ -433,6 +440,12 @@ function initMap() {
         title: 'Sheet Metal Fabricator'
     });
     
+    var mag_marker = new google.maps.Marker({
+        position: mag_latlng,
+        map: harvard_yard_map,
+        title: 'Jet Engine Maker'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -559,6 +572,10 @@ function initMap() {
     
     google.maps.event.addListener(protk_marker, 'click', function () {
         protk_infowindow.open(harvard_yard_map, protk_marker);
+    });
+    
+    google.maps.event.addListener(mag_marker, 'click', function () {
+        mag_infowindow.open(harvard_yard_map, mag_marker);
     });
 
 
