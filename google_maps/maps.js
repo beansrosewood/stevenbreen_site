@@ -44,6 +44,7 @@ function initMap() {
     var armor_latlng = new google.maps.LatLng(42.437260, -73.294348);
     var blue_latlng = new google.maps.LatLng(44.637907, -70.130541);
     var pmi_latlng = new google.maps.LatLng(41.990884, -71.485394);
+    var eb_latlng = new google.maps.LatLng(41.587184, -71.414170);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -128,6 +129,8 @@ function initMap() {
     var blue_info = "<strong>High School Composite Shop</strong><br/>" + "Farmington, ME";
     
     var pmi_info = "<strong>Injection Moulder</strong><br/>" + "Woonsocket, RI";
+    
+    var eb_info = "<strong>General Dynamics</strong><br/>" + "Electric Boat" + "Quonset Point, RI";
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
@@ -279,6 +282,10 @@ function initMap() {
     
     var pmi_infowindow = new google.maps.InfoWindow({
         content: pmi_info
+    });
+    
+    var eb_infowindow = new google.maps.InfoWindow({
+        content: eb_info
     });
 
 
@@ -511,6 +518,12 @@ function initMap() {
         title: 'Injection Moulder'
     });
     
+    var eb_marker = new google.maps.Marker({
+        position: eb_latlng,
+        map: harvard_yard_map,
+        title: 'Electric Boat'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -661,6 +674,10 @@ function initMap() {
     
     google.maps.event.addListener(pmi_marker, 'click', function () {
         pmi_infowindow.open(harvard_yard_map, pmi_marker);
+    });
+    
+    google.maps.event.addListener(eb_marker, 'click', function () {
+        eb_infowindow.open(harvard_yard_map, eb_marker);
     });
 
 
