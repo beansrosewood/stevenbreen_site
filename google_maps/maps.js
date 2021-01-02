@@ -59,6 +59,7 @@ function initMap() {
     var rim_latlng = new google.maps.LatLng(42.674921, -71.444507);
     var mac_latlng = new google.maps.LatLng(42.568785, -71.988990);
     var therm_latlng = new google.maps.LatLng(42.558925, -71.615833);
+    var duncan_latlng = new google.maps.LatLng(42.407133, -71.067362);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -173,6 +174,8 @@ function initMap() {
     var mac_info = "<strong>Prototype Fabricator</strong><br/>" + "Gardner, MA";
     
     var therm_info = "<strong>Plastics Fab Shop</strong><br/>" + "Shirley, MA";
+    
+    var duncan_info = "<strong>Galvanizing Shop</strong><br/>" + "Everett, MA";
 
 
 
@@ -387,6 +390,10 @@ function initMap() {
     
     var therm_infowindow = new google.maps.InfoWindow({
         content: therm_info
+    });
+    
+    var duncan_infowindow = new google.maps.InfoWindow({
+        content: duncan_info
     });
 
 
@@ -709,6 +716,12 @@ function initMap() {
         title: 'Plastics Fabricator'
     });
     
+    var duncan_marker = new google.maps.Marker({
+        position: duncan_latlng,
+        map: harvard_yard_map,
+        title: 'Galvanizer'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -919,6 +932,10 @@ function initMap() {
     
     google.maps.event.addListener(therm_marker, 'click', function () {
         therm_infowindow.open(harvard_yard_map, therm_marker);
+    });
+    
+    google.maps.event.addListener(duncan_marker, 'click', function () {
+        duncan_infowindow.open(harvard_yard_map, duncan_marker);
     });
 
 
