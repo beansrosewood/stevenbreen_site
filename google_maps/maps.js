@@ -130,7 +130,7 @@ function initMap() {
     
     var pmi_info = "<strong>Injection Moulder</strong><br/>" + "Woonsocket, RI";
     
-    var eb_info = "<strong>General Dynamics</strong><br/>" + "Electric Boat" + "Quonset Point, RI";
+    var eb_info = "<strong>General Dynamics</strong><br/>" + "Electric Boat</br>" + "Quonset Point, RI";
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
