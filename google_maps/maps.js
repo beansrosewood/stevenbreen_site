@@ -60,6 +60,7 @@ function initMap() {
     var mac_latlng = new google.maps.LatLng(42.568785, -71.988990);
     var therm_latlng = new google.maps.LatLng(42.558925, -71.615833);
     var duncan_latlng = new google.maps.LatLng(42.407133, -71.067362);
+    var set_latlng = new google.maps.LatLng(42.184817, -71.200335);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -176,6 +177,8 @@ function initMap() {
     var therm_info = "<strong>Plastics Fab Shop</strong><br/>" + "Shirley, MA";
     
     var duncan_info = "<strong>Galvanizing Shop</strong><br/>" + "Everett, MA";
+    
+    var set_info = "<strong>Studio Set Fabricator</strong><br/>" + "Norwood, MA";
 
 
 
@@ -394,6 +397,10 @@ function initMap() {
     
     var duncan_infowindow = new google.maps.InfoWindow({
         content: duncan_info
+    });
+    
+    var set_infowindow = new google.maps.InfoWindow({
+        content: set_info
     });
 
 
@@ -722,6 +729,12 @@ function initMap() {
         title: 'Galvanizer'
     });
     
+    var set_marker = new google.maps.Marker({
+        position: set_latlng,
+        map: harvard_yard_map,
+        title: 'Studio Set Fabber'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -936,6 +949,10 @@ function initMap() {
     
     google.maps.event.addListener(duncan_marker, 'click', function () {
         duncan_infowindow.open(harvard_yard_map, duncan_marker);
+    });
+    
+    google.maps.event.addListener(set_marker, 'click', function () {
+        set_infowindow.open(harvard_yard_map, set_marker);
     });
 
 
