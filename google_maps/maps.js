@@ -42,6 +42,7 @@ function initMap() {
     var adan_latlng = new google.maps.LatLng(43.770140, -72.757891);
     var lhw_latlng = new google.maps.LatLng(43.290414, -70.866669);
     var armor_latlng = new google.maps.LatLng(42.437260, -73.294348);
+    var blue_latlng = new google.maps.LatLng(44.637907, -70.130541);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -122,6 +123,8 @@ function initMap() {
     var lhw_info = "<strong>Specialty Window Maker</strong><br/>" + "Berwick, ME";
     
     var armor_info = "<strong>Armored Vehicle Manufacturer</strong><br/>" + "Pittsfield, MA";
+    
+    var blue_info = "<strong>High School Composite Shop</strong><br/>" + "Farmington, ME";
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
@@ -265,6 +268,10 @@ function initMap() {
     
     var armor_infowindow = new google.maps.InfoWindow({
         content: armor_info
+    });
+    
+    var blue_infowindow = new google.maps.InfoWindow({
+        content: blue_info
     });
 
 
@@ -485,6 +492,12 @@ function initMap() {
         title: 'Armored Vehicle Maker'
     });
     
+    var blue_marker = new google.maps.Marker({
+        position: blue_latlng,
+        map: harvard_yard_map,
+        title: 'High School Composite Shop'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -627,6 +640,10 @@ function initMap() {
     
     google.maps.event.addListener(armor_marker, 'click', function () {
         armor_infowindow.open(harvard_yard_map, armor_marker);
+    });
+    
+    google.maps.event.addListener(blue_marker, 'click', function () {
+        blue_infowindow.open(harvard_yard_map, blue_marker);
     });
 
 
