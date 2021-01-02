@@ -183,7 +183,7 @@ function initMap() {
 
     var icon = {
         url:"http://maps.google.com/mapfiles/ms/icons/blue-dot.png", // url
-        scaledSize: new google.maps.Size(50, 50), // size
+        scaledSize: new google.maps.Size(25, 25), // size
     };
     
 
