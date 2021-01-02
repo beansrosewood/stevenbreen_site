@@ -43,6 +43,7 @@ function initMap() {
     var lhw_latlng = new google.maps.LatLng(43.290414, -70.866669);
     var armor_latlng = new google.maps.LatLng(42.437260, -73.294348);
     var blue_latlng = new google.maps.LatLng(44.637907, -70.130541);
+    var pmi_latlng = new google.maps.LatLng(41.990884, -71.485394);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -125,6 +126,8 @@ function initMap() {
     var armor_info = "<strong>Armored Vehicle Manufacturer</strong><br/>" + "Pittsfield, MA";
     
     var blue_info = "<strong>High School Composite Shop</strong><br/>" + "Farmington, ME";
+    
+    var pmi_info = "<strong>Injection Moulder</strong><br/>" + "Woonsocket, RI";
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
@@ -272,6 +275,10 @@ function initMap() {
     
     var blue_infowindow = new google.maps.InfoWindow({
         content: blue_info
+    });
+    
+    var pmi_infowindow = new google.maps.InfoWindow({
+        content: pmi_info
     });
 
 
@@ -498,6 +505,12 @@ function initMap() {
         title: 'High School Composite Shop'
     });
     
+    var pmi_marker = new google.maps.Marker({
+        position: pmi_latlng,
+        map: harvard_yard_map,
+        title: 'Injection Moulder'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -644,6 +657,10 @@ function initMap() {
     
     google.maps.event.addListener(blue_marker, 'click', function () {
         blue_infowindow.open(harvard_yard_map, blue_marker);
+    });
+    
+    google.maps.event.addListener(pmi_marker, 'click', function () {
+        pmi_infowindow.open(harvard_yard_map, pmi_marker);
     });
 
 
