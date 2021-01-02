@@ -41,6 +41,7 @@ function initMap() {
     var mag_latlng = new google.maps.LatLng(42.785904, -71.119374);
     var adan_latlng = new google.maps.LatLng(43.770140, -72.757891);
     var lhw_latlng = new google.maps.LatLng(43.290414, -70.866669);
+    var armor_latlng = new google.maps.LatLng(42.437260, -73.294348);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -119,6 +120,8 @@ function initMap() {
     var adan_info = "<strong>Animatronic Fabricator</strong><br/>" + "Stockbridge, VT";
     
     var lhw_info = "<strong>Specialty Window Maker</strong><br/>" + "Berwick, ME";
+    
+    var armor_info = "<strong>Armored Vehicle Manufacturer</strong><br/>" + "Pittsfield, MA";
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
@@ -258,6 +261,10 @@ function initMap() {
     
     var lhw_infowindow = new google.maps.InfoWindow({
         content: lhw_info
+    });
+    
+    var armor_infowindow = new google.maps.InfoWindow({
+        content: armor_info
     });
 
 
@@ -472,6 +479,12 @@ function initMap() {
         title: 'Custom Window Fabrication'
     });
     
+    var armor_marker = new google.maps.Marker({
+        position: armor_latlng,
+        map: harvard_yard_map,
+        title: 'Armored Vehicle Maker'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -610,6 +623,10 @@ function initMap() {
     
     google.maps.event.addListener(lhw_marker, 'click', function () {
         lhw_infowindow.open(harvard_yard_map, lhw_marker);
+    });
+    
+    google.maps.event.addListener(armor_marker, 'click', function () {
+        armor_infowindow.open(harvard_yard_map, armor_marker);
     });
 
 
