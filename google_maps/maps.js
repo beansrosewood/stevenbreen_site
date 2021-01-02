@@ -36,6 +36,8 @@ function initMap() {
     var helmet_latlng = new google.maps.LatLng(44.945014, -72.181452);
     var smyth_latlng = new google.maps.LatLng(41.966103, -72.457108);
     var corcon_latlng = new google.maps.LatLng(43.898568, -71.145521);
+    var plp_latlng = new google.maps.LatLng();
+    var protk_latlng = new google.maps.LatLng();
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -104,6 +106,10 @@ function initMap() {
     var smyth_info = "<strong>Truck Collision Repair</strong><br/>" + "Somers, CT";
     
     var corcon_info = "<strong>Luxury Home Builder</strong><br/>" + "Madison, NH";
+    
+    var plp_info = "<strong>Composite Pole Fabrication</strong><br/>" + "Fitzwilliam, NH";
+    
+    var protk_info = "<strong>Sheet Metal Fabricator</strong><br/>" + "Contoocook, NH";
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
@@ -223,6 +229,14 @@ function initMap() {
     
     var corcon_infowindow = new google.maps.InfoWindow({
         content: corcon_info
+    });
+    
+    var plp_infowindow = new google.maps.InfoWindow({
+        content: plp_info
+    });
+    
+    var protk_infowindow = new google.maps.InfoWindow({
+        content: protk_info
     });
 
 
@@ -407,6 +421,18 @@ function initMap() {
         title: 'Cabinet Maker'
     });
     
+    var plp_marker = new google.maps.Marker({
+        position: plp_latlng,
+        map: harvard_yard_map,
+        title: 'Composite Flag Pole Maker'
+    });
+    
+    var protk_marker = new google.maps.Marker({
+        position: protk_latlng,
+        map: harvard_yard_map,
+        title: 'Sheet Metal Fabricator'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -525,6 +551,14 @@ function initMap() {
     
     google.maps.event.addListener(corcon_marker, 'click', function () {
         corcon_infowindow.open(harvard_yard_map, corcon_marker);
+    });
+    
+    google.maps.event.addListener(plp_marker, 'click', function () {
+        plp_infowindow.open(harvard_yard_map, plp_marker);
+    });
+    
+    google.maps.event.addListener(protk_marker, 'click', function () {
+        protk_infowindow.open(harvard_yard_map, protk_marker);
     });
 
 
