@@ -34,7 +34,7 @@ function initMap() {
     var pfe_latlng = new google.maps.LatLng(42.563881, -72.284395);
     var carmax_latlng = new google.maps.LatLng(41.787196, -72.663188);
     var helmet_latlng = new google.maps.LatLng(44.945014, -72.181452);
-    var smyth_latlng = new google.maps.LatLng();
+    var smyth_latlng = new google.maps.LatLng(41.966103, -72.457108);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
