@@ -49,13 +49,16 @@ function initMap() {
     var roche_latlng = new google.maps.LatLng(42.625940, -71.279806);
     var prescott_latlng = new google.maps.LatLng(43.466601, -70.492612);
     var crafts_latlng = new google.maps.LatLng(41.005824, -73.652228);
-    var mag_latlng = new google.maps.LatLng(40.707198, -73.397274);
+    var led_latlng = new google.maps.LatLng(40.707198, -73.397274);
     var devens_latlng = new google.maps.LatLng(42.549341, -71.587669);
     var radar_latlng = new google.maps.LatLng(42.418666, -71.539954);
     var jmd_latlng = new google.maps.LatLng(42.781839, -71.381889);
     var metal_latlng = new google.maps.LatLng(42.920801, -71.431559);
     var wrta_latlng = new google.maps.LatLng(42.249439, -71.805393);
     var hm_latlng = new google.maps.LatLng(42.804961, -71.580074);
+    var rim_latlng = new google.maps.LatLng(42.674921, -71.444507);
+    var mac_latlng = new google.maps.LatLng(42.568785, -71.988990);
+    var therm_latlng = new google.maps.LatLng(42.558925, -71.615833);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -151,7 +154,7 @@ function initMap() {
     
     var crafts_info = "<strong>Light Fixture Fabricator</strong><br/>" + "Greenwich, CT";
     
-    var mag_info = "<strong>Light Fixture Fabricator</strong><br/>" + "Amityville, NY";
+    var led_info = "<strong>Light Fixture Fabricator</strong><br/>" + "Amityville, NY";
     
     var devens_info = "<strong>Army National Guard</strong><br/>" + "Equipment Refurbishment Shop<br/>" + "Amityville, NY";
     
@@ -164,6 +167,12 @@ function initMap() {
     var wrta_info = "<strong>Worcester Regional Transit Authority</strong><br/>" + "Bus Maintainance Facility<br/>" + "Worcester, MA";
     
     var hm_info = "<strong>Sheet Metal Fabricator</strong><br/>" + "Amherst, NH";
+    
+    var rim_info = "<strong>Vehicle Wheel Refinisher</strong><br/>" + "Tyngsborough, MA";
+    
+    var mac_info = "<strong>Prototype Fabricator</strong><br/>" + "Gardner, MA";
+    
+    var therm_info = "<strong>Plastics Fab Shop</strong><br/>" + "Shirley, MA";
 
 
 
@@ -340,8 +349,8 @@ function initMap() {
         content: crafts_info
     });
     
-    var mag_infowindow = new google.maps.InfoWindow({
-        content: mag_info
+    var led_infowindow = new google.maps.InfoWindow({
+        content: led_info
     });
     
     var devens_infowindow = new google.maps.InfoWindow({
@@ -366,6 +375,18 @@ function initMap() {
     
     var hm_infowindow = new google.maps.InfoWindow({
         content: hm_info
+    });
+    
+    var rim_infowindow = new google.maps.InfoWindow({
+        content: rim_info
+    });
+    
+    var mac_infowindow = new google.maps.InfoWindow({
+        content: mac_info
+    });
+    
+    var therm_infowindow = new google.maps.InfoWindow({
+        content: therm_info
     });
 
 
@@ -628,8 +649,8 @@ function initMap() {
         title: 'Lighting Fabricator'
     });
     
-    var mag_marker = new google.maps.Marker({
-        position: mag_latlng,
+    var led_marker = new google.maps.Marker({
+        position: led_latlng,
         map: harvard_yard_map,
         title: 'Lighting Manufacturer'
     });
@@ -668,6 +689,24 @@ function initMap() {
         position: hm_latlng,
         map: harvard_yard_map,
         title: 'Sheet Metal Fabber'
+    });
+    
+    var rim_marker = new google.maps.Marker({
+        position: rim_latlng,
+        map: harvard_yard_map,
+        title: 'Rim Refinisher'
+    });
+    
+    var mac_marker = new google.maps.Marker({
+        position: mac_latlng,
+        map: harvard_yard_map,
+        title: 'Prototype Fab Shop'
+    });
+    
+    var therm_marker = new google.maps.Marker({
+        position: therm_latlng,
+        map: harvard_yard_map,
+        title: 'Plastics Fabricator'
     });
     
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
@@ -842,8 +881,8 @@ function initMap() {
         crafts_infowindow.open(harvard_yard_map, crafts_marker);
     });
     
-    google.maps.event.addListener(mag_marker, 'click', function () {
-        mag_infowindow.open(harvard_yard_map, mag_marker);
+    google.maps.event.addListener(led_marker, 'click', function () {
+        led_infowindow.open(harvard_yard_map, led_marker);
     });
     
     google.maps.event.addListener(devens_marker, 'click', function () {
@@ -863,11 +902,23 @@ function initMap() {
     });
     
     google.maps.event.addListener(wrta_marker, 'click', function () {
-        wtra_infowindow.open(harvard_yard_map, wrta_marker);
+        wrta_infowindow.open(harvard_yard_map, wrta_marker);
     });
     
     google.maps.event.addListener(hm_marker, 'click', function () {
         hm_infowindow.open(harvard_yard_map, hm_marker);
+    });
+    
+    google.maps.event.addListener(rim_marker, 'click', function () {
+        rim_infowindow.open(harvard_yard_map, rim_marker);
+    });
+    
+    google.maps.event.addListener(mac_marker, 'click', function () {
+        mac_infowindow.open(harvard_yard_map, mac_marker);
+    });
+    
+    google.maps.event.addListener(therm_marker, 'click', function () {
+        therm_infowindow.open(harvard_yard_map, therm_marker);
     });
 
 
