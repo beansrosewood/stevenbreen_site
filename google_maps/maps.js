@@ -36,7 +36,7 @@ function initMap() {
     var helmet_latlng = new google.maps.LatLng(44.945014, -72.181452);
     var mapOptions = {
         zoom: 7,
-        center: new google.maps.LatLng(42.623404, -75.820153),
+        center: new google.maps.LatLng(42.85226761, -75.75546543),
         mapTypeId: 'hybrid'
     };
     harvard_yard_map = new google.maps.Map(document.getElementById('map-canvas'),
