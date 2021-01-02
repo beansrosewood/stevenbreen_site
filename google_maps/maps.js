@@ -35,6 +35,7 @@ function initMap() {
     var carmax_latlng = new google.maps.LatLng(41.787196, -72.663188);
     var helmet_latlng = new google.maps.LatLng(44.945014, -72.181452);
     var smyth_latlng = new google.maps.LatLng(41.966103, -72.457108);
+    var corcon_latlng = new google.maps.LatLng(43.898568, -71.145521);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -101,6 +102,8 @@ function initMap() {
     var helmet_info = "<strong>Military Helmet Manufacturer</strong><br/>" + "Newport, VT";
     
     var smyth_info = "<strong>Truck Collision Repair</strong><br/>" + "Somers, CT";
+    
+    var corcon_info = "<strong>Luxury Home Builder</strong><br/>" + "Madison, NH";
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
@@ -216,6 +219,10 @@ function initMap() {
     
     var smyth_infowindow = new google.maps.InfoWindow({
         content: smyth_info
+    });
+    
+    var corcon_infowindow = new google.maps.InfoWindow({
+        content: corcon_info
     });
 
 
@@ -394,6 +401,12 @@ function initMap() {
         title: 'Heavy Collision Repair'
     });
     
+    var corcon_marker = new google.maps.Marker({
+        position: corcon_latlng,
+        map: harvard_yard_map,
+        title: 'Cabinet Maker'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -509,5 +522,10 @@ function initMap() {
     google.maps.event.addListener(smyth_marker, 'click', function () {
         smyth_infowindow.open(harvard_yard_map, smyth_marker);
     });
+    
+    google.maps.event.addListener(corcon_marker, 'click', function () {
+        corcon_infowindow.open(harvard_yard_map, corcon_marker);
+    });
+
 
 }
