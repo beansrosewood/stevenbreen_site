@@ -50,7 +50,10 @@ function initMap() {
     var prescott_latlng = new google.maps.LatLng(43.466601, -70.492612);
     var crafts_latlng = new google.maps.LatLng(41.005824, -73.652228);
     var mag_latlng = new google.maps.LatLng(40.707198, -73.397274);
-    var devens_latlng = new google.maps.LatLng();
+    var devens_latlng = new google.maps.LatLng(42.549341, -71.587669);
+    var radar_latlng = new google.maps.LatLng(42.418666, -71.539954);
+    var jmd_latlng = new google.maps.LatLng(42.781839, -71.381889);
+    var metal_latlng = new google.maps.LatLng(42.920801, -71.431559);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -149,6 +152,15 @@ function initMap() {
     var mag_info = "<strong>Light Fixture Fabricator</strong><br/>" + "Amityville, NY";
     
     var devens_info = "<strong>Army National Guard</strong><br/>" + "Equipment Refurbishment Shop<br/>" + "Amityville, NY";
+    
+    var radar_info = "<strong>Radar Dome Fabricator</strong><br/>" + "Stow, MA";
+    
+    var jmd_info = "<strong>Metal Plater</strong><br/>" + "Hudson, NH";
+    
+    var metal_info = "<strong>Sheet Metal Fabricator</strong><br/>" + "Londonderry, NH";
+
+
+
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
@@ -328,6 +340,18 @@ function initMap() {
     
     var devens_infowindow = new google.maps.InfoWindow({
         content: devens_info
+    });
+    
+    var radar_infowindow = new google.maps.InfoWindow({
+        content: radar_info
+    });
+    
+    var jmd_infowindow = new google.maps.InfoWindow({
+        content: jmd_info
+    });
+    
+    var metal_infowindow = new google.maps.InfoWindow({
+        content: metal_info
     });
 
 
@@ -602,6 +626,24 @@ function initMap() {
         title: 'Army Paint Shop'
     });
     
+    var radar_marker = new google.maps.Marker({
+        position: radar_latlng,
+        map: harvard_yard_map,
+        title: 'Radar Dome Maker'
+    });
+    
+    var jmd_marker = new google.maps.Marker({
+        position: jmd_latlng,
+        map: harvard_yard_map,
+        title: 'Metal Plater'
+    });
+    
+    var metal_marker = new google.maps.Marker({
+        position: metal_latlng,
+        map: harvard_yard_map,
+        title: 'Sheet Metal Fab Shop'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -780,6 +822,18 @@ function initMap() {
     
     google.maps.event.addListener(devens_marker, 'click', function () {
         devens_infowindow.open(harvard_yard_map, devens_marker);
+    });
+    
+    google.maps.event.addListener(radar_marker, 'click', function () {
+        radar_infowindow.open(harvard_yard_map, radar_marker);
+    });
+    
+    google.maps.event.addListener(jmd_marker, 'click', function () {
+        jmd_infowindow.open(harvard_yard_map, jmd_marker);
+    });
+    
+    google.maps.event.addListener(metal_marker, 'click', function () {
+        metal_infowindow.open(harvard_yard_map, metal_marker);
     });
 
 
