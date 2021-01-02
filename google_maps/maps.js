@@ -45,6 +45,10 @@ function initMap() {
     var blue_latlng = new google.maps.LatLng(44.637907, -70.130541);
     var pmi_latlng = new google.maps.LatLng(41.990884, -71.485394);
     var eb_latlng = new google.maps.LatLng(41.587184, -71.414170);
+    var tba_latlng = new google.maps.LatLng(43.207524, -71.487582);
+    var roche_latlng = new google.maps.LatLng(42.625940, -71.279806);
+    var prescott_latlng = new google.maps.LatLng(43.466601, -70.492612);
+    var crafts_latlng = new google.maps.LatLng(41.005824, -73.652228);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -131,6 +135,14 @@ function initMap() {
     var pmi_info = "<strong>Injection Moulder</strong><br/>" + "Woonsocket, RI";
     
     var eb_info = "<strong>General Dynamics</strong><br/>" + "Electric Boat</br>" + "Quonset Point, RI";
+    
+    var tba_info = "<strong>Powder Coating Shop</strong><br/>" + "Concord, NH";
+    
+    var roche_info = "<strong>Steel Barrel Manufacturer</strong><br/>" + "Lowell, MA";
+    
+    var prescott_info = "<strong>Sheet Metal Fabricator</strong><br/>" + "Biddeford, ME";
+    
+    var crafts_info = "<strong>Light Fixture Fabricator</strong><br/>" + "Greenwich, CT";
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
@@ -286,6 +298,22 @@ function initMap() {
     
     var eb_infowindow = new google.maps.InfoWindow({
         content: eb_info
+    });
+    
+    var tba_infowindow = new google.maps.InfoWindow({
+        content: tba_info
+    });
+    
+    var roche_infowindow = new google.maps.InfoWindow({
+        content: roche_info
+    });
+    
+    var prescott_infowindow = new google.maps.InfoWindow({
+        content: prescott_info
+    });
+    
+    var crafts_infowindow = new google.maps.InfoWindow({
+        content: crafts_info
     });
 
 
@@ -524,6 +552,30 @@ function initMap() {
         title: 'Electric Boat'
     });
     
+    var tba_marker = new google.maps.Marker({
+        position: tba_latlng,
+        map: harvard_yard_map,
+        title: 'Powder Coater'
+    });
+    
+    var roche_marker = new google.maps.Marker({
+        position: roche_latlng,
+        map: harvard_yard_map,
+        title: 'Barrel Manufacture'
+    });
+    
+    var prescott_marker = new google.maps.Marker({
+        position: prescott_latlng,
+        map: harvard_yard_map,
+        title: 'Metal Shop'
+    });
+    
+    var crafts_marker = new google.maps.Marker({
+        position: crafts_latlng,
+        map: harvard_yard_map,
+        title: 'Lighting Fabricator'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -679,6 +731,23 @@ function initMap() {
     google.maps.event.addListener(eb_marker, 'click', function () {
         eb_infowindow.open(harvard_yard_map, eb_marker);
     });
+    
+    google.maps.event.addListener(tba_marker, 'click', function () {
+        tba_infowindow.open(harvard_yard_map, tba_marker);
+    });
+    
+    google.maps.event.addListener(roche_marker, 'click', function () {
+        roche_infowindow.open(harvard_yard_map, roche_marker);
+    });
+    
+    google.maps.event.addListener(prescott_marker, 'click', function () {
+        prescott_infowindow.open(harvard_yard_map, prescott_marker);
+    });
+    
+    google.maps.event.addListener(crafts_marker, 'click', function () {
+        crafts_infowindow.open(harvard_yard_map, crafts_marker);
+    });
+
 
 
 }
