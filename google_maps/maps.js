@@ -54,7 +54,7 @@ function initMap() {
         mapOptions);
 
     var fort_drum_info = "<strong>Fort Drum Aerospace Reset Contractor</strong><br/>" +
-        "<a href='https://home.army.mil/drum/index.php'>Helicopter Re-Manurfacturing</a>";
+        "<a href='https://home.army.mil/drum/index.php'>Blackhawk Helicopter Re-Manufacturing</a>";
 
     var northwest_info = "<strong>Northwest Science Building</strong><br/>" + "Latitude: 42.3795462<br/>" + "Longitude: -71.1156024";
 
@@ -78,11 +78,11 @@ function initMap() {
 
     var saratoga_info = "<strong>Job Fab Shop</strong><br/>" + "Saratoga Springs, NY";
 
-    var whelen_info = "<strong>Emergency Equipment Manurfacturer</strong><br/>" + "Charlestown, NH";
+    var whelen_info = "<strong>Emergency Equipment Manufacturer</strong><br/>" + "Charlestown, NH";
 
     var boat_info = "<strong>Luxury Yacht Builder</strong><br/>" + "Richmond, ME";
 
-    var mex_info = "<strong>OEM Volkswagon Parts Manurfaturer</strong><br/>" + "Puebla, Mexico";
+    var mex_info = "<strong>OEM Volkswagon Parts Manufacturer</strong><br/>" + "Puebla, Mexico";
 
     var pei_info = "<strong>Progressive Energy</strong><br/>" + "Bedford, NH Corporate Office<br/>" + "<a href='https://progressiveenergy.com'>PEI.Com</a>";
     
