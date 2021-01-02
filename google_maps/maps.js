@@ -40,6 +40,7 @@ function initMap() {
     var protk_latlng = new google.maps.LatLng(43.212682, -71.724145);
     var mag_latlng = new google.maps.LatLng(42.785904, -71.119374);
     var adan_latlng = new google.maps.LatLng(43.770140, -72.757891);
+    var lhw_latlng = new google.maps.LatLng();
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -116,6 +117,8 @@ function initMap() {
     var mag_info = "<strong>Jet Engine Manufacturer</strong><br/>" + "Haverhill, MA";
     
     var adan_info = "<strong>Animatronic Fabricator</strong><br/>" + "Stockbridge, VT";
+    
+    var lhw_info = "<strong>Specialty Window Maker</strong><br/>" + "Berwick, ME";
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
@@ -251,6 +254,10 @@ function initMap() {
     
     var adan_infowindow = new google.maps.InfoWindow({
         content: adan_info
+    });
+    
+    var lhw_infowindow = new google.maps.InfoWindow({
+        content: lhw_info
     });
 
 
@@ -459,6 +466,12 @@ function initMap() {
         title: 'Animatronic System Fabricator'
     });
     
+    var lhw_marker = new google.maps.Marker({
+        position: lhw_latlng,
+        map: harvard_yard_map,
+        title: 'Custom Window Fabrication'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -593,6 +606,10 @@ function initMap() {
     
     google.maps.event.addListener(adan_marker, 'click', function () {
         adan_infowindow.open(harvard_yard_map, adan_marker);
+    });
+    
+    google.maps.event.addListener(lhw_marker, 'click', function () {
+        lhw_infowindow.open(harvard_yard_map, lhw_marker);
     });
 
 
