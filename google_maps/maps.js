@@ -50,6 +50,7 @@ function initMap() {
     var prescott_latlng = new google.maps.LatLng(43.466601, -70.492612);
     var crafts_latlng = new google.maps.LatLng(41.005824, -73.652228);
     var mag_latlng = new google.maps.LatLng(40.707198, -73.397274);
+    var devens_latlng = new google.maps.LatLng();
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -135,7 +136,7 @@ function initMap() {
     
     var pmi_info = "<strong>Injection Moulder</strong><br/>" + "Woonsocket, RI";
     
-    var eb_info = "<strong>General Dynamics</strong><br/>" + "Electric Boat</br>" + "Quonset Point, RI";
+    var eb_info = "<strong>General Dynamics</strong><br/>" + "Electric Boat<br/>" + "Quonset Point, RI";
     
     var tba_info = "<strong>Powder Coating Shop</strong><br/>" + "Concord, NH";
     
@@ -146,6 +147,8 @@ function initMap() {
     var crafts_info = "<strong>Light Fixture Fabricator</strong><br/>" + "Greenwich, CT";
     
     var mag_info = "<strong>Light Fixture Fabricator</strong><br/>" + "Amityville, NY";
+    
+    var devens_info = "<strong>Army National Guard</strong><br/>" + "Equipment Refurbishment Shop<br/>" + "Amityville, NY";
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
@@ -321,6 +324,10 @@ function initMap() {
     
     var mag_infowindow = new google.maps.InfoWindow({
         content: mag_info
+    });
+    
+    var devens_infowindow = new google.maps.InfoWindow({
+        content: devens_info
     });
 
 
@@ -589,6 +596,12 @@ function initMap() {
         title: 'Lighting Manufacturer'
     });
     
+    var devens_marker = new google.maps.Marker({
+        position: devens_latlng,
+        map: harvard_yard_map,
+        title: 'Army Paint Shop'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -763,6 +776,10 @@ function initMap() {
     
     google.maps.event.addListener(mag_marker, 'click', function () {
         mag_infowindow.open(harvard_yard_map, mag_marker);
+    });
+    
+    google.maps.event.addListener(devens_marker, 'click', function () {
+        devens_infowindow.open(harvard_yard_map, devens_marker);
     });
 
 
