@@ -49,6 +49,7 @@ function initMap() {
     var roche_latlng = new google.maps.LatLng(42.625940, -71.279806);
     var prescott_latlng = new google.maps.LatLng(43.466601, -70.492612);
     var crafts_latlng = new google.maps.LatLng(41.005824, -73.652228);
+    var mag_latlng = new google.maps.LatLng(40.707198, -73.397274);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -143,6 +144,8 @@ function initMap() {
     var prescott_info = "<strong>Sheet Metal Fabricator</strong><br/>" + "Biddeford, ME";
     
     var crafts_info = "<strong>Light Fixture Fabricator</strong><br/>" + "Greenwich, CT";
+    
+    var mag_info = "<strong>Light Fixture Fabricator</strong><br/>" + "Amityville, NY";
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
@@ -314,6 +317,10 @@ function initMap() {
     
     var crafts_infowindow = new google.maps.InfoWindow({
         content: crafts_info
+    });
+    
+    var mag_infowindow = new google.maps.InfoWindow({
+        content: mag_info
     });
 
 
@@ -576,6 +583,12 @@ function initMap() {
         title: 'Lighting Fabricator'
     });
     
+    var mag_marker = new google.maps.Marker({
+        position: mag_latlng,
+        map: harvard_yard_map,
+        title: 'Lighting Manufacturer'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -746,6 +759,10 @@ function initMap() {
     
     google.maps.event.addListener(crafts_marker, 'click', function () {
         crafts_infowindow.open(harvard_yard_map, crafts_marker);
+    });
+    
+    google.maps.event.addListener(mag_marker, 'click', function () {
+        mag_infowindow.open(harvard_yard_map, mag_marker);
     });
 
 
