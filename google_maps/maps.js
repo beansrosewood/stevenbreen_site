@@ -33,6 +33,7 @@ function initMap() {
     var evs_latlng = new google.maps.LatLng(42.916349, -72.259066);
     var pfe_latlng = new google.maps.LatLng(42.563881, -72.284395);
     var carmax_latlng = new google.maps.LatLng(41.787196, -72.663188);
+    var helmet_latlng = new google.maps.LatLng(44.945014, -72.181452);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.623404, -75.820153),
@@ -84,7 +85,7 @@ function initMap() {
     
     var steel_info = "<strong>Steel Fabricator</strong><br/>" + "Allentown, PA";
 
-    var forest_info = "<strong>Institutional Furniture Manurfacturer</strong><br/>" + "Forestdale, VT";
+    var forest_info = "<strong>Institutional Furniture Manufacturer</strong><br/>" + "Forestdale, VT";
     
     var geno_info = "<strong>Auto Body Repair</strong><br/>" + "Chicopee, MA";
     
@@ -95,6 +96,8 @@ function initMap() {
     var pfe_info = "<strong>Roll Machine Shop</strong><br/>" + "Orange, MA";
     
     var carmax_info = "<strong>Auto Super Store</strong><br/>" + "Hartford, CT";
+    
+    var helmet_info = "<strong>Military Helmet Manufacturer</strong><br/>" + "Newport, VT";
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
@@ -202,6 +205,10 @@ function initMap() {
     
     var carmax_infowindow = new google.maps.InfoWindow({
         content: carmax_info
+    });
+    
+    var helmet_infowindow = new google.maps.InfoWindow({
+        content: helmet_info
     });
 
 
@@ -368,6 +375,12 @@ function initMap() {
         title: 'Automotive Super Store'
     });
     
+    var helmet_marker = new google.maps.Marker({
+        position: helmet_latlng,
+        map: harvard_yard_map,
+        title: 'Kevlar Helmet Maker'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -474,6 +487,10 @@ function initMap() {
     
     google.maps.event.addListener(carmax_marker, 'click', function () {
         carmax_infowindow.open(harvard_yard_map, carmax_marker);
+    });
+    
+    google.maps.event.addListener(helmet_marker, 'click', function () {
+        helmet_infowindow.open(harvard_yard_map, helmet_marker);
     });
 
 }
