@@ -40,7 +40,7 @@ function initMap() {
     var protk_latlng = new google.maps.LatLng(43.212682, -71.724145);
     var mag_latlng = new google.maps.LatLng(42.785904, -71.119374);
     var adan_latlng = new google.maps.LatLng(43.770140, -72.757891);
-    var lhw_latlng = new google.maps.LatLng();
+    var lhw_latlng = new google.maps.LatLng(43.290414, -70.866669);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
