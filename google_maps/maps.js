@@ -180,7 +180,9 @@ function initMap() {
     
     var set_info = "<strong>Studio Set Fabricator</strong><br/>" + "Norwood, MA";
 
-
+    
+    
+    /* This var is for the map icon style/size */
     var icon = {
         url:"http://maps.google.com/mapfiles/ms/icons/blue-dot.png", // url
         scaledSize: new google.maps.Size(25, 25), // size
