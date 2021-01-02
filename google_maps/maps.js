@@ -34,6 +34,7 @@ function initMap() {
     var pfe_latlng = new google.maps.LatLng(42.563881, -72.284395);
     var carmax_latlng = new google.maps.LatLng(41.787196, -72.663188);
     var helmet_latlng = new google.maps.LatLng(44.945014, -72.181452);
+    var smyth_latlng = new google.maps.LatLng();
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -98,6 +99,8 @@ function initMap() {
     var carmax_info = "<strong>Auto Super Store</strong><br/>" + "Hartford, CT";
     
     var helmet_info = "<strong>Military Helmet Manufacturer</strong><br/>" + "Newport, VT";
+    
+    var smyth_info = "<strong>Truck Collision Repair</strong><br/>" + "Somers, CT";
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
@@ -209,6 +212,10 @@ function initMap() {
     
     var helmet_infowindow = new google.maps.InfoWindow({
         content: helmet_info
+    });
+    
+    var smyth_infowindow = new google.maps.InfoWindow({
+        content: smyth_info
     });
 
 
@@ -381,6 +388,12 @@ function initMap() {
         title: 'Kevlar Helmet Maker'
     });
     
+     var smyth_marker = new google.maps.Marker({
+        position: smyth_latlng,
+        map: harvard_yard_map,
+        title: 'Heavy Collision Repair'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -491,6 +504,10 @@ function initMap() {
     
     google.maps.event.addListener(helmet_marker, 'click', function () {
         helmet_infowindow.open(harvard_yard_map, helmet_marker);
+    });
+    
+    google.maps.event.addListener(smyth_marker, 'click', function () {
+        smyth_infowindow.open(harvard_yard_map, smyth_marker);
     });
 
 }
