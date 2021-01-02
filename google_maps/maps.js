@@ -39,6 +39,7 @@ function initMap() {
     var plp_latlng = new google.maps.LatLng(42.763989, -72.151933);
     var protk_latlng = new google.maps.LatLng(43.212682, -71.724145);
     var mag_latlng = new google.maps.LatLng(42.785904, -71.119374);
+    var adan_latlng = new google.maps.LatLng(43.770140, -72.757891);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -113,6 +114,8 @@ function initMap() {
     var protk_info = "<strong>Sheet Metal Fabricator</strong><br/>" + "Contoocook, NH";
     
     var mag_info = "<strong>Jet Engine Manufacturer</strong><br/>" + "Haverhill, MA";
+    
+    var adan_info = "<strong>Animatronic Fabricator</strong><br/>" + "Stockbridge, VT";
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
@@ -244,6 +247,10 @@ function initMap() {
     
     var mag_infowindow = new google.maps.InfoWindow({
         content: mag_info
+    });
+    
+    var adan_infowindow = new google.maps.InfoWindow({
+        content: adan_info
     });
 
 
@@ -446,6 +453,12 @@ function initMap() {
         title: 'Jet Engine Maker'
     });
     
+    var adan_marker = new google.maps.Marker({
+        position: adan_latlng,
+        map: harvard_yard_map,
+        title: 'Animatronic System Fabricator'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -576,6 +589,10 @@ function initMap() {
     
     google.maps.event.addListener(mag_marker, 'click', function () {
         mag_infowindow.open(harvard_yard_map, mag_marker);
+    });
+    
+    google.maps.event.addListener(adan_marker, 'click', function () {
+        adan_infowindow.open(harvard_yard_map, adan_marker);
     });
 
 
