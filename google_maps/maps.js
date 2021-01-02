@@ -181,6 +181,11 @@ function initMap() {
     var set_info = "<strong>Studio Set Fabricator</strong><br/>" + "Norwood, MA";
 
 
+    var icon = {
+        url: "'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'", // url
+        scaledSize: new google.maps.Size(50, 50), // size
+    };
+    
 
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
@@ -432,7 +437,8 @@ function initMap() {
     var berlin_city_marker = new google.maps.Marker({
         position: berlin_city_latlng,
         map: harvard_yard_map,
-        title: 'Automotive Dealer/Finisher'
+        title: 'Automotive Dealer/Finisher',
+        icon: icon
     });
 
     var cil_marker = new google.maps.Marker({
