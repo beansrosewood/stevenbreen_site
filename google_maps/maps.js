@@ -65,6 +65,9 @@ function initMap() {
     var kab_latlng = new google.maps.LatLng(42.004672, -70.757951);
     var bms_latlng = new google.maps.LatLng(43.154587, -73.690920);
     var cwt_latlng = new google.maps.LatLng(41.669950, -72.787610);
+    var ag_latlng = new google.maps.LatLng(42.832954, -70.962489);
+    var nw_latlng = new google.maps.LatLng(42.586836, -71.305596);
+    var gfs_latlng = new google.maps.LatLng(44.581854, -91.204141);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -191,6 +194,12 @@ function initMap() {
     var bms_info = "<strong>Metal Fabrication Shop</strong><br/>" + "Gansevoort, NY";
     
     var cwt_info = "<strong>Water Treatment Plant</strong><br/>" + "New Britain, CT";
+    
+    var ag_info = "<strong>Industrial Silkscreener</strong><br/>" + "Amesbury, MA";
+    
+    var nw_info = "<strong>Norris Wiener, Inc.</strong><br/>" + "Finishing Equipment Supplier<br/>" + "North Billerica, MA";
+    
+    var gfs_info = "<strong>Global Finishing Solutions</strong><br/>" + "Finishing Equipment Manufacturer<br/>" + "Osseo, WI";
 
     
     
@@ -436,6 +445,18 @@ function initMap() {
     
     var cwt_infowindow = new google.maps.InfoWindow({
         content: cwt_info
+    });
+    
+    var ag_infowindow = new google.maps.InfoWindow({
+        content: ag_info
+    });
+    
+    var nw_infowindow = new google.maps.InfoWindow({
+        content: nw_info
+    });
+    
+    var gfs_infowindow = new google.maps.InfoWindow({
+        content: gfs_info
     });
 
 
@@ -795,6 +816,24 @@ function initMap() {
         title: 'Treatment Plant'
     });
     
+    var ag_marker = new google.maps.Marker({
+        position: ag_latlng,
+        map: harvard_yard_map,
+        title: 'Silkscreener'
+    });
+    
+    var nw_marker = new google.maps.Marker({
+        position: nw_latlng,
+        map: harvard_yard_map,
+        title: 'Equipment Supplier'
+    });
+    
+    var gfs_marker = new google.maps.Marker({
+        position: gfs_latlng,
+        map: harvard_yard_map,
+        title: 'Manufacturer'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -1029,6 +1068,18 @@ function initMap() {
     
     google.maps.event.addListener(cwt_marker, 'click', function () {
         cwt_infowindow.open(harvard_yard_map, cwt_marker);
+    });
+    
+    google.maps.event.addListener(ag_marker, 'click', function () {
+        ag_infowindow.open(harvard_yard_map, ag_marker);
+    });
+    
+    google.maps.event.addListener(nw_marker, 'click', function () {
+        nw_infowindow.open(harvard_yard_map, nw_marker);
+    });
+    
+    google.maps.event.addListener(gfs_marker, 'click', function () {
+        gfs_infowindow.open(harvard_yard_map, gfs_marker);
     });
 
 
