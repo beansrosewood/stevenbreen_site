@@ -64,6 +64,7 @@ function initMap() {
     var pine_latlng = new google.maps.LatLng(44.264209, -69.156833);
     var kab_latlng = new google.maps.LatLng(42.004672, -70.757951);
     var bms_latlng = new google.maps.LatLng(43.154587, -73.690920);
+    var cwt_latlng = new google.maps.LatLng(41.669950, -72.787610);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -188,6 +189,8 @@ function initMap() {
     var kab_info = "<strong>Auto Body Repair</strong><br/>" + "Kingston, MA";
     
     var bms_info = "<strong>Metal Fabrication Shop</strong><br/>" + "Gansevoort, NY";
+    
+    var cwt_info = "<strong>Water Treatment Plant</strong><br/>" + "New Britain, CT";
 
     
     
@@ -429,6 +432,10 @@ function initMap() {
     
     var bms_infowindow = new google.maps.InfoWindow({
         content: bms_info
+    });
+    
+    var cwt_infowindow = new google.maps.InfoWindow({
+        content: cwt_info
     });
 
 
@@ -782,6 +789,12 @@ function initMap() {
         title: 'Metal Fab Shop'
     });
     
+    var cwt_marker = new google.maps.Marker({
+        position: cwt_latlng,
+        map: harvard_yard_map,
+        title: 'Treatment Plant'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -1012,6 +1025,10 @@ function initMap() {
     
     google.maps.event.addListener(bms_marker, 'click', function () {
         bms_infowindow.open(harvard_yard_map, bms_marker);
+    });
+    
+    google.maps.event.addListener(cwt_marker, 'click', function () {
+        cwt_infowindow.open(harvard_yard_map, cwt_marker);
     });
 
 
