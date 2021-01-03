@@ -62,6 +62,7 @@ function initMap() {
     var duncan_latlng = new google.maps.LatLng(42.407133, -71.067362);
     var set_latlng = new google.maps.LatLng(42.184817, -71.200335);
     var pine_latlng = new google.maps.LatLng(44.264209, -69.156833);
+    var kab_latlng = new google.maps.LatLng(42.004672, -70.757951);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -182,6 +183,8 @@ function initMap() {
     var set_info = "<strong>Studio Set Fabricator</strong><br/>" + "Norwood, MA";
     
     var pine_info = "<strong>Caninet Maker Shop</strong><br/>" + "Hope, ME";
+    
+    var kab_info = "<strong>Auto Body Repair</strong><br/>" + "Kingston, MA";
 
     
     
@@ -415,6 +418,10 @@ function initMap() {
     
     var pine_infowindow = new google.maps.InfoWindow({
         content: pine_info
+    });
+    
+    var kab_infowindow = new google.maps.InfoWindow({
+        content: kab_info
     });
 
 
@@ -756,6 +763,12 @@ function initMap() {
         title: 'Cabinet Shop'
     });
     
+    var kab_marker = new google.maps.Marker({
+        position: kab_latlng,
+        map: harvard_yard_map,
+        title: 'Auto Body Shop'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -978,6 +991,10 @@ function initMap() {
     
     google.maps.event.addListener(pine_marker, 'click', function () {
         pine_infowindow.open(harvard_yard_map, pine_marker);
+    });
+    
+    google.maps.event.addListener(kab_marker, 'click', function () {
+        kab_infowindow.open(harvard_yard_map, kab_marker);
     });
 
 
