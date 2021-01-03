@@ -61,6 +61,7 @@ function initMap() {
     var therm_latlng = new google.maps.LatLng(42.558925, -71.615833);
     var duncan_latlng = new google.maps.LatLng(42.407133, -71.067362);
     var set_latlng = new google.maps.LatLng(42.184817, -71.200335);
+    var pine_latlng = new google.maps.LatLng(44.264209, -69.156833);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -179,6 +180,8 @@ function initMap() {
     var duncan_info = "<strong>Galvanizing Shop</strong><br/>" + "Everett, MA";
     
     var set_info = "<strong>Studio Set Fabricator</strong><br/>" + "Norwood, MA";
+    
+    var pine_info = "<strong>Caninet Maker Shop</strong><br/>" + "Hope, ME";
 
     
     
@@ -408,6 +411,10 @@ function initMap() {
     
     var set_infowindow = new google.maps.InfoWindow({
         content: set_info
+    });
+    
+    var pine_infowindow = new google.maps.InfoWindow({
+        content: pine_info
     });
 
 
@@ -743,6 +750,12 @@ function initMap() {
         title: 'Studio Set Fabber'
     });
     
+    var pine_marker = new google.maps.Marker({
+        position: pine_latlng,
+        map: harvard_yard_map,
+        title: 'Cabinet Shop'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -961,6 +974,10 @@ function initMap() {
     
     google.maps.event.addListener(set_marker, 'click', function () {
         set_infowindow.open(harvard_yard_map, set_marker);
+    });
+    
+    google.maps.event.addListener(pine_marker, 'click', function () {
+        pine_infowindow.open(harvard_yard_map, pine_marker);
     });
 
 
