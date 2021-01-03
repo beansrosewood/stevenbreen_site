@@ -63,6 +63,7 @@ function initMap() {
     var set_latlng = new google.maps.LatLng(42.184817, -71.200335);
     var pine_latlng = new google.maps.LatLng(44.264209, -69.156833);
     var kab_latlng = new google.maps.LatLng(42.004672, -70.757951);
+    var bms_latlng = new google.maps.LatLng(43.154587, -73.690920);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -185,6 +186,8 @@ function initMap() {
     var pine_info = "<strong>Caninet Maker Shop</strong><br/>" + "Hope, ME";
     
     var kab_info = "<strong>Auto Body Repair</strong><br/>" + "Kingston, MA";
+    
+    var bms_info = "<strong>Metal Fabrication Shop</strong><br/>" + "Gansevoort, NY";
 
     
     
@@ -422,6 +425,10 @@ function initMap() {
     
     var kab_infowindow = new google.maps.InfoWindow({
         content: kab_info
+    });
+    
+    var bms_infowindow = new google.maps.InfoWindow({
+        content: bms_info
     });
 
 
@@ -769,6 +776,12 @@ function initMap() {
         title: 'Auto Body Shop'
     });
     
+    var bms_marker = new google.maps.Marker({
+        position: bms_latlng,
+        map: harvard_yard_map,
+        title: 'Metal Fab Shop'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -995,6 +1008,10 @@ function initMap() {
     
     google.maps.event.addListener(kab_marker, 'click', function () {
         kab_infowindow.open(harvard_yard_map, kab_marker);
+    });
+    
+    google.maps.event.addListener(bms_marker, 'click', function () {
+        bms_infowindow.open(harvard_yard_map, bms_marker);
     });
 
 
