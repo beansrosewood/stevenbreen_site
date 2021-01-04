@@ -522,7 +522,8 @@ function initMap() {
         map: harvard_yard_map,
         title: 'Steven Breen-Office/Shop',
         icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
-        zIndex: 9999
+        zIndex: 9999,
+        scaledSize: new google.maps.Size(200, 200),
     });
 
     var precision_coating_marker = new google.maps.Marker({
