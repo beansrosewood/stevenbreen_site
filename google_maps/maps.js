@@ -68,6 +68,7 @@ function initMap() {
     var ag_latlng = new google.maps.LatLng(42.832954, -70.962489);
     var nw_latlng = new google.maps.LatLng(42.586836, -71.305596);
     var gfs_latlng = new google.maps.LatLng(44.581854, -91.204141);
+    var bose_latlng = new google.maps.LatLng(42.302347, -71.475465);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -200,6 +201,8 @@ function initMap() {
     var nw_info = "<strong>Norris Wiener, Inc.</strong><br/>" + "Finishing Equipment Supplier<br/>" + "North Billerica, MA";
     
     var gfs_info = "<strong>Global Finishing Solutions</strong><br/>" + "Finishing Equipment Manufacturer<br/>" + "Osseo, WI";
+    
+    var bose_info = "<strong>Bose Corporation</strong><br/>" + "Model Shop<br/>" + "Framingham, MA";
 
     
     
@@ -457,6 +460,10 @@ function initMap() {
     
     var gfs_infowindow = new google.maps.InfoWindow({
         content: gfs_info
+    });
+    
+    var bose_infowindow = new google.maps.InfoWindow({
+        content: bose_info
     });
 
 
@@ -834,6 +841,12 @@ function initMap() {
         title: 'Manufacturer'
     });
     
+    var bose_marker = new google.maps.Marker({
+        position: bose_latlng,
+        map: harvard_yard_map,
+        title: 'Research & Developement'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -1080,6 +1093,10 @@ function initMap() {
     
     google.maps.event.addListener(gfs_marker, 'click', function () {
         gfs_infowindow.open(harvard_yard_map, gfs_marker);
+    });
+    
+    google.maps.event.addListener(bose_marker, 'click', function () {
+        bose_infowindow.open(harvard_yard_map, bose_marker);
     });
 
 
