@@ -544,7 +544,8 @@ function initMap() {
     var fort_drum_marker = new google.maps.Marker({
         position: fort_drum_latlng,
         map: harvard_yard_map,
-        title: 'Fort Drum Aerospace Contractor'
+        title: 'Fort Drum Aerospace Contractor',
+        scaledSize: new google.maps.Size(25, 25),
     });
 
     var northwest_marker = new google.maps.Marker({
