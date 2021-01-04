@@ -70,6 +70,7 @@ function initMap() {
     var gfs_latlng = new google.maps.LatLng(44.581854, -91.204141);
     var bose_latlng = new google.maps.LatLng(42.302347, -71.475465);
     var bobs_latlng = new google.maps.LatLng(42.597358, -71.145872);
+    var harvey_latlng = new google.maps.LatLng(42.931606, -71.385205);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -206,6 +207,8 @@ function initMap() {
     var bose_info = "<strong>Bose Corporation</strong><br/>" + "Model Shop<br/>" + "Framingham, MA";
     
     var bobs_info = "<strong>Auto Body Shop</strong><br/>" + "Wilmington, MA";
+    
+    var harvey_info = "<strong>Harvey Manufaturing</strong><br/>" + "Window & Door Fab<br/>" + "Londonderry, NH";
 
     
     
@@ -471,6 +474,10 @@ function initMap() {
     
     var bobs_infowindow = new google.maps.InfoWindow({
         content: bobs_info
+    });
+    
+    var harvey_infowindow = new google.maps.InfoWindow({
+        content: harvey_info
     });
 
 
@@ -861,6 +868,12 @@ function initMap() {
         title: 'Body Shop'
     });
     
+    var harvey_marker = new google.maps.Marker({
+        position: harvey_latlng,
+        map: harvard_yard_map,
+        title: 'Building Products Manufacturer'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -1115,6 +1128,10 @@ function initMap() {
     
     google.maps.event.addListener(bobs_marker, 'click', function () {
         bobs_infowindow.open(harvard_yard_map, bobs_marker);
+    });
+    
+    google.maps.event.addListener(harvey_marker, 'click', function () {
+        harvey_infowindow.open(harvard_yard_map, harvey_marker);
     });
 
 
