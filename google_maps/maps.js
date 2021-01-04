@@ -74,6 +74,9 @@ function initMap() {
     var richey_latlng = new google.maps.LatLng(42.801109, -70.880812);
     var hhc_latlng = new google.maps.LatLng(43.798297, -73.087901);
     var bay_latlng = new google.maps.LatLng(43.178210, -70.914768);
+    var kal_latlng = new google.maps.LatLng(42.987994, -71.406646);
+    var dura_latlng = new google.maps.LatLng(42.161972, -71.464012);
+    var dyna_latlng = new google.maps.LatLng(42.800878, -70.882320);
     
     var mapOptions = {
         zoom: 7,
@@ -220,6 +223,12 @@ function initMap() {
     var hhc_info = "<strong>Hawk Hill Cabinetry</strong><br/>" + "Millwork Shop<br/>" + "Brandon, VT";
     
     var bay_info = "<strong>Bayhead Products</strong><br/>" + "Material Handling Equipment Manufacturer<br/>" + "Dover, NH";
+    
+    var kal_info = "<strong>Kalwall Corporation</strong><br/>" + "Plastic Panel Manufacturer<br/>" + "Candia, NH";
+    
+    var dura_info = "<strong>American Durafilm</strong><br/>" + "Plastic Fabricator<br/>" + "Holliston, MA";
+    
+    var dyna_info = "<strong>DynaChrome</strong><br/>" + "Plating Service<br/>" + "Newburyport, MA";
 
     
     
@@ -502,6 +511,18 @@ function initMap() {
     var bay_infowindow = new google.maps.InfoWindow({
         content: bay_info
     });
+    
+    var kal_infowindow = new google.maps.InfoWindow({
+        content: kal_info
+    });
+    
+    var dura_infowindow = new google.maps.InfoWindow({
+        content: dura_info
+    });
+    
+    var dyna_infowindow = new google.maps.InfoWindow({
+        content: dyna_info
+    });
 
 
 
@@ -516,6 +537,8 @@ function initMap() {
         map: harvard_yard_map,
         title: 'Northwest Science Building'
     });
+    
+    /* Steve's Shop/Office Main Marker with code to place on top of others and resize. */
 
     var chez_sheridan_marker = new google.maps.Marker({
         position: chez_sheridan_latlng,
@@ -917,6 +940,24 @@ function initMap() {
         title: 'Plastics Rotation Moulder'
     });
     
+    var kal_marker = new google.maps.Marker({
+        position: kal_latlng,
+        map: harvard_yard_map,
+        title: 'Passive Solar Panel Manufacturer'
+    });
+    
+    var dura_marker = new google.maps.Marker({
+        position: dura_latlng,
+        map: harvard_yard_map,
+        title: 'Plastics Fabber'
+    });
+    
+    var dyna_marker = new google.maps.Marker({
+        position: dyna_latlng,
+        map: harvard_yard_map,
+        title: 'Plating Shop'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -1187,6 +1228,18 @@ function initMap() {
     
     google.maps.event.addListener(bay_marker, 'click', function () {
         bay_infowindow.open(harvard_yard_map, bay_marker);
+    });
+    
+    google.maps.event.addListener(kal_marker, 'click', function () {
+        kal_infowindow.open(harvard_yard_map, kal_marker);
+    });
+    
+    google.maps.event.addListener(dura_marker, 'click', function () {
+        dura_infowindow.open(harvard_yard_map, dura_marker);
+    });
+    
+    google.maps.event.addListener(dyna_marker, 'click', function () {
+        dyna_infowindow.open(harvard_yard_map, dyna_marker);
     });
 
 
