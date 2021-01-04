@@ -71,6 +71,7 @@ function initMap() {
     var bose_latlng = new google.maps.LatLng(42.302347, -71.475465);
     var bobs_latlng = new google.maps.LatLng(42.597358, -71.145872);
     var harvey_latlng = new google.maps.LatLng(42.931606, -71.385205);
+    var richey_latlng = new google.maps.LatLng(42.801109, -70.880812);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -209,6 +210,8 @@ function initMap() {
     var bobs_info = "<strong>Auto Body Shop</strong><br/>" + "Wilmington, MA";
     
     var harvey_info = "<strong>Harvey Manufaturing</strong><br/>" + "Window & Door Fab<br/>" + "Londonderry, NH";
+    
+    var richey_info = "<strong>Mark Richey Woodworking</strong><br/>" + "Millwork Shop<br/>" + "Newburyport, MA";
 
     
     
@@ -478,6 +481,10 @@ function initMap() {
     
     var harvey_infowindow = new google.maps.InfoWindow({
         content: harvey_info
+    });
+    
+    var richey_infowindow = new google.maps.InfoWindow({
+        content: richey_info
     });
 
 
@@ -874,6 +881,12 @@ function initMap() {
         title: 'Building Products Manufacturer'
     });
     
+    var richey_marker = new google.maps.Marker({
+        position: richey_latlng,
+        map: harvard_yard_map,
+        title: 'Woodwork Shop'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -1133,6 +1146,11 @@ function initMap() {
     google.maps.event.addListener(harvey_marker, 'click', function () {
         harvey_infowindow.open(harvard_yard_map, harvey_marker);
     });
+    
+    google.maps.event.addListener(richey_marker, 'click', function () {
+        richey_infowindow.open(harvard_yard_map, richey_marker);
+    });
+
 
 
 
