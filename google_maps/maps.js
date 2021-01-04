@@ -77,6 +77,9 @@ function initMap() {
     var kal_latlng = new google.maps.LatLng(42.987994, -71.406646);
     var dura_latlng = new google.maps.LatLng(42.161972, -71.464012);
     var dyna_latlng = new google.maps.LatLng(42.800878, -70.882320);
+    var bae_latlng = new google.maps.LatLng(42.814631, -71.485930);
+    var anjen_latlng = new google.maps.LatLng(42.334687, -71.598505);
+    
     
     var mapOptions = {
         zoom: 7,
@@ -229,6 +232,10 @@ function initMap() {
     var dura_info = "<strong>American Durafilm</strong><br/>" + "Plastic Fabricator<br/>" + "Holliston, MA";
     
     var dyna_info = "<strong>DynaChrome</strong><br/>" + "Plating Service<br/>" + "Newburyport, MA";
+    
+    var bae_info = "<strong>BAE Systems</strong><br/>" + "Aerospace Contractor<br/>" + "Merrimack, NH";
+    
+    var anjen_info = "<strong>Anjen Finishing</strong><br/>" + "Powder Coating Shop<br/>" + "Northborough, MA";
 
     
     
@@ -522,6 +529,14 @@ function initMap() {
     
     var dyna_infowindow = new google.maps.InfoWindow({
         content: dyna_info
+    });
+    
+    var bae_infowindow = new google.maps.InfoWindow({
+        content: bae_info
+    });
+    
+    var anjen_infowindow = new google.maps.InfoWindow({
+        content: anjen_info
     });
 
 
@@ -958,6 +973,18 @@ function initMap() {
         title: 'Plating Shop'
     });
     
+    var bae_marker = new google.maps.Marker({
+        position: bae_latlng,
+        map: harvard_yard_map,
+        title: 'Aerospace Composite Shop'
+    });
+    
+    var anjen_marker = new google.maps.Marker({
+        position: anjen_latlng,
+        map: harvard_yard_map,
+        title: 'Finishing  Shop'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -1238,8 +1265,12 @@ function initMap() {
         dura_infowindow.open(harvard_yard_map, dura_marker);
     });
     
-    google.maps.event.addListener(dyna_marker, 'click', function () {
-        dyna_infowindow.open(harvard_yard_map, dyna_marker);
+    google.maps.event.addListener(bae_marker, 'click', function () {
+        bae_infowindow.open(harvard_yard_map, bae_marker);
+    });
+    
+    google.maps.event.addListener(anjen_marker, 'click', function () {
+        anjen_infowindow.open(harvard_yard_map, anjen_marker);
     });
 
 
