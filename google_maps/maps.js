@@ -73,11 +73,14 @@ function initMap() {
     var harvey_latlng = new google.maps.LatLng(42.931606, -71.385205);
     var richey_latlng = new google.maps.LatLng(42.801109, -70.880812);
     var hhc_latlng = new google.maps.LatLng(43.798297, -73.087901);
+    var bay_latlng = new google.maps.LatLng(43.178210, -70.914768);
+    
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
         mapTypeId: 'hybrid'
     };
+    
     harvard_yard_map = new google.maps.Map(document.getElementById('map-canvas'),
         mapOptions);
 
@@ -215,6 +218,8 @@ function initMap() {
     var richey_info = "<strong>Mark Richey Woodworking</strong><br/>" + "Millwork Shop<br/>" + "Newburyport, MA";
     
     var hhc_info = "<strong>Hawk Hill Cabinetry</strong><br/>" + "Millwork Shop<br/>" + "Brandon, VT";
+    
+    var bay_info = "<strong>Bayhead Products</strong><br/>" + "Material Handling Equipment Manufacturer<br/>" + "Dover, NH";
 
     
     
@@ -492,6 +497,10 @@ function initMap() {
     
     var hhc_infowindow = new google.maps.InfoWindow({
         content: hhc_info
+    });
+    
+    var bay_infowindow = new google.maps.InfoWindow({
+        content: bay_info
     });
 
 
@@ -900,6 +909,12 @@ function initMap() {
         title: 'Cabinet Shop'
     });
     
+    var bay_marker = new google.maps.Marker({
+        position: bay_latlng,
+        map: harvard_yard_map,
+        title: 'Plastics Rotation Moulder'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -1166,6 +1181,10 @@ function initMap() {
     
     google.maps.event.addListener(hhc_marker, 'click', function () {
         hhc_infowindow.open(harvard_yard_map, hhc_marker);
+    });
+    
+    google.maps.event.addListener(bay_marker, 'click', function () {
+        bay_infowindow.open(harvard_yard_map, bay_marker);
     });
 
 
