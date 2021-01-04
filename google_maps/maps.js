@@ -69,6 +69,7 @@ function initMap() {
     var nw_latlng = new google.maps.LatLng(42.586836, -71.305596);
     var gfs_latlng = new google.maps.LatLng(44.581854, -91.204141);
     var bose_latlng = new google.maps.LatLng(42.302347, -71.475465);
+    var bobs_latlng = new google.maps.LatLng(42.597358, -71.145872);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -203,6 +204,8 @@ function initMap() {
     var gfs_info = "<strong>Global Finishing Solutions</strong><br/>" + "Finishing Equipment Manufacturer<br/>" + "Osseo, WI";
     
     var bose_info = "<strong>Bose Corporation</strong><br/>" + "Model Shop<br/>" + "Framingham, MA";
+    
+    var bobs_info = "<strong>Auto Body Shop</strong><br/>" + "Wilmington, MA";
 
     
     
@@ -465,6 +468,11 @@ function initMap() {
     var bose_infowindow = new google.maps.InfoWindow({
         content: bose_info
     });
+    
+    var bobs_infowindow = new google.maps.InfoWindow({
+        content: bobs_info
+    });
+
 
 
     var fort_drum_marker = new google.maps.Marker({
@@ -847,6 +855,12 @@ function initMap() {
         title: 'Research & Developement'
     });
     
+    var bobs_marker = new google.maps.Marker({
+        position: bobs_latlng,
+        map: harvard_yard_map,
+        title: 'Body Shop'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -1097,6 +1111,10 @@ function initMap() {
     
     google.maps.event.addListener(bose_marker, 'click', function () {
         bose_infowindow.open(harvard_yard_map, bose_marker);
+    });
+    
+    google.maps.event.addListener(bobs_marker, 'click', function () {
+        bobs_infowindow.open(harvard_yard_map, bobs_marker);
     });
 
 
