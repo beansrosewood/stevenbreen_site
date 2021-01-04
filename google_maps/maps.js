@@ -72,6 +72,7 @@ function initMap() {
     var bobs_latlng = new google.maps.LatLng(42.597358, -71.145872);
     var harvey_latlng = new google.maps.LatLng(42.931606, -71.385205);
     var richey_latlng = new google.maps.LatLng(42.801109, -70.880812);
+    var hhc_latlng = new google.maps.LatLng(43.798297, -73.087901);
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.85226761, -75.75546543),
@@ -212,6 +213,8 @@ function initMap() {
     var harvey_info = "<strong>Harvey Manufaturing</strong><br/>" + "Window & Door Fab<br/>" + "Londonderry, NH";
     
     var richey_info = "<strong>Mark Richey Woodworking</strong><br/>" + "Millwork Shop<br/>" + "Newburyport, MA";
+    
+    var hhc_info = "<strong>Hawk Hill Cabinetry</strong><br/>" + "Millwork Shop<br/>" + "Brandon, VT";
 
     
     
@@ -485,6 +488,10 @@ function initMap() {
     
     var richey_infowindow = new google.maps.InfoWindow({
         content: richey_info
+    });
+    
+    var hhc_infowindow = new google.maps.InfoWindow({
+        content: hhc_info
     });
 
 
@@ -887,6 +894,12 @@ function initMap() {
         title: 'Woodwork Shop'
     });
     
+    var hhc_marker = new google.maps.Marker({
+        position: hhc_latlng,
+        map: harvard_yard_map,
+        title: 'Cabinet Shop'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -1150,6 +1163,11 @@ function initMap() {
     google.maps.event.addListener(richey_marker, 'click', function () {
         richey_infowindow.open(harvard_yard_map, richey_marker);
     });
+    
+    google.maps.event.addListener(hhc_marker, 'click', function () {
+        hhc_infowindow.open(harvard_yard_map, hhc_marker);
+    });
+
 
 
 
