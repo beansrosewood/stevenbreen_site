@@ -83,6 +83,8 @@ function initMap() {
     var koll_latlng = new google.maps.LatLng(42.824483, -71.493695);
     var pro_latlng = new google.maps.LatLng(42.858723, -71.176272);
     var edab_latlng = new google.maps.LatLng(42.387939, -71.018061);
+    var jpro_latlng = new google.maps.LatLng(41.386371, -72.163009);
+    var metso_latlng = new google.maps.LatLng(42.299183, -71.755980);
     
     
     var mapOptions = {
@@ -248,6 +250,10 @@ function initMap() {
     var pro_info = "<strong>Powder Coater</strong><br/>" + "Hampstead, NH";
     
     var edab_info = "<strong>Body Shop</strong><br/>" + "Boston, MA";
+    
+    var jpro_info = "<strong>Gymnasium Equipment Maker</strong><br/>" + "Waterford, CT";
+    
+    var metso_info = "<strong>Metso Flow Control</strong><br/>" + "Shrewsbury, MA";
 
     
     
@@ -566,6 +572,15 @@ function initMap() {
     var edab_infowindow = new google.maps.InfoWindow({
         content: edab_info
     });
+    
+    var jpro_infowindow = new google.maps.InfoWindow({
+        content: jpro_info
+    });
+    
+    var metso_infowindow = new google.maps.InfoWindow({
+        content: metso_info
+    });
+
 
 
 
@@ -1038,6 +1053,18 @@ function initMap() {
         title: 'Body Shop'
     });
     
+    var jpro_marker = new google.maps.Marker({
+        position: jpro_latlng,
+        map: harvard_yard_map,
+        title: 'Gym Fixture Maker'
+    });
+    
+    var metso_marker = new google.maps.Marker({
+        position: metso_latlng,
+        map: harvard_yard_map,
+        title: 'Automation Manufacturer'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -1340,6 +1367,14 @@ function initMap() {
     
     google.maps.event.addListener(edab_marker, 'click', function () {
         edab_infowindow.open(harvard_yard_map, edab_marker);
+    });
+    
+    google.maps.event.addListener(jpro_marker, 'click', function () {
+        jpro_infowindow.open(harvard_yard_map, jpro_marker);
+    });
+    
+    google.maps.event.addListener(metso_marker, 'click', function () {
+        metso_infowindow.open(harvard_yard_map, metso_marker);
     });
 
 
