@@ -86,6 +86,7 @@ function initMap() {
     var jpro_latlng = new google.maps.LatLng(41.386371, -72.163009);
     var metso_latlng = new google.maps.LatLng(42.299183, -71.755980);
     var natl_latlng = new google.maps.LatLng(42.042749, -71.206717);
+    var grapek_latlng = new google.maps.LatLng(40.123942, -76.003888);
     
     
     var mapOptions = {
@@ -257,6 +258,8 @@ function initMap() {
     var metso_info = "<strong>Metso Flow Control</strong><br/>" + "Shrewsbury, MA";
     
     var natl_info = "<strong>National Lumber</strong><br/>" + "Mansfield, MA";
+    
+    var grapek_info = "<strong>Grapek/Bates Finishing</strong><br/>" + "Industrial Equipment Supplier<br/>" + "Mansfield, MA";
 
     
     
@@ -586,6 +589,10 @@ function initMap() {
     
     var natl_infowindow = new google.maps.InfoWindow({
         content: natl_info
+    });
+    
+    var grapek_infowindow = new google.maps.InfoWindow({
+        content: grapek_info
     });
 
 
@@ -1078,6 +1085,12 @@ function initMap() {
         title: 'Building Material Supplier'
     });
     
+    var grapek_marker = new google.maps.Marker({
+        position: grapek_latlng,
+        map: harvard_yard_map,
+        title: 'Finishing Equipment Supplier'
+    });
+    
     
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
@@ -1393,6 +1406,10 @@ function initMap() {
     
     google.maps.event.addListener(natl_marker, 'click', function () {
         natl_infowindow.open(harvard_yard_map, natl_marker);
+    });
+    
+    google.maps.event.addListener(grapek_marker, 'click', function () {
+        grapek_infowindow.open(harvard_yard_map, grapek_marker);
     });
 
 
