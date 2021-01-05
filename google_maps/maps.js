@@ -82,6 +82,7 @@ function initMap() {
     var pws_latlng = new google.maps.LatLng(42.640206, -71.322883);
     var koll_latlng = new google.maps.LatLng(42.824483, -71.493695);
     var pro_latlng = new google.maps.LatLng(42.858723, -71.176272);
+    var edab_latlng = new google.maps.LatLng(42.387939, -71.018061);
     
     
     var mapOptions = {
@@ -245,6 +246,8 @@ function initMap() {
     var koll_info = "<strong>Kollsman</strong><br/>" + "Aviation Electronics<br/>" + "Merrimack, NH";
     
     var pro_info = "<strong>Powder Coater</strong><br/>" + "Hampstead, NH";
+    
+    var edab_info = "<strong>Body Shop</strong><br/>" + "Boston, MA";
 
     
     
@@ -558,6 +561,10 @@ function initMap() {
     
     var pro_infowindow = new google.maps.InfoWindow({
         content: pro_info
+    });
+    
+    var edab_infowindow = new google.maps.InfoWindow({
+        content: edab_info
     });
 
 
@@ -1025,6 +1032,12 @@ function initMap() {
         title: 'Powder Coating Shop'
     });
     
+    var edab_marker = new google.maps.Marker({
+        position: edab_latlng,
+        map: harvard_yard_map,
+        title: 'Body Shop'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -1323,6 +1336,10 @@ function initMap() {
     
     google.maps.event.addListener(pro_marker, 'click', function () {
         pro_infowindow.open(harvard_yard_map, pro_marker);
+    });
+    
+    google.maps.event.addListener(edab_marker, 'click', function () {
+        edab_infowindow.open(harvard_yard_map, edab_marker);
     });
 
 
