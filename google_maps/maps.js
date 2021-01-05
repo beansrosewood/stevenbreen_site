@@ -259,7 +259,7 @@ function initMap() {
     
     /* This var is for the map icon style/size */
     var icon = {
-        url:"http://maps.google.com/mapfiles/ms/icons/blue-dot.png", // url
+        url:"http://maps.google.com/mapfiles/ms/icons/red-dot.png", // url
         scaledSize: new google.maps.Size(25, 25), // size
     };
     
