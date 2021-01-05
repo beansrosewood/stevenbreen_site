@@ -79,6 +79,8 @@ function initMap() {
     var dyna_latlng = new google.maps.LatLng(42.800878, -70.882320);
     var bae_latlng = new google.maps.LatLng(42.814631, -71.485930);
     var anjen_latlng = new google.maps.LatLng(42.334687, -71.598505);
+    var pws_latlng = new google.maps.LatLng(42.640206, -71.322883);
+    var koll_latlng = new google.maps.LatLng(42.824483, -71.493695);
     
     
     var mapOptions = {
@@ -236,6 +238,10 @@ function initMap() {
     var bae_info = "<strong>BAE Systems</strong><br/>" + "Aerospace Contractor<br/>" + "Merrimack, NH";
     
     var anjen_info = "<strong>Anjen Finishing</strong><br/>" + "Powder Coating Shop<br/>" + "Northborough, MA";
+    
+    var pws_info = "<strong>Phoenix Work Stations</strong><br/>" + "Industrial Bench Manufacturer<br/>" + "Lowell, MA";
+    
+    var koll_info = "<strong>Kollsman</strong><br/>" + "Aviation Electronics<br/>" + "Merrimack, NH";
 
     
     
@@ -537,6 +543,14 @@ function initMap() {
     
     var anjen_infowindow = new google.maps.InfoWindow({
         content: anjen_info
+    });
+    
+    var pws_infowindow = new google.maps.InfoWindow({
+        content: pws_info
+    });
+    
+    var koll_infowindow = new google.maps.InfoWindow({
+        content: koll_info
     });
 
 
@@ -986,6 +1000,18 @@ function initMap() {
         title: 'Finishing  Shop'
     });
     
+    var pws_marker = new google.maps.Marker({
+        position: pws_latlng,
+        map: harvard_yard_map,
+        title: 'Work Bench Maker'
+    });
+    
+     var koll_marker = new google.maps.Marker({
+        position: koll_latlng,
+        map: harvard_yard_map,
+        title: 'Aviation Electronics'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -1272,6 +1298,14 @@ function initMap() {
     
     google.maps.event.addListener(anjen_marker, 'click', function () {
         anjen_infowindow.open(harvard_yard_map, anjen_marker);
+    });
+    
+    google.maps.event.addListener(pws_marker, 'click', function () {
+        pws_infowindow.open(harvard_yard_map, pws_marker);
+    });
+    
+    google.maps.event.addListener(koll_marker, 'click', function () {
+        koll_infowindow.open(harvard_yard_map, koll_marker);
     });
 
 
