@@ -85,6 +85,7 @@ function initMap() {
     var edab_latlng = new google.maps.LatLng(42.387939, -71.018061);
     var jpro_latlng = new google.maps.LatLng(41.386371, -72.163009);
     var metso_latlng = new google.maps.LatLng(42.299183, -71.755980);
+    var natl_latlng = new google.maps.LatLng(42.042749, -71.206717);
     
     
     var mapOptions = {
@@ -254,6 +255,8 @@ function initMap() {
     var jpro_info = "<strong>Gymnasium Equipment Maker</strong><br/>" + "Waterford, CT";
     
     var metso_info = "<strong>Metso Flow Control</strong><br/>" + "Shrewsbury, MA";
+    
+    var natl_info = "<strong>National Lumber</strong><br/>" + "Mansfield, MA";
 
     
     
@@ -579,6 +582,10 @@ function initMap() {
     
     var metso_infowindow = new google.maps.InfoWindow({
         content: metso_info
+    });
+    
+    var natl_infowindow = new google.maps.InfoWindow({
+        content: natl_info
     });
 
 
@@ -1065,6 +1072,13 @@ function initMap() {
         title: 'Automation Manufacturer'
     });
     
+    var natl_marker = new google.maps.Marker({
+        position: natl_latlng,
+        map: harvard_yard_map,
+        title: 'Building Material Supplier'
+    });
+    
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -1375,6 +1389,10 @@ function initMap() {
     
     google.maps.event.addListener(metso_marker, 'click', function () {
         metso_infowindow.open(harvard_yard_map, metso_marker);
+    });
+    
+    google.maps.event.addListener(natl_marker, 'click', function () {
+        natl_infowindow.open(harvard_yard_map, natl_marker);
     });
 
 
