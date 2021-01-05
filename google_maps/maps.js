@@ -81,6 +81,7 @@ function initMap() {
     var anjen_latlng = new google.maps.LatLng(42.334687, -71.598505);
     var pws_latlng = new google.maps.LatLng(42.640206, -71.322883);
     var koll_latlng = new google.maps.LatLng(42.824483, -71.493695);
+    var pro_latlng = new google.maps.LatLng(42.858723, -71.176272);
     
     
     var mapOptions = {
@@ -242,6 +243,8 @@ function initMap() {
     var pws_info = "<strong>Phoenix Work Stations</strong><br/>" + "Industrial Bench Manufacturer<br/>" + "Lowell, MA";
     
     var koll_info = "<strong>Kollsman</strong><br/>" + "Aviation Electronics<br/>" + "Merrimack, NH";
+    
+    var pro_info = "<strong>Powder Coater</strong><br/>" + "Hampstead, NH";
 
     
     
@@ -551,6 +554,10 @@ function initMap() {
     
     var koll_infowindow = new google.maps.InfoWindow({
         content: koll_info
+    });
+    
+    var pro_infowindow = new google.maps.InfoWindow({
+        content: pro_info
     });
 
 
@@ -1012,6 +1019,12 @@ function initMap() {
         title: 'Aviation Electronics'
     });
     
+    var pro_marker = new google.maps.Marker({
+        position: pro_latlng,
+        map: harvard_yard_map,
+        title: 'Powder Coating Shop'
+    });
+    
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -1306,6 +1319,10 @@ function initMap() {
     
     google.maps.event.addListener(koll_marker, 'click', function () {
         koll_infowindow.open(harvard_yard_map, koll_marker);
+    });
+    
+    google.maps.event.addListener(pro_marker, 'click', function () {
+        pro_infowindow.open(harvard_yard_map, pro_marker);
     });
 
 
