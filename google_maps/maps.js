@@ -601,6 +601,7 @@ function initMap() {
     var fort_drum_marker = new google.maps.Marker({
         position: fort_drum_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Fort Drum Aerospace Contractor',
         scaledSize: new google.maps.Size(25, 25),
     });
@@ -608,6 +609,7 @@ function initMap() {
     var northwest_marker = new google.maps.Marker({
         position: northwest_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Northwest Science Building'
     });
     
@@ -625,235 +627,273 @@ function initMap() {
     var precision_coating_marker = new google.maps.Marker({
         position: precision_coating_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Precision Coating'
     });
 
     var berlin_city_marker = new google.maps.Marker({
         position: berlin_city_latlng,
         map: harvard_yard_map,
-        title: 'Automotive Dealer/Finisher',
-        icon: icon
+        icon: icon,
+        title: 'Automotive Dealer/Finisher'
     });
 
     var cil_marker = new google.maps.Marker({
         position: cil_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Anodizer/Electro-Plater'
     });
 
     var colonial_marker = new google.maps.Marker({
         position: colonial_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Aerospace Industry Plater/Finisher'
     });
 
     var landing_marker = new google.maps.Marker({
         position: landing_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'The Composite Boat Building School'
     });
 
     var lyndon_marker = new google.maps.Marker({
         position: lyndon_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Furniture Manurfacturer'
     });
 
     var design_marker = new google.maps.Marker({
         position: design_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Metal Fabrication Shop'
     });
 
     var emtec_marker = new google.maps.Marker({
         position: emtec_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Architectural Fabricator'
     });
 
     var saratoga_marker = new google.maps.Marker({
         position: saratoga_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Jobber Shop/ Metal Fab'
     });
 
     var whelen_marker = new google.maps.Marker({
         position: whelen_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Emergency Equipment Manurfacturer'
     });
 
     var boat_marker = new google.maps.Marker({
         position: boat_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Yacht Builder'
     });
 
     var mex_marker = new google.maps.Marker({
         position: mex_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'OEM Auto Parts Supplier'
     });
 
     var pei_marker = new google.maps.Marker({
         position: pei_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Progressive Energy Headquarters'
     });
     
     var suntube_marker = new google.maps.Marker({
         position: suntube_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Solaronics Plant'
     });
     
     var jfk_marker = new google.maps.Marker({
         position: jfk_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Pan Am Air Freight'
     });
     
     var ge_marker = new google.maps.Marker({
         position: ge_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Plastics R&D'
     });
     
     var vt_ware_marker = new google.maps.Marker({
         position: vt_ware_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Fab/Job Shop'
     });
     
     var steel_marker = new google.maps.Marker({
         position: steel_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Steel Fabricator'
     });
 
      var forest_marker = new google.maps.Marker({
         position: forest_latlng,
         map: harvard_yard_map,
+        icon: icon, 
         title: 'Institutional Furniture Maker'
     });
     
     var geno_marker = new google.maps.Marker({
         position: geno_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Auto Collision Repair'
     });
     
     var united_marker = new google.maps.Marker({
         position: united_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Jobber Shop'
     });
     
     var evs_marker = new google.maps.Marker({
         position: evs_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Sheet Metal Fabrication'
     });
     
     var pfe_marker = new google.maps.Marker({
         position: pfe_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Roll Machine Shop'
     });
     
     var carmax_marker = new google.maps.Marker({
         position: carmax_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Automotive Super Store'
     });
     
     var helmet_marker = new google.maps.Marker({
         position: helmet_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Kevlar Helmet Maker'
     });
     
      var smyth_marker = new google.maps.Marker({
         position: smyth_latlng,
         map: harvard_yard_map,
+        icon: icon, 
         title: 'Heavy Collision Repair'
     });
     
     var corcon_marker = new google.maps.Marker({
         position: corcon_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Cabinet Maker'
     });
     
     var plp_marker = new google.maps.Marker({
         position: plp_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Composite Flag Pole Maker'
     });
     
     var protk_marker = new google.maps.Marker({
         position: protk_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Sheet Metal Fabricator'
     });
     
     var mag_marker = new google.maps.Marker({
         position: mag_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Jet Engine Maker'
     });
     
     var adan_marker = new google.maps.Marker({
         position: adan_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Animatronic System Fabricator'
     });
     
     var lhw_marker = new google.maps.Marker({
         position: lhw_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Custom Window Fabrication'
     });
     
     var armor_marker = new google.maps.Marker({
         position: armor_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Armored Vehicle Maker'
     });
     
     var blue_marker = new google.maps.Marker({
         position: blue_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'High School Composite Shop'
     });
     
     var pmi_marker = new google.maps.Marker({
         position: pmi_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Injection Moulder'
     });
     
     var eb_marker = new google.maps.Marker({
         position: eb_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Electric Boat'
     });
     
     var tba_marker = new google.maps.Marker({
         position: tba_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Powder Coater'
     });
     
     var roche_marker = new google.maps.Marker({
         position: roche_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Barrel Manufacture'
     });
     
     var prescott_marker = new google.maps.Marker({
         position: prescott_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Metal Shop'
     });
     
@@ -866,228 +906,266 @@ function initMap() {
     var led_marker = new google.maps.Marker({
         position: led_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Lighting Manufacturer'
     });
     
     var devens_marker = new google.maps.Marker({
         position: devens_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Army Paint Shop'
     });
     
     var radar_marker = new google.maps.Marker({
         position: radar_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Radar Dome Maker'
     });
     
     var jmd_marker = new google.maps.Marker({
         position: jmd_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Metal Plater'
     });
     
     var metal_marker = new google.maps.Marker({
         position: metal_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Sheet Metal Fab Shop'
     });
     
     var wrta_marker = new google.maps.Marker({
         position: wrta_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Transit Bus Paint Shop'
     });
     
     var hm_marker = new google.maps.Marker({
         position: hm_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Sheet Metal Fabber'
     });
     
     var rim_marker = new google.maps.Marker({
         position: rim_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Rim Refinisher'
     });
     
     var mac_marker = new google.maps.Marker({
         position: mac_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Prototype Fab Shop'
     });
     
     var therm_marker = new google.maps.Marker({
         position: therm_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Plastics Fabricator'
     });
     
     var duncan_marker = new google.maps.Marker({
         position: duncan_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Galvanizer'
     });
     
     var set_marker = new google.maps.Marker({
         position: set_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Studio Set Fabber'
     });
     
     var pine_marker = new google.maps.Marker({
         position: pine_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Cabinet Shop'
     });
     
     var kab_marker = new google.maps.Marker({
         position: kab_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Auto Body Shop'
     });
     
     var bms_marker = new google.maps.Marker({
         position: bms_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Metal Fab Shop'
     });
     
     var cwt_marker = new google.maps.Marker({
         position: cwt_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Treatment Plant'
     });
     
     var ag_marker = new google.maps.Marker({
         position: ag_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Silkscreener'
     });
     
     var nw_marker = new google.maps.Marker({
         position: nw_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Equipment Supplier'
     });
     
     var gfs_marker = new google.maps.Marker({
         position: gfs_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Manufacturer'
     });
     
     var bose_marker = new google.maps.Marker({
         position: bose_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Research & Developement'
     });
     
     var bobs_marker = new google.maps.Marker({
         position: bobs_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Body Shop'
     });
     
     var harvey_marker = new google.maps.Marker({
         position: harvey_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Building Products Manufacturer'
     });
     
     var richey_marker = new google.maps.Marker({
         position: richey_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Woodwork Shop'
     });
     
     var hhc_marker = new google.maps.Marker({
         position: hhc_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Cabinet Shop'
     });
     
     var bay_marker = new google.maps.Marker({
         position: bay_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Plastics Rotation Moulder'
     });
     
     var kal_marker = new google.maps.Marker({
         position: kal_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Passive Solar Panel Manufacturer'
     });
     
     var dura_marker = new google.maps.Marker({
         position: dura_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Plastics Fabber'
     });
     
     var dyna_marker = new google.maps.Marker({
         position: dyna_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Plating Shop'
     });
     
     var bae_marker = new google.maps.Marker({
         position: bae_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Aerospace Composite Shop'
     });
     
     var anjen_marker = new google.maps.Marker({
         position: anjen_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Finishing  Shop'
     });
     
     var pws_marker = new google.maps.Marker({
         position: pws_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Work Bench Maker'
     });
     
      var koll_marker = new google.maps.Marker({
         position: koll_latlng,
         map: harvard_yard_map,
+        icon: icon, 
         title: 'Aviation Electronics'
     });
     
     var pro_marker = new google.maps.Marker({
         position: pro_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Powder Coating Shop'
     });
     
     var edab_marker = new google.maps.Marker({
         position: edab_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Body Shop'
     });
     
     var jpro_marker = new google.maps.Marker({
         position: jpro_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Gym Fixture Maker'
     });
     
     var metso_marker = new google.maps.Marker({
         position: metso_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Automation Manufacturer'
     });
     
     var natl_marker = new google.maps.Marker({
         position: natl_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Building Material Supplier'
     });
     
     var grapek_marker = new google.maps.Marker({
         position: grapek_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Finishing Equipment Supplier'
     });
     
