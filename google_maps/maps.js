@@ -93,7 +93,8 @@ function initMap() {
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.65, -75.75),
-        mapTypeId: 'hybrid'
+        /*Map type id can also be set to "hybrid" for sat/road. */
+        mapTypeId: 'roadmap'
     };
     
     harvard_yard_map = new google.maps.Map(document.getElementById('map-canvas'),
