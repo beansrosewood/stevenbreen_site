@@ -41,7 +41,7 @@
     margin-bottom: 10px;
     background-size: cover;
     padding-top: 10px;
-    padding-bottom: 80em;
+    padding-bottom: 40em;
     color: crimson;
     border-width: medium;
     border-color: crimson;
@@ -58,6 +58,7 @@
 }
 
 .what {
+    font-family: Georgia, serif;
     font-size: 5em;
     text-align: center;
     text-shadow: 2px 2px 1.5px #020203;
@@ -69,6 +70,7 @@
     list-style-type: none;}
 
 .established {
+    font-family: Georgia, serif;
     font-size: 3em;
     text-align: center;
     text-shadow: 2px 2px 1.5px #020203;
