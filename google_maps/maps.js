@@ -900,6 +900,7 @@ function initMap() {
     var crafts_marker = new google.maps.Marker({
         position: crafts_latlng,
         map: harvard_yard_map,
+        icon: icon,
         title: 'Lighting Fabricator'
     });
     
