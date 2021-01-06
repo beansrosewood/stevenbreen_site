@@ -88,15 +88,25 @@ function initMap() {
     var natl_latlng = new google.maps.LatLng(42.042749, -71.206717);
     var grapek_latlng = new google.maps.LatLng(40.123942, -76.003888);
     var mta_latlng = new google.maps.LatLng(40.707412, -73.780572);
-    
-    
+
+
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.65, -75.75),
+        minZoom: zoom - 3,
+        maxZoom: zoom + 3,
+        restriction: {
+            latLngBounds: {
+                north: -10,
+                south: -40,
+                east: 160,
+                west: 100,
+            },
+        },
         /*Map type id can also be set to "hybrid" for sat/road. */
         mapTypeId: 'roadmap'
     };
-    
+
     harvard_yard_map = new google.maps.Map(document.getElementById('map-canvas'),
         mapOptions);
 
@@ -132,147 +142,147 @@ function initMap() {
     var mex_info = "<strong>OEM Volkswagon Parts Manufacturer</strong><br/>" + "Puebla, Mexico";
 
     var pei_info = "<strong>Progressive Energy</strong><br/>" + "Bedford, NH Corporate Office<br/>" + "<a href='https://progressiveenergy.com'>PEI.Com</a>";
-    
+
     var suntube_info = "<strong>Solaronics, Inc</strong><br/>" + "Auburn Hills, MI<br/>" + "<a href='https://solaronicsusa.com'>Solaronics.com</a>";
-    
+
     var jfk_info = "<strong>Pan Am Air Freight</strong><br/>" + "JFK International Airport<br/>" + "Long Island, NY";
-    
+
     var ge_info = "<strong>Plastics Research/Developement</strong><br/>" + "Pittsfield, MA";
-    
+
     var vt_ware_info = "<strong>Fabrication/Jobber Shop</strong><br/>" + "St Georges, VT";
-    
+
     var steel_info = "<strong>Steel Fabricator</strong><br/>" + "Allentown, PA";
 
     var forest_info = "<strong>Institutional Furniture Manufacturer</strong><br/>" + "Forestdale, VT";
-    
+
     var geno_info = "<strong>Auto Body Repair</strong><br/>" + "Chicopee, MA";
-    
+
     var united_info = "<strong>Job Shop/Silk Screener</strong><br/>" + "Cedar Grove, NJ";
-    
+
     var evs_info = "<strong>Sheet Metal Fab</strong><br/>" + "Keene, NH";
-    
+
     var pfe_info = "<strong>Roll Machine Shop</strong><br/>" + "Orange, MA";
-    
+
     var carmax_info = "<strong>Auto Super Store</strong><br/>" + "Hartford, CT";
-    
+
     var helmet_info = "<strong>Military Helmet Manufacturer</strong><br/>" + "Newport, VT";
-    
+
     var smyth_info = "<strong>Truck Collision Repair</strong><br/>" + "Somers, CT";
-    
+
     var corcon_info = "<strong>Luxury Home Builder</strong><br/>" + "Madison, NH";
-    
+
     var plp_info = "<strong>Composite Pole Fabrication</strong><br/>" + "Fitzwilliam, NH";
-    
+
     var protk_info = "<strong>Sheet Metal Fabricator</strong><br/>" + "Contoocook, NH";
-    
+
     var mag_info = "<strong>Jet Engine Manufacturer</strong><br/>" + "Haverhill, MA";
-    
+
     var adan_info = "<strong>Animatronic Fabricator</strong><br/>" + "Stockbridge, VT";
-    
+
     var lhw_info = "<strong>Specialty Window Maker</strong><br/>" + "Berwick, ME";
-    
+
     var armor_info = "<strong>Armored Vehicle Manufacturer</strong><br/>" + "Pittsfield, MA";
-    
+
     var blue_info = "<strong>High School Composite Shop</strong><br/>" + "Farmington, ME";
-    
+
     var pmi_info = "<strong>Injection Moulder</strong><br/>" + "Woonsocket, RI";
-    
+
     var eb_info = "<strong>General Dynamics</strong><br/>" + "Electric Boat<br/>" + "Quonset Point, RI";
-    
+
     var tba_info = "<strong>Powder Coating Shop</strong><br/>" + "Concord, NH";
-    
+
     var roche_info = "<strong>Steel Barrel Manufacturer</strong><br/>" + "Lowell, MA";
-    
+
     var prescott_info = "<strong>Sheet Metal Fabricator</strong><br/>" + "Biddeford, ME";
-    
+
     var crafts_info = "<strong>Light Fixture Fabricator</strong><br/>" + "Greenwich, CT";
-    
+
     var led_info = "<strong>Light Fixture Fabricator</strong><br/>" + "Amityville, NY";
-    
+
     var devens_info = "<strong>Army National Guard</strong><br/>" + "Equipment Refurbishment Shop<br/>" + "Amityville, NY";
-    
+
     var radar_info = "<strong>Radar Dome Fabricator</strong><br/>" + "Stow, MA";
-    
+
     var jmd_info = "<strong>Metal Plater</strong><br/>" + "Hudson, NH";
-    
+
     var metal_info = "<strong>Sheet Metal Fabricator</strong><br/>" + "Londonderry, NH";
-    
+
     var wrta_info = "<strong>Worcester Regional Transit Authority</strong><br/>" + "Bus Maintainance Facility<br/>" + "Worcester, MA";
-    
+
     var hm_info = "<strong>Sheet Metal Fabricator</strong><br/>" + "Amherst, NH";
-    
+
     var rim_info = "<strong>Vehicle Wheel Refinisher</strong><br/>" + "Tyngsborough, MA";
-    
+
     var mac_info = "<strong>Prototype Fabricator</strong><br/>" + "Gardner, MA";
-    
+
     var therm_info = "<strong>Plastics Fab Shop</strong><br/>" + "Shirley, MA";
-    
+
     var duncan_info = "<strong>Galvanizing Shop</strong><br/>" + "Everett, MA";
-    
+
     var set_info = "<strong>Studio Set Fabricator</strong><br/>" + "Norwood, MA";
-    
+
     var pine_info = "<strong>Caninet Maker Shop</strong><br/>" + "Hope, ME";
-    
+
     var kab_info = "<strong>Auto Body Repair</strong><br/>" + "Kingston, MA";
-    
+
     var bms_info = "<strong>Metal Fabrication Shop</strong><br/>" + "Gansevoort, NY";
-    
+
     var cwt_info = "<strong>Water Treatment Plant</strong><br/>" + "New Britain, CT";
-    
+
     var ag_info = "<strong>Industrial Silkscreener</strong><br/>" + "Amesbury, MA";
-    
+
     var nw_info = "<strong>Norris Wiener, Inc.</strong><br/>" + "Finishing Equipment Supplier<br/>" + "North Billerica, MA";
-    
+
     var gfs_info = "<strong>Global Finishing Solutions</strong><br/>" + "Finishing Equipment Manufacturer<br/>" + "Osseo, WI";
-    
+
     var bose_info = "<strong>Bose Corporation</strong><br/>" + "Model Shop<br/>" + "Framingham, MA";
-    
+
     var bobs_info = "<strong>Auto Body Shop</strong><br/>" + "Wilmington, MA";
-    
+
     var harvey_info = "<strong>Harvey Manufaturing</strong><br/>" + "Window & Door Fab<br/>" + "Londonderry, NH";
-    
+
     var richey_info = "<strong>Mark Richey Woodworking</strong><br/>" + "Millwork Shop<br/>" + "Newburyport, MA";
-    
+
     var hhc_info = "<strong>Hawk Hill Cabinetry</strong><br/>" + "Millwork Shop<br/>" + "Brandon, VT";
-    
+
     var bay_info = "<strong>Bayhead Products</strong><br/>" + "Material Handling Equipment Manufacturer<br/>" + "Dover, NH";
-    
+
     var kal_info = "<strong>Kalwall Corporation</strong><br/>" + "Plastic Panel Manufacturer<br/>" + "Candia, NH";
-    
+
     var dura_info = "<strong>American Durafilm</strong><br/>" + "Plastic Fabricator<br/>" + "Holliston, MA";
-    
+
     var dyna_info = "<strong>DynaChrome</strong><br/>" + "Plating Service<br/>" + "Newburyport, MA";
-    
+
     var bae_info = "<strong>BAE Systems</strong><br/>" + "Aerospace Contractor<br/>" + "Merrimack, NH";
-    
+
     var anjen_info = "<strong>Anjen Finishing</strong><br/>" + "Powder Coating Shop<br/>" + "Northborough, MA";
-    
+
     var pws_info = "<strong>Phoenix Work Stations</strong><br/>" + "Industrial Bench Manufacturer<br/>" + "Lowell, MA";
-    
+
     var koll_info = "<strong>Kollsman</strong><br/>" + "Aviation Electronics<br/>" + "Merrimack, NH";
-    
+
     var pro_info = "<strong>Powder Coater</strong><br/>" + "Hampstead, NH";
-    
+
     var edab_info = "<strong>Body Shop</strong><br/>" + "Boston, MA";
-    
+
     var jpro_info = "<strong>Gymnasium Equipment Maker</strong><br/>" + "Waterford, CT";
-    
+
     var metso_info = "<strong>Metso Flow Control</strong><br/>" + "Shrewsbury, MA";
-    
+
     var natl_info = "<strong>National Lumber</strong><br/>" + "Mansfield, MA";
-    
+
     var grapek_info = "<strong>Grapek/Bates Finishing</strong><br/>" + "Industrial Equipment Supplier<br/>" + "Mansfield, MA";
-    
+
     var mta_info = "<strong>New York City MTA</strong><br/>" + "Maintainance Yard<br/>" + "Jamaica, NY";
 
-    
-    
+
+
     /* This var is for the map icon style/size */
     var icon = {
-        url:"http://maps.google.com/mapfiles/ms/icons/red-dot.png", // url
+        url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png", // url
         scaledSize: new google.maps.Size(25, 25), // size
     };
-    
+
 
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
@@ -338,267 +348,267 @@ function initMap() {
     var pei_infowindow = new google.maps.InfoWindow({
         content: pei_info
     });
-    
+
     var suntube_infowindow = new google.maps.InfoWindow({
         content: suntube_info
     });
-    
+
     var jfk_infowindow = new google.maps.InfoWindow({
         content: jfk_info
     });
-    
+
     var ge_infowindow = new google.maps.InfoWindow({
         content: ge_info
     });
-    
-     var vt_ware_infowindow = new google.maps.InfoWindow({
+
+    var vt_ware_infowindow = new google.maps.InfoWindow({
         content: vt_ware_info
     });
-    
+
     var steel_infowindow = new google.maps.InfoWindow({
         content: steel_info
     });
-    
+
     var forest_infowindow = new google.maps.InfoWindow({
         content: forest_info
     });
-    
+
     var geno_infowindow = new google.maps.InfoWindow({
         content: geno_info
     });
-    
+
     var united_infowindow = new google.maps.InfoWindow({
         content: united_info
     });
-    
+
     var evs_infowindow = new google.maps.InfoWindow({
         content: evs_info
     });
-    
+
     var pfe_infowindow = new google.maps.InfoWindow({
         content: pfe_info
     });
-    
+
     var carmax_infowindow = new google.maps.InfoWindow({
         content: carmax_info
     });
-    
+
     var helmet_infowindow = new google.maps.InfoWindow({
         content: helmet_info
     });
-    
+
     var smyth_infowindow = new google.maps.InfoWindow({
         content: smyth_info
     });
-    
+
     var corcon_infowindow = new google.maps.InfoWindow({
         content: corcon_info
     });
-    
+
     var plp_infowindow = new google.maps.InfoWindow({
         content: plp_info
     });
-    
+
     var protk_infowindow = new google.maps.InfoWindow({
         content: protk_info
     });
-    
+
     var mag_infowindow = new google.maps.InfoWindow({
         content: mag_info
     });
-    
+
     var adan_infowindow = new google.maps.InfoWindow({
         content: adan_info
     });
-    
+
     var lhw_infowindow = new google.maps.InfoWindow({
         content: lhw_info
     });
-    
+
     var armor_infowindow = new google.maps.InfoWindow({
         content: armor_info
     });
-    
+
     var blue_infowindow = new google.maps.InfoWindow({
         content: blue_info
     });
-    
+
     var pmi_infowindow = new google.maps.InfoWindow({
         content: pmi_info
     });
-    
+
     var eb_infowindow = new google.maps.InfoWindow({
         content: eb_info
     });
-    
+
     var tba_infowindow = new google.maps.InfoWindow({
         content: tba_info
     });
-    
+
     var roche_infowindow = new google.maps.InfoWindow({
         content: roche_info
     });
-    
+
     var prescott_infowindow = new google.maps.InfoWindow({
         content: prescott_info
     });
-    
+
     var crafts_infowindow = new google.maps.InfoWindow({
         content: crafts_info
     });
-    
+
     var led_infowindow = new google.maps.InfoWindow({
         content: led_info
     });
-    
+
     var devens_infowindow = new google.maps.InfoWindow({
         content: devens_info
     });
-    
+
     var radar_infowindow = new google.maps.InfoWindow({
         content: radar_info
     });
-    
+
     var jmd_infowindow = new google.maps.InfoWindow({
         content: jmd_info
     });
-    
+
     var metal_infowindow = new google.maps.InfoWindow({
         content: metal_info
     });
-    
+
     var wrta_infowindow = new google.maps.InfoWindow({
         content: wrta_info
     });
-    
+
     var hm_infowindow = new google.maps.InfoWindow({
         content: hm_info
     });
-    
+
     var rim_infowindow = new google.maps.InfoWindow({
         content: rim_info
     });
-    
+
     var mac_infowindow = new google.maps.InfoWindow({
         content: mac_info
     });
-    
+
     var therm_infowindow = new google.maps.InfoWindow({
         content: therm_info
     });
-    
+
     var duncan_infowindow = new google.maps.InfoWindow({
         content: duncan_info
     });
-    
+
     var set_infowindow = new google.maps.InfoWindow({
         content: set_info
     });
-    
+
     var pine_infowindow = new google.maps.InfoWindow({
         content: pine_info
     });
-    
+
     var kab_infowindow = new google.maps.InfoWindow({
         content: kab_info
     });
-    
+
     var bms_infowindow = new google.maps.InfoWindow({
         content: bms_info
     });
-    
+
     var cwt_infowindow = new google.maps.InfoWindow({
         content: cwt_info
     });
-    
+
     var ag_infowindow = new google.maps.InfoWindow({
         content: ag_info
     });
-    
+
     var nw_infowindow = new google.maps.InfoWindow({
         content: nw_info
     });
-    
+
     var gfs_infowindow = new google.maps.InfoWindow({
         content: gfs_info
     });
-    
+
     var bose_infowindow = new google.maps.InfoWindow({
         content: bose_info
     });
-    
+
     var bobs_infowindow = new google.maps.InfoWindow({
         content: bobs_info
     });
-    
+
     var harvey_infowindow = new google.maps.InfoWindow({
         content: harvey_info
     });
-    
+
     var richey_infowindow = new google.maps.InfoWindow({
         content: richey_info
     });
-    
+
     var hhc_infowindow = new google.maps.InfoWindow({
         content: hhc_info
     });
-    
+
     var bay_infowindow = new google.maps.InfoWindow({
         content: bay_info
     });
-    
+
     var kal_infowindow = new google.maps.InfoWindow({
         content: kal_info
     });
-    
+
     var dura_infowindow = new google.maps.InfoWindow({
         content: dura_info
     });
-    
+
     var dyna_infowindow = new google.maps.InfoWindow({
         content: dyna_info
     });
-    
+
     var bae_infowindow = new google.maps.InfoWindow({
         content: bae_info
     });
-    
+
     var anjen_infowindow = new google.maps.InfoWindow({
         content: anjen_info
     });
-    
+
     var pws_infowindow = new google.maps.InfoWindow({
         content: pws_info
     });
-    
+
     var koll_infowindow = new google.maps.InfoWindow({
         content: koll_info
     });
-    
+
     var pro_infowindow = new google.maps.InfoWindow({
         content: pro_info
     });
-    
+
     var edab_infowindow = new google.maps.InfoWindow({
         content: edab_info
     });
-    
+
     var jpro_infowindow = new google.maps.InfoWindow({
         content: jpro_info
     });
-    
+
     var metso_infowindow = new google.maps.InfoWindow({
         content: metso_info
     });
-    
+
     var natl_infowindow = new google.maps.InfoWindow({
         content: natl_info
     });
-    
+
     var grapek_infowindow = new google.maps.InfoWindow({
         content: grapek_info
     });
-    
+
     var mta_infowindow = new google.maps.InfoWindow({
         content: mta_info
     });
@@ -620,7 +630,7 @@ function initMap() {
         icon: icon,
         title: 'Northwest Science Building'
     });
-    
+
     /* Steve's Shop/Office Main Marker with code to place on top of others and resize. */
 
     var chez_sheridan_marker = new google.maps.Marker({
@@ -722,35 +732,35 @@ function initMap() {
         icon: icon,
         title: 'Progressive Energy Headquarters'
     });
-    
+
     var suntube_marker = new google.maps.Marker({
         position: suntube_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Solaronics Plant'
     });
-    
+
     var jfk_marker = new google.maps.Marker({
         position: jfk_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Pan Am Air Freight'
     });
-    
+
     var ge_marker = new google.maps.Marker({
         position: ge_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Plastics R&D'
     });
-    
+
     var vt_ware_marker = new google.maps.Marker({
         position: vt_ware_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Fab/Job Shop'
     });
-    
+
     var steel_marker = new google.maps.Marker({
         position: steel_latlng,
         map: harvard_yard_map,
@@ -758,434 +768,434 @@ function initMap() {
         title: 'Steel Fabricator'
     });
 
-     var forest_marker = new google.maps.Marker({
+    var forest_marker = new google.maps.Marker({
         position: forest_latlng,
         map: harvard_yard_map,
-        icon: icon, 
+        icon: icon,
         title: 'Institutional Furniture Maker'
     });
-    
+
     var geno_marker = new google.maps.Marker({
         position: geno_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Auto Collision Repair'
     });
-    
+
     var united_marker = new google.maps.Marker({
         position: united_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Jobber Shop'
     });
-    
+
     var evs_marker = new google.maps.Marker({
         position: evs_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Sheet Metal Fabrication'
     });
-    
+
     var pfe_marker = new google.maps.Marker({
         position: pfe_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Roll Machine Shop'
     });
-    
+
     var carmax_marker = new google.maps.Marker({
         position: carmax_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Automotive Super Store'
     });
-    
+
     var helmet_marker = new google.maps.Marker({
         position: helmet_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Kevlar Helmet Maker'
     });
-    
-     var smyth_marker = new google.maps.Marker({
+
+    var smyth_marker = new google.maps.Marker({
         position: smyth_latlng,
         map: harvard_yard_map,
-        icon: icon, 
+        icon: icon,
         title: 'Heavy Collision Repair'
     });
-    
+
     var corcon_marker = new google.maps.Marker({
         position: corcon_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Cabinet Maker'
     });
-    
+
     var plp_marker = new google.maps.Marker({
         position: plp_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Composite Flag Pole Maker'
     });
-    
+
     var protk_marker = new google.maps.Marker({
         position: protk_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Sheet Metal Fabricator'
     });
-    
+
     var mag_marker = new google.maps.Marker({
         position: mag_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Jet Engine Maker'
     });
-    
+
     var adan_marker = new google.maps.Marker({
         position: adan_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Animatronic System Fabricator'
     });
-    
+
     var lhw_marker = new google.maps.Marker({
         position: lhw_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Custom Window Fabrication'
     });
-    
+
     var armor_marker = new google.maps.Marker({
         position: armor_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Armored Vehicle Maker'
     });
-    
+
     var blue_marker = new google.maps.Marker({
         position: blue_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'High School Composite Shop'
     });
-    
+
     var pmi_marker = new google.maps.Marker({
         position: pmi_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Injection Moulder'
     });
-    
+
     var eb_marker = new google.maps.Marker({
         position: eb_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Electric Boat'
     });
-    
+
     var tba_marker = new google.maps.Marker({
         position: tba_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Powder Coater'
     });
-    
+
     var roche_marker = new google.maps.Marker({
         position: roche_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Barrel Manufacture'
     });
-    
+
     var prescott_marker = new google.maps.Marker({
         position: prescott_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Metal Shop'
     });
-    
+
     var crafts_marker = new google.maps.Marker({
         position: crafts_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Lighting Fabricator'
     });
-    
+
     var led_marker = new google.maps.Marker({
         position: led_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Lighting Manufacturer'
     });
-    
+
     var devens_marker = new google.maps.Marker({
         position: devens_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Army Paint Shop'
     });
-    
+
     var radar_marker = new google.maps.Marker({
         position: radar_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Radar Dome Maker'
     });
-    
+
     var jmd_marker = new google.maps.Marker({
         position: jmd_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Metal Plater'
     });
-    
+
     var metal_marker = new google.maps.Marker({
         position: metal_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Sheet Metal Fab Shop'
     });
-    
+
     var wrta_marker = new google.maps.Marker({
         position: wrta_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Transit Bus Paint Shop'
     });
-    
+
     var hm_marker = new google.maps.Marker({
         position: hm_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Sheet Metal Fabber'
     });
-    
+
     var rim_marker = new google.maps.Marker({
         position: rim_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Rim Refinisher'
     });
-    
+
     var mac_marker = new google.maps.Marker({
         position: mac_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Prototype Fab Shop'
     });
-    
+
     var therm_marker = new google.maps.Marker({
         position: therm_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Plastics Fabricator'
     });
-    
+
     var duncan_marker = new google.maps.Marker({
         position: duncan_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Galvanizer'
     });
-    
+
     var set_marker = new google.maps.Marker({
         position: set_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Studio Set Fabber'
     });
-    
+
     var pine_marker = new google.maps.Marker({
         position: pine_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Cabinet Shop'
     });
-    
+
     var kab_marker = new google.maps.Marker({
         position: kab_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Auto Body Shop'
     });
-    
+
     var bms_marker = new google.maps.Marker({
         position: bms_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Metal Fab Shop'
     });
-    
+
     var cwt_marker = new google.maps.Marker({
         position: cwt_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Treatment Plant'
     });
-    
+
     var ag_marker = new google.maps.Marker({
         position: ag_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Silkscreener'
     });
-    
+
     var nw_marker = new google.maps.Marker({
         position: nw_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Equipment Supplier'
     });
-    
+
     var gfs_marker = new google.maps.Marker({
         position: gfs_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Manufacturer'
     });
-    
+
     var bose_marker = new google.maps.Marker({
         position: bose_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Research & Developement'
     });
-    
+
     var bobs_marker = new google.maps.Marker({
         position: bobs_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Body Shop'
     });
-    
+
     var harvey_marker = new google.maps.Marker({
         position: harvey_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Building Products Manufacturer'
     });
-    
+
     var richey_marker = new google.maps.Marker({
         position: richey_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Woodwork Shop'
     });
-    
+
     var hhc_marker = new google.maps.Marker({
         position: hhc_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Cabinet Shop'
     });
-    
+
     var bay_marker = new google.maps.Marker({
         position: bay_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Plastics Rotation Moulder'
     });
-    
+
     var kal_marker = new google.maps.Marker({
         position: kal_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Passive Solar Panel Manufacturer'
     });
-    
+
     var dura_marker = new google.maps.Marker({
         position: dura_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Plastics Fabber'
     });
-    
+
     var dyna_marker = new google.maps.Marker({
         position: dyna_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Plating Shop'
     });
-    
+
     var bae_marker = new google.maps.Marker({
         position: bae_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Aerospace Composite Shop'
     });
-    
+
     var anjen_marker = new google.maps.Marker({
         position: anjen_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Finishing  Shop'
     });
-    
+
     var pws_marker = new google.maps.Marker({
         position: pws_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Work Bench Maker'
     });
-    
-     var koll_marker = new google.maps.Marker({
+
+    var koll_marker = new google.maps.Marker({
         position: koll_latlng,
         map: harvard_yard_map,
-        icon: icon, 
+        icon: icon,
         title: 'Aviation Electronics'
     });
-    
+
     var pro_marker = new google.maps.Marker({
         position: pro_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Powder Coating Shop'
     });
-    
+
     var edab_marker = new google.maps.Marker({
         position: edab_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Body Shop'
     });
-    
+
     var jpro_marker = new google.maps.Marker({
         position: jpro_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Gym Fixture Maker'
     });
-    
+
     var metso_marker = new google.maps.Marker({
         position: metso_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Automation Manufacturer'
     });
-    
+
     var natl_marker = new google.maps.Marker({
         position: natl_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Building Material Supplier'
     });
-    
+
     var grapek_marker = new google.maps.Marker({
         position: grapek_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Finishing Equipment Supplier'
     });
-    
+
     var mta_marker = new google.maps.Marker({
         position: mta_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Transit Rail Yard'
     });
-    
-    
+
+
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
     });
@@ -1249,263 +1259,263 @@ function initMap() {
     google.maps.event.addListener(pei_marker, 'click', function () {
         pei_infowindow.open(harvard_yard_map, pei_marker);
     });
-    
+
     google.maps.event.addListener(suntube_marker, 'click', function () {
         suntube_infowindow.open(harvard_yard_map, suntube_marker);
     });
-    
+
     google.maps.event.addListener(jfk_marker, 'click', function () {
         jfk_infowindow.open(harvard_yard_map, jfk_marker);
     });
-    
+
     google.maps.event.addListener(ge_marker, 'click', function () {
         ge_infowindow.open(harvard_yard_map, ge_marker);
     });
-    
+
     google.maps.event.addListener(vt_ware_marker, 'click', function () {
         vt_ware_infowindow.open(harvard_yard_map, vt_ware_marker);
     });
-    
+
     google.maps.event.addListener(steel_marker, 'click', function () {
         steel_infowindow.open(harvard_yard_map, steel_marker);
     });
-    
-     google.maps.event.addListener(forest_marker, 'click', function () {
+
+    google.maps.event.addListener(forest_marker, 'click', function () {
         forest_infowindow.open(harvard_yard_map, forest_marker);
     });
-    
-     google.maps.event.addListener(geno_marker, 'click', function () {
+
+    google.maps.event.addListener(geno_marker, 'click', function () {
         geno_infowindow.open(harvard_yard_map, geno_marker);
     });
-    
-     google.maps.event.addListener(united_marker, 'click', function () {
+
+    google.maps.event.addListener(united_marker, 'click', function () {
         united_infowindow.open(harvard_yard_map, united_marker);
     });
-    
-     google.maps.event.addListener(evs_marker, 'click', function () {
+
+    google.maps.event.addListener(evs_marker, 'click', function () {
         evs_infowindow.open(harvard_yard_map, evs_marker);
     });
-    
+
     google.maps.event.addListener(pfe_marker, 'click', function () {
         pfe_infowindow.open(harvard_yard_map, pfe_marker);
     });
-    
+
     google.maps.event.addListener(carmax_marker, 'click', function () {
         carmax_infowindow.open(harvard_yard_map, carmax_marker);
     });
-    
+
     google.maps.event.addListener(helmet_marker, 'click', function () {
         helmet_infowindow.open(harvard_yard_map, helmet_marker);
     });
-    
+
     google.maps.event.addListener(smyth_marker, 'click', function () {
         smyth_infowindow.open(harvard_yard_map, smyth_marker);
     });
-    
+
     google.maps.event.addListener(corcon_marker, 'click', function () {
         corcon_infowindow.open(harvard_yard_map, corcon_marker);
     });
-    
+
     google.maps.event.addListener(plp_marker, 'click', function () {
         plp_infowindow.open(harvard_yard_map, plp_marker);
     });
-    
+
     google.maps.event.addListener(protk_marker, 'click', function () {
         protk_infowindow.open(harvard_yard_map, protk_marker);
     });
-    
+
     google.maps.event.addListener(mag_marker, 'click', function () {
         mag_infowindow.open(harvard_yard_map, mag_marker);
     });
-    
+
     google.maps.event.addListener(adan_marker, 'click', function () {
         adan_infowindow.open(harvard_yard_map, adan_marker);
     });
-    
+
     google.maps.event.addListener(lhw_marker, 'click', function () {
         lhw_infowindow.open(harvard_yard_map, lhw_marker);
     });
-    
+
     google.maps.event.addListener(armor_marker, 'click', function () {
         armor_infowindow.open(harvard_yard_map, armor_marker);
     });
-    
+
     google.maps.event.addListener(blue_marker, 'click', function () {
         blue_infowindow.open(harvard_yard_map, blue_marker);
     });
-    
+
     google.maps.event.addListener(pmi_marker, 'click', function () {
         pmi_infowindow.open(harvard_yard_map, pmi_marker);
     });
-    
+
     google.maps.event.addListener(eb_marker, 'click', function () {
         eb_infowindow.open(harvard_yard_map, eb_marker);
     });
-    
+
     google.maps.event.addListener(tba_marker, 'click', function () {
         tba_infowindow.open(harvard_yard_map, tba_marker);
     });
-    
+
     google.maps.event.addListener(roche_marker, 'click', function () {
         roche_infowindow.open(harvard_yard_map, roche_marker);
     });
-    
+
     google.maps.event.addListener(prescott_marker, 'click', function () {
         prescott_infowindow.open(harvard_yard_map, prescott_marker);
     });
-    
+
     google.maps.event.addListener(crafts_marker, 'click', function () {
         crafts_infowindow.open(harvard_yard_map, crafts_marker);
     });
-    
+
     google.maps.event.addListener(led_marker, 'click', function () {
         led_infowindow.open(harvard_yard_map, led_marker);
     });
-    
+
     google.maps.event.addListener(devens_marker, 'click', function () {
         devens_infowindow.open(harvard_yard_map, devens_marker);
     });
-    
+
     google.maps.event.addListener(radar_marker, 'click', function () {
         radar_infowindow.open(harvard_yard_map, radar_marker);
     });
-    
+
     google.maps.event.addListener(jmd_marker, 'click', function () {
         jmd_infowindow.open(harvard_yard_map, jmd_marker);
     });
-    
+
     google.maps.event.addListener(metal_marker, 'click', function () {
         metal_infowindow.open(harvard_yard_map, metal_marker);
     });
-    
+
     google.maps.event.addListener(wrta_marker, 'click', function () {
         wrta_infowindow.open(harvard_yard_map, wrta_marker);
     });
-    
+
     google.maps.event.addListener(hm_marker, 'click', function () {
         hm_infowindow.open(harvard_yard_map, hm_marker);
     });
-    
+
     google.maps.event.addListener(rim_marker, 'click', function () {
         rim_infowindow.open(harvard_yard_map, rim_marker);
     });
-    
+
     google.maps.event.addListener(mac_marker, 'click', function () {
         mac_infowindow.open(harvard_yard_map, mac_marker);
     });
-    
+
     google.maps.event.addListener(therm_marker, 'click', function () {
         therm_infowindow.open(harvard_yard_map, therm_marker);
     });
-    
+
     google.maps.event.addListener(duncan_marker, 'click', function () {
         duncan_infowindow.open(harvard_yard_map, duncan_marker);
     });
-    
+
     google.maps.event.addListener(set_marker, 'click', function () {
         set_infowindow.open(harvard_yard_map, set_marker);
     });
-    
+
     google.maps.event.addListener(pine_marker, 'click', function () {
         pine_infowindow.open(harvard_yard_map, pine_marker);
     });
-    
+
     google.maps.event.addListener(kab_marker, 'click', function () {
         kab_infowindow.open(harvard_yard_map, kab_marker);
     });
-    
+
     google.maps.event.addListener(bms_marker, 'click', function () {
         bms_infowindow.open(harvard_yard_map, bms_marker);
     });
-    
+
     google.maps.event.addListener(cwt_marker, 'click', function () {
         cwt_infowindow.open(harvard_yard_map, cwt_marker);
     });
-    
+
     google.maps.event.addListener(ag_marker, 'click', function () {
         ag_infowindow.open(harvard_yard_map, ag_marker);
     });
-    
+
     google.maps.event.addListener(nw_marker, 'click', function () {
         nw_infowindow.open(harvard_yard_map, nw_marker);
     });
-    
+
     google.maps.event.addListener(gfs_marker, 'click', function () {
         gfs_infowindow.open(harvard_yard_map, gfs_marker);
     });
-    
+
     google.maps.event.addListener(bose_marker, 'click', function () {
         bose_infowindow.open(harvard_yard_map, bose_marker);
     });
-    
+
     google.maps.event.addListener(bobs_marker, 'click', function () {
         bobs_infowindow.open(harvard_yard_map, bobs_marker);
     });
-    
+
     google.maps.event.addListener(harvey_marker, 'click', function () {
         harvey_infowindow.open(harvard_yard_map, harvey_marker);
     });
-    
+
     google.maps.event.addListener(richey_marker, 'click', function () {
         richey_infowindow.open(harvard_yard_map, richey_marker);
     });
-    
+
     google.maps.event.addListener(hhc_marker, 'click', function () {
         hhc_infowindow.open(harvard_yard_map, hhc_marker);
     });
-    
+
     google.maps.event.addListener(bay_marker, 'click', function () {
         bay_infowindow.open(harvard_yard_map, bay_marker);
     });
-    
+
     google.maps.event.addListener(kal_marker, 'click', function () {
         kal_infowindow.open(harvard_yard_map, kal_marker);
     });
-    
+
     google.maps.event.addListener(dura_marker, 'click', function () {
         dura_infowindow.open(harvard_yard_map, dura_marker);
     });
-    
+
     google.maps.event.addListener(bae_marker, 'click', function () {
         bae_infowindow.open(harvard_yard_map, bae_marker);
     });
-    
+
     google.maps.event.addListener(anjen_marker, 'click', function () {
         anjen_infowindow.open(harvard_yard_map, anjen_marker);
     });
-    
+
     google.maps.event.addListener(pws_marker, 'click', function () {
         pws_infowindow.open(harvard_yard_map, pws_marker);
     });
-    
+
     google.maps.event.addListener(koll_marker, 'click', function () {
         koll_infowindow.open(harvard_yard_map, koll_marker);
     });
-    
+
     google.maps.event.addListener(pro_marker, 'click', function () {
         pro_infowindow.open(harvard_yard_map, pro_marker);
     });
-    
+
     google.maps.event.addListener(edab_marker, 'click', function () {
         edab_infowindow.open(harvard_yard_map, edab_marker);
     });
-    
+
     google.maps.event.addListener(jpro_marker, 'click', function () {
         jpro_infowindow.open(harvard_yard_map, jpro_marker);
     });
-    
+
     google.maps.event.addListener(metso_marker, 'click', function () {
         metso_infowindow.open(harvard_yard_map, metso_marker);
     });
-    
+
     google.maps.event.addListener(natl_marker, 'click', function () {
         natl_infowindow.open(harvard_yard_map, natl_marker);
     });
-    
+
     google.maps.event.addListener(grapek_marker, 'click', function () {
         grapek_infowindow.open(harvard_yard_map, grapek_marker);
     });
-    
+
     google.maps.event.addListener(mta_marker, 'click', function () {
         mta_infowindow.open(harvard_yard_map, mta_marker);
     });
