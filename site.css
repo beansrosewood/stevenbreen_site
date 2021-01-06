@@ -202,3 +202,6 @@ body { padding-top: 70px}
     padding-top: 1em;
     position: fixed;
 }
+.bottom + .content {
+    padding-bottom: 60px;
+}
