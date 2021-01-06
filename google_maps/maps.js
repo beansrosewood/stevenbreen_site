@@ -93,16 +93,7 @@ function initMap() {
     var mapOptions = {
         zoom: 7,
         center: new google.maps.LatLng(42.65, -75.75),
-        minZoom: zoom - 3,
-        maxZoom: zoom + 3,
-        restriction: {
-            latLngBounds: {
-                north: -10,
-                south: -40,
-                east: 160,
-                west: 100,
-            },
-        },
+       
         /*Map type id can also be set to "hybrid" for sat/road. */
         mapTypeId: 'roadmap'
     };
