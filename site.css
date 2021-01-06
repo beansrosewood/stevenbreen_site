@@ -165,9 +165,7 @@
 .content {
   padding: 16px;
 }
-.bottom {
-    position: fixed;
-}
+
 .sticky {
   position: fixed;
   top: 0;
