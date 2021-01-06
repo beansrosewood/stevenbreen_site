@@ -87,6 +87,7 @@ function initMap() {
     var metso_latlng = new google.maps.LatLng(42.299183, -71.755980);
     var natl_latlng = new google.maps.LatLng(42.042749, -71.206717);
     var grapek_latlng = new google.maps.LatLng(40.123942, -76.003888);
+    var mta_latlng = new google.maps.LatLng(40.707412, -73.780572);
     
     
     var mapOptions = {
@@ -260,6 +261,8 @@ function initMap() {
     var natl_info = "<strong>National Lumber</strong><br/>" + "Mansfield, MA";
     
     var grapek_info = "<strong>Grapek/Bates Finishing</strong><br/>" + "Industrial Equipment Supplier<br/>" + "Mansfield, MA";
+    
+    var mta_info = "<strong>New York City MTA</strong><br/>" + "Maintainance Yard<br/>" + "Jamaica, NY";
 
     
     
@@ -593,6 +596,10 @@ function initMap() {
     
     var grapek_infowindow = new google.maps.InfoWindow({
         content: grapek_info
+    });
+    
+    var mta_infowindow = new google.maps.InfoWindow({
+        content: mta_info
     });
 
 
@@ -1170,6 +1177,13 @@ function initMap() {
         title: 'Finishing Equipment Supplier'
     });
     
+    var mta_marker = new google.maps.Marker({
+        position: mta_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Transit Rail Yard'
+    });
+    
     
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
         fort_drum_infowindow.open(harvard_yard_map, fort_drum_marker);
@@ -1489,6 +1503,10 @@ function initMap() {
     
     google.maps.event.addListener(grapek_marker, 'click', function () {
         grapek_infowindow.open(harvard_yard_map, grapek_marker);
+    });
+    
+    google.maps.event.addListener(mta_marker, 'click', function () {
+        mta_infowindow.open(harvard_yard_map, mta_marker);
     });
 
 
