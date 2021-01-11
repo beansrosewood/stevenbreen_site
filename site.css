@@ -234,7 +234,9 @@ body { padding-top: 70px}
 }
 
 @media screen and (max-width: 600px) {
-  .topnav a:not(.home_tab) {display: none;}
+  .topnav a.big_only {
+      display: none;
+    }
   .topnav a.icon {
     float: right;
     display: block;
