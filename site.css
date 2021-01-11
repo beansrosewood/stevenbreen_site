@@ -166,6 +166,7 @@
   padding: 16px;
 }
 
+/* Not used. Was going to be for sticky nav bar, but switched to top nav.
 .sticky {
   position: fixed;
   top: 0;
@@ -174,7 +175,7 @@
 
 .sticky + .content {
   padding-top: 60px;
-}
+} */
 
 /* Bootstrap Nav Bar Fixed Padding */
 
