@@ -203,11 +203,11 @@ body { padding-top: 70px}
     padding-top: 1em;
     /*position: fixed;*/
 }
-    /*top nav for responsive format on mobile*/
+    /*top nav for responsive format on mobile
 .topnav {
   overflow: hidden;
   background-color: #333;
-}
+}*/
 
 .topnav a {
   float: left;
