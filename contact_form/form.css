@@ -2,7 +2,7 @@
 /* Add a black background color to the top navigation */
         .navbar {
             background-color: black;
-            overflow: hidden;
+            /*overflow: hidden;*/
         }
 
 .my_info, .your_info {
