@@ -21,3 +21,11 @@ html,body,#map-canvas {
             background-color: black;
             /*overflow: hidden;*/
         }
+
+/* footer */
+
+.bottom {
+    text-align: center;
+    padding-top: 1em;
+    /*position: fixed;*/
+}
