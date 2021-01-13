@@ -42,3 +42,11 @@
 .my_cell a:hover {
     color: yellow;
 }
+
+/* footer */
+
+.bottom {
+    text-align: center;
+    /*padding-top: 1em;*/
+    /*position: fixed;*/
+}
