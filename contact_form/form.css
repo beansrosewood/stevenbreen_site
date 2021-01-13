@@ -1,4 +1,10 @@
  
+/* Add a black background color to the top navigation */
+        .navbar {
+            background-color: black;
+            overflow: hidden;
+        }
+
 .my_info, .your_info {
     background-image: url(../photo_gallery/EE25B659-5901-48C3-8B5F-527119AC2848_1_105_c.jpeg);
     padding-left: 12em;
