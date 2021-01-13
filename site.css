@@ -251,7 +251,7 @@ body { padding-top: 70px}
     top: 0;
   }
   .topnav.responsive a {
-    float: none;
+    float: left;/*Just changed this!*/
     display: block;
     text-align: left;
   }
