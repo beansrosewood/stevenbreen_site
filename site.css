@@ -255,3 +255,7 @@ body { padding-top: 70px}
     display: block;
     text-align: left;
   }
+    
+    .search_bar {
+        display: none;
+    }  
