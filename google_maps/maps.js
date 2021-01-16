@@ -93,6 +93,7 @@ function initMap() {
     var display_latlng = new google.maps.LatLng(40.762642, -73.429244);
     var furman_latlng = new google.maps.LatLng(41.692148, -71.175632);
     var rapid_latlng = new google.maps.LatLng(42.777993, -71.500630);
+    var minute_latlng = new google.maps.LatLng(42.110344, -71.246050);
 
 
     var mapOptions = {
@@ -280,6 +281,8 @@ function initMap() {
     var furman_info = "<strong>W.A. Furman Company</strong><br/>" + "Millwork Shop<br/>" + "Fall River, MA";
     
     var rapid_info = "<strong>Rapid Machine Company</strong><br/>" + "Machine Shop<br/>" + "Nashua, NH";
+    
+    var minute_info = "<strong>Minuteman Truck </strong><br/>" + "Truck Equipment Supplier<br/>" + "Walpole, MA";
 
 
 
@@ -637,6 +640,10 @@ function initMap() {
     
     var rapid_infowindow = new google.maps.InfoWindow({
         content: rapid_info
+    });
+    
+    var minute_infowindow = new google.maps.InfoWindow({
+        content: minute_info
     });
 
 
@@ -1254,6 +1261,13 @@ function initMap() {
         icon: icon,
         title: 'Machine Shop'
     });
+    
+    var minute_marker = new google.maps.Marker({
+        position: minute_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Fire Truck Fitter'
+    });
 
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
@@ -1598,6 +1612,10 @@ function initMap() {
     
     google.maps.event.addListener(rapid_marker, 'click', function () {
         rapid_infowindow.open(harvard_yard_map, rapid_marker);
+    });
+    
+    google.maps.event.addListener(minute_marker, 'click', function () {
+        minute_infowindow.open(harvard_yard_map, minute_marker);
     });
 
 
