@@ -1248,7 +1248,7 @@ function initMap() {
         title: 'Millwork Shop'
     });
     
-    var radid_marker = new google.maps.Marker({
+    var rapid_marker = new google.maps.Marker({
         position: rapid_latlng,
         map: harvard_yard_map,
         icon: icon,
@@ -1597,7 +1597,7 @@ function initMap() {
     });
     
     google.maps.event.addListener(rapid_marker, 'click', function () {
-        rapid_infowindow.open(harvard_yard_map, radid_marker);
+        rapid_infowindow.open(harvard_yard_map, rapid_marker);
     });
 
 
