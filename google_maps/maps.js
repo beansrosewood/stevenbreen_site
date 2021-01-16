@@ -95,6 +95,7 @@ function initMap() {
     var rapid_latlng = new google.maps.LatLng(42.777993, -71.500630);
     var minute_latlng = new google.maps.LatLng(42.110344, -71.246050);
     var faniel_latlng = new google.maps.LatLng(42.244642, -70.917666);
+    var newton_latlng = new google.maps.LatLng(42.354882, -71.202077);
 
 
     var mapOptions = {
@@ -286,6 +287,8 @@ function initMap() {
     var minute_info = "<strong>Minuteman Truck </strong><br/>" + "Truck Equipment Supplier<br/>" + "Walpole, MA";
     
     var faniel_info = "<strong>Faniel Kitchens</strong><br/>" + "Cabinet Shop<br/>" + "Hingham, MA";
+    
+    var newton_info = "<strong>Auto Body Shop</strong><br/>" + "Newton, MA";
 
 
 
@@ -651,6 +654,10 @@ function initMap() {
     
     var faniel_infowindow = new google.maps.InfoWindow({
         content: faniel_info
+    });
+    
+    var newton_infowindow = new google.maps.InfoWindow({
+        content: newton_info
     });
 
 
@@ -1282,6 +1289,13 @@ function initMap() {
         icon: icon,
         title: 'Kitchen Shop'
     });
+    
+    var newton_marker = new google.maps.Marker({
+        position: newton_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Body Shop'
+    });
 
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
@@ -1634,6 +1648,10 @@ function initMap() {
     
     google.maps.event.addListener(faniel_marker, 'click', function () {
         faniel_infowindow.open(harvard_yard_map, faniel_marker);
+    });
+    
+    google.maps.event.addListener(newton_marker, 'click', function () {
+        newton_infowindow.open(harvard_yard_map, newton_marker);
     });
 
 
