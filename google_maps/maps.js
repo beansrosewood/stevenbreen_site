@@ -92,6 +92,7 @@ function initMap() {
     var duck_latlng = new google.maps.LatLng(42.299409, -71.056044);
     var display_latlng = new google.maps.LatLng(40.762642, -73.429244);
     var furman_latlng = new google.maps.LatLng(41.692148, -71.175632);
+    var rapid_latlng = new google.maps.LatLng(42.777993, -71.500630);
 
 
     var mapOptions = {
@@ -277,6 +278,8 @@ function initMap() {
     var display_info = "<strong>Gilbert Displays Company </strong><br/>" + "Advertizing Display Maker<br/>" + "Melville, NY";
     
     var furman_info = "<strong>W.A. Furman Company</strong><br/>" + "Millwork Shop<br/>" + "Fall River, MA";
+    
+    var rapid_info = "<strong>Rapid Machine Company</strong><br/>" + "Machine Shop<br/>" + "Nashua, NH";
 
 
 
@@ -630,6 +633,10 @@ function initMap() {
     
     var furman_infowindow = new google.maps.InfoWindow({
         content: furman_info
+    });
+    
+    var rapid_infowindow = new google.maps.InfoWindow({
+        content: rapid_info
     });
 
 
@@ -1240,6 +1247,13 @@ function initMap() {
         icon: icon,
         title: 'Millwork Shop'
     });
+    
+    var radid_marker = new google.maps.Marker({
+        position: rapid_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Machine Shop'
+    });
 
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
@@ -1580,6 +1594,10 @@ function initMap() {
     
     google.maps.event.addListener(furman_marker, 'click', function () {
         furman_infowindow.open(harvard_yard_map, furman_marker);
+    });
+    
+    google.maps.event.addListener(rapid_marker, 'click', function () {
+        rapid_infowindow.open(harvard_yard_map, radid_marker);
     });
 
 
