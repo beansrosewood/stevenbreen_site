@@ -257,6 +257,6 @@ body { padding-top: 70px}
     text-align: left;
   }
     
-    .big_screen #map #photo #contact {
+    .big_screen {
         display: none;
     }  
