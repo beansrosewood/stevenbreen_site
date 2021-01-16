@@ -88,6 +88,7 @@ function initMap() {
     var natl_latlng = new google.maps.LatLng(42.042749, -71.206717);
     var grapek_latlng = new google.maps.LatLng(40.123942, -76.003888);
     var mta_latlng = new google.maps.LatLng(40.707412, -73.780572);
+    var eppley_latlng = new google.maps.LatLng(40.940967, -74.164334);
 
 
     var mapOptions = {
@@ -265,6 +266,8 @@ function initMap() {
     var grapek_info = "<strong>Grapek/Bates Finishing</strong><br/>" + "Industrial Equipment Supplier<br/>" + "Mansfield, MA";
 
     var mta_info = "<strong>New York City MTA</strong><br/>" + "Maintainance Yard<br/>" + "Jamaica, NY";
+    
+    var eppley_info = "<strong>Eppley Building & Design </strong><br/>" + "Architectural Millwork & Cabinet Shop<br/>" + "Hawthorn, NJ";
 
 
 
@@ -602,6 +605,10 @@ function initMap() {
 
     var mta_infowindow = new google.maps.InfoWindow({
         content: mta_info
+    });
+    
+    var eppley_infowindow = new google.maps.InfoWindow({
+        content: eppley_info
     });
 
 
@@ -1185,6 +1192,13 @@ function initMap() {
         icon: icon,
         title: 'Transit Rail Yard'
     });
+    
+    var eppley_marker = new google.maps.Marker({
+        position: eppley_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Millwork Shop'
+    });
 
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
@@ -1509,6 +1523,10 @@ function initMap() {
 
     google.maps.event.addListener(mta_marker, 'click', function () {
         mta_infowindow.open(harvard_yard_map, mta_marker);
+    });
+    
+    google.maps.event.addListener(eppley_marker, 'click', function () {
+        eppley_infowindow.open(harvard_yard_map, eppley_marker);
     });
 
 
