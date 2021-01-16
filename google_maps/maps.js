@@ -89,6 +89,7 @@ function initMap() {
     var grapek_latlng = new google.maps.LatLng(40.123942, -76.003888);
     var mta_latlng = new google.maps.LatLng(40.707412, -73.780572);
     var eppley_latlng = new google.maps.LatLng(40.940967, -74.164334);
+    var duck_latlng = new google.maps.LatLng(42.299409, -71.056044);
 
 
     var mapOptions = {
@@ -268,6 +269,8 @@ function initMap() {
     var mta_info = "<strong>New York City MTA</strong><br/>" + "Maintainance Yard<br/>" + "Jamaica, NY";
     
     var eppley_info = "<strong>Eppley Building & Design </strong><br/>" + "Architectural Millwork & Cabinet Shop<br/>" + "Hawthorn, NJ";
+    
+    var duck_info = "<strong>Boston Duck Boat Tours </strong><br/>" + "Amphibious Vehicle Paint/Repair Shop<br/>" + "Dorchester, MA";
 
 
 
@@ -610,7 +613,10 @@ function initMap() {
     var eppley_infowindow = new google.maps.InfoWindow({
         content: eppley_info
     });
-
+    
+    var duck_infowindow = new google.maps.InfoWindow({
+        content: duck_info
+    });
 
 
 
@@ -1199,6 +1205,13 @@ function initMap() {
         icon: icon,
         title: 'Millwork Shop'
     });
+    
+     var duck_marker = new google.maps.Marker({
+        position: duck_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Duck Boat Shop'
+    });
 
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
@@ -1527,6 +1540,10 @@ function initMap() {
     
     google.maps.event.addListener(eppley_marker, 'click', function () {
         eppley_infowindow.open(harvard_yard_map, eppley_marker);
+    });
+    
+    google.maps.event.addListener(duck_marker, 'click', function () {
+        duck_infowindow.open(harvard_yard_map, duck_marker);
     });
 
 
