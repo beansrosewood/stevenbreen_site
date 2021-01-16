@@ -91,6 +91,7 @@ function initMap() {
     var eppley_latlng = new google.maps.LatLng(40.940967, -74.164334);
     var duck_latlng = new google.maps.LatLng(42.299409, -71.056044);
     var display_latlng = new google.maps.LatLng(40.762642, -73.429244);
+    var furman_latlng = new google.maps.LatLng(41.692148, -71.175632);
 
 
     var mapOptions = {
@@ -274,6 +275,8 @@ function initMap() {
     var duck_info = "<strong>Boston Duck Boat Tours </strong><br/>" + "Amphibious Vehicle Paint/Repair Shop<br/>" + "Dorchester, MA";
     
     var display_info = "<strong>Gilbert Displays Company </strong><br/>" + "Advertizing Display Maker<br/>" + "Melville, NY";
+    
+    var furman_info = "<strong>W.A. Furman Company</strong><br/>" + "Millwork Shop<br/>" + "Fall River, MA";
 
 
 
@@ -623,6 +626,10 @@ function initMap() {
     
     var display_infowindow = new google.maps.InfoWindow({
         content: display_info
+    });
+    
+    var furman_infowindow = new google.maps.InfoWindow({
+        content: furman_info
     });
 
 
@@ -1226,6 +1233,13 @@ function initMap() {
         icon: icon,
         title: 'Electronic Display Maker'
     });
+    
+    var furman_marker = new google.maps.Marker({
+        position: furman_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Millwork Shop'
+    });
 
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
@@ -1562,6 +1576,10 @@ function initMap() {
     
     google.maps.event.addListener(display_marker, 'click', function () {
         display_infowindow.open(harvard_yard_map, display_marker);
+    });
+    
+    google.maps.event.addListener(furman_marker, 'click', function () {
+        furman_infowindow.open(harvard_yard_map, furman_marker);
     });
 
 
