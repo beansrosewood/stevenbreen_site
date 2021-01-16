@@ -94,6 +94,7 @@ function initMap() {
     var furman_latlng = new google.maps.LatLng(41.692148, -71.175632);
     var rapid_latlng = new google.maps.LatLng(42.777993, -71.500630);
     var minute_latlng = new google.maps.LatLng(42.110344, -71.246050);
+    var faniel_latlng = new google.maps.LatLng(42.244642, -70.917666);
 
 
     var mapOptions = {
@@ -283,6 +284,8 @@ function initMap() {
     var rapid_info = "<strong>Rapid Machine Company</strong><br/>" + "Machine Shop<br/>" + "Nashua, NH";
     
     var minute_info = "<strong>Minuteman Truck </strong><br/>" + "Truck Equipment Supplier<br/>" + "Walpole, MA";
+    
+    var faniel_info = "<strong>Faniel Kitchens</strong><br/>" + "Cabinet Shop<br/>" + "Hingham, MA";
 
 
 
@@ -644,6 +647,10 @@ function initMap() {
     
     var minute_infowindow = new google.maps.InfoWindow({
         content: minute_info
+    });
+    
+    var faniel_infowindow = new google.maps.InfoWindow({
+        content: faniel_info
     });
 
 
@@ -1268,6 +1275,13 @@ function initMap() {
         icon: icon,
         title: 'Fire Truck Fitter'
     });
+    
+    var faniel_marker = new google.maps.Marker({
+        position: faniel_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Kitchen Shop'
+    });
 
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
@@ -1616,6 +1630,10 @@ function initMap() {
     
     google.maps.event.addListener(minute_marker, 'click', function () {
         minute_infowindow.open(harvard_yard_map, minute_marker);
+    });
+    
+    google.maps.event.addListener(faniel_marker, 'click', function () {
+        faniel_infowindow.open(harvard_yard_map, faniel_marker);
     });
 
 
