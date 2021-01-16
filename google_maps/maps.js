@@ -90,6 +90,7 @@ function initMap() {
     var mta_latlng = new google.maps.LatLng(40.707412, -73.780572);
     var eppley_latlng = new google.maps.LatLng(40.940967, -74.164334);
     var duck_latlng = new google.maps.LatLng(42.299409, -71.056044);
+    var display_latlng = new google.maps.LatLng(40.762642, -73.429244);
 
 
     var mapOptions = {
@@ -271,6 +272,8 @@ function initMap() {
     var eppley_info = "<strong>Eppley Building & Design </strong><br/>" + "Architectural Millwork & Cabinet Shop<br/>" + "Hawthorn, NJ";
     
     var duck_info = "<strong>Boston Duck Boat Tours </strong><br/>" + "Amphibious Vehicle Paint/Repair Shop<br/>" + "Dorchester, MA";
+    
+    var display_info = "<strong>Gilbert Displays Company </strong><br/>" + "Advertizing Display Maker<br/>" + "Melville, NY";
 
 
 
@@ -616,6 +619,10 @@ function initMap() {
     
     var duck_infowindow = new google.maps.InfoWindow({
         content: duck_info
+    });
+    
+    var display_infowindow = new google.maps.InfoWindow({
+        content: display_info
     });
 
 
@@ -1212,6 +1219,13 @@ function initMap() {
         icon: icon,
         title: 'Duck Boat Shop'
     });
+    
+    var display_marker = new google.maps.Marker({
+        position: display_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Electronic Display Maker'
+    });
 
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
@@ -1544,6 +1558,10 @@ function initMap() {
     
     google.maps.event.addListener(duck_marker, 'click', function () {
         duck_infowindow.open(harvard_yard_map, duck_marker);
+    });
+    
+    google.maps.event.addListener(display_marker, 'click', function () {
+        display_infowindow.open(harvard_yard_map, display_marker);
     });
 
 
