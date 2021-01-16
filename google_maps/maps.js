@@ -96,6 +96,7 @@ function initMap() {
     var minute_latlng = new google.maps.LatLng(42.110344, -71.246050);
     var faniel_latlng = new google.maps.LatLng(42.244642, -70.917666);
     var newton_latlng = new google.maps.LatLng(42.354882, -71.202077);
+    var ab_latlng = new google.maps.LatLng(42.725928, -71.434485);
 
 
     var mapOptions = {
@@ -289,6 +290,8 @@ function initMap() {
     var faniel_info = "<strong>Faniel Kitchens</strong><br/>" + "Cabinet Shop<br/>" + "Hingham, MA";
     
     var newton_info = "<strong>Auto Body Shop</strong><br/>" + "Newton, MA";
+    
+    var ab_info = "<strong>A&B Sandblasting/Powder Coating</strong><br/>" + "Hudson, NH";
 
 
 
@@ -658,6 +661,10 @@ function initMap() {
     
     var newton_infowindow = new google.maps.InfoWindow({
         content: newton_info
+    });
+    
+    var ab_infowindow = new google.maps.InfoWindow({
+        content: ab_info
     });
 
 
@@ -1296,6 +1303,13 @@ function initMap() {
         icon: icon,
         title: 'Body Shop'
     });
+    
+    var ab_marker = new google.maps.Marker({
+        position: ab_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Powder Coating Shop'
+    });
 
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
@@ -1652,6 +1666,10 @@ function initMap() {
     
     google.maps.event.addListener(newton_marker, 'click', function () {
         newton_infowindow.open(harvard_yard_map, newton_marker);
+    });
+    
+    google.maps.event.addListener(ab_marker, 'click', function () {
+        ab_infowindow.open(harvard_yard_map, ab_marker);
     });
 
 
