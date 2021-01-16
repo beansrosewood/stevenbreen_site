@@ -201,6 +201,7 @@ body { padding-top: 70px}
 .bottom {
     text-align: center;
     padding-top: 1em;
+    padding-bottom: 1em;
     /*position: fixed;*/
 }
     /*top nav for responsive format on mobile
@@ -256,6 +257,6 @@ body { padding-top: 70px}
     text-align: left;
   }
     
-    .big_screen {
+    .big_screen #map #photo #contact {
         display: none;
     }  
