@@ -310,7 +310,7 @@ function initMap() {
     
     var iron_info = "<strong>Derry Iron Works</strong><br/>" + "Decorative Metal Fabrication<br/>" + "Derry, NH";
     
-    var martin_info = "<strong>Martin International</strong><br/>" + "Metal Enclosure Manurfacturer<br/>" + "Seabrook, NH";
+    var martin_info = "<strong>Martin International</strong><br/>" + "Metal Enclosure Manufacturer<br/>" + "Seabrook, NH";
     
     var carlos_info = "<strong>Carlos Fencing Corp</strong><br/>" + "Security Fencing Fabricator<br/>" + "Elizabeth, NJ";
 
@@ -786,7 +786,7 @@ function initMap() {
         position: lyndon_latlng,
         map: harvard_yard_map,
         icon: icon,
-        title: 'Furniture Manurfacturer'
+        title: 'Furniture Manufacturer'
     });
 
     var design_marker = new google.maps.Marker({
@@ -814,7 +814,7 @@ function initMap() {
         position: whelen_latlng,
         map: harvard_yard_map,
         icon: icon,
-        title: 'Emergency Equipment Manurfacturer'
+        title: 'Emergency Equipment Manufacturer'
     });
 
     var boat_marker = new google.maps.Marker({
