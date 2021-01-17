@@ -102,6 +102,7 @@ function initMap() {
     var buck_latlng = new google.maps.LatLng(42.199430, -71.749115);
     var lundy_latlng = new google.maps.LatLng(42.477914, -70.955037);
     var iron_latlng = new google.maps.LatLng(42.882525, -71.329483);
+    var martin_latlng = new google.maps.LatLng(42.888039, -70.884624);
 
 
     var mapOptions = {
@@ -307,6 +308,8 @@ function initMap() {
     var lundy_info = "<strong>Lundy's Ornamental Iron</strong><br/>" + "Architechural Railing Fabricator<br/>" + "Lynn, MA";
     
     var iron_info = "<strong>Derry Iron Works</strong><br/>" + "Decorative Metal Fabrication<br/>" + "Derry, NH";
+    
+    var martin_info = "<strong>Martin International</strong><br/>" + "Metal Enclosure Manurfacturer<br/>" + "Seabrook, NH";
 
 
 
@@ -701,6 +704,10 @@ function initMap() {
     
     var iron_infowindow = new google.maps.InfoWindow({
         content: iron_info
+    });
+    
+    var martin_infowindow = new google.maps.InfoWindow({
+        content: martin_info
     });
 
 
@@ -1383,6 +1390,13 @@ function initMap() {
         icon: icon,
         title: 'Decorative Metal Fab Shop'
     });
+    
+    var martin_marker = new google.maps.Marker({
+        position: martin_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Server Enclosure Maker'
+    });
 
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
@@ -1763,6 +1777,10 @@ function initMap() {
     
     google.maps.event.addListener(iron_marker, 'click', function () {
         iron_infowindow.open(harvard_yard_map, iron_marker);
+    });
+    
+    google.maps.event.addListener(martin_marker, 'click', function () {
+        martin_infowindow.open(harvard_yard_map, martin_marker);
     });
 
 
