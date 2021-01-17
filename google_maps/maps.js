@@ -101,6 +101,7 @@ function initMap() {
     var edo_latlng = new google.maps.LatLng(40.710598, -73.399051);
     var buck_latlng = new google.maps.LatLng(42.199430, -71.749115);
     var lundy_latlng = new google.maps.LatLng(42.477914, -70.955037);
+    var iron_latlng = new google.maps.LatLng(42.882525, -71.329483);
 
 
     var mapOptions = {
@@ -304,6 +305,9 @@ function initMap() {
     var buck_info = "<strong>Buck Brothers Tool Corp</strong><br/>" + "Woodworking Tool Manufacturer<br/>" + "Millbury, MA";
     
     var lundy_info = "<strong>Lundy's Ornamental Iron</strong><br/>" + "Architechural Railing Fabricator<br/>" + "Lynn, MA";
+    
+    var iron_info = "<strong>Derry Iron Works</strong><br/>" + "Decorative Metal Fabrication<br/>" + "Derry, NH";
+
 
 
 
@@ -693,6 +697,10 @@ function initMap() {
     
     var lundy_infowindow = new google.maps.InfoWindow({
         content: lundy_info
+    });
+    
+    var iron_infowindow = new google.maps.InfoWindow({
+        content: iron_info
     });
 
 
@@ -1368,6 +1376,13 @@ function initMap() {
         icon: icon,
         title: 'Decorative Metal Fab Shop'
     });
+    
+    var iron_marker = new google.maps.Marker({
+        position: iron_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Decorative Metal Fab Shop'
+    });
 
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
@@ -1744,6 +1759,10 @@ function initMap() {
     
     google.maps.event.addListener(lundy_marker, 'click', function () {
         lundy_infowindow.open(harvard_yard_map, lundy_marker);
+    });
+    
+    google.maps.event.addListener(iron_marker, 'click', function () {
+        iron_infowindow.open(harvard_yard_map, iron_marker);
     });
 
 
