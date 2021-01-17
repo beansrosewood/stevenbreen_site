@@ -39,7 +39,7 @@
     margin-right: 0px;
     margin-top: 0px;
     margin-bottom: 10px;
-    background-size: auto;
+    background-size: contain;
     /*background-position: right;*/
     padding-top: 10px;
     padding-bottom: 40em;
