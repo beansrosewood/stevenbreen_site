@@ -100,6 +100,7 @@ function initMap() {
     var fresh_latlng = new google.maps.LatLng(42.860484, -71.101491);
     var edo_latlng = new google.maps.LatLng(40.710598, -73.399051);
     var buck_latlng = new google.maps.LatLng(42.199430, -71.749115);
+    var lundy_latlng = new google.maps.LatLng(42.477914, -70.955037);
 
 
     var mapOptions = {
@@ -301,6 +302,8 @@ function initMap() {
     var edo_info = "<strong>EDO Corporation</strong><br/>" + "Military Contractor<br/>" + "Amityville, NY";
     
     var buck_info = "<strong>Buck Brothers Tool Corp</strong><br/>" + "Woodworking Tool Manufacturer<br/>" + "Millbury, MA";
+    
+    var lundy_info = "<strong>Lundy's Ornamental Iron</strong><br/>" + "Architechural Railing Fabricator<br/>" + "Lynn, MA";
 
 
 
@@ -687,6 +690,11 @@ function initMap() {
     var buck_infowindow = new google.maps.InfoWindow({
         content: buck_info
     });
+    
+    var lundy_infowindow = new google.maps.InfoWindow({
+        content: lundy_info
+    });
+
 
 
 
@@ -1353,6 +1361,13 @@ function initMap() {
         icon: icon,
         title: 'Tool Maker'
     });
+    
+    var lundy_marker = new google.maps.Marker({
+        position: lundy_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Decorative Metal Fab Shop'
+    });
 
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
@@ -1725,6 +1740,10 @@ function initMap() {
     
     google.maps.event.addListener(buck_marker, 'click', function () {
         buck_infowindow.open(harvard_yard_map, buck_marker);
+    });
+    
+    google.maps.event.addListener(lundy_marker, 'click', function () {
+        lundy_infowindow.open(harvard_yard_map, lundy_marker);
     });
 
 
