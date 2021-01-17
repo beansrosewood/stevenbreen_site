@@ -747,7 +747,6 @@ function initMap() {
 
     var chez_sheridan_marker = new google.maps.Marker({
         position: chez_sheridan_latlng,
-        zoom: 10;
         map: harvard_yard_map,
         title: 'Steven Breen-Office/Shop',
         icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
