@@ -99,6 +99,7 @@ function initMap() {
     var ab_latlng = new google.maps.LatLng(42.725928, -71.434485);
     var fresh_latlng = new google.maps.LatLng(42.860484, -71.101491);
     var edo_latlng = new google.maps.LatLng(40.710598, -73.399051);
+    var buck_latlng = new google.maps.LatLng(42.199430, -71.749115);
 
 
     var mapOptions = {
@@ -298,6 +299,8 @@ function initMap() {
     var fresh_info = "<strong>Fresh Coat Finishing</strong><br/>" + "Plaistow, NH";
     
     var edo_info = "<strong>EDO Corporation</strong><br/>" + "Military Contractor<br/>" + "Amityville, NY";
+    
+    var buck_info = "<strong>Buck Brothers Tool Corp</strong><br/>" + "Woodworking Tool Manufacturer<br/>" + "Millbury, MA";
 
 
 
@@ -679,6 +682,10 @@ function initMap() {
     
     var edo_infowindow = new google.maps.InfoWindow({
         content: edo_info
+    });
+    
+    var buck_infowindow = new google.maps.InfoWindow({
+        content: buck_info
     });
 
 
@@ -1339,6 +1346,13 @@ function initMap() {
         icon: icon,
         title: 'Military Contractor'
     });
+    
+    var buck_marker = new google.maps.Marker({
+        position: buck_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Tool Maker'
+    });
 
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
@@ -1707,6 +1721,10 @@ function initMap() {
     
     google.maps.event.addListener(edo_marker, 'click', function () {
         edo_infowindow.open(harvard_yard_map, edo_marker);
+    });
+    
+    google.maps.event.addListener(buck_marker, 'click', function () {
+        buck_infowindow.open(harvard_yard_map, buck_marker);
     });
 
 
