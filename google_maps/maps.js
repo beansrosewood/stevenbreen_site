@@ -1438,6 +1438,12 @@ function initMap() {
     google.maps.event.addListener(chez_sheridan_marker, 'click', function () {
         sheridan_infowindow.open(harvard_yard_map, chez_sheridan_marker);
     });
+    
+    /* Added code below to zoom in on Chez Sheridan marker. */
+    google.maps.event.addListener(chez_sheridan_marker, 'hoover', () => {
+    map.setZoom(10);
+    map.setCenter(marker.getPosition() as google.maps.LatLng);
+    });
 
     google.maps.event.addListener(precision_coating_marker, 'click', function () {
         precision_coating_infowindow.open(harvard_yard_map, precision_coating_marker);
