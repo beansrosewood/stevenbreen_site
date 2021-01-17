@@ -103,6 +103,7 @@ function initMap() {
     var lundy_latlng = new google.maps.LatLng(42.477914, -70.955037);
     var iron_latlng = new google.maps.LatLng(42.882525, -71.329483);
     var martin_latlng = new google.maps.LatLng(42.888039, -70.884624);
+    var carlos_latlng = new google.maps.LatLng(40.661188, -74.196067);
 
 
     var mapOptions = {
@@ -310,6 +311,8 @@ function initMap() {
     var iron_info = "<strong>Derry Iron Works</strong><br/>" + "Decorative Metal Fabrication<br/>" + "Derry, NH";
     
     var martin_info = "<strong>Martin International</strong><br/>" + "Metal Enclosure Manurfacturer<br/>" + "Seabrook, NH";
+    
+    var carlos_info = "<strong>Carlos Fencing Corp</strong><br/>" + "Security Fencing Fabricator<br/>" + "Elizabeth, NJ";
 
 
 
@@ -708,6 +711,10 @@ function initMap() {
     
     var martin_infowindow = new google.maps.InfoWindow({
         content: martin_info
+    });
+    
+    var carlos_infowindow = new google.maps.InfoWindow({
+        content: carlos_info
     });
 
 
@@ -1397,6 +1404,13 @@ function initMap() {
         icon: icon,
         title: 'Server Enclosure Maker'
     });
+    
+    var carlos_marker = new google.maps.Marker({
+        position: carlos_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Fencing Contractor'
+    });
 
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
@@ -1781,6 +1795,10 @@ function initMap() {
     
     google.maps.event.addListener(martin_marker, 'click', function () {
         martin_infowindow.open(harvard_yard_map, martin_marker);
+    });
+    
+    google.maps.event.addListener(carlos_marker, 'click', function () {
+        carlos_infowindow.open(harvard_yard_map, carlos_marker);
     });
 
 
