@@ -103,7 +103,8 @@ function initMap() {
     var lundy_latlng = new google.maps.LatLng(42.477914, -70.955037);
     var iron_latlng = new google.maps.LatLng(42.882525, -71.329483);
     var martin_latlng = new google.maps.LatLng(42.888039, -70.884624);
-    var carlos_latlng = new google.maps.LatLng(40.661188, -74.196067);
+    var carlos_latlng = new google.maps.LatLng(40.671486, -74.200218);
+    var time_latlng = new google.maps.LatLng(41.216362, -73.984500);
 
 
     var mapOptions = {
@@ -313,6 +314,8 @@ function initMap() {
     var martin_info = "<strong>Martin International</strong><br/>" + "Metal Enclosure Manufacturer<br/>" + "Seabrook, NH";
     
     var carlos_info = "<strong>Carlos Fencing Corp</strong><br/>" + "Security Fencing Fabricator<br/>" + "Elizabeth, NJ";
+    
+    var time_info = "<strong>Time Square Lighting</strong><br/>" + "Theatrical Lighting Manufacturer<br/>" + "Stony Point, NY";
 
 
 
@@ -715,6 +718,10 @@ function initMap() {
     
     var carlos_infowindow = new google.maps.InfoWindow({
         content: carlos_info
+    });
+    
+    var time_infowindow = new google.maps.InfoWindow({
+        content: time_info
     });
 
 
@@ -1411,6 +1418,13 @@ function initMap() {
         icon: icon,
         title: 'Fencing Contractor'
     });
+    
+    var time_marker = new google.maps.Marker({
+        position: time_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Lighting Manufacturer'
+    });
 
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
@@ -1799,6 +1813,10 @@ function initMap() {
     
     google.maps.event.addListener(carlos_marker, 'click', function () {
         carlos_infowindow.open(harvard_yard_map, carlos_marker);
+    });
+    
+    google.maps.event.addListener(time_marker, 'click', function () {
+        time_infowindow.open(harvard_yard_map, time_marker);
     });
 
 
