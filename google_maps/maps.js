@@ -98,6 +98,7 @@ function initMap() {
     var newton_latlng = new google.maps.LatLng(42.354882, -71.202077);
     var ab_latlng = new google.maps.LatLng(42.725928, -71.434485);
     var fresh_latlng = new google.maps.LatLng(42.860484, -71.101491);
+    var edo_latlng = new google.maps.LatLng(40.710598, -73.399051);
 
 
     var mapOptions = {
@@ -295,6 +296,8 @@ function initMap() {
     var ab_info = "<strong>A&B Sandblasting/Powder Coating</strong><br/>" + "Hudson, NH";
     
     var fresh_info = "<strong>Fresh Coat Finishing</strong><br/>" + "Plaistow, NH";
+    
+    var edo_info = "<strong>EDO Corporation</strong><br/>" + "Military Contractor<br/>" + "Amityville, NY";
 
 
 
@@ -672,6 +675,10 @@ function initMap() {
     
     var fresh_infowindow = new google.maps.InfoWindow({
         content: fresh_info
+    });
+    
+    var edo_infowindow = new google.maps.InfoWindow({
+        content: edo_info
     });
 
 
@@ -1325,6 +1332,13 @@ function initMap() {
         icon: icon,
         title: 'Powder Coater'
     });
+    
+    var edo_marker = new google.maps.Marker({
+        position: edo_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Military Contractor'
+    });
 
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
@@ -1689,6 +1703,10 @@ function initMap() {
     
     google.maps.event.addListener(fresh_marker, 'click', function () {
         fresh_infowindow.open(harvard_yard_map, fresh_marker);
+    });
+    
+    google.maps.event.addListener(edo_marker, 'click', function () {
+        edo_infowindow.open(harvard_yard_map, edo_marker);
     });
 
 
