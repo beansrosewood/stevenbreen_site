@@ -123,9 +123,12 @@
     <?php
    if(isset($_POST['send'])) {
    // Prepare the email
-   $to = 'someone@example.com';
+   $to = 'steve-breen@comcast.net';
    $subject = 'Message sent from website';
    $message = $_POST['message'];
+
+   $header = "From: $name <$mail_from>";
+
    // Send it
    $sent = mail($to, $subject, $message);
    if($sent) {
