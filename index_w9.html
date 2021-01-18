@@ -62,18 +62,18 @@
             border: 3px solid #73AD21;
             padding: 10px;
         }
-        
+
         .credit_card {
             width: 100%;
-            height: auto; 
+            height: auto;
         }
-        
+
         .thanks {
             font-size: 5em;
             color: #73AD21;
             text-align: center;
         }
-        
+
         .input {
             font-size: 2em;
             text-align: center;
@@ -98,9 +98,45 @@
         </div>
     </nav>
     <h1 class="warning">Payment Page Under Construction</h1>
-   
-   
-   </body>
-   </html>
 
-    
+
+    <!--Code to email form info-->
+    <form method="post" action="contact.php">
+        <p>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" />
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" />
+        </p>
+        <p>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" cols="30"></textarea>
+        </p>
+        <p>
+            <input type="submit" name="send" value="Send message" />
+        </p>
+    </form>
+
+    <!--PHP to send form info to email-->
+    <?php
+   if(isset($_POST['send'])) {
+   // Prepare the email
+   $to = 'someone@example.com';
+   $subject = 'Message sent from website';
+   $message = $_POST['message'];
+   // Send it
+   $sent = mail($to, $subject, $message);
+   if($sent) {
+   echo 'Your message has been sent successfully!';
+   } else {
+   echo 'Sorry, your message could not send.';
+   }
+   }
+?>
+
+
+</body>
+
+</html>
