@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
 <?php
    if(isset($_POST['send'])) {
    // Prepare the email
@@ -16,3 +20,6 @@
    }
    }
 ?>
+
+</body>
+</html>
