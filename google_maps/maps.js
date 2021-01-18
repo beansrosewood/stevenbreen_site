@@ -116,6 +116,35 @@ function initMap() {
     };
     
     const centerLatlng = { lat: 42.65, lng: -75.75 };
+    
+    /*const myLatlng = { lat: -25.363, lng: 131.044 };*/
+
+  const map = new google.maps.Map(
+    document.getElementById("map") as HTMLElement,
+    {
+      zoom: 4,
+      center: centerLatlng,
+    }
+  );
+
+  const marker = new google.maps.Marker({
+    position: centerLatlng,
+    map,
+    title: "Click to zoom",
+  });
+
+  map.addListener("center_changed", () => {
+    // 3 seconds after the center of the map has changed, pan back to the
+    // marker.
+    window.setTimeout(() => {
+      map.panTo(marker.getPosition() as google.maps.LatLng);
+    }, 3000);
+  });
+
+  marker.addListener("click", () => {
+    map.setZoom(8);
+    map.setCenter(marker.getPosition() as google.maps.LatLng);
+  });
 
     harvard_yard_map = new google.maps.Map(document.getElementById('map-canvas'),
         mapOptions);
