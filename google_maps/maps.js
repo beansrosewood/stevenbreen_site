@@ -117,7 +117,7 @@ function initMap() {
     
     const centerLatlng = { lat: 42.65, lng: -75.75 };
     
-    /*const myLatlng = { lat: -25.363, lng: 131.044 };*/
+    /*const myLatlng = { lat: -25.363, lng: 131.044 };
 
   const map = new google.maps.Map(
     document.getElementById("map") as HTMLElement,
@@ -125,11 +125,12 @@ function initMap() {
       zoom: 4,
       center: centerLatlng,
     }
-  );
+  );*/
 
-  const marker = new google.maps.Marker({
+  var marker = new google.maps.Marker({
     position: centerLatlng,
-    map,
+    map: harvard_yard_map,
+    icon: icon,
     title: "Click to zoom",
   });
 
