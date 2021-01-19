@@ -50,16 +50,23 @@
 
         }
 
+        .everything {
+            background-image: url(photo_gallery/TGD_DAM_06_05_big.jpg);
+            width: 100%;
+            padding-bottom: 10em;
+            height: auto;
+        }
+
         .warning {
             text-align: center;
             font-size: 4em;
-            color: crimson;
+            color: yellow;
         }
-        
+
         .inshoe {
             text-align: center;
             font-size: 4em;
-            color: blue;
+            color: crimson;
         }
 
         .pay {
@@ -103,31 +110,32 @@
             </ul>
         </div>
     </nav>
-    <h1 class="warning">Insurance Page Under Construction</h1>
-    <h3 class="inshoe">Request Insurance Certificate</h3>
+    <div class="everthing">
+        <h1 class="warning">Insurance Page Under Construction</h1>
+        <h3 class="inshoe">Request Insurance Certificate</h3>
 
 
-    <!--Code to email form info-->
-    <form method="post" action="contact.php">
-        <p>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" />
-        </p>
-        <p>
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email" />
-        </p>
-        <p>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" cols="30"></textarea>
-        </p>
-        <p>
-            <input type="submit" name="send" value="Send message" />
-        </p>
-    </form>
+        <!--Code to email form info-->
+        <form method="post" action="contact.php">
+            <p>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" />
+            </p>
+            <p>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" />
+            </p>
+            <p>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" cols="30"></textarea>
+            </p>
+            <p>
+                <input type="submit" name="send" value="Send message" />
+            </p>
+        </form>
 
-    <!--PHP to send form info to email-->
-    <?php
+        <!--PHP to send form info to email-->
+        <?php
    if(isset($_POST['send'])) {
    // Prepare the email
    $to = 'someone@example.com';
@@ -143,7 +151,7 @@
    }
 ?>
 
-
+    </div>
 </body>
 
 </html>
