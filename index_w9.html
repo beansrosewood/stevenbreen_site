@@ -44,7 +44,7 @@
         .navbar .icon {
             display: none;
         }
-        
+
         .everything {
             background-image: url(photo_gallery/TGD_DAM_06_05_big.jpg);
             width: 100%;
@@ -92,6 +92,12 @@
             text-align: center;
         }
 
+        .bottom {
+            text-align: center;
+            padding-top: 8em;
+            /*position: fixed;*/
+        }
+
     </style>
 </head>
 
@@ -111,29 +117,29 @@
         </div>
     </nav>
     <div class="everything">
-    <h1 class="warning">W-9 Page Under Construction</h1>
-    <h3 class="irs_form">Request A Completed IRS W-9 Form</h3>
+        <h1 class="warning">W-9 Page Under Construction</h1>
+        <h3 class="irs_form">Request A Completed IRS W-9 Form</h3>
 
 
-    <!--Code to email form info-->
-    <form method="post" action="./contact.php">
-        <p>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" />
-        </p>
-        <p>
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email" />
-        </p>
-        <p>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" cols="30"></textarea>
-        </p>
-        <p>
-            <input type="submit" name="send" value="Send message" />
-        </p>
-    </form>
-    <!--
+        <!--Code to email form info-->
+        <form method="post" action="./contact.php">
+            <p>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" />
+            </p>
+            <p>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" />
+            </p>
+            <p>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" cols="30"></textarea>
+            </p>
+            <p>
+                <input type="submit" name="send" value="Send message" />
+            </p>
+        </form>
+        <!--
     <?php
    if(isset($_POST['send'])) {
    // Prepare the email
@@ -152,6 +158,12 @@
    }
    }
 ?>-->
+        <footer class="bottom">
+
+            <h5><span class="glyphicon glyphicon-copyright-mark"></span> 1985-2021 - STEVEN BREEN - Industrial Service</h5>
+
+        </footer>
+
     </div>
 
 </body>
