@@ -156,7 +156,7 @@ function initMap() {
     harvard_yard_map = new google.maps.Map(document.getElementById('map-canvas'),
         mapOptions);
     
-    map.addListener("center_changed", () => {
+    /*map.addListener("center_changed", () => {
                 // 3 seconds after the center of the map has changed, pan back to the
                 // marker.
                 window.setTimeout(() => {
@@ -170,7 +170,7 @@ function initMap() {
             chez_sheridan_marker.addListener("mouseout", () => {
                 map.setZoom(6);
                 map.setCenter(chez_sheridan_marker.getPosition());
-            });
+            });*/
 
     var fort_drum_info = "<strong>Fort Drum Aerospace Reset Contractor</strong><br/>" +
         "<a href='https://home.army.mil/drum/index.php'>Blackhawk Helicopter Re-Manufacturing</a>";
