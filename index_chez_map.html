@@ -28,7 +28,7 @@
                 lng: -71.478260
             //var chez_sheridan_latlng = new google.maps.LatLng(42.776370, -71.478260);
             };
-            const harvard_yard_map = new google.maps.Map(document.getElementById("map-canvas"), {
+            const map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 6,
                 center: chez_sheridan_latlng,
             });
@@ -36,10 +36,10 @@
         mapOptions);
             const chez_sheridan_marker = new google.maps.Marker({
                 position: chez_sheridan_latlng,
-                map: harvard_yard_map,
+                map,
                 title: "Mouseover to zoom; mouseout to zoom out!",
             });
-            harvard_yard_map.addListener("center_changed", () => {
+            map.addListener("center_changed", () => {
                 // 3 seconds after the center of the map has changed, pan back to the
                 // marker.
                 window.setTimeout(() => {
@@ -47,12 +47,12 @@
                 }, 3000);
             });
             chez_sheridan_marker.addListener("mouseover", () => {
-                harvard_yard_map.setZoom(10);
-                harvard_yard_map.setCenter(chez_sheridan_marker.getPosition());
+                map.setZoom(10);
+                map.setCenter(chez_sheridan_marker.getPosition());
             });
             chez_sheridan_marker.addListener("mouseout", () => {
-                harvard_yard_map.setZoom(6);
-                harvard_yard_map.setCenter(chez_sheridan_marker.getPosition());
+                map.setZoom(6);
+                map.setCenter(chez_sheridan_marker.getPosition());
             });
         }
 
