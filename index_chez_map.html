@@ -45,13 +45,13 @@
                 map,
                 title: "Mouseover to zoom; mouseout to zoom out!",
             });
-            map.addListener("center_changed", () => {
+            /*map.addListener("center_changed", () => {
                 // 3 seconds after the center of the map has changed, pan back to the
                 // marker.
                 window.setTimeout(() => {
                     map.panTo(chez_sheridan_marker.getPosition());
                 }, 3000);
-            });
+            });*/
             chez_sheridan_marker.addListener("mouseover", () => {
                 map.setZoom(10);
                 map.setCenter(chez_sheridan_marker.getPosition());
