@@ -108,7 +108,7 @@ function initMap() {
 
 
     var mapOptions = {
-        zoom: 8,
+        zoom: 7,
         center: chez_sheridan_latlng,
         
         /*Old center for map to include Solaronics: new google.maps.LatLng(42.65, -75.75)*/
@@ -119,52 +119,10 @@ function initMap() {
     
     
 
-    /*const centerLatlng = {
-        lat: 42.65,
-        lng: -75.75
-    };
-
-    
-   const myLatlng = { lat: -25.363, lng: 131.044 };
-
-  const map = new google.maps.Map(
-    document.getElementById("map") as HTMLElement,
-    {
-      zoom: 4,
-      center: centerLatlng,
-    }
-  );
-
-    var marker = new google.maps.Marker({
-        position: centerLatlng,
-        map: harvard_yard_map,
-        icon: icon,
-        title: "Click to zoom",
-    });
-
-    map.addListener("center_changed", () => {
-        // 3 seconds after the center of the map has changed, pan back to the
-        // marker.
-        window.setTimeout(() => {
-            map.panTo(marker.getPosition() as google.maps.LatLng);
-        }, 3000);
-    });
-
-    marker.addListener("click", () => {
-        map.setZoom(8);
-        map.setCenter(marker.getPosition() as google.maps.LatLng);
-    }); */
-
     harvard_yard_map = new google.maps.Map(document.getElementById('map-canvas'),
         mapOptions);
     
-    /*map.addListener("center_changed", () => {
-                // 3 seconds after the center of the map has changed, pan back to the
-                // marker.
-                window.setTimeout(() => {
-                    map.panTo(chez_sheridan_marker.getPosition());
-                }, 3000);
-            });*/
+    
             
 
     var fort_drum_info = "<strong>Fort Drum Aerospace Reset Contractor</strong><br/>" +
@@ -1476,14 +1434,27 @@ function initMap() {
     });
     
     
+    
+    
+            harvard_yard_map.addListener("center_changed", () => {
+                // 3 seconds after the center of the map has changed, pan back to the
+                // marker.
+                window.setTimeout(() => {
+                    harvard_yard_map.panTo(chez_sheridan_marker.getPosition());
+                }, 3000);
+            });
+    
             chez_sheridan_marker.addListener("mouseover", () => {
                 harvard_yard_map.setZoom(10);
                 harvard_yard_map.setCenter(chez_sheridan_marker.getPosition());
             });
+    
             chez_sheridan_marker.addListener("mouseout", () => {
                 harvard_yard_map.setZoom(6);
                 harvard_yard_map.setCenter(chez_sheridan_marker.getPosition());
             });
+    
+    
 
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
