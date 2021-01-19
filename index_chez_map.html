@@ -23,16 +23,17 @@
     </style>
     <script>
         function initMap() {
-            const chez_latlng = {
-                lat: 42.776370,
-                lng: -71.478260
+            //const chez_latlng = {
+            //    lat: 42.776370,
+            //    lng: -71.478260
+            var chez_sheridan_latlng = new google.maps.LatLng(42.776370, -71.478260);
             };
             const map = new google.maps.Map(document.getElementById("map"), {
                 zoom: 6,
-                center: chez_latlng,
+                center: chez_sheridan_latlng,
             });
-            const chez_marker = new google.maps.Marker({
-                position: chez_latlng,
+            const chez_sheridan_marker = new google.maps.Marker({
+                position: chez_sheridan_latlng,
                 map,
                 title: "Mouseover to zoom; mouseout to zoom out!",
             });
@@ -40,16 +41,16 @@
                 // 3 seconds after the center of the map has changed, pan back to the
                 // marker.
                 window.setTimeout(() => {
-                    map.panTo(chez_marker.getPosition());
+                    map.panTo(chez_sheridan_marker.getPosition());
                 }, 3000);
             });
-            chez_marker.addListener("mouseover", () => {
+            chez_sheridan_marker.addListener("mouseover", () => {
                 map.setZoom(10);
-                map.setCenter(chez_marker.getPosition());
+                map.setCenter(chez_sheridan_marker.getPosition());
             });
-            chez_marker.addListener("mouseout", () => {
+            chez_sheridan_marker.addListener("mouseout", () => {
                 map.setZoom(6);
-                map.setCenter(chez_marker.getPosition());
+                map.setCenter(chez_sheridan_marker.getPosition());
             });
         }
 
