@@ -108,7 +108,7 @@ function initMap() {
 
 
     var mapOptions = {
-        zoom: 6,
+        zoom: 8,
         center: chez_sheridan_latlng,
         
         /*Old center for map to include Solaronics: new google.maps.LatLng(42.65, -75.75)*/
