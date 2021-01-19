@@ -108,8 +108,10 @@ function initMap() {
 
 
     var mapOptions = {
-        zoom: 7,
-        center: new google.maps.LatLng(42.65, -75.75),
+        zoom: 6,
+        center: chez_sheridan_latlng,
+        
+        /*Old center for map to include Solaronics: new google.maps.LatLng(42.65, -75.75)*/
 
         /*Map type id can also be set to "hybrid" for sat/road. */
         mapTypeId: 'roadmap'
