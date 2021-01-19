@@ -162,15 +162,8 @@ function initMap() {
                 window.setTimeout(() => {
                     map.panTo(chez_sheridan_marker.getPosition());
                 }, 3000);
-            });
-            chez_sheridan_marker.addListener("mouseover", () => {
-                map.setZoom(10);
-                map.setCenter(chez_sheridan_marker.getPosition());
-            });
-            chez_sheridan_marker.addListener("mouseout", () => {
-                map.setZoom(6);
-                map.setCenter(chez_sheridan_marker.getPosition());
             });*/
+            
 
     var fort_drum_info = "<strong>Fort Drum Aerospace Reset Contractor</strong><br/>" +
         "<a href='https://home.army.mil/drum/index.php'>Blackhawk Helicopter Re-Manufacturing</a>";
@@ -1479,6 +1472,16 @@ function initMap() {
         icon: icon,
         title: 'Lighting Manufacturer'
     });
+    
+    
+            chez_sheridan_marker.addListener("mouseover", () => {
+                harvard_yard_map.setZoom(10);
+                harvard_yard_map.setCenter(chez_sheridan_marker.getPosition());
+            });
+            chez_sheridan_marker.addListener("mouseout", () => {
+                harvard_yard_map.setZoom(6);
+                harvard_yard_map.setCenter(chez_sheridan_marker.getPosition());
+            });
 
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
