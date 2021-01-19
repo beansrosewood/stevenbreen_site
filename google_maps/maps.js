@@ -114,6 +114,8 @@ function initMap() {
         /*Map type id can also be set to "hybrid" for sat/road. */
         mapTypeId: 'roadmap'
     };
+    
+    
 
     /*const centerLatlng = {
         lat: 42.65,
