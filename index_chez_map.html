@@ -26,7 +26,7 @@
       function initMap() {
         const myLatlng = { lat: 42.776370, lng: -71.478260 };
         const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 4,
+          zoom: 6,
           center: myLatlng,
         });
         const marker = new google.maps.Marker({
@@ -42,7 +42,7 @@
           }, 3000);
         });
         marker.addListener("click", () => {
-          map.setZoom(8);
+          map.setZoom(10);
           map.setCenter(marker.getPosition());
         });
       }
