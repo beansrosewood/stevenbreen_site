@@ -1,138 +1,149 @@
 <!DOCTYPE html>
 <html lang=en>
-  <head>
+
+<head>
     <title>POI Click Events</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMNn87a_o0wTPYifkDYMNDqF_7dcuRZZQ&callback=initMap&libraries=places&v=weekly"
-      defer
-    ></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMNn87a_o0wTPYifkDYMNDqF_7dcuRZZQ&callback=initMap&libraries=places&v=weekly" defer></script>
     <style type="text/css">
-      /* Always set the map height explicitly to define the size of the div
+        /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-      #map {
-        height: 100%;
-      }
+        #map {
+            height: 100%;
+        }
 
-      /* Optional: Makes the sample page fill the window. */
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
 
-      .title {
-        font-weight: bold;
-      }
+        .title {
+            font-weight: bold;
+        }
 
-      #infowindow-content {
-        display: none;
-      }
+        #infowindow-content {
+            display: none;
+        }
 
-      #map #infowindow-content {
-        display: inline;
-      }
+        #map #infowindow-content {
+            display: inline;
+        }
+
     </style>
     <script>
         //Chez Sheridan Lag Lng: 42.776370, -71.478260
         //Added below for marker.
-      var chez_sheridan_latlng = new google.maps.LatLng(42.776370, -71.478260);
-        
-      var chez_sheridan_info = "<strong>Steven Breen's Office/Shop</strong><br/>" + "9 Sheridan St<br/>" + "Nashua, NH 03064";    
-        
-        
-      function initMap() {
-        const origin = { lat: 42.776370, lng: -71.478260 };
-        const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 12,
-          center: origin,
+        var chez_sheridan_latlng = new google.maps.LatLng(42.776370, -71.478260);
+
+        var chez_sheridan_info = "<strong>Steven Breen's Office/Shop</strong><br/>" + "9 Sheridan St<br/>" + "Nashua, NH 03064";
+
+        var sheridan_infowindow = new google.maps.InfoWindow({
+            content: chez_sheridan_info
         });
-        new ClickEventHandler(map, origin);
-      }
 
-      function isIconMouseEvent(e) {
-        return "placeId" in e;
-      }
 
-      class ClickEventHandler {
-        constructor(map, origin) {
-          this.origin = origin;
-          this.map = map;
-          this.directionsService = new google.maps.DirectionsService();
-          this.directionsRenderer = new google.maps.DirectionsRenderer();
-          this.directionsRenderer.setMap(map);
-          this.placesService = new google.maps.places.PlacesService(map);
-          this.infowindow = new google.maps.InfoWindow();
-          this.infowindowContent = document.getElementById(
-            "infowindow-content"
-          );
-          this.infowindow.setContent(this.infowindowContent);
-          // Listen for clicks on the map.
-          this.map.addListener("click", this.handleClick.bind(this));
+        function initMap() {
+            const origin = {
+                lat: 42.776370,
+                lng: -71.478260
+            };
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12,
+                center: origin,
+            });
+            new ClickEventHandler(map, origin);
         }
-        handleClick(event) {
-          console.log("You clicked on: " + event.latLng);
 
-          // If the event has a placeId, use it.
-          if (isIconMouseEvent(event)) {
-            console.log("You clicked on place:" + event.placeId);
-            // Calling e.stop() on the event prevents the default info window from
-            // showing.
-            // If you call stop here when there is no placeId you will prevent some
-            // other map click event handlers from receiving the event.
-            event.stop();
-            this.calculateAndDisplayRoute(event.placeId);
-            this.getPlaceInformation(event.placeId);
-          }
+        function isIconMouseEvent(e) {
+            return "placeId" in e;
         }
-        calculateAndDisplayRoute(placeId) {
-          const me = this;
-          this.directionsService.route(
-            {
-              origin: this.origin,
-              destination: { placeId: placeId },
-              travelMode: google.maps.TravelMode.WALKING,
-            },
-            (response, status) => {
-              if (status === "OK") {
-                me.directionsRenderer.setDirections(response);
-              } else {
-                window.alert("Directions request failed due to " + status);
-              }
+
+        class ClickEventHandler {
+            constructor(map, origin) {
+                this.origin = origin;
+                this.map = map;
+                this.directionsService = new google.maps.DirectionsService();
+                this.directionsRenderer = new google.maps.DirectionsRenderer();
+                this.directionsRenderer.setMap(map);
+                this.placesService = new google.maps.places.PlacesService(map);
+                this.infowindow = new google.maps.InfoWindow();
+                this.infowindowContent = document.getElementById(
+                    "infowindow-content"
+                );
+                this.infowindow.setContent(this.infowindowContent);
+                // Listen for clicks on the map.
+                this.map.addListener("click", this.handleClick.bind(this));
             }
-          );
-        }
-        getPlaceInformation(placeId) {
-          const me = this;
-          this.placesService.getDetails(
-            { placeId: placeId },
-            (place, status) => {
-              if (status === "OK") {
-                me.infowindow.close();
-                me.infowindow.setPosition(place.geometry.location);
-                me.infowindowContent.children["place-icon"].src = place.icon;
-                me.infowindowContent.children["place-name"].textContent =
-                  place.name;
-                me.infowindowContent.children["place-id"].textContent =
-                  place.place_id;
-                me.infowindowContent.children["place-address"].textContent =
-                  place.formatted_address;
-                me.infowindow.open(me.map);
-              }
+            handleClick(event) {
+                console.log("You clicked on: " + event.latLng);
+
+                // If the event has a placeId, use it.
+                if (isIconMouseEvent(event)) {
+                    console.log("You clicked on place:" + event.placeId);
+                    // Calling e.stop() on the event prevents the default info window from
+                    // showing.
+                    // If you call stop here when there is no placeId you will prevent some
+                    // other map click event handlers from receiving the event.
+                    event.stop();
+                    this.calculateAndDisplayRoute(event.placeId);
+                    this.getPlaceInformation(event.placeId);
+                }
             }
-          );
+            calculateAndDisplayRoute(placeId) {
+                const me = this;
+                this.directionsService.route({
+                        origin: this.origin,
+                        destination: {
+                            placeId: placeId
+                        },
+                        travelMode: google.maps.TravelMode.WALKING,
+                    },
+                    (response, status) => {
+                        if (status === "OK") {
+                            me.directionsRenderer.setDirections(response);
+                        } else {
+                            window.alert("Directions request failed due to " + status);
+                        }
+                    }
+                );
+            }
+            getPlaceInformation(placeId) {
+                const me = this;
+                this.placesService.getDetails({
+                        placeId: placeId
+                    },
+                    (place, status) => {
+                        if (status === "OK") {
+                            me.infowindow.close();
+                            me.infowindow.setPosition(place.geometry.location);
+                            me.infowindowContent.children["place-icon"].src = place.icon;
+                            me.infowindowContent.children["place-name"].textContent =
+                                place.name;
+                            me.infowindowContent.children["place-id"].textContent =
+                                place.place_id;
+                            me.infowindowContent.children["place-address"].textContent =
+                                place.formatted_address;
+                            me.infowindow.open(me.map);
+                        }
+                    }
+                );
+            }
         }
-      }
+
     </script>
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="map"></div>
     <div id="infowindow-content">
-      <img id="place-icon" src="" height="16" width="16" />
-      <span id="place-name" class="title"></span><br />
-      Place ID <span id="place-id"></span><br />
-      <span id="place-address"></span>
+        <img id="place-icon" src="" height="16" width="16" />
+        <span id="place-name" class="title"></span><br />
+        Place ID <span id="place-id"></span><br />
+        <span id="place-address"></span>
     </div>
-  </body>
+</body>
+
 </html>
