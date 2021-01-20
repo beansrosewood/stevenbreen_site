@@ -53,6 +53,10 @@
                 zIndex: 9999,
                 scaledSize: new google.maps.Size(200, 200),
             });
+            
+            google.maps.event.addListener(chez_sheridan_marker, 'click', function () {
+        sheridan_infowindow.open(harvard_yard_map, chez_sheridan_marker);
+    });
             */
 
 
