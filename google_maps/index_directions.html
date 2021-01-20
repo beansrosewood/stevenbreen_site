@@ -31,7 +31,7 @@
         #map #infowindow-content {
             display: inline;
         }
-        
+
         /*Styles for the mini overview map inset*/
         #overview {
             position: absolute;
@@ -45,11 +45,11 @@
     </style>
     <script>
         //inset map stuff:
-            let map, overview;
-            const OVERVIEW_DIFFERENCE = 5;
-            const OVERVIEW_MIN_ZOOM = 3;
-            const OVERVIEW_MAX_ZOOM = 10;
-        
+        let map, overview;
+        const OVERVIEW_DIFFERENCE = 5;
+        const OVERVIEW_MIN_ZOOM = 3;
+        const OVERVIEW_MAX_ZOOM = 10;
+
         function initMap() {
             //Chez Sheridan Lag Lng: 42.776370, -71.478260
             //Added below for marker.
@@ -60,7 +60,7 @@
             var sheridan_infowindow = new google.maps.InfoWindow({
                 content: chez_sheridan_info
             });
-            
+
 
 
 
@@ -85,6 +85,34 @@
 
             google.maps.event.addListener(chez_sheridan_marker, 'click', function() {
                 sheridan_infowindow.open(map, chez_sheridan_marker);
+            });
+            
+            
+            //Inset map stuff:
+            // instantiate the primary map
+            //map = new google.maps.Map(document.getElementById("map"), {
+            //    ...mapOptions,
+            //});
+            // instantiate the overview map without controls
+            overview = new google.maps.Map(document.getElementById("overview"), {
+                ...mapOptions,
+                disableDefaultUI: true,
+                gestureHandling: "none",
+                zoomControl: false,
+            });
+
+            function clamp(num, min, max) {
+                return Math.min(Math.max(num, min), max);
+            }
+            map.addListener("bounds_changed", () => {
+                overview.setCenter(map.getCenter());
+                overview.setZoom(
+                    clamp(
+                        map.getZoom() - OVERVIEW_DIFFERENCE,
+                        OVERVIEW_MIN_ZOOM,
+                        OVERVIEW_MAX_ZOOM
+                    )
+                );
             });
 
         }
