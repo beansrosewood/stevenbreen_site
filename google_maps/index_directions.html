@@ -4,7 +4,7 @@
     <title>POI Click Events</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=places&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMNn87a_o0wTPYifkDYMNDqF_7dcuRZZQ&callback=initMap&libraries=places&v=weekly"
       defer
     ></script>
     <style type="text/css">
@@ -35,10 +35,11 @@
       }
     </style>
     <script>
+        //Chez Sheridan Lag Lng: 42.776370, -71.478260
       function initMap() {
-        const origin = { lat: -33.871, lng: 151.197 };
+        const origin = { lat: 42.776370, lng: -71.478260 };
         const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 18,
+          zoom: 12,
           center: origin,
         });
         new ClickEventHandler(map, origin);
