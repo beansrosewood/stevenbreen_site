@@ -44,6 +44,12 @@
 
     </style>
     <script>
+        //inset map stuff:
+            let map, overview;
+            const OVERVIEW_DIFFERENCE = 5;
+            const OVERVIEW_MIN_ZOOM = 3;
+            const OVERVIEW_MAX_ZOOM = 10;
+        
         function initMap() {
             //Chez Sheridan Lag Lng: 42.776370, -71.478260
             //Added below for marker.
@@ -54,11 +60,7 @@
             var sheridan_infowindow = new google.maps.InfoWindow({
                 content: chez_sheridan_info
             });
-            //inset map stuff:
-            //let map, overview;
-            const OVERVIEW_DIFFERENCE = 5;
-            const OVERVIEW_MIN_ZOOM = 3;
-            const OVERVIEW_MAX_ZOOM = 10;
+            
 
 
 
