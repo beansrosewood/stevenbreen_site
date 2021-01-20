@@ -61,7 +61,13 @@
                 content: chez_sheridan_info
             });
 
-
+            const mapOptions = {
+                center: {
+                    lat: 50,
+                    lng: 8
+                },
+                zoom: 7,
+            };
 
 
             const origin = {
@@ -199,10 +205,10 @@
 
 
 <body>
-    
-        <div id="map"></div>
-        <div id="overview"></div>
-    
+
+    <div id="map"></div>
+    <div id="overview"></div>
+
     <div id="infowindow-content">
         <img id="place-icon" src="" height="16" width="16" />
         <span id="place-name" class="title"></span><br />
