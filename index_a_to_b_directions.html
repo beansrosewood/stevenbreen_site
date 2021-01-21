@@ -37,14 +37,12 @@
     </style>
     <script>
         function initMap() {
+            var chez_sheridan_latlng = new google.maps.LatLng(42.776370, -71.478260);
             const directionsService = new google.maps.DirectionsService();
             const directionsRenderer = new google.maps.DirectionsRenderer();
             const map = new google.maps.Map(document.getElementById("map"), {
                 zoom: 7,
-                center: {
-                    lat: 41.85,
-                    lng: -87.65
-                },
+                center: chez_sheridan_latlng,
             });
             directionsRenderer.setMap(map);
 
