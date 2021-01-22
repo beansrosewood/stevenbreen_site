@@ -44,7 +44,8 @@
             var chez_sheridan_info = "<strong>Steven Breen's Office/Shop</strong><br/>" + "9 Sheridan St<br/>" + "Nashua, NH 03064";
 
             var sheridan_infowindow = new google.maps.InfoWindow({
-                content: chez_sheridan_info
+                content: chez_sheridan_info;
+                pixelOffset: new google.maps.Size(0, 100);
             });
             
             const directionsService = new google.maps.DirectionsService();
