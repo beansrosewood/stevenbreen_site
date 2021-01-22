@@ -100,6 +100,15 @@
             color: white;
             /*position: fixed;*/
         }
+        
+        .form_stuff {
+            width: 50%;
+            margin-left: 25%;
+            font-size: 2em;
+            color: crimson;
+            text-shadow: 1px 1px 1px #020203;
+                
+        }
 
     </style>
 </head>
@@ -126,19 +135,19 @@
 
         <!--Code to email form info-->
         <form method="post" action="contact.php">
-            <p>
+            <p class="form_stuff">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" />
             </p>
-            <p>
+            <p class="form_stuff">
                 <label for="email">Email</label>
                 <input type="text" id="email" name="email" />
             </p>
-            <p>
+            <p class="form_stuff">
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="6" cols="30"></textarea>
             </p>
-            <p>
+            <p class="form_stuff">
                 <input type="submit" name="send" value="Send message" />
             </p>
         </form>
