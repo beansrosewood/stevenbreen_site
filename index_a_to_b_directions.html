@@ -58,6 +58,20 @@
             const onChangeHandler = function() {
                 calculateAndDisplayRoute(directionsService, directionsRenderer);
             };
+            
+            var chez_sheridan_marker = new google.maps.Marker({
+                position: chez_sheridan_latlng,
+                map: map,
+                title: 'Steven Breen-Office/Shop',
+                icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+                zIndex: 9999,
+                scaledSize: new google.maps.Size(200, 200),
+            });
+
+            google.maps.event.addListener(chez_sheridan_marker, 'click', function() {
+                sheridan_infowindow.open(map, chez_sheridan_marker);
+            });
+            
             document
                 .getElementById("start")
                 .addEventListener("change", onChangeHandler);
