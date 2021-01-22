@@ -44,14 +44,14 @@
 
             var chez_sheridan_info = "<strong>Steven Breen's Office/Shop</strong><br/>" + "9 Sheridan St<br/>" + "Nashua, NH 03064";
 
-            /*var sheridan_infowindow = new google.maps.InfoWindow({
+            var sheridan_infowindow = new google.maps.InfoWindow({
                 content: chez_sheridan_info,
                 pixelOffset: new google.maps.Size(0, 107),
                 zIndex: 10,
                 arrowPosition: 30,
-            });*/
+            });
 
-            //INFO BUBBLE
+            /*INFO BUBBLE
             var sheridan_infoBubble = new InfoBubble({
                 map: map,
                 content: chez_sheridan_info,
@@ -70,7 +70,7 @@
                 arrowStyle: 2
             });
 
-            //infoBubble.open();
+            //infoBubble.open();*/
 
 
 
@@ -96,7 +96,7 @@
             });
 
             google.maps.event.addListener(chez_sheridan_marker, 'click', function() {
-                sheridan_infoBubble.open(map, chez_sheridan_marker);
+                sheridan_infowindow.open(map, chez_sheridan_marker);
             });
 
             document
