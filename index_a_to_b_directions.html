@@ -37,7 +37,16 @@
     </style>
     <script>
         function initMap() {
+            //Chez Sheridan Lag Lng: 42.776370, -71.478260
+            //Added below for marker.
             var chez_sheridan_latlng = new google.maps.LatLng(42.776370, -71.478260);
+
+            var chez_sheridan_info = "<strong>Steven Breen's Office/Shop</strong><br/>" + "9 Sheridan St<br/>" + "Nashua, NH 03064";
+
+            var sheridan_infowindow = new google.maps.InfoWindow({
+                content: chez_sheridan_info
+            });
+            
             const directionsService = new google.maps.DirectionsService();
             const directionsRenderer = new google.maps.DirectionsRenderer();
             const map = new google.maps.Map(document.getElementById("map"), {
