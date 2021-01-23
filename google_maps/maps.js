@@ -106,6 +106,7 @@ function initMap() {
     var carlos_latlng = new google.maps.LatLng(40.671486, -74.200218);
     var time_latlng = new google.maps.LatLng(41.216362, -73.984500);
     var mass_latlng = new google.maps.LatLng(42.738677, -71.212577);
+    var fresh_latlng = new google.maps.LatLng(42.860414, -71.100622);
 
 
     var mapOptions = {
@@ -326,6 +327,8 @@ function initMap() {
     var time_info = "<strong>Time Square Lighting</strong><br/>" + "Theatrical Lighting Manufacturer<br/>" + "Stony Point, NY";
     
     var mass_info = "<strong>Mass Cabinets, Inc</strong><br/>" + "Architechural Cabinet Shop<br/>" + "Methuen, MA";
+    
+    var fresh_info = "<strong>Fresh Coat Finishing</strong><br/>" + "Powder Coating Shop<br/>" + "Plaistow, NH";
 
 
 
@@ -736,6 +739,10 @@ function initMap() {
     
     var mass_infowindow = new google.maps.InfoWindow({
         content: mass_info
+    });
+    
+    var fresh_infowindow = new google.maps.InfoWindow({
+        content: fresh_info
     });
 
 
@@ -1447,6 +1454,13 @@ function initMap() {
         icon: icon,
         title: 'Millwork Shop'
     });
+    
+    var fresh_marker = new google.maps.Marker({
+        position: fresh_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Powder Coating Shop'
+    });
 
     
 
@@ -1875,6 +1889,10 @@ function initMap() {
     
     google.maps.event.addListener(mass_marker, 'click', function () {
         mass_infowindow.open(harvard_yard_map, mass_marker);
+    });
+    
+    google.maps.event.addListener(fresh_marker, 'click', function () {
+        fresh_infowindow.open(harvard_yard_map, fresh_marker);
     });
 
 
