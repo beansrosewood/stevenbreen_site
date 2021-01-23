@@ -105,6 +105,7 @@ function initMap() {
     var martin_latlng = new google.maps.LatLng(42.888039, -70.884624);
     var carlos_latlng = new google.maps.LatLng(40.671486, -74.200218);
     var time_latlng = new google.maps.LatLng(41.216362, -73.984500);
+    var mass_latlng = new google.maps.LatLng(42.738677, -71.212577);
 
 
     var mapOptions = {
@@ -323,6 +324,8 @@ function initMap() {
     var carlos_info = "<strong>Carlos Fencing Corp</strong><br/>" + "Security Fencing Fabricator<br/>" + "Elizabeth, NJ";
 
     var time_info = "<strong>Time Square Lighting</strong><br/>" + "Theatrical Lighting Manufacturer<br/>" + "Stony Point, NY";
+    
+    var mass_info = "<strong>Mass Cabinets, Inc</strong><br/>" + "Architechural Cabinet Shop<br/>" + "Methuen, MA";
 
 
 
@@ -730,6 +733,11 @@ function initMap() {
     var time_infowindow = new google.maps.InfoWindow({
         content: time_info
     });
+    
+    var mass_infowindow = new google.maps.InfoWindow({
+        content: mass_info
+    });
+
 
 
 
@@ -1418,20 +1426,30 @@ function initMap() {
         icon: icon,
         title: 'Server Enclosure Maker'
     });
-
-    var carlos_marker = new google.maps.Marker({
-        position: carlos_latlng,
-        map: harvard_yard_map,
-        icon: icon,
-        title: 'Fencing Contractor'
-    });
-
+    
     var time_marker = new google.maps.Marker({
         position: time_latlng,
         map: harvard_yard_map,
         icon: icon,
-        title: 'Lighting Manufacturer'
+        title: 'Stage Lighting Maker'
     });
+    
+    var carlos_marker = new google.maps.Marker({
+        position: carlos_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Fence Maker'
+    });
+    
+    var mass_marker = new google.maps.Marker({
+        position: mass_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Millwork Shop'
+    });
+
+    
+
     
     
     
@@ -1853,6 +1871,10 @@ function initMap() {
 
     google.maps.event.addListener(time_marker, 'click', function () {
         time_infowindow.open(harvard_yard_map, time_marker);
+    });
+    
+    google.maps.event.addListener(mass_marker, 'click', function () {
+        mass_infowindow.open(harvard_yard_map, mass_marker);
     });
 
 
