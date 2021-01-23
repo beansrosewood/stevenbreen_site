@@ -107,6 +107,7 @@ function initMap() {
     var time_latlng = new google.maps.LatLng(41.216362, -73.984500);
     var mass_latlng = new google.maps.LatLng(42.738677, -71.212577);
     var fresh_latlng = new google.maps.LatLng(42.860414, -71.100622);
+    var spray_me_latlng = new google.maps.LatLng(43.231700, -70.809956);
 
 
     var mapOptions = {
@@ -329,6 +330,8 @@ function initMap() {
     var mass_info = "<strong>Mass Cabinets, Inc</strong><br/>" + "Architechural Cabinet Shop<br/>" + "Methuen, MA";
     
     var fresh_info = "<strong>Fresh Coat Finishing</strong><br/>" + "Powder Coating Shop<br/>" + "Plaistow, NH";
+    
+    var spray_me_info = "<strong>Spray ME Finishing</strong><br/>" + "Powder Coating Shop<br/>" + "South Berwick, ME";
 
 
 
@@ -743,6 +746,10 @@ function initMap() {
     
     var fresh_infowindow = new google.maps.InfoWindow({
         content: fresh_info
+    });
+    
+    var spray_me_infowindow = new google.maps.InfoWindow({
+        content: spray_me_info
     });
 
 
@@ -1461,6 +1468,13 @@ function initMap() {
         icon: icon,
         title: 'Powder Coating Shop'
     });
+    
+    var spray_me_marker = new google.maps.Marker({
+        position: spray_me_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Powder Coating Shop'
+    });
 
     
 
@@ -1893,6 +1907,10 @@ function initMap() {
     
     google.maps.event.addListener(fresh_marker, 'click', function () {
         fresh_infowindow.open(harvard_yard_map, fresh_marker);
+    });
+    
+    google.maps.event.addListener(spray_me_marker, 'click', function () {
+        spray_me_infowindow.open(harvard_yard_map, spray_me_marker);
     });
 
 
