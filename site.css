@@ -47,15 +47,8 @@
     border-width: medium;
     border-color: crimson;
     opacity: 1;
-    transition: opacity 2s;
-    transition-timing-function: linear;
 }
 
-.hello :hover {
-    opacity: .5;
-}
-
-}
 
 
 .who {
