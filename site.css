@@ -34,7 +34,7 @@
 
 .hello {
     background-image: url(photo_gallery/BDE85E1A-9E80-4126-BDE6-C5613A2E0F75_1_201_a.jpeg);
-    background-attachment:fixed;
+    background-attachment: fixed;
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 0px;
@@ -47,6 +47,13 @@
     border-width: medium;
     border-color: crimson;
     opacity: 1;
+    transition: opacity 2s;
+    transition-timing-function: linear;
+}
+
+.hello :hover {
+    opacity: .5;
+}
 
 }
 
@@ -161,9 +168,9 @@
 }
 
 /* Sticky Nav Bar Styles */
-    
+
 .content {
-  padding: 16px;
+    padding: 16px;
 }
 
 /* Not used. Was going to be for sticky nav bar, but switched to top nav.
@@ -179,11 +186,13 @@
 
 /* Bootstrap Nav Bar Fixed Padding */
 
-body { padding-top: 70px}
+body {
+    padding-top: 70px
+}
 
 . search_bar {
-    float:right;
-    
+    float: right;
+
 }
 
 /* Home Page buttons below photo */
@@ -203,59 +212,66 @@ body { padding-top: 70px}
     padding-top: 1em;
     /*position: fixed;*/
 }
-    /*top nav for responsive format on mobile
+
+/*top nav for responsive format on mobile
 .topnav {
   overflow: hidden;
   background-color: #333;
 }*/
 
 .topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+    background-color: #ddd;
+    color: black;
 }
 
 .topnav a.active {
-  background-color: crimson;
-  color: white;
+    background-color: crimson;
+    color: white;
 }
 
 .topnav .icon {
-  display: none;
+    display: none;
 }
 
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {
-      display: none;
+    .topnav a:not(:first-child) {
+        display: none;
     }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: left;/*Just changed this!*/
-    display: block;
-    text-align: left;
-  }
-    
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: left;
+        /*Just changed this!*/
+        display: block;
+        text-align: left;
+    }
+
     .big_screen {
         display: none;
-    }  
+    }
