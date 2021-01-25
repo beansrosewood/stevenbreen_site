@@ -32,6 +32,10 @@
     display: none;
 }
 
+body {
+    background-color: lightgray;
+}
+
 .hello {
     background-image: url(photo_gallery/BDE85E1A-9E80-4126-BDE6-C5613A2E0F75_1_201_a.jpeg);
     background-attachment: fixed;
