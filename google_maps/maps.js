@@ -163,7 +163,7 @@ function initMap() {
 
     var suntube_info = "<strong>Solaronics, Inc</strong><br/>" + "Auburn Hills, MI<br/>" + "<a href='https://solaronicsusa.com'>Solaronics.com</a>";
 
-    var jfk_info = "<strong>Pan Am Air Freight</strong><br/>" + "JFK International Airport<br/>" + "Long Island, NY";
+    var jfk_info = "<strong>Korean Air Freight</strong><br/>" + "JFK International Airport<br/>" + "Long Island, NY";
 
     var ge_info = "<strong>Plastics Research/Developement</strong><br/>" + "Pittsfield, MA";
 
@@ -885,7 +885,7 @@ function initMap() {
         position: jfk_latlng,
         map: harvard_yard_map,
         icon: icon,
-        title: 'Pan Am Air Freight'
+        title: 'Korean Air Freight'
     });
 
     var ge_marker = new google.maps.Marker({
