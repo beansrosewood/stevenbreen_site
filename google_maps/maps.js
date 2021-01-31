@@ -108,6 +108,7 @@ function initMap() {
     var mass_latlng = new google.maps.LatLng(42.738677, -71.212577);
     var fresh_latlng = new google.maps.LatLng(42.860414, -71.100622);
     var spray_me_latlng = new google.maps.LatLng(43.231700, -70.809956);
+    var fuzz_latlng = new google.maps.LatLng(43.025027, -70.939568);
 
 
     var mapOptions = {
@@ -332,6 +333,8 @@ function initMap() {
     var fresh_info = "<strong>Fresh Coat Finishing</strong><br/>" + "Powder Coating Shop<br/>" + "Plaistow, NH";
     
     var spray_me_info = "<strong>Spray ME Finishing</strong><br/>" + "Powder Coating Shop<br/>" + "South Berwick, ME";
+    
+    var fuzz_info = "<strong>Hutchinson Sealing Systems</strong><br/>" + "Automotive Parts - OEM <br/>" + "Newfields, NH";
 
 
 
@@ -750,6 +753,10 @@ function initMap() {
     
     var spray_me_infowindow = new google.maps.InfoWindow({
         content: spray_me_info
+    });
+    
+    var fuzz_infowindow = new google.maps.InfoWindow({
+        content: fuzz_info
     });
 
 
@@ -1475,6 +1482,13 @@ function initMap() {
         icon: icon,
         title: 'Powder Coating Shop'
     });
+    
+    var fuzz_marker = new google.maps.Marker({
+        position: fuzz_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Automotive-OEM'
+    });
 
     
 
@@ -1911,6 +1925,10 @@ function initMap() {
     
     google.maps.event.addListener(spray_me_marker, 'click', function () {
         spray_me_infowindow.open(harvard_yard_map, spray_me_marker);
+    });
+    
+    google.maps.event.addListener(fuzz_marker, 'click', function () {
+        fuzz_infowindow.open(harvard_yard_map, fuzz_marker);
     });
 
 
