@@ -86,14 +86,19 @@
                 calculateAndDisplayRoute(directionsService, directionsRenderer);
             };
 
+            var icon = {
+                url: ".//photo_gallery/manwithwrench.jpg", // url
+                scaledSize: new google.maps.Size(25, 25), // size
+            };
+
             var chez_sheridan_marker = new google.maps.Marker({
                 position: chez_sheridan_latlng,
                 map: map,
                 title: 'Steven Breen-Office/Shop',
                 //icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
-                icon: ".//photo_gallery/manwithwrench.jpg",
+                icon: icon,
                 zIndex: 9999,
-                scaledSize: new google.maps.Size(50, 50),
+                scaledSize: new google.maps.Size(200, 200),
             });
 
             google.maps.event.addListener(chez_sheridan_marker, 'click', function() {
