@@ -196,10 +196,12 @@ body {
 
 .pay_button {
     margin: 1em;
+    background: #3B5998;
 }
 
 .store_button {
     margin: 1em;
+    background: #bb0000;
 }
 
 /* footer */
