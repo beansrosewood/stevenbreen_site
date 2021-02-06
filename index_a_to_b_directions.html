@@ -100,6 +100,7 @@
                 //icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
                 icon: icon,
                 zIndex: 9999,
+                animation: google.maps.Animation.DROP,
                 scaledSize: new google.maps.Size(200, 200),
             });
 
@@ -113,6 +114,9 @@
             document
                 .getElementById("end")
                 .addEventListener("change", onChangeHandler);
+            
+            marker.addListener("hover", toggleBounce);
+            
         }
 
         function calculateAndDisplayRoute(directionsService, directionsRenderer) {
