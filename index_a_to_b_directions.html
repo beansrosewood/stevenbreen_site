@@ -100,6 +100,7 @@
                 //icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
                 icon: icon,
                 zIndex: 9999,
+                //animation added below to bounce marker on hover.
                 animation: google.maps.Animation.DROP,
                 scaledSize: new google.maps.Size(200, 200),
             });
@@ -114,9 +115,18 @@
             document
                 .getElementById("end")
                 .addEventListener("change", onChangeHandler);
-            
+
+            //listener added below to bounce marker on hover.
             marker.addListener("hover", toggleBounce);
-            
+
+        }
+        //Function below is an attempt to bounce the marker.
+        function toggleBounce() {
+            if (marker.getAnimation() !== null) {
+                marker.setAnimation(null);
+            } else {
+                marker.setAnimation(google.maps.Animation.BOUNCE);
+            }
         }
 
         function calculateAndDisplayRoute(directionsService, directionsRenderer) {
