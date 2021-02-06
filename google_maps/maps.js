@@ -787,7 +787,7 @@ function initMap() {
         title: 'Steven Breen-Office/Shop',
         icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
         zIndex: 9999,
-        animation: google.maps.Animation.DROP,
+        animation: google.maps.Animation.BOUNCE,
         scaledSize: new google.maps.Size(200, 200),
     });
 
