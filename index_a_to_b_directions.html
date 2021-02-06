@@ -35,7 +35,7 @@
             line-height: 30px;
             padding-left: 5px;
         }
-        
+
         #total_miles,
         #total {
             font-size: 5px;
@@ -115,6 +115,10 @@
                 sheridan_infowindow.open(map, chez_sheridan_marker);
             });
 
+            setTimeout(function() {
+                chez_sheridan_marker.setAnimation(null)
+            }, 10000);
+
             document
                 .getElementById("start")
                 .addEventListener("change", onChangeHandler);
@@ -122,56 +126,56 @@
                 .getElementById("end")
                 .addEventListener("change", onChangeHandler);
 
-            //listener added below to bounce marker on hover.
-            chez_sheridan_marker.addListener("mouseover", toggleBounce);
+            /*    //listener added below to bounce marker on hover.
+                chez_sheridan_marker.addListener("click", toggleBounce);
 
-        }
+            }
 
-        /*// On idle, change marker animation to bounce
-        google.maps.event.addListener(map, 'idle', function() {
-            chez_sheridan_marker.setAnimation(google.maps.Animation.BOUNCE);
-        });
-
-        //Function below is an attempt to bounce the marker.
-        function toggleBounce() {
-            if (chez_sheridan_marker.getAnimation() !== null) {
-                chez_sheridan_marker.setAnimation(null);
-            } else {
+            // On idle, change marker animation to bounce
+            google.maps.event.addListener(map, 'idle', function() {
                 chez_sheridan_marker.setAnimation(google.maps.Animation.BOUNCE);
-            }
-        } */
+            });
 
-        function calculateAndDisplayRoute(directionsService, directionsRenderer) {
-            directionsService.route({
-                    origin: {
-                        query: document.getElementById("start").value,
-                    },
-                    destination: {
-                        query: document.getElementById("end").value,
-                    },
-                    travelMode: google.maps.TravelMode.DRIVING,
-                },
-                (response, status) => {
-                    if (status === "OK") {
-                        directionsRenderer.setDirections(response);
-                    } else {
-                        window.alert("Directions request failed due to " + status);
-                    }
+            //Function below is an attempt to bounce the marker.
+            function toggleBounce() {
+                if (chez_sheridan_marker.getAnimation() !== null) {
+                    chez_sheridan_marker.setAnimation(null);
+                } else {
+                    chez_sheridan_marker.setAnimation(google.maps.Animation.BOUNCE);
                 }
-            );
-        }
+            } */
 
-        function computeTotalDistance(result) {
-            var totalDist = 0;
-            var totalTime = 0;
-            var myroute = result.routes[0];
-            for (i = 0; i < myroute.legs.length; i++) {
-                totalDist += myroute.legs[i].distance.value;
-                totalTime += myroute.legs[i].duration.value;
+            function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+                directionsService.route({
+                        origin: {
+                            query: document.getElementById("start").value,
+                        },
+                        destination: {
+                            query: document.getElementById("end").value,
+                        },
+                        travelMode: google.maps.TravelMode.DRIVING,
+                    },
+                    (response, status) => {
+                        if (status === "OK") {
+                            directionsRenderer.setDirections(response);
+                        } else {
+                            window.alert("Directions request failed due to " + status);
+                        }
+                    }
+                );
             }
-            totalDist = totalDist / 1000.
-            document.getElementById("total").innerHTML = "total distance is: " + totalDist + " km<br>total time is: " + (totalTime / 60).toFixed(2) + " minutes";
-        }
+
+            function computeTotalDistance(result) {
+                var totalDist = 0;
+                var totalTime = 0;
+                var myroute = result.routes[0];
+                for (i = 0; i < myroute.legs.length; i++) {
+                    totalDist += myroute.legs[i].distance.value;
+                    totalTime += myroute.legs[i].duration.value;
+                }
+                totalDist = totalDist / 1000.
+                document.getElementById("total").innerHTML = "total distance is: " + totalDist + " km<br>total time is: " + (totalTime / 60).toFixed(2) + " minutes";
+            }
 
     </script>
 </head>
