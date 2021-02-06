@@ -120,14 +120,20 @@
             chez_sheridan_marker.addListener("hover", toggleBounce);
 
         }
+
+        // On idle, change marker animation to bounce
+        google.maps.event.addListener(map, 'idle', function() {
+            chez_sheridan_marker.setAnimation(google.maps.Animation.BOUNCE);
+        });
+
         //Function below is an attempt to bounce the marker.
-        function toggleBounce() {
+        /*function toggleBounce() {
             if (chez_sheridan_marker.getAnimation() !== null) {
                 chez_sheridan_marker.setAnimation(null);
             } else {
                 chez_sheridan_marker.setAnimation(google.maps.Animation.BOUNCE);
             }
-        }
+        } */
 
         function calculateAndDisplayRoute(directionsService, directionsRenderer) {
             directionsService.route({
