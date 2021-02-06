@@ -123,7 +123,7 @@
                 .addEventListener("change", onChangeHandler);
 
             //listener added below to bounce marker on hover.
-            chez_sheridan_marker.addListener("hover", toggleBounce);
+            chez_sheridan_marker.addListener("mouseover", toggleBounce);
 
         }
 
@@ -133,13 +133,13 @@
         });
 
         //Function below is an attempt to bounce the marker.
-        /*function toggleBounce() {
+        function toggleBounce() {
             if (chez_sheridan_marker.getAnimation() !== null) {
                 chez_sheridan_marker.setAnimation(null);
             } else {
                 chez_sheridan_marker.setAnimation(google.maps.Animation.BOUNCE);
             }
-        } */
+        } 
 
         function calculateAndDisplayRoute(directionsService, directionsRenderer) {
             directionsService.route({
