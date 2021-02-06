@@ -1931,6 +1931,10 @@ function initMap() {
     google.maps.event.addListener(fuzz_marker, 'click', function () {
         fuzz_infowindow.open(harvard_yard_map, fuzz_marker);
     });
+    
+    setTimeout(function() {
+                chez_sheridan_marker.setAnimation(null)
+            }, 3000);
 
 
 
