@@ -107,7 +107,7 @@
                 icon: icon,
                 zIndex: 9999,
                 //animation added below to bounce marker on hover.
-                animation: google.maps.Animation.DROP,
+                animation: google.maps.Animation.BOUNCE,
                 scaledSize: new google.maps.Size(200, 200),
             });
 
@@ -127,7 +127,7 @@
 
         }
 
-        // On idle, change marker animation to bounce
+        /*// On idle, change marker animation to bounce
         google.maps.event.addListener(map, 'idle', function() {
             chez_sheridan_marker.setAnimation(google.maps.Animation.BOUNCE);
         });
@@ -139,7 +139,7 @@
             } else {
                 chez_sheridan_marker.setAnimation(google.maps.Animation.BOUNCE);
             }
-        } 
+        } */
 
         function calculateAndDisplayRoute(directionsService, directionsRenderer) {
             directionsService.route({
