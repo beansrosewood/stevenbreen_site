@@ -43,6 +43,10 @@
     color: yellow;
 }
 
+.your_info {
+    text-shadow: 1px 1px .75px #020203;
+}
+
 /* footer */
 
 .bottom {
