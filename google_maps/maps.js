@@ -109,6 +109,7 @@ function initMap() {
     var fresh_latlng = new google.maps.LatLng(42.860414, -71.100622);
     var spray_me_latlng = new google.maps.LatLng(43.231700, -70.809956);
     var fuzz_latlng = new google.maps.LatLng(43.025027, -70.939568);
+    var light_latlng = new google.maps.LatLng(42.383418, -71.203824);
 
 
     var mapOptions = {
@@ -335,6 +336,8 @@ function initMap() {
     var spray_me_info = "<strong>Spray ME Finishing</strong><br/>" + "Powder Coating Shop<br/>" + "South Berwick, ME";
     
     var fuzz_info = "<strong>Hutchinson Sealing Systems</strong><br/>" + "Automotive Parts - OEM <br/>" + "Newfields, NH";
+    
+    var light_info = "<strong>Light Metal Platers, LLC</strong><br/>" + "Finishing Shop<br/>" + "Waltham, MA";
 
 
 
@@ -757,6 +760,10 @@ function initMap() {
     
     var fuzz_infowindow = new google.maps.InfoWindow({
         content: fuzz_info
+    });
+    
+    var light_infowindow = new google.maps.InfoWindow({
+        content: light_info
     });
 
 
@@ -1490,6 +1497,13 @@ function initMap() {
         icon: icon,
         title: 'Automotive-OEM'
     });
+    
+    var light_marker = new google.maps.Marker({
+        position: light_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Metal Finisher'
+    });
 
     
 
@@ -1930,6 +1944,10 @@ function initMap() {
     
     google.maps.event.addListener(fuzz_marker, 'click', function () {
         fuzz_infowindow.open(harvard_yard_map, fuzz_marker);
+    });
+    
+    google.maps.event.addListener(light_marker, 'click', function () {
+        light_infowindow.open(harvard_yard_map, light_marker);
     });
     
     setTimeout(function() {
