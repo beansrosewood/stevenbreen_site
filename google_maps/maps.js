@@ -347,6 +347,13 @@ function initMap() {
         url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png", // url
         scaledSize: new google.maps.Size(25, 25), // size
     };
+    
+    var icon_man = {
+                url: ".//photo_gallery/manwithwrench.png", // url
+                scaledSize: new google.maps.Size(25, 25), // size
+                //origin: new google.maps.Point(0, 0),
+                //anchor: new google.maps.Point(0, 0), // used to adjust the placement of the marker relative to the point
+            };
 
 
 
@@ -792,7 +799,8 @@ function initMap() {
         position: chez_sheridan_latlng,
         map: harvard_yard_map,
         title: 'Steven Breen-Office/Shop',
-        icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+        icon: icon_man,
+        //icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
         zIndex: 9999,
         animation: google.maps.Animation.BOUNCE,
         scaledSize: new google.maps.Size(200, 200),
