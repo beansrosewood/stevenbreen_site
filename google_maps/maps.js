@@ -349,7 +349,7 @@ function initMap() {
     };
     
     var icon_man = {
-                url: ".//photo_gallery/manwithwrench.png", // url
+                url: "..//photo_gallery/manwithwrench.png", // url
                 scaledSize: new google.maps.Size(25, 25), // size
                 //origin: new google.maps.Point(0, 0),
                 //anchor: new google.maps.Point(0, 0), // used to adjust the placement of the marker relative to the point
