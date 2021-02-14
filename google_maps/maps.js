@@ -110,6 +110,7 @@ function initMap() {
     var spray_me_latlng = new google.maps.LatLng(43.231700, -70.809956);
     var fuzz_latlng = new google.maps.LatLng(43.025027, -70.939568);
     var light_latlng = new google.maps.LatLng(42.383418, -71.203824);
+    var foods_latlng = new google.maps.LatLng(44.431644, -69.011950);
 
 
     var mapOptions = {
@@ -338,6 +339,8 @@ function initMap() {
     var fuzz_info = "<strong>Hutchinson Sealing Systems</strong><br/>" + "Automotive Parts - OEM <br/>" + "Newfields, NH";
     
     var light_info = "<strong>Light Metal Platers, LLC</strong><br/>" + "Finishing Shop<br/>" + "Waltham, MA";
+    
+    var foods_info = "<strong>Penobscot Foods</strong><br/>" + "Frozen Food Processor<br/>" + "Belfast, ME";
 
 
 
@@ -772,6 +775,10 @@ function initMap() {
     
     var light_infowindow = new google.maps.InfoWindow({
         content: light_info
+    });
+    
+    var foods_infowindow = new google.maps.InfoWindow({
+        content: foods_info
     });
 
 
@@ -1513,6 +1520,13 @@ function initMap() {
         icon: icon,
         title: 'Metal Finisher'
     });
+    
+    var foods_marker = new google.maps.Marker({
+        position: foods_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Frozen Food Plant'
+    });
 
     
 
@@ -1957,6 +1971,10 @@ function initMap() {
     
     google.maps.event.addListener(light_marker, 'click', function () {
         light_infowindow.open(harvard_yard_map, light_marker);
+    });
+    
+    google.maps.event.addListener(foods_marker, 'click', function () {
+        foods_infowindow.open(harvard_yard_map, foods_marker);
     });
     
     setTimeout(function() {
