@@ -60,7 +60,7 @@ body {
     font-size: 10em;
     text-align: center;
     text-shadow: 2px 2px 1.5px #020203;
-    font-weight: 500;
+    font-weight: 800;
 }
 
 .what {
@@ -68,6 +68,7 @@ body {
     font-size: 5em;
     text-align: center;
     text-shadow: 2px 2px 1.5px #020203;
+    font-weight: 600;
 }
 
 .how {
