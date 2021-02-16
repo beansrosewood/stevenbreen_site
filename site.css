@@ -17,13 +17,13 @@
 
 /* Change the color of links on hover */
 .navbar a:hover {
-    background-color: crimson;
+    background-color: #bb0000;
     color: black;
 }
 
 /* Add an active class to highlight the current page */
 .navbar a.active {
-    background-color: crimson;
+    background-color: #bb0000;
     color: white;
 }
 
@@ -47,9 +47,9 @@ body {
     /*background-position: right;*/
     padding-top: 10px;
     padding-bottom: 40em;
-    color: crimson;
+    color: #bb0000;
     border-width: medium;
-    border-color: crimson;
+    border-color: #bb0000;
     opacity: 1;
 }
 
@@ -141,7 +141,7 @@ body {
 
 /* Style the links on the main photo */
 .where {
-    color: crimson;
+    color: #bb0000;
 }
 
 .how a:hover {
@@ -235,7 +235,7 @@ body {
 }
 
 .topnav a.active {
-    background-color: crimson;
+    background-color: #bb0000;
     color: white;
 }
 
