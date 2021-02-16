@@ -144,6 +144,10 @@ body {
     color: transparent;
 }
 
+.veritas a:hover {
+    background-color: transparent;
+}
+
 /* Style the links on the main photo */
 .where {
     color: #bb0000;
