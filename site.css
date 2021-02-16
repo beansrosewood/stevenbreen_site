@@ -93,7 +93,7 @@ body {
 /* Fixed/sticky icon social media bar (vertically aligned 50% from the top of the screen) */
 .icon-bar {
     position: fixed;
-    top: 50%;
+    top: 55%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
