@@ -139,6 +139,11 @@ body {
     color: white;
 }
 
+.veritas {
+    background-color: transparent;
+    color: transparent;
+}
+
 /* Style the links on the main photo */
 .where {
     color: #bb0000;
