@@ -110,7 +110,7 @@ body {
 }
 
 /* Style the social media icons with color, if you want */
-.icon-bar a:hover {
+.facebook, .twitter, .google, .linkedin, .youtube a:hover {
     background-color: #000;
 }
 
