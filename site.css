@@ -175,6 +175,10 @@ body {
     color: transparent;
 }
 
+.hat a:hover {
+    color: black;
+}
+
 /* Style the links on the main photo */
 .where {
     color: #bb0000;
