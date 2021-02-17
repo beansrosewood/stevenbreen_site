@@ -13,12 +13,14 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    transition: all 0.5s ease;
 }
 
 /* Change the color of links on hover */
 .navbar a:hover {
     background-color: #bb0000;
     color: black;
+    transition: all 0.5s ease;
 }
 
 /* Add an active class to highlight the current page */
