@@ -167,17 +167,15 @@ body {
     color: transparent;
 }
 
-.veritas a:hover {
-    background-color: transparent;
-}
-
 .hat {
     color: transparent;
 }
 
-.hat a:hover {
+.veritas a:hover {
+    background-color: transparent;
     color: black;
 }
+
 
 /* Style the links on the main photo */
 .where {
