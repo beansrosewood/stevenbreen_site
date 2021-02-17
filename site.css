@@ -231,11 +231,13 @@ body {
 .pay_button {
     margin: 1em;
     background-color: #3B5998;
+    transition: all 0.5s ease;
 }
 
 .store_button {
     margin: 1em;
     background-color: #bb0000;
+    transition: all 0.5s ease;
 }
 
 /* footer */
