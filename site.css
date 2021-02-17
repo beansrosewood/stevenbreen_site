@@ -120,9 +120,17 @@ body {
     color: white;
 }
 
+.facebook a:hover {
+    color: #3B5998;
+}
+
 .twitter {
     background: #55ACEE;
     color: white;
+}
+
+.twitter a:hover {
+    color: #55ACEE;
 }
 
 .google {
@@ -130,14 +138,26 @@ body {
     color: white;
 }
 
+.google a:hover {
+    color: #dd4b39;
+}
+
 .linkedin {
     background: #007bb5;
     color: white;
 }
 
+.linkedin a:hover {
+    color: #007bb5;
+}
+
 .youtube {
     background: #bb0000;
     color: white;
+}
+
+.youtube a:hover {
+    color: #bb0000;
 }
 
 .veritas {
