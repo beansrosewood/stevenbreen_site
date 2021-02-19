@@ -32,6 +32,7 @@
 
 .my_email a:hover {
     color: yellow;
+    transition: all 1.0s ease;
 }
 
 .my_cell {
@@ -41,6 +42,7 @@
 
 .my_cell a:hover {
     color: yellow;
+    transition: all 1.0s ease;
 }
 
 .your_info {
