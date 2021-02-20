@@ -176,6 +176,11 @@ body {
     color: black;
 }
 
+.veritas a {
+    font-size: 10px;
+    padding-left: 5px;
+}
+
 
 /* Style the links on the main photo */
 .where {
