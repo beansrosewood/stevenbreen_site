@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     /*Scripts below added to try mouseover and mouseout to change H1.*/
-    
+
     <script src="events.js"> </script>
     <script>
         $(document).ready(function() {
@@ -86,10 +86,10 @@
             padding-bottom: 1.5em;
         }
 
-        /*Added in an attempt to switch out H1 text.*/
+        /*Added in an attempt to switch out H1 text.
         .code :hover {
             display: none;
-        }
+        } */
 
         .bottom {
             text-align: center;
@@ -104,6 +104,21 @@
             /*background-color: lightgray;*/
             background-image: url(226A6168-1EF8-418E-967A-F4BA0907F8FB_1_105_c.jpeg);
         }
+
+        .hide {
+            display: none;
+        }
+
+        .code:hover+.hide {
+            display: block;
+            color: red;
+        }
+
+
+        /*<h2>Display an Element on Hover</h2>
+
+<div class="myDIV">Hover over me.</div>
+*/
 
     </style>
 </head>
@@ -125,7 +140,8 @@
         </div>
     </nav>
     <div class="qr_body">
-        <h1 class="code">Enter To Grow In Wisdom.</h1>
+        <div class="code">Enter To Grow In Wisdom.</div>
+        <div class="hide">I am shown when someone hovers over the div above.</div>
         <p><img class="qrcode" alt="StevenBreen.com QR Code" src="photo_gallery/stevenbreen_github_qr_code.png"></p>
 
         <footer class="bottom">
