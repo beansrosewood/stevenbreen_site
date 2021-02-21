@@ -108,12 +108,15 @@
         /*Below added in an attempt to have .hide display on .code hoover.*/
         
         .hide {
-            display: contents;
+            display: none;
         }
 
-        .code :hover+.hide {
+        .code :hover + .hide {
             display: block;
-            color: red;
+            text-align: center;
+            font-size: 5em;
+            color: #bb0000;
+            text-shadow: 2px 2px 1.5px #020203;
         }
 
 
