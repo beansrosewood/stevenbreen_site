@@ -10,6 +10,20 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- Load font awesome icons for the social media bar-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    /*Scripts below added to try mouseover and mouseout to change H1.*/
+    
+    <script src="scripts/events.js"> </script>
+    <script>
+        $(document).ready(function() {
+            $('#optin').click(function(e) {
+                doWasJustClicked(e);
+            });
+            /* add your jQuery selectors, event listeners, and event handlers here */
+        });
+
+    </script>
+
     <style>
         /* Add a black background color to the top navigation */
         .navbar {
@@ -57,7 +71,7 @@
             /* Equal to rotateZ(45deg) */
             transition: width 1s;
             transition-timing-function: ease-in-out;
-            
+
         }
 
         p :hover {
@@ -71,6 +85,7 @@
             text-shadow: 2px 2px 1.5px #020203;
             padding-bottom: 1.5em;
         }
+
         /*Added in an attempt to switch out H1 text.*/
         .code :hover {
             display: none;
@@ -115,7 +130,7 @@
 
         <footer class="bottom">
 
-            <h5>Copyright  <span class="glyphicon glyphicon-copyright-mark"></span> 1985-2021 - STEVEN BREEN - Industrial Service</h5>
+            <h5>Copyright <span class="glyphicon glyphicon-copyright-mark"></span> 1985-2021 - STEVEN BREEN - Industrial Service</h5>
 
         </footer>
     </div>
