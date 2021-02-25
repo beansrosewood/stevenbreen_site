@@ -111,6 +111,7 @@ function initMap() {
     var fuzz_latlng = new google.maps.LatLng(43.025027, -70.939568);
     var light_latlng = new google.maps.LatLng(42.383418, -71.203824);
     var foods_latlng = new google.maps.LatLng(44.431644, -69.011950);
+    var silvex_latlng = new google.maps.LatLng(43.648803, -70.346556);
 
 
     var mapOptions = {
@@ -341,6 +342,8 @@ function initMap() {
     var light_info = "<strong>Light Metal Platers, LLC</strong><br/>" + "Finishing Shop<br/>" + "Waltham, MA";
     
     var foods_info = "<strong>Penobscot Foods</strong><br/>" + "Frozen Food Processor<br/>" + "Belfast, ME";
+    
+    var silvex_info = "<strong>Silvex Surface Technology</strong><br/>" + "Electroplating Shop<br/>" + "Westbrook, ME";
 
 
 
@@ -779,6 +782,10 @@ function initMap() {
     
     var foods_infowindow = new google.maps.InfoWindow({
         content: foods_info
+    });
+    
+    var silvex_infowindow = new google.maps.InfoWindow({
+        content: silvex_info
     });
 
 
@@ -1527,6 +1534,13 @@ function initMap() {
         icon: icon,
         title: 'Frozen Food Plant'
     });
+    
+    var silvex_marker = new google.maps.Marker({
+        position: silvex_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Plating Shop'
+    });
 
     
 
@@ -1975,6 +1989,10 @@ function initMap() {
     
     google.maps.event.addListener(foods_marker, 'click', function () {
         foods_infowindow.open(harvard_yard_map, foods_marker);
+    });
+    
+    google.maps.event.addListener(silvex_marker, 'click', function () {
+        silvex_infowindow.open(harvard_yard_map, silvex_marker);
     });
     
     setTimeout(function() {
