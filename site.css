@@ -192,6 +192,7 @@ body {
 
 .how a:hover {
     color: yellow;
+    font-weight: bold;
     transition: all 1.0s ease;
 
 }
