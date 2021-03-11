@@ -112,6 +112,7 @@ function initMap() {
     var light_latlng = new google.maps.LatLng(42.383418, -71.203824);
     var foods_latlng = new google.maps.LatLng(44.431644, -69.011950);
     var silvex_latlng = new google.maps.LatLng(43.648803, -70.346556);
+    var triangle_latlng = new google.maps.LatLng(39.257840, -76.681999);
 
 
     var mapOptions = {
@@ -344,6 +345,8 @@ function initMap() {
     var foods_info = "<strong>Penobscot Foods</strong><br/>" + "Frozen Food Processor<br/>" + "Belfast, ME";
     
     var silvex_info = "<strong>Silvex Surface Technology</strong><br/>" + "Electroplating Shop<br/>" + "Westbrook, ME";
+    
+    var triangle_info = "<strong>Triangle Sign</strong><br/>" + "Sign Paint Shop<br/>" + "Baltimore, MD";
 
 
 
@@ -786,6 +789,10 @@ function initMap() {
     
     var silvex_infowindow = new google.maps.InfoWindow({
         content: silvex_info
+    });
+    
+    var triangle_infowindow = new google.maps.InfoWindow({
+        content: triangle_info
     });
 
 
@@ -1541,6 +1548,13 @@ function initMap() {
         icon: icon,
         title: 'Plating Shop'
     });
+    
+    var triangle_marker = new google.maps.Marker({
+        position: triangle_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Sign Shop'
+    });
 
     
 
@@ -1993,6 +2007,10 @@ function initMap() {
     
     google.maps.event.addListener(silvex_marker, 'click', function () {
         silvex_infowindow.open(harvard_yard_map, silvex_marker);
+    });
+    
+    google.maps.event.addListener(triangle_marker, 'click', function () {
+        triangle_infowindow.open(harvard_yard_map, triangle_marker);
     });
     
     setTimeout(function() {
