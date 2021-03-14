@@ -6,6 +6,7 @@ var harvard_yard_map;
 
 function initMap() {
     console.log("I'm in initmap");
+    var starting_center_latlng = new google.maps.LatLng(33.340755, -87.201459);
     var fort_drum_latlng = new google.maps.LatLng(44.05010, -75.72427);
     var northwest_latlng = new google.maps.LatLng(42.3795462, -71.1156024);
     var chez_sheridan_latlng = new google.maps.LatLng(42.776370, -71.478260);
@@ -117,7 +118,7 @@ function initMap() {
 
     var mapOptions = {
         zoom: 4,
-        center: chez_sheridan_latlng,
+        center: starting_center_latlng,
         
         /*Old center for map to include Solaronics: new google.maps.LatLng(42.65, -75.75)*/
 
@@ -2014,7 +2015,8 @@ function initMap() {
     });
     
     setTimeout(function() {
-                harvard_yard_map.setZoom(7)
+                harvard_yard_map.setZoom(7);
+                harvard_yard_map.panTo(chez_sheridan_marker.getPosition());
             }, 1500);
     
     setTimeout(function() {
