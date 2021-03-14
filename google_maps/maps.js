@@ -116,7 +116,7 @@ function initMap() {
 
 
     var mapOptions = {
-        zoom: 7,
+        zoom: 2,
         center: chez_sheridan_latlng,
         
         /*Old center for map to include Solaronics: new google.maps.LatLng(42.65, -75.75)*/
@@ -2012,6 +2012,10 @@ function initMap() {
     google.maps.event.addListener(triangle_marker, 'click', function () {
         triangle_infowindow.open(harvard_yard_map, triangle_marker);
     });
+    
+    setTimeout(function() {
+                harvard_yard_map.setZoom(7)
+            }, 1000);
     
     setTimeout(function() {
                 chez_sheridan_marker.setAnimation(null)
