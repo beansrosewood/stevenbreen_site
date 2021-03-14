@@ -2017,11 +2017,11 @@ function initMap() {
     setTimeout(function() {
                 harvard_yard_map.setZoom(7);
                 harvard_yard_map.panTo(chez_sheridan_marker.getPosition());
-            }, 1500);
+            }, 2500);
     
     setTimeout(function() {
                 chez_sheridan_marker.setAnimation(null)
-            }, 3500);
+            }, 4500);
 
 
 
