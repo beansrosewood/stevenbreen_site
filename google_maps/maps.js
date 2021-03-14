@@ -2021,7 +2021,7 @@ function initMap() {
     
     setTimeout(function() {
                 chez_sheridan_marker.setAnimation(null)
-            }, 4500);
+            }, 5000);
 
 
 
