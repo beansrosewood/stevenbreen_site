@@ -114,6 +114,8 @@ function initMap() {
     var foods_latlng = new google.maps.LatLng(44.431644, -69.011950);
     var silvex_latlng = new google.maps.LatLng(43.648803, -70.346556);
     var triangle_latlng = new google.maps.LatLng(39.257840, -76.681999);
+    var met_atl_latlng = new google.maps.LatLng();
+
 
 
     var mapOptions = {
@@ -348,6 +350,9 @@ function initMap() {
     var silvex_info = "<strong>Silvex Surface Technology</strong><br/>" + "Electroplating Shop<br/>" + "Westbrook, ME";
     
     var triangle_info = "<strong>Triangle Sign</strong><br/>" + "Sign Paint Shop<br/>" + "Baltimore, MD";
+    
+    var met_atl_info = "<strong>Metso Automation</strong><br/>" + "Valve Manufacturer<br/>" + "Atlanta, GA";
+
 
 
 
@@ -794,6 +799,10 @@ function initMap() {
     
     var triangle_infowindow = new google.maps.InfoWindow({
         content: triangle_info
+    });
+    
+    var met_atl_infowindow = new google.maps.InfoWindow({
+        content: met_atl_info
     });
 
 
@@ -1556,6 +1565,14 @@ function initMap() {
         icon: icon,
         title: 'Sign Shop'
     });
+    
+    var met_atl_marker = new google.maps.Marker({
+        position: met_atl_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Automation Shop'
+    });
+
 
     
 
@@ -2013,6 +2030,13 @@ function initMap() {
     google.maps.event.addListener(triangle_marker, 'click', function () {
         triangle_infowindow.open(harvard_yard_map, triangle_marker);
     });
+    
+    google.maps.event.addListener(met_atl_marker, 'click', function () {
+        met_atl_infowindow.open(harvard_yard_map, met_atl_marker);
+    });
+    
+    
+    /*Timing functions for zoom in to northeast and stop marker bounce. */
     
     setTimeout(function() {
                 harvard_yard_map.setZoom(7);
