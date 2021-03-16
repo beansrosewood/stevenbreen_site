@@ -114,7 +114,7 @@ function initMap() {
     var foods_latlng = new google.maps.LatLng(44.431644, -69.011950);
     var silvex_latlng = new google.maps.LatLng(43.648803, -70.346556);
     var triangle_latlng = new google.maps.LatLng(39.257840, -76.681999);
-    var met_atl_latlng = new google.maps.LatLng();
+    var met_atl_latlng = new google.maps.LatLng(33.790391, -84.627324);
 
 
 
