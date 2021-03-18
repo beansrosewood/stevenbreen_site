@@ -115,6 +115,8 @@ function initMap() {
     var silvex_latlng = new google.maps.LatLng(43.648803, -70.346556);
     var triangle_latlng = new google.maps.LatLng(39.257840, -76.681999);
     var met_atl_latlng = new google.maps.LatLng(33.790391, -84.627324);
+    var dorma_latlng = new google.maps.LatLng(40.215129, -76.116723);
+
 
 
 
@@ -352,6 +354,8 @@ function initMap() {
     var triangle_info = "<strong>Triangle Sign</strong><br/>" + "Sign Paint Shop<br/>" + "Baltimore, MD";
     
     var met_atl_info = "<strong>Metso Automation</strong><br/>" + "Valve Manufacturer<br/>" + "Atlanta, GA";
+    
+    var dorma_info = "<strong>Dormakaba Corp. </strong><br/>" + "Security and Access Control Manufacturer<br/>" + "Stevens, PA";
 
 
 
@@ -803,6 +807,10 @@ function initMap() {
     
     var met_atl_infowindow = new google.maps.InfoWindow({
         content: met_atl_info
+    });
+    
+    var dorma_infowindow = new google.maps.InfoWindow({
+        content: dorma_info
     });
 
 
@@ -1572,6 +1580,13 @@ function initMap() {
         icon: icon,
         title: 'Automation Shop'
     });
+    
+    var dorma_marker = new google.maps.Marker({
+        position: dorma_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Door Hardware Maker'
+    });
 
 
     
@@ -2034,6 +2049,11 @@ function initMap() {
     google.maps.event.addListener(met_atl_marker, 'click', function () {
         met_atl_infowindow.open(harvard_yard_map, met_atl_marker);
     });
+    
+    google.maps.event.addListener(dorma_marker, 'click', function () {
+        dorma_infowindow.open(harvard_yard_map, dorma_marker);
+    });
+    
     
     
     /*Timing functions for zoom in to northeast and stop marker bounce. */
