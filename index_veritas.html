@@ -11,16 +11,35 @@
     <!-- Load font awesome icons for the social media bar-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    /*Scripts below added to try mouseover and mouseout to change H1.*/
+    <!--Scripts below added to try mouseover and mouseout to change H1.-->
 
     <script src="events.js"> </script>
     <script>
-        $(document).ready(function() {
+        /*$(document).ready(function() {
             $('#optin').click(function(e) {
                 doWasJustClicked(e);
             });
-            /* add your jQuery selectors, event listeners, and event handlers here */
-        });
+             add your jQuery selectors, event listeners, and event handlers here 
+        });*/
+        
+        /*Below is script from E-12 event assignment to maybe get mouse over/out to work.*/
+
+        function updateStatusBox(img, msg) {
+            document.getElementById('statuscaption').innerHTML = msg;
+            document.getElementById('event_image').src = img;
+        }
+
+        function doWasJustMousedOver(myObj) {
+            console.log("A 'mouseover' event occured");
+            console.log(myObj);
+            updateStatusBox("images/mouseover.png", "<strong>mouseover</strong> event occured");
+        }
+
+        function doWasJustMousedOut(myObj) {
+            console.log("A 'mouseout' event occured");
+            console.log(myObj);
+            updateStatusBox("images/mouseout.png", "<strong>mouseout</strong> event occured");
+        }
 
     </script>
 
@@ -103,7 +122,7 @@
         }
 
         /*Below added in an attempt to have .hide display on .code hover.*/
-        
+
         .dexter {
             display: none;
             text-align: center;
@@ -112,11 +131,10 @@
             text-shadow: 2px 2px 1.5px #020203;
         }
 
-        .code :hover + .dexter {
+        .code :hover+.dexter {
             display: block;
-            
-        }
 
+        }
 
     </style>
 </head>
@@ -139,7 +157,7 @@
     </nav>
     <div class="qr_body">
         <div class="code">Enter To Grow In Wisdom.</div>
-        <div class="dexter">Depart To Serve Better Thy Country And Thy Kind.</div> 
+        <div class="dexter">Depart To Serve Better Thy Country And Thy Kind.</div>
         <p><img class="qrcode" alt="StevenBreen.com QR Code" src="photo_gallery/stevenbreen_github_qr_code.png"></p>
 
         <footer class="bottom">
@@ -152,3 +170,11 @@
 </body>
 
 </html>
+
+
+<!--<body onload="doWasJustLoaded()">
+<h1>Illustrating JavaScript Events</h1>
+<p id="status"><img src="images/blank.png" alt="event image" id="event_image" /><br/>
+<span id="statuscaption">Event images and messages will display here.</span></p>
+<p><a id="mylink" href="#" onclick="doWasJustClicked(this)" >Lorem ipsum dolor</a></p>
+<p id="mypara" class="p1" onmouseover="doWasJustMousedOver(this)" onmouseout="doWasJustMousedOut(this)">Mouseover and out of this paragraph.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel risus at augue semper hendrerit.</p>-->
