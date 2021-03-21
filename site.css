@@ -1,6 +1,8 @@
 /* Add a black background color to the top navigation */
 .navbar {
     background-color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
     /*min-height: 70px;*/
     /*    overflow: hidden;*/
 }
