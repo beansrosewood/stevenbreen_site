@@ -116,6 +116,8 @@ function initMap() {
     var triangle_latlng = new google.maps.LatLng(39.257840, -76.681999);
     var met_atl_latlng = new google.maps.LatLng(33.790391, -84.627324);
     var dorma_latlng = new google.maps.LatLng(40.215129, -76.116723);
+    var classic_latlng = new google.maps.LatLng();
+    
 
 
 
@@ -356,6 +358,9 @@ function initMap() {
     var met_atl_info = "<strong>Metso Automation</strong><br/>" + "Valve Manufacturer<br/>" + "Atlanta, GA";
     
     var dorma_info = "<strong>Dormakaba Corp. </strong><br/>" + "Security and Access Control Manufacturer<br/>" + "Stevens, PA";
+    
+    var classic_info = "<strong>Classic Autobody</strong><br/>" + "Collision Repair Shop<br/>" + "Salem, MA";
+
 
 
 
@@ -811,6 +816,10 @@ function initMap() {
     
     var dorma_infowindow = new google.maps.InfoWindow({
         content: dorma_info
+    });
+    
+    var classic_infowindow = new google.maps.InfoWindow({
+        content: classic_info
     });
 
 
@@ -1587,6 +1596,13 @@ function initMap() {
         icon: icon,
         title: 'Door Hardware Maker'
     });
+    
+     var classic_marker = new google.maps.Marker({
+        position: classic_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Autobody Shop'
+    });
 
 
     
@@ -2052,6 +2068,10 @@ function initMap() {
     
     google.maps.event.addListener(dorma_marker, 'click', function () {
         dorma_infowindow.open(harvard_yard_map, dorma_marker);
+    });
+    
+    google.maps.event.addListener(classic_marker, 'click', function () {
+        classic_infowindow.open(harvard_yard_map, classic_marker);
     });
     
     
