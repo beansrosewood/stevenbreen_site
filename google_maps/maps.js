@@ -116,7 +116,7 @@ function initMap() {
     var triangle_latlng = new google.maps.LatLng(39.257840, -76.681999);
     var met_atl_latlng = new google.maps.LatLng(33.790391, -84.627324);
     var dorma_latlng = new google.maps.LatLng(40.215129, -76.116723);
-    var classic_latlng = new google.maps.LatLng();
+    var classic_latlng = new google.maps.LatLng(42.506649, -70.901660);
     
 
 
@@ -359,7 +359,7 @@ function initMap() {
     
     var dorma_info = "<strong>Dormakaba Corp. </strong><br/>" + "Security and Access Control Manufacturer<br/>" + "Stevens, PA";
     
-    var classic_info = "<strong>Classic Autobody</strong><br/>" + "Collision Repair Shop<br/>" + "Salem, MA";
+    var classic_info = "<strong>Classic Auto Body</strong><br/>" + "Collision Repair Shop<br/>" + "Salem, MA";
 
 
 
@@ -1601,7 +1601,7 @@ function initMap() {
         position: classic_latlng,
         map: harvard_yard_map,
         icon: icon,
-        title: 'Autobody Shop'
+        title: 'Auto Body Shop'
     });
 
 
