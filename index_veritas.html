@@ -40,13 +40,31 @@
             console.log(myObj);*/
             updateStatusBox("images/mouseout.png", "<strong>Depart To Serve Better Thy Country And Thy Kind.</strong>");
         }
-        
+
         /* Possibly modify below code to modulate message?
         setTimeout(function(doWasJustMousedOut(myObj)) {
                 updateStatusBox("images/mouseout.png", "<strong></strong>")
                 
             }, 2000);*/
-            
+
+        function timedText() {
+            setTimeout(myTimeout1, 2000)
+            setTimeout(myTimeout2, 4000)
+            setTimeout(myTimeout3, 6000)
+        }
+
+        function myTimeout1() {
+            document.getElementById("demo").innerHTML = "Enter to grow in wisdom.";
+        }
+
+        function myTimeout2() {
+            document.getElementById("demo").innerHTML = "Depart to serve better thy country and thy kind.";
+        }
+
+        function myTimeout3() {
+            document.getElementById("demo").innerHTML = "";
+        }
+
     </script>
 
     <style>
@@ -110,7 +128,7 @@
             text-shadow: 2px 2px 1.5px #020203;
             padding-bottom: 1.5em;
         }
-        
+
         .p1 {
             text-align: center;
             font-size: 5em;
@@ -126,7 +144,7 @@
             text-shadow: 2px 2px 1.5px #020203;
             padding-bottom: .5em;
         }
-        
+
 
         .bottom {
             text-align: center;
@@ -180,7 +198,8 @@
     <div class="qr_body">
         <h1 class="p1">The Gates of Harvard Yard</h1>
         <!--Img in paragraph below appears below H1.-->
-        <p id="status" class="enter"><!--<img src="images/blank.png" alt="event image" id="event_image" /><br />-->
+        <p id="status" class="enter">
+            <!--<img src="images/blank.png" alt="event image" id="event_image" /><br />-->
             <!--Event images/messages will display in the span below between ><.-->
             <span id="statuscaption" class="enter"></span>
         </p>
@@ -189,6 +208,11 @@
         <!--<div class="code">Enter To Grow In Wisdom.</div>
         <div class="dexter">Depart To Serve Better Thy Country And Thy Kind.</div>-->
         <p><img class="qrcode" id="mypara" onmouseover="doWasJustMousedOver(this)" onmouseout="doWasJustMousedOut(this)" alt="StevenBreen.com QR Code" src="photo_gallery/stevenbreen_github_qr_code.png"></p>
+
+        <!--Below is an experiment for text changing then off.-->
+        <button onclick="timedText()">Try it</button>
+
+        <p id="demo"></p>
 
         <footer class="bottom">
 
