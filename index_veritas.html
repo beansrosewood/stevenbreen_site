@@ -46,12 +46,13 @@
                 updateStatusBox("images/mouseout.png", "<strong></strong>")
                 
             }, 2000);*/
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(myTimeout1, 2000);
+            setTimeout(myTimeout2, 4000);
+            setTimeout(myTimeout3, 6000);
+        });
 
-        function timedText() {
-            setTimeout(myTimeout1, 2000)
-            setTimeout(myTimeout2, 4000)
-            setTimeout(myTimeout3, 6000)
-        }
+        
 
         function myTimeout1() {
             document.getElementById("demo").innerHTML = "Enter to grow in wisdom.";
