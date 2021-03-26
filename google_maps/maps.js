@@ -118,6 +118,7 @@ function initMap() {
     var dorma_latlng = new google.maps.LatLng(40.215129, -76.116723);
     var classic_latlng = new google.maps.LatLng(42.506649, -70.901660);
     var feeley_latlng = new google.maps.LatLng(42.240100, -71.007337);
+    var ospc_latlng = new google.maps.LatLng(41.739228, -71.428761);
 
 
 
@@ -362,6 +363,9 @@ function initMap() {
     var classic_info = "<strong>Classic Auto Body</strong><br/>" + "Collision Repair Shop<br/>" + "Salem, MA";
     
     var feeley_info = "<strong>Feeley's Company, Inc.</strong><br/>" + "Powder Coating Shop<br/>" + "Quincy, MA";
+    
+    var ospc_info = "<strong>Ocean State Powder Coat</strong><br/>" + "Powder Shop<br/>" + "Warwick, RI";
+
 
 
 
@@ -827,6 +831,10 @@ function initMap() {
     
     var feeley_infowindow = new google.maps.InfoWindow({
         content: feeley_info
+    });
+    
+    var ospc_infowindow = new google.maps.InfoWindow({
+        content: ospc_info
     });
 
 
@@ -1617,6 +1625,13 @@ function initMap() {
         icon: icon,
         title: 'Powder Coating Shop'
     });
+    
+    var ospc_marker = new google.maps.Marker({
+        position: ospc_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Powder Coating Shop'
+    });
 
 
     
@@ -2090,6 +2105,10 @@ function initMap() {
     
     google.maps.event.addListener(feeley_marker, 'click', function () {
         feeley_infowindow.open(harvard_yard_map, feeley_marker);
+    });
+    
+    google.maps.event.addListener(ospc_marker, 'click', function () {
+        ospc_infowindow.open(harvard_yard_map, ospc_marker);
     });
     
     
