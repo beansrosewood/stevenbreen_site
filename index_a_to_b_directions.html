@@ -126,56 +126,56 @@
                 .getElementById("end")
                 .addEventListener("change", onChangeHandler);
 
-                //listener added below to bounce marker on hover.
-                chez_sheridan_marker.addListener("click", toggleBounce);
+            //listener added below to bounce marker on hover.
+            chez_sheridan_marker.addListener("click", toggleBounce);
 
-            }
+        }
 
-            /*// On idle, change marker animation to bounce
-            google.maps.event.addListener(map, 'idle', function() {
+        /*// On idle, change marker animation to bounce
+        google.maps.event.addListener(map, 'idle', function() {
+            chez_sheridan_marker.setAnimation(google.maps.Animation.BOUNCE);
+        });
+
+        //Function below is an attempt to bounce the marker.
+        function toggleBounce() {
+            if (chez_sheridan_marker.getAnimation() !== null) {
+                chez_sheridan_marker.setAnimation(null);
+            } else {
                 chez_sheridan_marker.setAnimation(google.maps.Animation.BOUNCE);
-            });
+            }
+        } */
 
-            //Function below is an attempt to bounce the marker.
-            function toggleBounce() {
-                if (chez_sheridan_marker.getAnimation() !== null) {
-                    chez_sheridan_marker.setAnimation(null);
-                } else {
-                    chez_sheridan_marker.setAnimation(google.maps.Animation.BOUNCE);
-                }
-            } */
-
-            function calculateAndDisplayRoute(directionsService, directionsRenderer) {
-                directionsService.route({
-                        origin: {
-                            query: document.getElementById("start").value,
-                        },
-                        destination: {
-                            query: document.getElementById("end").value,
-                        },
-                        travelMode: google.maps.TravelMode.DRIVING,
+        function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+            directionsService.route({
+                    origin: {
+                        query: document.getElementById("start").value,
                     },
-                    (response, status) => {
-                        if (status === "OK") {
-                            directionsRenderer.setDirections(response);
-                        } else {
-                            window.alert("Directions request failed due to " + status);
-                        }
+                    destination: {
+                        query: document.getElementById("end").value,
+                    },
+                    travelMode: google.maps.TravelMode.DRIVING,
+                },
+                (response, status) => {
+                    if (status === "OK") {
+                        directionsRenderer.setDirections(response);
+                    } else {
+                        window.alert("Directions request failed due to " + status);
                     }
-                );
-            }
-
-            function computeTotalDistance(result) {
-                var totalDist = 0;
-                var totalTime = 0;
-                var myroute = result.routes[0];
-                for (i = 0; i < myroute.legs.length; i++) {
-                    totalDist += myroute.legs[i].distance.value;
-                    totalTime += myroute.legs[i].duration.value;
                 }
-                totalDist = totalDist / 1000.
-                document.getElementById("total").innerHTML = "total distance is: " + totalDist + " km<br>total time is: " + (totalTime / 60).toFixed(2) + " minutes";
+            );
+        }
+
+        function computeTotalDistance(result) {
+            var totalDist = 0;
+            var totalTime = 0;
+            var myroute = result.routes[0];
+            for (i = 0; i < myroute.legs.length; i++) {
+                totalDist += myroute.legs[i].distance.value;
+                totalTime += myroute.legs[i].duration.value;
             }
+            totalDist = totalDist / 1000.
+            document.getElementById("total").innerHTML = "total distance is: " + totalDist + " km<br>total time is: " + (totalTime / 60).toFixed(2) + " minutes";
+        }
 
     </script>
 </head>
@@ -218,12 +218,10 @@
             </select>-->
         </div>
         <div>
-            <span>
-                <label for="total_miles">Total miles:</label>
-                <output id="total_miles" name="total_miles"></output><br />
-                <label for="total">Total time:</label>
-                <output id="total" name="total"></output>
-            </span>
+
+            <p> Total Miles:<span id="total_miles"></span></p><br />
+            <p> Total Time:<span id="total"></span></p>
+
         </div>
     </div>
     <div id="map"></div>
