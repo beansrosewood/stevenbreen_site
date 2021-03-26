@@ -117,7 +117,7 @@ function initMap() {
     var met_atl_latlng = new google.maps.LatLng(33.790391, -84.627324);
     var dorma_latlng = new google.maps.LatLng(40.215129, -76.116723);
     var classic_latlng = new google.maps.LatLng(42.506649, -70.901660);
-    
+    var feeley_latlng = new google.maps.LatLng(42.240100, -71.007337);
 
 
 
@@ -360,6 +360,9 @@ function initMap() {
     var dorma_info = "<strong>Dormakaba Corp. </strong><br/>" + "Security and Access Control Manufacturer<br/>" + "Stevens, PA";
     
     var classic_info = "<strong>Classic Auto Body</strong><br/>" + "Collision Repair Shop<br/>" + "Salem, MA";
+    
+    var feeley_info = "<strong>Feeley's Company, Inc.</strong><br/>" + "Powder Coating Shop<br/>" + "Quincy, MA";
+
 
 
 
@@ -820,6 +823,10 @@ function initMap() {
     
     var classic_infowindow = new google.maps.InfoWindow({
         content: classic_info
+    });
+    
+    var feeley_infowindow = new google.maps.InfoWindow({
+        content: feeley_info
     });
 
 
@@ -1603,6 +1610,13 @@ function initMap() {
         icon: icon,
         title: 'Auto Body Shop'
     });
+    
+    var feeley_marker = new google.maps.Marker({
+        position: feeley_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Powder Coating Shop'
+    });
 
 
     
@@ -2072,6 +2086,10 @@ function initMap() {
     
     google.maps.event.addListener(classic_marker, 'click', function () {
         classic_infowindow.open(harvard_yard_map, classic_marker);
+    });
+    
+    google.maps.event.addListener(feeley_marker, 'click', function () {
+        feeley_infowindow.open(harvard_yard_map, feeley_marker);
     });
     
     
