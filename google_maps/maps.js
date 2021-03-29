@@ -119,6 +119,7 @@ function initMap() {
     var classic_latlng = new google.maps.LatLng(42.506649, -70.901660);
     var feeley_latlng = new google.maps.LatLng(42.240100, -71.007337);
     var ospc_latlng = new google.maps.LatLng(41.739228, -71.428761);
+    var services_latlng = new google.maps.LatLng(42.229057, -71.429503);
 
 
 
@@ -365,6 +366,8 @@ function initMap() {
     var feeley_info = "<strong>Feeley's Company, Inc.</strong><br/>" + "Powder Coating Shop<br/>" + "Quincy, MA";
     
     var ospc_info = "<strong>Ocean State Powder Coat</strong><br/>" + "Powder Shop<br/>" + "Warwick, RI";
+    
+    var services_info = "<strong>Services Plus Company</strong><br/>" + "Painter<br/>" + "Holliston, MA";
 
 
 
@@ -835,6 +838,10 @@ function initMap() {
     
     var ospc_infowindow = new google.maps.InfoWindow({
         content: ospc_info
+    });
+    
+    var services_infowindow = new google.maps.InfoWindow({
+        content: services_info
     });
 
 
@@ -1632,6 +1639,13 @@ function initMap() {
         icon: icon,
         title: 'Powder Coating Shop'
     });
+    
+    var services_marker = new google.maps.Marker({
+        position: services_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Painter'
+    });
 
 
     
@@ -2109,6 +2123,10 @@ function initMap() {
     
     google.maps.event.addListener(ospc_marker, 'click', function () {
         ospc_infowindow.open(harvard_yard_map, ospc_marker);
+    });
+    
+    google.maps.event.addListener(services_marker, 'click', function () {
+        services_infowindow.open(harvard_yard_map, services_marker);
     });
     
     
