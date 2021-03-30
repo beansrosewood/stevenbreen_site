@@ -57,7 +57,7 @@
             /* Equal to rotateZ(45deg) */
             transition: width 1s;
             transition-timing-function: ease-in-out;
-            
+
         }
 
         p :hover {
@@ -71,19 +71,17 @@
             text-shadow: 2px 2px 1.5px #020203;
             padding-bottom: 1.5em;
         }
-        
+
         .print_button {
             background-color: blue;
             color: white;
-            margin:0 auto;
-            display:block;
+            margin: 0 auto;
+            display: block;
             margin-top: 6em;
-            
+
         }
-        
-        .qr_body {
-            
-        }
+
+        .qr_body {}
 
         .bottom {
             text-align: center;
@@ -96,7 +94,31 @@
 
         body {
             /*background-color: lightgray;*/
-            background-image: linear-gradient(to bottom, powderblue, black/*deepskyblue*/);
+            background-image: linear-gradient(to bottom, powderblue, black
+                    /*deepskyblue*/
+                );
+        }
+
+        /*Below is for overlay maybe for QR print button. Not sure yet.*/
+        #overlay {
+            position: fixed;
+            /* Sit on top of the page content */
+            display: none;
+            /* Hidden by default */
+            width: 100%;
+            /* Full width (cover the whole page) */
+            height: 100%;
+            /* Full height (cover the whole page) */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Black background with opacity */
+            z-index: 2;
+            /* Specify a stack order in case you're using a different order for other elements */
+            cursor: pointer;
+            /* Add a pointer on hover */
         }
 
     </style>
@@ -118,18 +140,20 @@
             </ul>
         </div>
     </nav>
+    <div id="overlay">
     <div class="qr_body">
         <h1 class="code">Contact Info Label</h1>
         <div>
-        <p><img class="qrcode" alt="StevenBreen.com QR Code" src="photo_gallery/stevenbreen_github_qr_code.png"></p>
-        <button class="print_button" onclick="window.print()">Print This QR Code.</button>
-        </div>    
+            <p><img class="qrcode" alt="StevenBreen.com QR Code" src="photo_gallery/stevenbreen_github_qr_code.png"></p>
+            <button class="print_button" onclick="window.print()">Print This QR Code.</button>
+        </div>
         <footer class="bottom">
 
-            <h5>Copyright  <span class="glyphicon glyphicon-copyright-mark"></span> 1985-2021 - STEVEN BREEN - Industrial Service</h5>
+            <h5>Copyright <span class="glyphicon glyphicon-copyright-mark"></span> 1985-2021 - STEVEN BREEN - Industrial Service</h5>
 
         </footer>
     </div>
+    </div>    
 
 </body>
 
