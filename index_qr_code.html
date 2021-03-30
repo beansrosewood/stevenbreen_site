@@ -120,8 +120,30 @@
             cursor: pointer;
             /* Add a pointer on hover */
         }
-    
+
+        #text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 50px;
+            color: white;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
     </style>
+
+    <script>
+        function on() {
+            document.getElementById("overlay").style.display = "block";
+        }
+
+        function off() {
+            document.getElementById("overlay").style.display = "none";
+        }
+
+    </script>
+
 </head>
 
 <body>
@@ -140,12 +162,13 @@
             </ul>
         </div>
     </nav>
-    <!--<div id="overlay">-->
+    <div id="overlay">
     <div class="qr_body">
         <h1 class="code">Contact Info Label</h1>
         <div>
             <p><img class="qrcode" alt="StevenBreen.com QR Code" src="photo_gallery/stevenbreen_github_qr_code.png"></p>
             <button class="print_button" onclick="window.print()">Print This QR Code.</button>
+            <div id="text">Overlay Text</div>
         </div>
         <footer class="bottom">
 
@@ -153,7 +176,7 @@
 
         </footer>
     </div>
-    <!--</div>-->    
+    </div>
 
 </body>
 
