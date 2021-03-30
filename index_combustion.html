@@ -117,7 +117,7 @@
             visibility: visible;
             /* Show the snackbar */
             /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
-  However, delay the fade out process for 2.5 seconds */
+  However, delay the fade out process for 4.5 seconds */
             -webkit-animation: fadein 0.5s, fadeout 0.5s 4.5s;
             animation: fadein 0.5s, fadeout 0.5s 4.5s;
         }
@@ -181,7 +181,7 @@
             // Add the "show" class to DIV
             x.className = "show";
 
-            // After 3 seconds, remove the show class from DIV
+            // After 5 seconds, remove the show class from DIV
             setTimeout(function() {
                 x.className = x.className.replace("show", "");
             }, 5000);
