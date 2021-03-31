@@ -11,6 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <!-- Load font awesome icons for the social media bar-->
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="site.css">
 
@@ -82,6 +83,25 @@
     </script>-->
 </head>
 
+
+
+
+<!-- Top Navigation Menu 
+<div class="topnav">-->
+    <a href="#home" class="active">Logo</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links 
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>-->
+</div>
+
+
 <body>
 
     <div>
@@ -90,6 +110,7 @@
                 <div class="navbar-header big_screen">
                     <a class="navbar-brand" href="./index_qr_code.html"><span class="glyphicon glyphicon-qrcode"></span> StevenBreen.com</a>
                 </div>
+                <div id="myLinks"><!--mylinks is for the hamburger menu icon function.-->
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
                         <a class="dropdown-toggle active" data-toggle="dropdown" href="./index.html"><span class="glyphicon glyphicon-home"></span> Home Page
@@ -134,12 +155,13 @@
                 </div>
 
 
-            </div>
-            <!--This is for the "menu icon" when the nav is colapsed.    
+            </div><!--This div is for the hamburger menu icon function.-->
+            </div>    
+            <!--This is for the "menu icon" when the nav is colapsed.-->    
             
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
-            </a>-->
+            </a>
         </nav>
     </div>
 
