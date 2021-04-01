@@ -1,3 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Steven Breen Industrial Service-Combustion-Flip</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Load font awesome icons for the social media bar-->
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="site.css">
+
+    <!--Code to open dropdown nav menus on hover-->
+    <style>
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            transition: all 0.5s ease;
+            color: #bb0000;
+        }
+
+        .dropdown-menu {
+            margin-top: 0;
+            transition: all 0.5s ease;
+            background-color: lightgray;
+        }
+
+        .item a:hover {
+            font-weight: bold;
+            background-color: lightgray;
+            color: #bb0000;
+            transition: all 0.5s ease;
+        }
+
+    </style>
+
+    <!--<script>
+         /*Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon*/ 
+        function burgerFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+
+    </script>-->
+
+    <script>
+        $(document).ready(function() {
+            $(".dropdown").hover(function() {
+                var dropdownMenu = $(this).children(".dropdown-menu");
+                if (dropdownMenu.is(":visible")) {
+                    dropdownMenu.parent().toggleClass("open");
+                }
+            });
+        });
+
+    </script>
+
+
+    <!--JS for sticky nav bar from W3 Schools
+    <script>
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+
+    </script>-->
+</head>
+
+
+
+
+<!-- Top Navigation Menu 
+<div class="topnav">
+    <a href="#home" class="active">Logo</a>
+     Navigation links (hidden by default) 
+    <div id="myLinks">
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+     "Hamburger menu" / "Bar icon" to toggle the navigation links 
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>-->
+
+
+<body>
+
+    <div>
+        <nav class="navbar navbar-inverse navbar-fixed-top topnav" id="myTopnav">
+            <div class="container-fluid">
+                <div class="navbar-header big_screen">
+                    <a class="navbar-brand" href="./index_qr_code.html"><span class="glyphicon glyphicon-qrcode"></span> StevenBreen.com</a>
+                </div>
+                <div id="myLinks"><!--mylinks is for the hamburger menu icon function.-->
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle active" data-toggle="dropdown" href="./index.html"><span class="glyphicon glyphicon-home"></span> Home Page
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="item"><a href="./index_combustion.html">Combustion Services</a></li>
+                            <li class="item"><a href="./index_mapping_cal.html">Mapping and Calibration</a></li>
+                            <li class="item"><a href="./index_design_fab.html">Process Control Design/Fabrication</a></li>
+                            <li class="item"><a href="./index_booth_service.html">Spray Booth Services</a></li>
+                            <li class="item"><a href="./index_vfd_plc.html">VFD/PLC Programming</a></li>
+                            <li class="item"><a href="https://www.ebay.com/str/stevenbreenindustrialservice">Purchase Parts</a></li>
+                            <li class="item"><a href="index_payment.html">Invoice Payments - Thank You!</a></li>
+                        </ul>
+                    </li>
+                    <!--<div class="big_screen">-->
+                    <li id="photo"><a href="./photo_gallery/indexgallery.html"><span class="glyphicon glyphicon-picture"></span> Image Gallery</a></li>
+                    <!--</div>-->
+                    <!--<div class="big_screen">-->
+                    <li id="contact" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="./contact_form/indexform.html"><span class="glyphicon glyphicon-earphone"></span> Contact Info
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="item"><a href="./contact_form/indexform.html">Contact Information</a></li>
+                            <li class="item"><a href="./index_inshoe_cert.html">Request An Insurance Certificate</a></li>
+                            <li class="item"><a href="./index_w9.html">Request A Completed IRS W-9 Form</a></li>
+                            <li class="item"><a href="./index_service.html">Request Service</a></li>
+                        </ul>
+                    </li>
+                    <!--</div>-->
+                    <!--<div class="big_screen">-->
+                    <li id="map"><a href="./google_maps/indexmap.html"><span class="glyphicon glyphicon-user"></span> Customer Base</a></li>
+                    <!--</div>-->
+
+                </ul>
+                <div class="search_bar big_screen">
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div>
+
+
+            </div><!--This div is for the hamburger menu icon function.-->
+            </div>    
+            <!--This is for the hamburger "menu icon" when the nav is colapsed.    
+            
+            <a href="javascript:void(0);" class="icon" onclick="burgerFunction()">
+                <i class="fa fa-bars"></i>
+            </a>-->
+        </nav>
+    </div>
+
+    <main>
+
+
+
+        <!-- The social media icon bar -->
+        <div class="icon-bar">
+            <a href="#" class="veritas"><i class="fa"></i></a>
+            <a href="https://facebook.com" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://google.com" class="google"><i class="fa fa-google"></i></a>
+            <a href="https://linkin.com" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/watch?v=5LoPn2mRgME" class="youtube"><i class="fa fa-youtube"></i></a>
+            <a href="#" class="veritas"><i class="fa"></i></a>
+            <a href="#" class="veritas"><i class="fa"></i></a>
+            <a href="./index_veritas.html" class="veritas"><i class="fa"></i><span class="hat glyphicon glyphicon-education"></span></a>
+        </div>
+        <div class="content">
+            <div class="container">
 <div class="flip-box">
   <div class="flip-box-inner">
     <div class="flip-box-front">
@@ -8,3 +193,5 @@
     </div>
   </div>
 </div>
+</div>
+</div
