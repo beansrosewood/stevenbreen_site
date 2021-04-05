@@ -358,11 +358,15 @@ body {
         float: right;
         display: block;
     }
-    
+}
+
+
+@media only screen and (max-width: 600px) {    
     .hello {
         background-size: auto;
     }
 }
+
 
 @media screen and (max-width: 1200px) {
     .topnav.responsive {
