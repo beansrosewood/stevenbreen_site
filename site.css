@@ -358,6 +358,10 @@ body {
         float: right;
         display: block;
     }
+    
+    .hello {
+        background-size: auto;
+    }
 }
 
 @media screen and (max-width: 1200px) {
