@@ -375,6 +375,10 @@ body {
     .what{
         font-size: 3em;
     }
+    .navbar{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
 }
 
 
