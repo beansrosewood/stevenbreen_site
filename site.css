@@ -369,6 +369,12 @@ body {
     .hello {
         background-size: auto;
     }
+    .who{
+        font-size: 5em;
+    }
+    .what{
+        font-size: 3em;
+    }
 }
 
 
