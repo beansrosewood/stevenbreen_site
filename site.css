@@ -388,9 +388,9 @@ body {
 }*/
     
 @media only screen and (max-width: 900px) {
-    .medium_screen .big_screen {
+    .medium_screen {
         display: none;
-} */   
+}   
 
 
 @media only screen and (max-width: 1200px) {
