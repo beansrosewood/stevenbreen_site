@@ -60,7 +60,7 @@
             background-color: #bb0000;
             color: white;
         }
-        
+
         .mobile_page {
             background-image: url(photo_gallery/BDE85E1A-9E80-4126-BDE6-C5613A2E0F75_4_5005_c.jpeg);
             background-size: cover;
@@ -68,9 +68,9 @@
 
     </style>
 
-    
+
     <!--Script for the MOBILE SITE-->
-    
+
     <script>
         /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
         function mobileFunction() {
@@ -108,7 +108,7 @@
 
     </style>-->
 
-    
+
 
     <!--<script>
         $(document).ready(function() {
@@ -153,20 +153,50 @@
 
         <!-- MOBILE-Top Navigation Menu-->
         <div class="mobile_page">
-        <div class="topnav">
-            <a class="active" href="./index_qr_code.html"><span class="glyphicon glyphicon-qrcode"></span> StevenBreen.com</a>
-            Navigation links (hidden by default)
-            <div id="mobileLinks">
-                <a href="#news">News</a>
-                <a href="#contact">Contact</a>
-                <a href="#about">About</a>
+            <div class="topnav">
+                <a class="active" href="./index_qr_code.html"><span class="glyphicon glyphicon-qrcode"></span> StevenBreen.com</a>
+                Navigation links (hidden by default)
+                <div id="mobileLinks">
+                    <a href="#news">News</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#about">About</a>
+                </div>
+                "Hamburger menu" / "Bar icon" to toggle the navigation links
+                <a href="javascript:void(0);" class="icon" onclick="mobileFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
             </div>
-            "Hamburger menu" / "Bar icon" to toggle the navigation links
-            <a href="javascript:void(0);" class="icon" onclick="mobileFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
+            <div class="content">
+                <div class="container">
+                    <div class="hello">
+                        <h1 class="who">STEVEN BREEN</h1>
+                        <h2 class="what">Industrial Service</h2>
+                        <ul class="how">
+                            <li><a class="where" href="./index_combustion.html"><span class="glyphicon glyphicon-wrench"></span> Combustion Services</a></li>
+                            <li><a class="where" href="./index_mapping_cal.html"><span class="glyphicon glyphicon-wrench"></span> Oven Mapping and Calibration</a></li>
+                            <li><a class="where" href="./index_design_fab.html"><span class="glyphicon glyphicon-wrench"></span> Controls Design/Fabrication</a></li>
+                            <li><a class="where" href="./index_booth_service.html"><span class="glyphicon glyphicon-wrench"></span> Booth Controller Service</a></li>
+                            <li><a class="where" href="./index_vfd_plc.html"><span class="glyphicon glyphicon-wrench"></span> VFD/PLC Controller Programming</a></li>
+                        </ul>
+                        <p class="established">Servicing manufacturers in the Northeast for over 35 years. </p>
+
+
+
+                    </div>
+                </div>
+                <div class="container, pay_button">
+                    <a href="index_payment.html" class="btn btn-primary btn-lg btn-block active" role="button" aria-pressed="true">Pay Invoices - Thank You!</a>
+                    <!-- <button type="button" class="btn btn-primary btn-lg btn-block">Pay Invoices - Thank You!</button> -->
+
+                </div>
+
+                <div class="container, store_button">
+                    <a href="https://www.ebay.com/str/stevenbreenindustrialservice" class="btn btn-primary btn-lg btn-block active" role="button" aria-pressed="true">Purchase Parts</a>
+                    <!-- <button type="button" class="btn btn-primary btn-lg btn-block">Store</button> -->
+
+                </div>
+            </div>
         </div>
-        </div>    
 
 
     </div>
