@@ -383,7 +383,7 @@ body {
 }
 
 @media only screen and (max-width: 900px) {
-    .big_screen {
+    .medium_screen {
         display: none;
 }
 
