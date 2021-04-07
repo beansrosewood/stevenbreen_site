@@ -382,6 +382,11 @@ body {
     }
 }
 
+@media screen and (max-width: 900px) {
+    .medium_screen {
+        display: none;
+}
+
 
 @media screen and (max-width: 1200px) {
     .topnav.responsive {
