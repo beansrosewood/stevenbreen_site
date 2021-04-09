@@ -146,13 +146,13 @@ body {
 }*/
 /*"end of hamburger icon"*/
 
-/* Fixed/sticky icon social media bar (vertically aligned 50% from the top of the screen) */
+/* Fixed/sticky icon social media bar (vertically aligned 60% from the top of the screen) */
 .icon-bar {
     position: fixed;
-    top: 55%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    top: 60%;
+    -webkit-transform: translateY(-60%);
+    -ms-transform: translateY(-60%);
+    transform: translateY(-60%);
 }
 
 /* Style the icon bar links */
