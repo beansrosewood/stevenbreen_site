@@ -317,6 +317,10 @@ body {
 
 /* footer */
 
+#type_writer_phrase {
+    text-align: center;
+}
+
 .bottom {
     text-align: center;
     padding-top: 1em;
