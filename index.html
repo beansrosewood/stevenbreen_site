@@ -68,14 +68,11 @@
 
     <!--Script for the typewriter effect-->
     <script>
-        
-        document.getElementById("type_writer_phrase").addEventListener("load", typeWriter);
-        
         var i = 0;
         var txt = 'It is never too later to be the person you might have been!'; /* The text */
         var speed = 50; /* The speed/duration of the effect in milliseconds */
-        
-        
+
+
         function typeWriter() {
             if (i < txt.length) {
                 document.getElementById("type_writer_phrase").innerHTML += txt.charAt(i);
@@ -238,8 +235,9 @@
         </div>
     </main>
     <footer class="bottom">
-        
-        <p id="type_writer_phrase"></p>
+        <div onload="typeWriter()">
+            <p id="type_writer_phrase"></p>
+        </div>
         <h5>Copyright <span class="glyphicon glyphicon-copyright-mark"></span> 1985-2021 - STEVEN BREEN - Industrial Service</h5>
 
     </footer>
