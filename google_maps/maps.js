@@ -121,6 +121,7 @@ function initMap() {
     var ospc_latlng = new google.maps.LatLng(41.739228, -71.428761);
     var services_latlng = new google.maps.LatLng(42.229057, -71.429503);
     var mc_shop_latlng = new google.maps.LatLng(42.106775, -70.759359);
+    var master_latlng = new google.maps.LatLng(41.799879, -70.747274);
 
 
 
@@ -371,6 +372,8 @@ function initMap() {
     var services_info = "<strong>Services Plus Company</strong><br/>" + "Painter<br/>" + "Holliston, MA";
     
     var mc_shop_info = "<strong>Metal Innovations</strong><br/>" + " Custom Motorcycle Shop<br/>" + "Marshfield, MA";
+    
+    var master_info = "<strong>Master Millwork</strong><br/>" + " Production Millwork Shop<br/>" + "West Wareham, MA";
 
 
 
@@ -849,6 +852,10 @@ function initMap() {
     
     var mc_shop_infowindow = new google.maps.InfoWindow({
         content: mc_shop_info
+    });
+    
+    var master_infowindow = new google.maps.InfoWindow({
+        content: master_info
     });
 
 
@@ -1660,6 +1667,13 @@ function initMap() {
         icon: icon,
         title: 'Cycle Shop'
     });
+    
+    var master_marker = new google.maps.Marker({
+        position: master_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Millwork Shop'
+    });
 
 
     
@@ -2145,6 +2159,10 @@ function initMap() {
     
     google.maps.event.addListener(mc_shop_marker, 'click', function () {
         mc_shop_infowindow.open(harvard_yard_map, mc_shop_marker);
+    });
+    
+    google.maps.event.addListener(master_marker, 'click', function () {
+        master_infowindow.open(harvard_yard_map, master_marker);
     });
     
     
