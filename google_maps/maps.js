@@ -1683,11 +1683,11 @@ function initMap() {
     
     
             harvard_yard_map.addListener("center_changed", () => {
-                // 3 seconds after the center of the map has changed, pan back to the
+                // 10 seconds after the center of the map has changed, pan back to the
                 // marker.
                 window.setTimeout(() => {
                     harvard_yard_map.panTo(chez_sheridan_marker.getPosition());
-                }, 3000);
+                }, 10000);
             });
     
             chez_sheridan_marker.addListener("mouseover", () => {
