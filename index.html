@@ -87,9 +87,11 @@
                 }
             });
         });
-        onload$(".who").fadeIn(3000);
+        
 
     </script>
+
+    
 
     <!--Script for the typewriter effect-->
     <script>
@@ -148,7 +150,14 @@
 </div>-->
 
 
-<body>
+<body onload="sbfadefunction()">
+    
+    <script>
+        function sbfadefunction() {
+            $(".who").fadeIn(3000);
+        }
+
+    </script>
 
     <div>
         <nav class="navbar navbar-inverse navbar-fixed-top topnav" id="myTopnav">
