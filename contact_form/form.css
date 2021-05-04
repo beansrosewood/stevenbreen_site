@@ -144,4 +144,6 @@ form select {
     background-color: #337ab7;
     color: white;
     font-weight: bold;
+    padding-left: 3em;
+    padding-right: 3em;
 }
