@@ -55,15 +55,29 @@
             </div>
             <div class=info_map>
                 <iframe src="../index_a_to_b_directions.html" height="500" width="600" title="Shop Location"></iframe>
-            </div>    
+            </div>
         </div>
     </div>
 
     <div class="your_info">
         <div class="container">
             <h2>Your contact info:</h2>
-            <form class="needs-validation" novalidate method="post" action="https://formspree.io/f/xwkavwpk">
-                <!--"https://cs12students.dce.harvard.edu/echo"-->
+
+            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xwkavwpk" method="post">
+                <fieldset id="fs-frm-inputs">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+                    <label for="email-address">Email Address</label>
+                    <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+                    <label for="message">Message</label>
+                    <textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
+                    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                </fieldset>
+                <input type="submit" value="Submit">
+            </form>
+
+            <!--<form class="needs-validation" novalidate method="post" action="https://formspree.io/f/xwkavwpk">
+                "https://cs12students.dce.harvard.edu/echo"
                 <div class="form-row">
                     <div class="col-md-4 mb-3">
                         <label for="validationCustom01">First name</label>
@@ -155,11 +169,11 @@
                     </div>
                     <button class="btn btn-primary" type="submit">Submit form</button>
                 </div>
-            </form>
+            </form>-->
 
             <footer class="bottom">
 
-                <h5>Copyright  <span class="glyphicon glyphicon-copyright-mark"></span> 1985-2021 - STEVEN BREEN - Industrial Service</h5>
+                <h5>Copyright <span class="glyphicon glyphicon-copyright-mark"></span> 1985-2021 - STEVEN BREEN - Industrial Service</h5>
 
             </footer>
 
