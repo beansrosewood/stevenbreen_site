@@ -139,3 +139,9 @@ form [type="reset"]:focus {
 form select {
   text-transform: none;
 }
+
+.submit {
+    background-color: #337ab7;
+    color: white;
+    font-weight: bold;
+}
