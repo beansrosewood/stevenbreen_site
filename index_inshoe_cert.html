@@ -10,6 +10,16 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- Load font awesome icons for the social media bar-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script>
+        /* Script to clear the form after submittal? */
+        window.onbeforeunload = () => {
+            for (const form of document.getElementsByTagName('form')) {
+                form.reset();
+            }
+        }
+
+    </script>
     <style>
         /* Add a black background color to the top navigation */
         .navbar {
@@ -139,6 +149,7 @@
             margin-bottom: 0.5rem;
             color: crimson;
             text-shadow: 1px 1px 1px #020203;
+            font-weight: 600;
         }
 
         /* border, padding, margin, width */
