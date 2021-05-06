@@ -11,6 +11,17 @@
 
 
     <link rel="stylesheet" href="form.css">
+    
+    <script>
+        /* Script to clear the form after submittal in FormSpree. */
+        window.onbeforeunload = () => {
+            for (const form of document.getElementsByTagName('form')) {
+                form.reset();
+            }
+        }
+
+    </script>
+    
 </head>
 
 <body>
