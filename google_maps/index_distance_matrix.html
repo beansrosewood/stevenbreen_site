@@ -50,9 +50,9 @@
         const bounds = new google.maps.LatLngBounds();
         const markersArray = [];
         const origin1 = "39 Bridge St, Nashua, NH";
-        const origin2 = "9 sheridan St, Nashua, NH";
+        //const origin2 = "9 sheridan St, Nashua, NH";
         const destinationA = "Cooperstown,NY";
-        const destinationB = "Cambridge, MA";
+        //const destinationB = "Cambridge, MA";
         const destinationIcon =
           "https://chart.googleapis.com/chart?" +
           "chst=d_map_pin_letter&chld=D|FF0000|000000";
@@ -61,14 +61,14 @@
           "chst=d_map_pin_letter&chld=O|FFFF00|000000";
         const map = new google.maps.Map(document.getElementById("map"), {
           center: { lat: 42.78, lng: -72.76 },
-          zoom: 8,
+          zoom: 7,
         });
         const geocoder = new google.maps.Geocoder();
         const service = new google.maps.DistanceMatrixService();
         service.getDistanceMatrix(
           {
-            origins: [origin1, origin2],
-            destinations: [destinationA, destinationB],
+            origins: [origin1],
+            destinations: [destinationA],
             travelMode: google.maps.TravelMode.DRIVING,
             unitSystem: google.maps.UnitSystem.IMPERIAL,
             avoidHighways: false,
@@ -144,9 +144,9 @@
       <div id="inputs">
         <pre>
 var origin1 = '39 Bridge St, Nashua, NH';
-var origin2 = '9 sheridan St, Nashua, NH';
+<!--var origin2 = '9 sheridan St, Nashua, NH';-->
 var destinationA = 'Cooperstown,NY';
-var destinationB = 'Cambridge, MA';
+<!--var destinationB = 'Cambridge, MA';-->
         </pre>
       </div>
       <div>
