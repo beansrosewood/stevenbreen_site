@@ -69,7 +69,7 @@
         const geocoder = new google.maps.Geocoder();
         const service = new google.maps.DistanceMatrixService();
         service.getDistanceMatrix(
-          {
+          {  
             origins: [origin1],
             destinations: [destinationA],
             travelMode: google.maps.TravelMode.DRIVING,
@@ -157,7 +157,7 @@ var destinationB = 'Cambridge, MA';
       </div>
       <div id="output"></div>
     </div>
-    <div id="map"></div>
+    <!--<div id="map"></div>-->
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script
