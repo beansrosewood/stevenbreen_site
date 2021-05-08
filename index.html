@@ -105,8 +105,8 @@
             /* Show the snackbar */
             /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
   However, delay the fade out process for 4.5 seconds */
-            -webkit-animation: fadein 0.5s, fadeout 0.5s 4.5s;
-            animation: fadein 0.5s, fadeout 0.5s 4.5s;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 5.5s;
+            animation: fadein 0.5s, fadeout 0.5s 5.5s;
         }
 
         /* Animations to fade the snackbar in and out */
@@ -168,10 +168,10 @@
             // Add the "show" class to DIV
             x.className = "show";
 
-            // After 5 seconds, remove the show class from DIV
+            // After 6 seconds, remove the show class from DIV
             setTimeout(function() {
                 x.className = x.className.replace("show", "");
-            }, 5000);
+            }, 6000);
         }
 
     </script>
