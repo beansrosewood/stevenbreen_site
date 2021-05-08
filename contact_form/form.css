@@ -148,6 +148,13 @@ form select {
     padding-right: 3em;
 }
 
+.submit a:hover {
+    color: crimson;
+    padding-left: 5em;
+    padding-right: 5em;
+    font-weight: 900;
+    transition: all 1.0s ease;
+
 @media only screen and (max-width: 600px) {    
      .my_info, .your_info {
         padding-left: 1em;
