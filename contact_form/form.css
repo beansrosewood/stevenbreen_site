@@ -155,5 +155,5 @@ form select {
 }
 
 .travel_info {
-    border: none;
+    border: none, !important;
 }
