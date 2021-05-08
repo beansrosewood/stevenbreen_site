@@ -261,8 +261,11 @@
 </div>-->
 
 
-<body onload="snackbarFunction()">
+<body>
     <!--<body onload="sbfadefunction()"> Not working correctly so turned off-->
+
+    
+
     <!--script below and onload above are an attempt to have steven breen fade in on load.-->
     <script>
         function sbfadefunction() {
@@ -408,6 +411,13 @@
 
     </script>
 
+    
+    <script>
+        setTimeout(snackbarFunction(){
+            //deferred onload for the snackbar.
+        }, 2000);
+
+    </script>
 
 
 </body>
