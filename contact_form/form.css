@@ -153,6 +153,7 @@ input[type="submit"].submit:hover {
     padding-left: 5em;
     padding-right: 5em;
     font-weight: 900;
+    border: black, 10px;
     transition: all 1.0s ease;
 
 @media only screen and (max-width: 600px) {    
