@@ -153,3 +153,7 @@ form select {
         padding-left: 1em;
     }
 }
+
+.travel_info {
+    border: none;
+}
