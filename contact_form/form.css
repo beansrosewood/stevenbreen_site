@@ -150,7 +150,7 @@ form select {
 
 input[type="submit"].submit:hover {
     background-color: crimson;
-    font-size: 3em;
+    font-size: 2em;
     padding-left: 5em;
     padding-right: 5em;
     font-weight: 900;
