@@ -63,7 +63,7 @@
             color: #bb0000;
             transition: all 0.5s ease;
         }
-        
+
         /* THE SNACKBAR!! - position it at the bottom and in the middle of the screen */
         #snackbar {
             visibility: hidden;
@@ -91,11 +91,12 @@
             bottom: 120px;
             /* 30px from the bottom */
             font-size: 2em;
-            
+
         }
+
         /*Change the color of the contact link.*/
         #snackbar a {
-            color:yellow;
+            color: yellow;
         }
 
         /* Show the snackbar when clicking on a button (class added with JavaScript) */
@@ -174,8 +175,8 @@
         }
 
     </script>
-    
-        
+
+
 
     <!--<script>
          /*Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon*/ 
@@ -198,11 +199,10 @@
                 }
             });
         });
-        
 
     </script>
 
-    
+
 
     <!--Script for the typewriter effect-->
     <script>
@@ -261,8 +261,8 @@
 </div>-->
 
 
-<body onload="snackbarFunction()">    
-<!--<body onload="sbfadefunction()"> Not working correctly so turned off-->
+<body onload="snackbarFunction()">
+    <!--<body onload="sbfadefunction()"> Not working correctly so turned off-->
     <!--script below and onload above are an attempt to have steven breen fade in on load.-->
     <script>
         function sbfadefunction() {
@@ -366,6 +366,13 @@
 
 
                 </div>
+
+                <!-- Use a button to open the snackbar -->
+                <!--<button onclick="snackbarFunction()">Show Snackbar</button>-->
+
+                <!-- The actual snackbar -->
+                <div id="snackbar"><a href="sms://+16034937211?&body=I%27m%20interested%20in%20your%20services.%20Please%20contact%20me.">CLICK TO TEXT STEVEN BREEN.</a></div>
+
             </div>
             <div class="container, pay_button">
                 <a href="index_payment.html" class="btn btn-primary btn-lg btn-block active" role="button" aria-pressed="true">Pay Invoices - Thank You!</a>
