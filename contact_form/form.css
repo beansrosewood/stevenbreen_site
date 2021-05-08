@@ -148,7 +148,7 @@ form select {
     padding-right: 3em;
 }
 
-#submit_button a:hover {
+input[type="submit"].submit:hover {
     color: crimson;
     padding-left: 5em;
     padding-right: 5em;
