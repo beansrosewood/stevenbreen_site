@@ -154,6 +154,7 @@ input[type="submit"].submit:hover {
     padding-right: 5em;
     font-weight: 900;
     border: 5px solid black;
+    border-radius: 10px;
     transition: all 1.0s ease;
 
 @media only screen and (max-width: 600px) {    
