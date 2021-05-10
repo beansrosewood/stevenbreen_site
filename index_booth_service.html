@@ -13,11 +13,9 @@
 
     <!--Script below is to fade an element-->
     <script>
-        $(document).ready(function() {
-            $("button").click(function() {
+        $(document).ready(headerFunction() {
                 $("h2").fadeTo(2000, 1.0);
             });
-        });
 
     </script>
 
@@ -102,7 +100,7 @@
     </style>
 </head>
 
-<body>
+<body onload="headerFunction">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
