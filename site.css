@@ -88,6 +88,10 @@ body {
     padding-top: 1em;
 }
 
+.who .what .how .established {
+    opacity: .3;
+}
+
 .established {
     font-family: Georgia, serif;
     font-size: 3em;
