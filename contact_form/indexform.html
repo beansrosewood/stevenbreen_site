@@ -12,7 +12,119 @@
 
     <link rel="stylesheet" href="form.css">
 
-   
+    <style>
+        /* THE SNACKBAR!! - position it at the bottom and in the middle of the screen */
+        #snackbar {
+            visibility: hidden;
+            /* Hidden by default. Visible on click */
+            min-width: 250px;
+            /* Set a default minimum width */
+            margin-left: -125px;
+            /* Divide value of min-width by 2 */
+            background-color: #333;
+            /* Black background color */
+            color: #fff;
+            /* White text color */
+            text-align: center;
+            /* Centered text */
+            border-radius: 2px;
+            /* Rounded borders */
+            padding: 16px;
+            /* Padding */
+            position: fixed;
+            /* Sit on top of the screen */
+            z-index: 1;
+            /* Add a z-index if needed */
+            left: 40%;
+            /* Center the snackbar */
+            bottom: 120px;
+            /* 30px from the bottom */
+            font-size: 2em;
+
+        }
+
+        /*Change the color of the contact link.*/
+        #snackbar a {
+            color: yellow;
+        }
+
+        /* Show the snackbar when clicking on a button (class added with JavaScript) */
+        #snackbar.show {
+            visibility: visible;
+            /* Show the snackbar */
+            /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 4.5 seconds */
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 5.5s;
+            animation: fadein 0.5s, fadeout 0.5s 5.5s;
+        }
+
+        /* Animations to fade the snackbar in and out */
+        @-webkit-keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 120px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 120px;
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fadeout {
+            from {
+                bottom: 120px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeout {
+            from {
+                bottom: 120px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+
+    </style>
+
+    <script>
+        function snackbarFunction() {
+            // Get the snackbar DIV
+            var x = document.getElementById("snackbar");
+
+            // Add the "show" class to DIV
+            x.className = "show";
+
+            // After 6 seconds, remove the show class from DIV
+            setTimeout(function() {
+                x.className = x.className.replace("show", "");
+            }, 6000);
+        }
+
+    </script>
+
 
 </head>
 
@@ -96,7 +208,7 @@
                 </fieldset>
                 <div id="submit_button">
                     <input class="submit" type="submit" value="Submit">
-                </div>    
+                </div>
             </form>
 
             <!--<form class="needs-validation" novalidate method="post" action="https://formspree.io/f/xwkavwpk">
@@ -194,6 +306,12 @@
                 </div>
             </form>-->
 
+            <!-- Use a button to open the snackbar -->
+            <!--<button onclick="snackbarFunction()">Show Snackbar</button>-->
+
+            <!-- The actual snackbar -->
+            <div id="snackbar"><a href="sms://+16034937211?&body=I%27m%20interested%20in%20your%20services.%20Please%20contact%20me.">CLICK TO TEXT STEVEN BREEN.</a></div>
+
             <footer class="bottom">
 
                 <h5>Copyright <span class="glyphicon glyphicon-copyright-mark"></span> 1985-2021 - STEVEN BREEN - Industrial Service</h5>
@@ -223,8 +341,12 @@
             </script>
         </div>
     </div>
-    
-    
+
+    <script>
+        //deferred onload for the snackbar.
+        setTimeout(function(){ snackbarFunction() }, 2000);
+
+    </script>
 
 
 </body>
