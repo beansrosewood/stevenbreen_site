@@ -264,7 +264,7 @@
 <body>
     <!--<body onload="sbfadefunction()"> Not working correctly so turned off-->
 
-    
+
 
     <!--script below and onload above are an attempt to have steven breen fade in on load.-->
     <script>
@@ -411,10 +411,18 @@
 
     </script>
 
-    
+
     <script>
+        $(window).load(function() {
+            $("html, body").animate({
+                scrollTop: $(document).height()
+            }, 1000);
+        });
+
         //deferred onload for the snackbar.
-        setTimeout(function(){ snackbarFunction() }, 2000);
+        setTimeout(function() {
+            snackbarFunction()
+        }, 2000);
 
     </script>
 
