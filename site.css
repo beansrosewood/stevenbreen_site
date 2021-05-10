@@ -56,7 +56,7 @@ body {
     color: #bb0000;
     border-width: medium;
     border-color: #bb0000;
-    opacity: 1;
+    opacity: .25;
     /*Below added to blur background
     filter: blur(8px);
   -webkit-filter: blur(8px);*/
