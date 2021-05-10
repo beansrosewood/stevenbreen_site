@@ -50,6 +50,16 @@
     transition: all 1.0s ease;
 }
 
+.my_text {
+    font-size: 2em;
+    text-shadow: 1px 1px .75px #020203;
+}
+
+.my_text a:hover {
+    color: yellow;
+    transition: all 1.0s ease;
+}
+
 .your_info {
     text-shadow: 1px 1px .75px #020203;
 }
