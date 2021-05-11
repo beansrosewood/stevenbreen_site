@@ -46,6 +46,39 @@
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--<link rel="stylesheet" href="site.css">-->
+    
+    <!--Script for the MOBILE SITE-->
+
+    <script>
+        /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+        function mobileFunction() {
+            var x = document.getElementById("mobileLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        /*JavaScript below is for the animated hamburger/menu.*/
+
+        $(document).ready(function() {
+
+            $('.first-button').on('click', function() {
+
+                $('.animated-icon1').toggleClass('open');
+            });
+            $('.second-button').on('click', function() {
+
+                $('.animated-icon2').toggleClass('open');
+            });
+            $('.third-button').on('click', function() {
+
+                $('.animated-icon3').toggleClass('open');
+            });
+        });
+
+    </script>
 
     
         
