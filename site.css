@@ -366,10 +366,10 @@ body {
     display: none;
 }
 
-@media screen and (max-width: 1200px) {
+/*@media screen and (max-width: 1200px) {
     .topnav a:not(:first-child) {
         display: none;
-    }
+    }*/
 
     .topnav a.icon {
         float: right;
