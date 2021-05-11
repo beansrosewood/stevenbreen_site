@@ -125,6 +125,21 @@
 
     </script>
 
+    <script>
+        // Script to detect CAPS LOCK.
+        var input = document.getElementById("email-address");
+        var text = document.getElementById("text");
+        input.addEventListener("keyup", function(event) {
+
+            if (event.getModifierState("CapsLock")) {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none"
+            }
+        });
+
+    </script>
+
 
 </head>
 
@@ -202,6 +217,7 @@
                     <input type="text" name="company" id="company-name" placeholder="Organization" required="">
                     <label for="email-address">Email Address</label>
                     <input type="email" name="_replyto" id="email-address" placeholder="snoopy@peanuts.com" required="">
+                    <p id="text">WARNING! Caps lock is ON.</p>
                     <label for="message">Message</label>
                     <textarea rows="5" name="message" id="message" placeholder="Hic numquam sero te hominem esse potuisse." required=""></textarea>
                     <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
@@ -344,7 +360,9 @@
 
     <script>
         //deferred onload for the snackbar.
-        setTimeout(function(){ snackbarFunction() }, 3500);
+        setTimeout(function() {
+            snackbarFunction()
+        }, 3500);
 
     </script>
 
