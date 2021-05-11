@@ -178,4 +178,7 @@ input[type="submit"].submit:hover {
     }
 }
 
+/*Below is for a warning on CAP LOCK in email field.*/
+#text {display:none;color:red}
+
 
