@@ -13,13 +13,12 @@
     <link rel="stylesheet" href="map.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    
+
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <style>
-        
-         /*Style below is for the animated hamburger icon/menu.*/
+        /*Style below is for the animated hamburger icon/menu.*/
 
         /* Icon 1 */
 
@@ -95,7 +94,15 @@
             -o-transform: rotate(-135deg);
             transform: rotate(-135deg);
         }
-    
+
+        @media only screen and (max-width: 600px) {
+            .mobile {
+                display: block;
+            }
+            .large {
+                display: none;
+            }}
+
     </style>
 
 
@@ -138,7 +145,7 @@
 <body>
 
     <!--Beginning of MOBILE SITE CODE-->
-    <div class="mobile"  style="display: none">
+    <div class="mobile" style="display: none">
 
 
 
@@ -165,7 +172,8 @@
     </div>
 
 
-    <div class="large"><!--Added for mobile menu-->
+    <div class="large">
+        <!--Added for mobile menu-->
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -179,7 +187,7 @@
                 </ul>
             </div>
         </nav>
-        
+
         <!--JavaScript for the responsive top nav for mobile from W3 Schools-->
         <script>
             function myFunction() {
@@ -192,7 +200,7 @@
             }
 
         </script>
-        
+
     </div>
 
     <div class="map_top">
