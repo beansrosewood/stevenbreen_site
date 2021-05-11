@@ -215,6 +215,23 @@
             -o-transform: rotate(-135deg);
             transform: rotate(-135deg);
         }
+        
+        @media only screen and (max-width: 600px) {
+            .mobile {
+                display: block;
+            }
+            .large {
+                display: none;
+            }}
+        
+        @media only screen and (min-width: 601px) {
+            .mobile {
+                display: none;
+            }
+            .large {
+                display: block;
+            }}
+
 
     </style>
         <!--END OF MOBILE CODE-->
@@ -455,7 +472,7 @@
     </script>
     
     <!--Beginning of MOBILE SITE CODE-->
-    <div class="mobile" style="display: none">
+    <div class="mobile">
 
 
 
