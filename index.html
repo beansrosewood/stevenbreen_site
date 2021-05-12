@@ -79,6 +79,22 @@
         });
 
     </script>
+    
+    <!--Script below is for the typewriter effect.-->
+    <script>
+        var i = 0;
+        var txt = 'VFD and PLC Programming';
+        var speed = 100;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("type_demo").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+    </script>
 
     
         
@@ -397,7 +413,7 @@
 
 
 
-    <!--Script for the typewriter effect-->
+    <!--Script for the typewriter effect
     <script>
         var i = 0;
         var txt = 'It is never too later to be the person you might have been!'; /* The text */
@@ -412,7 +428,7 @@
             }
         }
 
-    </script>
+    </script>-->
 
 
 </head>
@@ -563,7 +579,7 @@
                 <!--<button onclick="snackbarFunction()">Show Snackbar</button>-->
 
                 <!-- The actual snackbar -->
-                <div id="snackbar"><a href="sms://+16034937211?&body=I%27m%20interested%20in%20your%20services.%20Please%20contact%20me.">CLICK TO TEXT STEVEN BREEN.</a></div>
+                <div id="snackbar"><a href="sms://+16034937211?&body=I%27m%20interested%20in%20your%20services.%20Please%20contact%20me."><p id="type_demo"></p></a></div>
 
             </div>
             <div class="container, pay_button">
@@ -607,6 +623,9 @@
         setTimeout(function() {
             snackbarFunction()
         }, 4000);
+
+        //deferred onload for the typewriter.
+        setTimeout(function(){ typeWriter() }, 10);
 
     </script>
 
