@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
-        
         /*Style for the MOBILE SITE*/
 
 
@@ -63,7 +62,7 @@
             background-color: #bb0000;
             color: white;
         }
-        
+
         /*Style below is for the animated hamburger icon/menu.*/
 
         /* Icon 1 */
@@ -141,21 +140,34 @@
             transform: rotate(-135deg);
         }
 
-        @media only screen and (max-width: 1200px) {
+        @media only screen and (max-width: 900px) {
             .mobile {
                 display: block;
             }
+
             .large {
                 display: none;
-            }}
-        
-        @media only screen and (min-width: 1201px) {
+            }
+
+            .topnav a {
+                font-size: 30px;
+            }
+
+            .animated-icon1 {
+                width: 45px;
+                height: 30px;
+            }
+        }
+
+        @media only screen and (min-width: 901px) {
             .mobile {
                 display: none;
             }
+
             .large {
                 display: block;
-            }}
+            }
+        }
 
     </style>
 
