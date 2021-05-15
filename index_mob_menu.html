@@ -7,7 +7,7 @@
 
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMNn87a_o0wTPYifkDYMNDqF_7dcuRZZQ&callback=initMap&libraries=&v=weekly">
     </script>
-    <script src="./maps.js"></script>
+    <!--<script src="./maps.js"></script>-->
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="map.css" />
@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
-        
         /*Style for the MOBILE SITE*/
 
 
@@ -63,7 +62,7 @@
             background-color: #bb0000;
             color: white;
         }
-        
+
         /*Style below is for the animated hamburger icon/menu.*/
 
         /* Icon 1 */
@@ -145,17 +144,21 @@
             .mobile {
                 display: block;
             }
+
             .large {
                 display: none;
-            }}
-        
+            }
+        }
+
         @media only screen and (min-width: 601px) {
             .mobile {
                 display: none;
             }
+
             .large {
                 display: block;
-            }}
+            }
+        }
 
     </style>
 
@@ -193,6 +196,19 @@
 
     </script>
 
+    <!--JavaScript for the responsive top nav for mobile from W3 Schools-->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+    </script>
+
 
 </head>
 
@@ -223,7 +239,8 @@
                 </a>
             </div>
         </div>
+        <h1 style="font-size: 2em;">Mobile Site Menu Test</h1>
     </div>
-  </body>
-</html>
+</body>
 
+</html>
