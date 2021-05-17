@@ -367,7 +367,7 @@ body {
     display: none;
 }
 
-@media screen and (max-width: 1000px) {
+/* TEST@media screen and (max-width: 1000px) {
     .topnav a:not(:first-child) {
         display: none;
     }
@@ -376,7 +376,7 @@ body {
         float: right;
         display: block;
     }
-}
+}*/
 
 
 @media only screen and (max-width: 600px) {    
