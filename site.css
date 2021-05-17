@@ -408,8 +408,8 @@ body {
         display: none;
 }   
 
-
-/*Test@media only screen and (max-width: 1200px) {
+/*Below controls the search bar etc.*/
+@media only screen and (max-width: 1800px) {
     .topnav.responsive {
         position: relative;
     }
@@ -423,11 +423,11 @@ body {
     .topnav.responsive a {
         float: left;
         /*Just changed this!*/
-        /*display: block;
+        display: block;
         text-align: left;
     }
 
     .big_screen {
         display: none;
     }
-}*/
+}
