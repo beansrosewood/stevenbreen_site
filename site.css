@@ -367,7 +367,7 @@ body {
     display: none;
 }
 
-/* TEST@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
     .topnav a:not(:first-child) {
         display: none;
     }
@@ -376,7 +376,7 @@ body {
         float: right;
         display: block;
     }
-}*/
+}
 
 
 @media only screen and (max-width: 600px) {    
@@ -409,7 +409,7 @@ body {
 }   
 
 
-@media only screen and (max-width: 1200px) {
+/*Test@media only screen and (max-width: 1200px) {
     .topnav.responsive {
         position: relative;
     }
@@ -423,11 +423,11 @@ body {
     .topnav.responsive a {
         float: left;
         /*Just changed this!*/
-        display: block;
+        /*display: block;
         text-align: left;
     }
 
     .big_screen {
         display: none;
     }
-}
+}*/
