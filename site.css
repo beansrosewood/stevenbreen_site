@@ -403,13 +403,13 @@ body {
         display: none;
 }*/
     
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1500px) {
     .medium_screen {
         display: none;
 }   
 
 /*Below controls the search bar etc.*/
-@media only screen and (max-width: 1800px) {
+@media only screen and (max-width: 1200px) {
     .topnav.responsive {
         position: relative;
     }
