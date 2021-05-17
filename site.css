@@ -402,7 +402,7 @@ body {
     .medium_screen {
         display: none;
 }*/
-/*Below is caucing the .com and the search bar to drop out.*/    
+/*Below is causing the .com and the search bar to drop out? Check .medium_screen later today.*/    
 @media only screen and (max-width: 900px) {
     .medium_screen {
         display: none;
