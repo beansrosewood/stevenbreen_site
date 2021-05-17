@@ -367,7 +367,7 @@ body {
     display: none;
 }
 
-@media screen and (max-width: 100px) {
+@media screen and (max-width: 1000px) {
     .topnav a:not(:first-child) {
         display: none;
     }
