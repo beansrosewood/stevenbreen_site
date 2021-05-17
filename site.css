@@ -402,7 +402,7 @@ body {
     .medium_screen {
         display: none;
 }*/
-    
+/*Below is caucing the .com and the search bar to drop out.*/    
 @media only screen and (max-width: 900px) {
     .medium_screen {
         display: none;
