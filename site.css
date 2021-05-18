@@ -435,7 +435,4 @@ body {
         }
     }
 
-    @media screen and (max-width: 1300px) {
-        .search_bar {
-            display: none;
-        }
+   
