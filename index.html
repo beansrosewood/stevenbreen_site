@@ -451,12 +451,13 @@
     <script>
         function sbfadeFunction() {
             //$(".who").fadeIn(3000);
+            /*Below is an attempt to fade the home page background image.*/
+            $(".hello").animate({ opacity: .75 }, { duration: 3000 });
             $(".who").fadeTo(1000, 1.0);
             $(".what").fadeTo(2000, 1.0);
             $(".how").fadeTo(3000, 1.0);
             $(".established").fadeTo(4000, 1.0);
-            /*Below is an attempt to fade the home page background image.*/
-            $(".hello").animate({ opacity: .75 }, { duration: 3000 });
+            
         }
 
     </script>
