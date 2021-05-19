@@ -123,6 +123,7 @@ function initMap() {
     var mc_shop_latlng = new google.maps.LatLng(42.106775, -70.759359);
     var master_latlng = new google.maps.LatLng(41.799879, -70.747274);
     var parker_latlng = new google.maps.LatLng(41.648480, -72.756058);
+    var pri_latlng = new google.maps.LatLng(42.112856, -71.708395);
 
 
 
@@ -378,6 +379,9 @@ function initMap() {
     var master_info = "<strong>Master Millwork</strong><br/>" + " Production Millwork Shop<br/>" + "West Wareham, MA";
     
     var parker_info = "<strong>Parker-Hannifin Fluid Control</strong><br/>" + "Filter/valve research and develpoement<br/>" + "New Britain, CT ";
+    
+    var pri_info = "<strong>Primetals Technologies</strong><br/>" + "Metallurgical Equipment Manufacturer<br/>" + "Sutton, MA";
+
 
 
 
@@ -865,6 +869,10 @@ function initMap() {
     
     var parker_infowindow = new google.maps.InfoWindow({
         content: parker_info
+    });
+    
+    var pri_infowindow = new google.maps.InfoWindow({
+        content: pri_info
     });
 
 
@@ -1690,6 +1698,13 @@ function initMap() {
         icon: icon,
         title: 'Research and Developement'
     });
+    
+    var pri_marker = new google.maps.Marker({
+        position: pri_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Metallurgical Solutions'
+    });
 
 
     
@@ -2183,6 +2198,10 @@ function initMap() {
     
     google.maps.event.addListener(parker_marker, 'click', function () {
         parker_infowindow.open(harvard_yard_map, parker_marker);
+    });
+    
+    google.maps.event.addListener(pri_marker, 'click', function () {
+        pri_infowindow.open(harvard_yard_map, pri_marker);
     });
     
     
