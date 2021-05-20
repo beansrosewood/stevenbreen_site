@@ -2,6 +2,10 @@
 <html lang=en>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    
     <title>Fade Image Experiment</title>
 
     <style>
@@ -23,7 +27,18 @@
         }
 
         .hero {
-            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            font-weight: bold;
+            font-size: 2rem;
+            
+            
+            
+            /*position: relative;
             height: 100vh;
             width: 100%;
             display: flex;
@@ -31,11 +46,24 @@
             justify-content: center;
             background-image: url(./photo_gallery/BDE85E1A-9E80-4126-BDE6-C5613A2E0F75_1_201_a.jpeg);
             background-size: cover;
-            opacity: 1.0;
+            opacity: 1.0;*/
         }
 
         .hero ::before {
-            content: "";
+            content: '';
+            background: url('./photo_gallery/BDE85E1A-9E80-4126-BDE6-C5613A2E0F75_1_201_a.jpeg') 
+                no-repeat center center/cover;
+            position: absolute;
+            opacity: 0.3;
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            
+            
+            
+            /*content: "";
             background-image: url(./photo_gallery/BDE85E1A-9E80-4126-BDE6-C5613A2E0F75_1_201_a.jpeg);
             background-size: cover;
             position: absolute;
@@ -44,7 +72,7 @@
             right 0px;
             left: 0px;
             opacity: 0.2;
-            display: block;
+            display: block;*/
         }
 
 
