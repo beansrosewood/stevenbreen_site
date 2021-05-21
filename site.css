@@ -172,6 +172,7 @@ body {
     transition: all 1.0s ease;
     color: lightgray;
     font-size: 20px;
+    z-index: 100;
 }
 
 /* Style the social media icons with color, if you want */
