@@ -302,7 +302,7 @@
             /* 30px from the bottom */
             font-size: 3em;
             font-weight: bold;
-            
+
 
         }
 
@@ -374,7 +374,8 @@
             width: 25%;
             float: right;
         }
-/*  Below code is for possible background opacity seperate from the other elements.      
+
+        /*  Below code is for possible background opacity seperate from the other elements.      
         *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -421,8 +422,93 @@ h1 {
   text-align: center;
 }*/
 
+    </style>
+
+    <!--Start of pop up-->
+
+    <style>
+        /* Popup container - can be anything you want */
+        .popup {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* The actual popup */
+        .popup .popuptext {
+            visibility: hidden;
+            width: 160px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -80px;
+        }
+
+        /* Popup arrow */
+        .popup .popuptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        /* Toggle this class - hide and show the popup */
+        .popup .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
+
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
 
     </style>
+    <!--May need the below for pop up-->
+    <!--style="text-align:center"-->
+
+    <script>
+        // When the user mouses over div, open the popup
+        function windowFunction() {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+        }
+
+    </script>
+
+
+    <!--End of pop up-->
 
     <script>
         function snackbarFunction() {
@@ -504,7 +590,7 @@ h1 {
             $(".what").fadeTo(2000, 1.0);
             $(".how").fadeTo(3000, 1.0);
             $(".established").fadeTo(4000, 1.0);
-            
+
         }
 
     </script>
@@ -547,10 +633,12 @@ h1 {
                 <!--mylinks is for the hamburger menu icon function.-->
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a class="dropdown-toggle active" data-toggle="dropdown" href="./index.html"><span class="glyphicon glyphicon-home"></span> Home 
+                        <a class="dropdown-toggle active" data-toggle="dropdown" href="./index.html"><span class="glyphicon glyphicon-home"></span> Home
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li class="item"><a href="./index_combustion.html">Combustion Services</a></li>
+                            <li class="item popup" onmouseover="windowFunction()"><a href="./index_combustion.html">Combustion Services</a>
+                                <span class="popuptext" id="myPopup">A Simple Popup!</span>
+                            </li>
                             <li class="item"><a href="./index_mapping_cal.html">Mapping and Calibration</a></li>
                             <li class="item"><a href="./index_design_fab.html">Process Control Design/Fabrication</a></li>
                             <li class="item"><a href="./index_booth_service.html">Spray Booth Services</a></li>
@@ -647,7 +735,7 @@ h1 {
 
                 <!-- The actual snackbar -->
                 <div id="snackbar"><a href="sms://+16034937211?&body=I%27m%20interested%20in%20your%20services.%20Please%20contact%20me.">
-                        
+
                         <p id="type_demo"></p>
                         <img src="favicon-96x96.png" alt="Wrench Man">
                     </a></div>
