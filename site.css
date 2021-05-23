@@ -435,12 +435,4 @@ body {
         }
     }
 
-    /*Styles for showing a div on hover.*/
-    .hide {
-        display: none;
-    }
-
-    .hover_show:hover + .hide {
-        display: block;
-        color: red;
-    }
+    
