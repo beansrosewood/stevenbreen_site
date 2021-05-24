@@ -495,6 +495,38 @@ h1 {
         }
 
     </style>
+
+    <!--Start style for the footer overlay on click.-->
+
+    <style>
+        #overlay {
+            position: fixed;
+            display: none;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+            cursor: pointer;
+        }
+
+        #text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 50px;
+            color: white;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+    </style>
+
+    <!--End style for footer overlay-->
+
     <!--May need the below for pop up-->
     <!--style="text-align:center"-->
 
@@ -721,8 +753,8 @@ h1 {
                         <li><a class="where" href="./index_vfd_plc.html"><span class="glyphicon glyphicon-wrench"></span> VFD/PLC Controller Programming</a></li>
                     </ul>
                     <div class="popup" onmouseover="windowFunction()" onmouseout="windowFunction()">
-                    <p class="established" >Servicing manufacturers in the Northeast for over 35 years. </p>
-                    <span class="popuptext" id="myPopup">I Look Forward To Helping You!</span>
+                        <p class="established">Servicing manufacturers in the Northeast for over 35 years. </p>
+                        <span class="popuptext" id="myPopup">I Look Forward To Helping You!</span>
                     </div>
 
                 </div>
