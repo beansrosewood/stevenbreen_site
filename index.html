@@ -525,11 +525,23 @@ h1 {
 
     </style>
 
-    <!--End style for footer overlay-->
+    <script>
+        function on() {
+            document.getElementById("overlay").style.display = "block";
+        }
+
+        function off() {
+            document.getElementById("overlay").style.display = "none";
+        }
+
+    </script>
+
+    <!--End style and script for footer overlay-->
 
     <!--May need the below for pop up-->
     <!--style="text-align:center"-->
 
+    <!--Below is for pop up window.-->
     <script>
         // When the user mouses over div, open the popup
         function windowFunction() {
