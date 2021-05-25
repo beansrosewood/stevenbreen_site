@@ -70,7 +70,43 @@
             /*position: fixed;*/
         }
 
-        /*Styles for the counter.*/
+    </style>
+
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+
+        // Update the count down every 1 second
+        var countdownfunction = setInterval(function() {
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h " +
+                minutes + "m " + seconds + "s ";
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(countdownfunction);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+
+    </script>
+
+    <style>
+    /*Styles for the counter.*/
         html,
         body {
             height: 100%;
@@ -90,8 +126,9 @@
             background-repeat: repeat;
             font-family: 'Raleway', 'Arial', sans-serif;
         }
-
-        .countdown-container {
+    </style>
+    
+        <!--.countdown-container {
             position: relative;
             top: 50%;
             -webkit-transform: translateY(-50%);
@@ -143,11 +180,11 @@
             .clock-item {
                 margin: 0px 30px 30px 30px;
             }
-        }
+        }-->
 
-    </style>
 
-    <script>
+
+    <!--<script>
         /*Script for counter.*/
         $(document).ready(function() {
             $('.countdown').final_countdown({
@@ -185,7 +222,7 @@
             });
         });
 
-    </script>
+    </script>-->
 
 </head>
 
@@ -204,18 +241,23 @@
             </ul>
         </div>
     </nav>
-    <h1 class="working_on_it">Dooms Day Counter Has Been Activated!<br/>Have A Nice Day?</h1>
+    <h1 class="working_on_it">Dooms Day Counter Has Been Activated!<br />Have A Nice Day?</h1>
     <!--<p><img class="dam" alt="Three Gorges Dam" src="photo_gallery/TGD_DAM_06_05_big.jpg"></p>-->
-    
+
     <div class="doomed">
-    <!--<iframe src="./Modern-Circular-jQuery-Countdown-Timer-Plugin-Final-Countdown/demo/index.html" width="500" height="300" style="border:4px solid black;">
+        <!--<iframe src="./Modern-Circular-jQuery-Countdown-Timer-Plugin-Final-Countdown/demo/index.html" width="500" height="300" style="border:4px solid black;">
 </iframe>-->
     </div>
 
+    <div>
+        <p id="demo" style="font-size:30px"></p>
+    </div>
+
+    <!-- HTML for the first counter version.
     <div class="countdown-container container">
         <div class="clock row">
 
-           <!--days-->
+           days
             <div class="clock-item clock-days countdown-time-value col-sm-6 col-md-3">
                 <div class="wrap">
                     <div class="inner">
@@ -228,7 +270,7 @@
                 </div>
             </div>
 
-          <!--hours-->
+          hours
 
             <div class="clock-item clock-hours countdown-time-value col-sm-6 col-md-3">
                 <div class="wrap">
@@ -242,7 +284,7 @@
                 </div>
             </div>
 
-             <!--minutes-->
+             minutes
             <div class="clock-item clock-minutes countdown-time-value col-sm-6 col-md-3">
                 <div class="wrap">
                     <div class="inner">
@@ -255,7 +297,7 @@
                 </div>
             </div>
 
-             <!--seconds-->
+             seconds
             <div class="clock-item clock-seconds countdown-time-value col-sm-6 col-md-3">
                 <div class="wrap">
                     <div class="inner">
@@ -274,7 +316,7 @@
     <div class="bottom">
         <h5>Copyright <span class="glyphicon glyphicon-copyright-mark"></span> 1985-2021 - STEVEN BREEN - Industrial Service</h5>
     </div>
-    <!--Script for counter.-->
+    <!--Script for first counter version.
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="js/kinetic.js"></script>
     <script type="text/javascript" src="../jquery.final-countdown.js"></script>
@@ -286,7 +328,7 @@
             now: '1387461319'
         });
 
-    </script>
+    </script>-->
 
 </body>
 
