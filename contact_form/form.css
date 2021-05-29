@@ -39,7 +39,7 @@ button {
     padding-left: 0;
 }
 
-button :hover {
+button:hover {
     color: yellow;
     transition: all 1.0s ease;
 }
