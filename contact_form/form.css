@@ -39,10 +39,9 @@ button {
     padding-left: 0;
 }
 
-button a:hover {
+button :hover {
     color: yellow;
     transition: all 1.0s ease;
-    padding-left: 0;
 }
 
 .my_email {
