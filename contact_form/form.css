@@ -32,10 +32,11 @@
     outline: none;
 }
 
-/*button {
+button {
     background-color: transparent;
-    border: none;    
-}*/
+    border: none;
+    text-shadow: 1px 1px .75px #020203;
+}
 
 .my_email {
     font-size: 2em;
