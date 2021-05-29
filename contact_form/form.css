@@ -36,12 +36,12 @@ button {
     background-color: transparent;
     border: none;
     text-shadow: 1px 1px .75px #020203;
-    margin-left: 0;
 }
 
 button a:hover {
     color: yellow;
     transition: all 1.0s ease;
+    padding-left: 0;
 }
 
 .my_email {
