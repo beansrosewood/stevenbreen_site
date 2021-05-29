@@ -262,7 +262,7 @@
 
     </style>
 
-    <style>
+    <!--<style>
         /*This should scroll down on hover to "your contact info".*/
         .my_note:hover body {
             animation: moveSlideshow 3s linear;
@@ -279,7 +279,16 @@
             opacity: 0;
         }
 
-    </style>
+    </style>-->
+    
+    
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $(document).scrollTop($(document).height());
+            });
+        });
+    </script>
 
 
 
@@ -450,7 +459,7 @@
             </div>
             <div class="my_text"><a href="sms://+16034937211?&body=I%27m%20interested%20in%20your%20services.%20Please%20contact%20me.">Click to text Steven Breen.</a></div>
             <div class="my_note">
-                <p>(Scroll down for contact request form.)</p>
+                <button>(Scroll down for contact request form.)</button>
             </div>
             <div class=info_map>
                 <iframe src="../index_a_to_b_directions.html" height="500" width="600" title="Shop Location"></iframe>
