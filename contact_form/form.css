@@ -27,6 +27,14 @@
 .my_note {
     font-size: 2em;
     text-shadow: 1px 1px .75px #020203;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;    
 }
 
 .my_email {
