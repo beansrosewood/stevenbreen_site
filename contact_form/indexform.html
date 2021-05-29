@@ -269,6 +269,16 @@
             animation-fill-mode: forwards;
         }
 
+        @keyframes moveSlideshow {
+            100% {
+                transform: translateY(calc(-100% + 200px));
+            }
+        }
+
+        .my_note:hover .my_note:after {
+            opacity: 0;
+        }
+
     </style>
 
 
