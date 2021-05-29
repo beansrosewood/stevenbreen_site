@@ -39,6 +39,11 @@ button {
     margin-left: 0;
 }
 
+button a:hover {
+    color: yellow;
+    transition: all 1.0s ease;
+}
+
 .my_email {
     font-size: 2em;
     text-shadow: 1px 1px .75px #020203;
