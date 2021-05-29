@@ -42,6 +42,7 @@ button {
 button:hover {
     color: yellow;
     transition: all 1.0s ease;
+    text-decoration: underline;
 }
 
 .my_email {
