@@ -329,6 +329,7 @@ body {
 #type_writer_phrase {
     text-align: center;
     font-weight: bolder;
+    font: courier M;
 }
 
 .bottom {
