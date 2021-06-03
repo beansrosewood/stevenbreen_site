@@ -400,6 +400,13 @@
             }
         }
 
+        /*JS below is for X effect of hamburger icon. (added on June 3,2021)*/
+
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+
+
         /*JavaScript below is for the animated hamburger/menu.*/
 
         $(document).ready(function() {
@@ -455,7 +462,7 @@
                 </div>
                 <!--<a href="./index_mobile2.html" class="veritas"><i class="fa"></i><span class="hat glyphicon glyphicon-phone"></span></a>-->
                 "Hamburger menu" / "Bar icon" to toggle the navigation links
-                <a href="javascript:void(0);" class="icon" onclick="mobileFunction(),myFunction(this)">
+                <a href="javascript:void(0);" class="icon" onclick="mobileFunction(),myFunction(x)">
                     <!--<i class="fa fa-bars"></i>-->
                     <div class="x_bar">
                         <div class="bar1"></div>
