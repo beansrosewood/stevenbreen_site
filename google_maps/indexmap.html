@@ -210,16 +210,65 @@
 
     </script>
 
-    <script>
-        /*CHEESEBURGER ICON SCRIPT*/
-
-
-        
-
-    </script>
-
     <style>
         /*CHEESEBURGER ICON STYLES*/
+
+        .plate {
+            background: #bb0000;
+            text-align: center;
+        }
+
+        .hamburger {
+            margin-top: 30vh;
+            display: inline-block;
+        }
+
+        .hamburger>div {
+            margin-top: 4vh;
+            background: #fff;
+            height: 5vh;
+            width: 30vh;
+            border-radius: 2.5vh;
+            position: relative;
+        }
+
+        .hamburger>div:nth-child(2)::after {
+            border: 2.5vh solid #fff;
+            border-color: #fff transparent transparent transparent;
+            position: absolute;
+            content: "";
+            bottom: -2.5vh;
+            right: 4vh;
+            transition: 0.3s all ease-in-out;
+        }
+
+        .hamburger>div:first-child {
+            overflow: hidden;
+            transition: 0.3s all ease-in-out;
+            position: relative;
+            top: 0;
+        }
+
+        .hamburger:hover,
+        .hamburger:active,
+        .hamburger.expanded {
+            cursor: pointer;
+        }
+
+        .hamburger:hover div:nth-child(2)::after,
+        .hamburger:active div:nth-child(2)::after,
+        .hamburger.expanded div:nth-child(2)::after {
+            bottom: -4.5vh;
+        }
+
+        .hamburger:hover div:first-child,
+        .hamburger:active div:first-child,
+        .hamburger.expanded div:first-child {
+            height: 15vh;
+            top: -10vh;
+            margin-bottom: -10vh;
+            border-radius: 20vh 20vh 2.5vh 2.5vh;
+        }
 
         
 
@@ -251,8 +300,8 @@
                 <!--<a href="./index_mobile2.html" class="veritas"><i class="fa"></i><span class="hat glyphicon glyphicon-phone"></span></a>-->
                 "Hamburger menu" / "Bar icon" to toggle the navigation links
                 <a href="javascript:void(0);" class="icon" onclick="mobileFunction()">
-                    <i class="fa fa-bars"></i>
-                    <!--<div class="hamburger"></div>-->
+                    <!--<i class="fa fa-bars"></i>-->
+                    <div class="hamburger"></div>
                 </a>
             </div>
         </div>
@@ -302,4 +351,22 @@
         <h5>Copyright <span class="glyphicon glyphicon-copyright-mark"></span> 1985-2021 - STEVEN BREEN - Industrial Service</h5>
 
     </footer>
+    
+    <script>
+        /*CHEESEBURGER ICON SCRIPT*/
+
+        $(".hamburger")
+            .append("<div/><div/><div/>")
+            .click(function(e) {
+                $(this).toggleClass("expanded");
+                e.stopPropogation();
+            });
+
+        $("body").click(function(e) {
+            $(".expanded").removeClass("expanded");
+        });
+
+    </script>
+
+    
 </body>
