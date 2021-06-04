@@ -1,0 +1,76 @@
+<script>
+        /*CHEESEBURGER ICON SCRIPT*/
+
+    $('.hamburger').append('
+    <div />
+    <div />
+    <div />').click(function(e) {
+    $(this).toggleClass('expanded');
+    e.stopPropogation();
+    });
+
+
+    $('body').click(function(e) {
+    $('.expanded').removeClass('expanded');
+    });
+        
+    </script>    
+        
+    <style>
+        /*CHEESEBURGER ICON STYLES*/
+
+        .hamburger {
+            margin-top: 30vh;
+            display: inline-block;
+
+            >div {
+                margin-top: 4vh;
+                background: #fff;
+                height: 5vh;
+                width: 30vh;
+                border-radius: 2.5vh;
+                position: relative;
+
+                &:nth-child(2)::after {
+                    border: 2.5vh solid #fff;
+                    border-color: #fff transparent transparent transparent;
+                    position: absolute;
+                    content: "";
+                    bottom: -2.5vh;
+                    right: 4vh;
+                    transition: .3s all ease-in-out;
+                }
+
+                &:first-child {
+                    over-flow: hidden;
+                    transition: .3s all ease-in-out;
+                    position: relative;
+                    top: 0;
+                }
+            }
+
+            &:hover,
+            &:active,
+            &.expanded {
+                cursor: pointer;
+
+                div {
+                    &:nth-child(2)::after {
+                        bottom: -4.5vh;
+                    }
+
+                    &:first-child {
+                        height: 15vh;
+                        top: -10vh;
+                        margin-bottom: -10vh;
+                        border-radius: 20vh 20vh 2.5vh 2.5vh;
+                    }
+                }
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
