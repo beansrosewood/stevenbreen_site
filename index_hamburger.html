@@ -6,31 +6,37 @@
     <meta charset="utf-8">
     <meta name="author" content="Steven P Breen">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   
 
-<script>
+
+    <script>
         /*CHEESEBURGER ICON SCRIPT*/
 
-    $('.hamburger').append('
-    <div />
-    <div />
-    <div />').click(function(e) {
-    $(this).toggleClass('expanded');
-    e.stopPropogation();
-    });
+        $(document).ready(function() {
+            $('.hamburger').append(' <
+                div / >
+                <
+                div / >
+                <
+                div / > ').click(function(e) {
+                $(this).toggleClass('expanded'); e.stopPropogation();
+            });
 
 
-    $('body').click(function(e) {
-    $('.expanded').removeClass('expanded');
-    });
-        
-    </script>    
-        
+        $('body').click(function(e) {
+            $('.expanded').removeClass('expanded');
+        });
+        });
+
+    </script>
+
     <style>
         /*CHEESEBURGER ICON STYLES*/
-        
-        body {background: #FAB526; text-align:center;}
-        
+
+        body {
+            background: #FAB526;
+            text-align: center;
+        }
+
         .hamburger {
             margin-top: 30vh;
             display: inline-block;
@@ -86,9 +92,9 @@
 </head>
 
 <body>
- 
+
     <div class="hamburger"></div>
-    
+
 </body>
-    
-</html>    
+
+</html>
