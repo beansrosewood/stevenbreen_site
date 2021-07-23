@@ -126,6 +126,7 @@ function initMap() {
     var pri_latlng = new google.maps.LatLng(42.112856, -71.708395);
     var jap_latlng = new google.maps.LatLng(42.608168, -71.334151);
     var app_latlng = new google.maps.LatLng(42.179400, -71.217987);
+    var pool_latlng = new google.maps.LatLng(42.782113, -71.333019);
 
 
 
