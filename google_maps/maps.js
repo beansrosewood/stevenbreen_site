@@ -125,6 +125,7 @@ function initMap() {
     var parker_latlng = new google.maps.LatLng(41.648480, -72.756058);
     var pri_latlng = new google.maps.LatLng(42.112856, -71.708395);
     var jap_latlng = new google.maps.LatLng(42.608168, -71.334151);
+    var app_latlng = new google.maps.LatLng(42.179400, -71.217987);
 
 
 
@@ -384,6 +385,8 @@ function initMap() {
     var pri_info = "<strong>Primetals Technologies</strong><br/>" + "Metallurgical Equipment Manufacturer<br/>" + "Sutton, MA";
     
     var jap_info = "<strong>Finishing Shop</strong><br/>" + "Wet and Powder Applications<br/>" + "Chelmsford, MA";
+    
+    var app_info = "<strong>Finishing Shop</strong><br/>" + "Norwood, MA";
 
 
 
@@ -880,6 +883,10 @@ function initMap() {
     
     var jap_infowindow = new google.maps.InfoWindow({
         content: jap_info
+    });
+    
+    var app_infowindow = new google.maps.InfoWindow({
+        content: app_info
     });
 
 
@@ -1719,6 +1726,13 @@ function initMap() {
         icon: icon,
         title: 'Wet and Powder Finisher'
     });
+    
+    var app_marker = new google.maps.Marker({
+        position: app_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Finishing Applications'
+    });
 
 
     
@@ -2220,6 +2234,10 @@ function initMap() {
     
     google.maps.event.addListener(jap_marker, 'click', function () {
         jap_infowindow.open(harvard_yard_map, jap_marker);
+    });
+    
+    google.maps.event.addListener(app_marker, 'click', function () {
+        app_infowindow.open(harvard_yard_map, app_marker);
     });
     
     
