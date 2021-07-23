@@ -124,6 +124,7 @@ function initMap() {
     var master_latlng = new google.maps.LatLng(41.799879, -70.747274);
     var parker_latlng = new google.maps.LatLng(41.648480, -72.756058);
     var pri_latlng = new google.maps.LatLng(42.112856, -71.708395);
+    var jap_latlng = new google.maps.LatLng(42.608168, -71.334151);
 
 
 
@@ -381,6 +382,8 @@ function initMap() {
     var parker_info = "<strong>Parker-Hannifin Fluid Control</strong><br/>" + "Filter/valve research and develpoement<br/>" + "New Britain, CT ";
     
     var pri_info = "<strong>Primetals Technologies</strong><br/>" + "Metallurgical Equipment Manufacturer<br/>" + "Sutton, MA";
+    
+    var jap_info = "<strong>Finishing Shop</strong><br/>" + "Wet and Powder Applications<br/>" + "Chelmsford, MA";
 
 
 
@@ -873,6 +876,10 @@ function initMap() {
     
     var pri_infowindow = new google.maps.InfoWindow({
         content: pri_info
+    });
+    
+    var jap_infowindow = new google.maps.InfoWindow({
+        content: jap_info
     });
 
 
@@ -1705,6 +1712,13 @@ function initMap() {
         icon: icon,
         title: 'Metallurgical Solutions'
     });
+    
+    var jap_marker = new google.maps.Marker({
+        position: jap_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Wet and Powder Finisher'
+    });
 
 
     
@@ -2202,6 +2216,10 @@ function initMap() {
     
     google.maps.event.addListener(pri_marker, 'click', function () {
         pri_infowindow.open(harvard_yard_map, pri_marker);
+    });
+    
+    google.maps.event.addListener(jap_marker, 'click', function () {
+        jap_infowindow.open(harvard_yard_map, jap_marker);
     });
     
     
