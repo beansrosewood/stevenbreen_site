@@ -387,6 +387,8 @@ function initMap() {
     var jap_info = "<strong>Finishing Shop</strong><br/>" + "Wet and Powder Applications<br/>" + "Chelmsford, MA";
     
     var app_info = "<strong>Finishing Shop</strong><br/>" + "Norwood, MA";
+    
+    var pool_info = "<strong>Residential Pool House</strong><br/>" + "Tube heater with WiFi control<br/>" + "Windham, NH";
 
 
 
@@ -887,6 +889,10 @@ function initMap() {
     
     var app_infowindow = new google.maps.InfoWindow({
         content: app_info
+    });
+    
+    var pool_infowindow = new google.maps.InfoWindow({
+        content: pool_info
     });
 
 
@@ -1733,6 +1739,13 @@ function initMap() {
         icon: icon,
         title: 'Finishing Applications'
     });
+    
+    var pool_marker = new google.maps.Marker({
+        position: pool_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Pool House'
+    });
 
 
     
@@ -2238,6 +2251,10 @@ function initMap() {
     
     google.maps.event.addListener(app_marker, 'click', function () {
         app_infowindow.open(harvard_yard_map, app_marker);
+    });
+    
+    google.maps.event.addListener(pool_marker, 'click', function () {
+        pool_infowindow.open(harvard_yard_map, pool_marker);
     });
     
     
