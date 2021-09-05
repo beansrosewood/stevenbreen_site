@@ -128,6 +128,7 @@ function initMap() {
     var app_latlng = new google.maps.LatLng(42.179400, -71.217987);
     var pool_latlng = new google.maps.LatLng(42.782113, -71.333019);
     var sign_latlng = new google.maps.LatLng(42.318121, -71.612731);
+    var high_latlng = new google.maps.LatLng(41.505257, -73.000904);
 
 
 
@@ -393,6 +394,8 @@ function initMap() {
     var pool_info = "<strong>Residential Pool House</strong><br/>" + "Tube heater with WiFi control<br/>" + "Windham, NH";
     
     var sign_info = "<strong>Viewpoint Signs</strong><br/>" + "Signage fabrication shop<br/>" + "Northborough, MA";
+    
+    var high_info = "<strong>Highland Woodcraft</strong><br/>" + "Cabinet/Millwork Shop<br/>" + "Prospect, CT";
 
 
 
@@ -901,6 +904,10 @@ function initMap() {
     
     var sign_infowindow = new google.maps.InfoWindow({
         content: sign_info
+    });
+    
+    var high_infowindow = new google.maps.InfoWindow({
+        content: high_info
     });
 
 
@@ -1761,6 +1768,13 @@ function initMap() {
         icon: icon,
         title: 'Sign Fab Shop'
     });
+    
+    var high_marker = new google.maps.Marker({
+        position: high_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Cabinet Shop'
+    });
 
 
     
@@ -2274,6 +2288,10 @@ function initMap() {
     
     google.maps.event.addListener(sign_marker, 'click', function () {
         sign_infowindow.open(harvard_yard_map, sign_marker);
+    });
+    
+    google.maps.event.addListener(high_marker, 'click', function () {
+        high_infowindow.open(harvard_yard_map, high_marker);
     });
     
     
