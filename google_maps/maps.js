@@ -129,6 +129,7 @@ function initMap() {
     var pool_latlng = new google.maps.LatLng(42.782113, -71.333019);
     var sign_latlng = new google.maps.LatLng(42.318121, -71.612731);
     var high_latlng = new google.maps.LatLng(41.505257, -73.000904);
+    var crowe_latlng = new google.maps.LatLng(42.101007, -70.959050);
 
 
 
@@ -396,6 +397,8 @@ function initMap() {
     var sign_info = "<strong>Viewpoint Signs</strong><br/>" + "Signage fabrication shop<br/>" + "Northborough, MA";
     
     var high_info = "<strong>Highland Woodcraft</strong><br/>" + "Cabinet/Millwork Shop<br/>" + "Prospect, CT";
+    
+    var crowe_info = "<strong>Crowe Collision</strong><br/>" + "Independant Body Shop<br/>" + "Abington, MA";
 
 
 
@@ -908,6 +911,10 @@ function initMap() {
     
     var high_infowindow = new google.maps.InfoWindow({
         content: high_info
+    });
+    
+    var crowe_infowindow = new google.maps.InfoWindow({
+        content: crowe_info
     });
 
 
@@ -1775,6 +1782,13 @@ function initMap() {
         icon: icon,
         title: 'Cabinet Shop'
     });
+    
+    var crowe_marker = new google.maps.Marker({
+        position: crowe_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Autobody Shop'
+    });
 
 
     
@@ -2292,6 +2306,10 @@ function initMap() {
     
     google.maps.event.addListener(high_marker, 'click', function () {
         high_infowindow.open(harvard_yard_map, high_marker);
+    });
+    
+    google.maps.event.addListener(crowe_marker, 'click', function () {
+        crowe_infowindow.open(harvard_yard_map, crowe_marker);
     });
     
     
