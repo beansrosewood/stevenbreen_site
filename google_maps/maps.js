@@ -398,7 +398,7 @@ function initMap() {
     
     var high_info = "<strong>Highland Woodcraft</strong><br/>" + "Cabinet/Millwork Shop<br/>" + "Prospect, CT";
     
-    var crowe_info = "<strong>Crowe Collision</strong><br/>" + "Independant Body Shop<br/>" + "Abington, MA";
+    var crowe_info = "<strong>Crowe Collision</strong><br/>" + "Independent Body Shop<br/>" + "Abington, MA";
 
 
 
