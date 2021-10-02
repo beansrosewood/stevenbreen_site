@@ -130,6 +130,7 @@ function initMap() {
     var sign_latlng = new google.maps.LatLng(42.318121, -71.612731);
     var high_latlng = new google.maps.LatLng(41.505257, -73.000904);
     var crowe_latlng = new google.maps.LatLng(42.101007, -70.959050);
+    var rotary_latlng = new google.maps.LatLng(41.663199, -70.286396);
 
 
 
@@ -399,6 +400,8 @@ function initMap() {
     var high_info = "<strong>Highland Woodcraft</strong><br/>" + "Cabinet/Millwork Shop<br/>" + "Prospect, CT";
     
     var crowe_info = "<strong>Crowe Collision</strong><br/>" + "Independent Body Shop<br/>" + "Abington, MA";
+    
+    var rotary_info = "<strong>Rotary Collision Center</strong><br/>" + "Independent Body Shop<br/>" + "Hyannis, MA";
 
 
 
@@ -915,6 +918,10 @@ function initMap() {
     
     var crowe_infowindow = new google.maps.InfoWindow({
         content: crowe_info
+    });
+    
+    var rotary_infowindow = new google.maps.InfoWindow({
+        content: rotary_info
     });
 
 
@@ -1789,6 +1796,13 @@ function initMap() {
         icon: icon,
         title: 'Autobody Shop'
     });
+    
+    var rotary_marker = new google.maps.Marker({
+        position: rotary_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Autobody Shop'
+    });
 
 
     
@@ -2310,6 +2324,10 @@ function initMap() {
     
     google.maps.event.addListener(crowe_marker, 'click', function () {
         crowe_infowindow.open(harvard_yard_map, crowe_marker);
+    });
+    
+    google.maps.event.addListener(rotary_marker, 'click', function () {
+        rotary_infowindow.open(harvard_yard_map, rotary_marker);
     });
     
     
