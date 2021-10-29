@@ -131,7 +131,7 @@ function initMap() {
     var high_latlng = new google.maps.LatLng(41.505257, -73.000904);
     var crowe_latlng = new google.maps.LatLng(42.101007, -70.959050);
     var rotary_latlng = new google.maps.LatLng(41.663199, -70.286396);
-
+    var rex_latlng = new google.maps.LatLng(41.851926, -72.582112);
 
 
 
@@ -402,6 +402,8 @@ function initMap() {
     var crowe_info = "<strong>Crowe Collision</strong><br/>" + "Independent Body Shop<br/>" + "Abington, MA";
     
     var rotary_info = "<strong>Rotary Collision Center</strong><br/>" + "Independent Body Shop<br/>" + "Hyannis, MA";
+    
+    var rex_info = "<strong>Rex Lumber</strong><br/>" + "Millwork-Lumber Wholesaler<br/>" + "South Windsor, CT";
 
 
 
@@ -922,6 +924,10 @@ function initMap() {
     
     var rotary_infowindow = new google.maps.InfoWindow({
         content: rotary_info
+    });
+    
+    var rex_infowindow = new google.maps.InfoWindow({
+        content: rex_info
     });
 
 
@@ -1803,6 +1809,13 @@ function initMap() {
         icon: icon,
         title: 'Autobody Shop'
     });
+    
+    var rex_marker = new google.maps.Marker({
+        position: rex_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Lumber Wholesaler'
+    });
 
 
     
@@ -2328,6 +2341,10 @@ function initMap() {
     
     google.maps.event.addListener(rotary_marker, 'click', function () {
         rotary_infowindow.open(harvard_yard_map, rotary_marker);
+    });
+    
+    google.maps.event.addListener(rex_marker, 'click', function () {
+        rex_infowindow.open(harvard_yard_map, rex_marker);
     });
     
     
