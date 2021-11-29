@@ -132,6 +132,7 @@ function initMap() {
     var crowe_latlng = new google.maps.LatLng(42.101007, -70.959050);
     var rotary_latlng = new google.maps.LatLng(41.663199, -70.286396);
     var rex_latlng = new google.maps.LatLng(41.851926, -72.582112);
+    var grid_latlng = new google.maps.LatLng(42.599106, -71.163884);
 
 
 
@@ -404,6 +405,8 @@ function initMap() {
     var rotary_info = "<strong>Rotary Collision Center</strong><br/>" + "Independent Body Shop<br/>" + "Hyannis, MA";
     
     var rex_info = "<strong>Rex Lumber</strong><br/>" + "Millwork-Lumber Wholesaler<br/>" + "South Windsor, CT";
+    
+    var grid_info = "<strong>National Grid</strong><br/>" + "Gas Meter Re-build Shop<br/>" + "Wilmington, MA";
 
 
 
@@ -928,6 +931,10 @@ function initMap() {
     
     var rex_infowindow = new google.maps.InfoWindow({
         content: rex_info
+    });
+    
+    var grid_infowindow = new google.maps.InfoWindow({
+        content: grid_info
     });
 
 
@@ -1816,6 +1823,13 @@ function initMap() {
         icon: icon,
         title: 'Lumber Wholesaler'
     });
+    
+    var grid_marker = new google.maps.Marker({
+        position: grid_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Gas Meter Shop'
+    });
 
 
     
@@ -2345,6 +2359,10 @@ function initMap() {
     
     google.maps.event.addListener(rex_marker, 'click', function () {
         rex_infowindow.open(harvard_yard_map, rex_marker);
+    });
+    
+    google.maps.event.addListener(grid_marker, 'click', function () {
+        grid_infowindow.open(harvard_yard_map, grid_marker);
     });
     
     
