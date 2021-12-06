@@ -148,16 +148,19 @@
             .cancelbtn {
                 width: 100%;
                 padding-bottom: 100px;
-                
+
             }
         }
 
         #w9_cover {
             background-image: url(photo_gallery/BDE85E1A-9E80-4126-BDE6-C5613A2E0F75_1_201_a.jpeg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 300%;
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            /* Preserve aspet ratio */
+            min-width: 100%;
+            min-height: 100%;
         }
 
     </style>
