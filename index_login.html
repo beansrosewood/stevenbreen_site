@@ -152,20 +152,23 @@
 
         #w9_cover {
             background-image: url(photo_gallery/BDE85E1A-9E80-4126-BDE6-C5613A2E0F75_1_201_a.jpeg);
-            
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
+
     </style>
 </head>
 
 <body>
     <div id="w9_cover">
-    <h2>Request IRS W-9 Login</h2>
+        <h2>Request IRS W-9 Login</h2>
 
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-    <br><br>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+        <br><br>
 
-    <a href="./index.html"><button type="button" class="cancelbtn">Return To Home Page</button></a>
-    </div>    
+        <a href="./index.html"><button type="button" class="cancelbtn">Return To Home Page</button></a>
+    </div>
     <div id="id01" class="modal">
 
         <form class="modal-content animate" action="/action_page.php" method="post">
