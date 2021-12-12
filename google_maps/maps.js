@@ -133,6 +133,7 @@ function initMap() {
     var rotary_latlng = new google.maps.LatLng(41.663199, -70.286396);
     var rex_latlng = new google.maps.LatLng(41.851926, -72.582112);
     var grid_latlng = new google.maps.LatLng(42.599106, -71.163884);
+    var c_g_metal_latlng = new google.maps.LatLng(44.303436, -69.976584);
 
 
 
@@ -407,6 +408,8 @@ function initMap() {
     var rex_info = "<strong>Rex Lumber</strong><br/>" + "Millwork-Lumber Wholesaler<br/>" + "South Windsor, CT";
     
     var grid_info = "<strong>National Grid</strong><br/>" + "Gas Meter Re-build Shop<br/>" + "Wilmington, MA";
+    
+    var c_g_metal_info = "<strong>C&G Metal </strong><br/>" + "Heat Pump Stand Fabricator<br/>" + "Winthrop, ME";
 
 
 
@@ -935,6 +938,10 @@ function initMap() {
     
     var grid_infowindow = new google.maps.InfoWindow({
         content: grid_info
+    });
+    
+    var c_g_metal_infowindow = new google.maps.InfoWindow({
+        content: c_g_metal_info
     });
 
 
@@ -1830,6 +1837,13 @@ function initMap() {
         icon: icon,
         title: 'Gas Meter Shop'
     });
+    
+     var c_g_metal_marker = new google.maps.Marker({
+        position: c_g_metal_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Powder Shop/Metal Fab'
+    });
 
 
     
@@ -2363,6 +2377,10 @@ function initMap() {
     
     google.maps.event.addListener(grid_marker, 'click', function () {
         grid_infowindow.open(harvard_yard_map, grid_marker);
+    });
+    
+    google.maps.event.addListener(c_g_metal_marker, 'click', function () {
+        c_g_metal_infowindow.open(harvard_yard_map, c_g_metal_marker);
     });
     
     
