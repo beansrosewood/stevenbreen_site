@@ -135,6 +135,7 @@ function initMap() {
     var grid_latlng = new google.maps.LatLng(42.599106, -71.163884);
     var c_g_metal_latlng = new google.maps.LatLng(44.303436, -69.976584);
     var summit_latlng = new google.maps.LatLng(41.627526, -73.068530);
+    var bae_latlng = new google.maps.LatLng(42.763650, -71.458853);
 
 
 
@@ -413,6 +414,8 @@ function initMap() {
     var c_g_metal_info = "<strong>C&G Metal </strong><br/>" + "Heat Pump Stand Fabricator<br/>" + "Winthrop, ME";
     
     var summit_info = "<strong>Summit Plating Corp. </strong><br/>" + "Electro-Plating and Metal Finishing <br/>" + "Thomaston, CT";
+    
+    var bae_info = "<strong>BAE Systems </strong><br/>" + "Military/Aerospace Manufacturer <br/>" + "Nashua, NH";
 
 
 
@@ -949,6 +952,10 @@ function initMap() {
     
     var summit_infowindow = new google.maps.InfoWindow({
         content: summit_info
+    });
+    
+    var bae_infowindow = new google.maps.InfoWindow({
+        content: bae_info
     });
 
 
@@ -1858,6 +1865,13 @@ function initMap() {
         icon: icon,
         title: 'Electro-plating Shop'
     });
+    
+    var bae_marker = new google.maps.Marker({
+        position: bae_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Military/Aerospace Contractor'
+    });
 
 
     
@@ -2399,6 +2413,10 @@ function initMap() {
     
     google.maps.event.addListener(summit_marker, 'click', function () {
         summit_infowindow.open(harvard_yard_map, summit_marker);
+    });
+    
+    google.maps.event.addListener(bae_marker, 'click', function () {
+        bae_infowindow.open(harvard_yard_map, bae_marker);
     });
     
     
