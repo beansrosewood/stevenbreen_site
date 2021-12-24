@@ -137,6 +137,7 @@ function initMap() {
     var summit_latlng = new google.maps.LatLng(41.627526, -73.068530);
     var bae_latlng = new google.maps.LatLng(42.763650, -71.458853);
     var mich_latlng = new google.maps.LatLng(41.852072, -72.811791);
+    var psg_latlng = new google.maps.LatLng(42.387488, -71.084847);
 
 
 
@@ -419,6 +420,8 @@ function initMap() {
     var bae_info = "<strong>BAE Systems </strong><br/>" + "Military/Aerospace Manufacturer <br/>" + "Nashua, NH";
     
     var mich_info = "<strong>Michelle Auto Body </strong><br/>" + "Independent Body Shop <br/>" + "Simsbury, CT";
+    
+    var psg_info = "<strong>PSG Framing </strong><br/>" + "Artwork Framing Shop <br/>" + "Somerville, MA";
 
 
 
@@ -964,6 +967,10 @@ function initMap() {
     
     var mich_infowindow = new google.maps.InfoWindow({
         content: mich_info
+    });
+    
+    var psg_infowindow = new google.maps.InfoWindow({
+        content: psg_info
     });
 
 
@@ -1887,6 +1894,13 @@ function initMap() {
         icon: icon,
         title: 'Auto Body Shop'
     });
+    
+    var psg_marker = new google.maps.Marker({
+        position: psg_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Picture Framer'
+    });
 
 
     
@@ -2436,6 +2450,10 @@ function initMap() {
     
     google.maps.event.addListener(mich_marker, 'click', function () {
         mich_infowindow.open(harvard_yard_map, mich_marker);
+    });
+    
+    google.maps.event.addListener(psg_marker, 'click', function () {
+        psg_infowindow.open(harvard_yard_map, psg_marker);
     });
     
     
