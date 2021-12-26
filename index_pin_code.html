@@ -10,14 +10,14 @@
     <meta name="theme-color" content="#990000">
 
     <style>
-        $background-color: #375ffa;
+        /*$background-color: #375ffa;
         $pinpad-color: #212121;
         $dot-size: .8em;
-        $number-size: 2.5em;
+        $number-size: 2.5em;*/
 
         body {
             height: 100vh;
-            background: $background-color;
+            background: #375ffa;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -60,7 +60,7 @@
         }
 
         #pin {
-            background: $pinpad-color;
+            background: #212121;
             width: 20em;
             min-width: 320px;
             display: flex;
@@ -85,9 +85,9 @@
         .dot {
             position: relative;
             background: rgba(255, 255, 255, .2);
-            border-radius: $dot-size;
-            width: $dot-size;
-            height: $dot-size;
+            border-radius: .8em;
+            width: .8em;
+            height: .8em;
             transform: scale3d(.7, .7, .7);
 
             &.active {
@@ -119,13 +119,13 @@
 
         .number {
             position: relative;
-            width: $number-size;
-            height: $number-size;
-            margin: $number-size/5;
-            border-radius: $number-size;
+            width: 2.5em;
+            height: 2.5em;
+            margin: 0.5em;
+            border-radius: 2.5em;
             border: 2px solid rgba(255, 255, 255, 0);
             text-align: center;
-            line-height: $number-size;
+            line-height: 2.5em;
             font-weight: 400;
             font-size: 1.8em;
             cursor: pointer;
@@ -144,10 +144,10 @@
                 content: "";
                 position: absolute;
                 left: -2px;
-                width: $number-size;
-                height: $number-size;
+                width: 2.5em;
+                height: 2.5em;
                 border: 2px solid rgba(255, 255, 255, .1);
-                border-radius: $number-size;
+                border-radius: 2.5em;
                 transition: all .5s ease;
             }
 
