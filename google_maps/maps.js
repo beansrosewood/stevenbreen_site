@@ -138,6 +138,7 @@ function initMap() {
     var bae_latlng = new google.maps.LatLng(42.763650, -71.458853);
     var mich_latlng = new google.maps.LatLng(41.852072, -72.811791);
     var psg_latlng = new google.maps.LatLng(42.387488, -71.084847);
+    var jfarm_latlng = new google.maps.LatLng(43.196406, -70.746603);
 
 
 
@@ -422,6 +423,8 @@ function initMap() {
     var mich_info = "<strong>Michelle Auto Body </strong><br/>" + "Independent Body Shop <br/>" + "Simsbury, CT";
     
     var psg_info = "<strong>PSG Framing </strong><br/>" + "Artwork Framing Shop <br/>" + "Somerville, MA";
+    
+    var jfarm_info = "<strong>Jewett Farm </strong><br/>" + "Cabinet Maker Shop <br/>" + "York, ME";
 
 
 
@@ -971,6 +974,10 @@ function initMap() {
     
     var psg_infowindow = new google.maps.InfoWindow({
         content: psg_info
+    });
+    
+    var jfarm_infowindow = new google.maps.InfoWindow({
+        content: jfarm_info
     });
 
 
@@ -1901,6 +1908,13 @@ function initMap() {
         icon: icon,
         title: 'Picture Framer'
     });
+    
+    var jfarm_marker = new google.maps.Marker({
+        position: jfarm_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Cabinet Maker'
+    });
 
 
     
@@ -2454,6 +2468,10 @@ function initMap() {
     
     google.maps.event.addListener(psg_marker, 'click', function () {
         psg_infowindow.open(harvard_yard_map, psg_marker);
+    });
+    
+    google.maps.event.addListener(jfarm_marker, 'click', function () {
+        jfarm_infowindow.open(harvard_yard_map, jfarm_marker);
     });
     
     
