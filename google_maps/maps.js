@@ -141,6 +141,7 @@ function initMap() {
     var jfarm_latlng = new google.maps.LatLng(43.196406, -70.746603);
     var mcb_latlng = new google.maps.LatLng(43.189805, -70.747944);
     var nashua_latlng = new google.maps.LatLng(42.782083, -71.519906);
+    var tdf_latlng = new google.maps.LatLng(42.575893, -70.974156);
 
 
 
@@ -430,7 +431,9 @@ function initMap() {
     
     var mcb_info = "<strong>Maine Coast Builders </strong><br/>" + "Custom Home Builder <br/>" + "York, ME";
     
-     var nashua_info = "<strong>Nashua Airport </strong><br/>" + "Municipal Aviation Facilities <br/>" + "Nashua, NH";
+    var nashua_info = "<strong>Nashua Airport </strong><br/>" + "Municipal Aviation Facilities <br/>" + "Nashua, NH";
+    
+    var tdf_info = "<strong>TDF Metal Finishing </strong><br/>" + "Metal Plating/Finishing Shop <br/>" + "Danvers, MA";
 
 
 
@@ -992,6 +995,10 @@ function initMap() {
     
     var nashua_infowindow = new google.maps.InfoWindow({
         content: nashua_info
+    });
+    
+    var tdf_infowindow = new google.maps.InfoWindow({
+        content: tdf_info
     });
 
 
@@ -1943,6 +1950,13 @@ function initMap() {
         icon: icon,
         title: 'Aircraft Hangers'
     });
+    
+    var tdf_marker = new google.maps.Marker({
+        position: tdf_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Plating Shop'
+    });
 
 
     
@@ -2508,6 +2522,10 @@ function initMap() {
     
     google.maps.event.addListener(nashua_marker, 'click', function () {
         nashua_infowindow.open(harvard_yard_map, nashua_marker);
+    });
+    
+    google.maps.event.addListener(tdf_marker, 'click', function () {
+        tdf_infowindow.open(harvard_yard_map, tdf_marker);
     });
     
     
