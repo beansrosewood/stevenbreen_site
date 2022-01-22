@@ -142,6 +142,7 @@ function initMap() {
     var mcb_latlng = new google.maps.LatLng(43.189805, -70.747944);
     var nashua_latlng = new google.maps.LatLng(42.782083, -71.519906);
     var tdf_latlng = new google.maps.LatLng(42.575893, -70.974156);
+    var waste_latlng = new google.maps.LatLng(41.299044, -72.896693);
 
 
 
@@ -434,6 +435,8 @@ function initMap() {
     var nashua_info = "<strong>Nashua Airport </strong><br/>" + "Municipal Aviation Facilities <br/>" + "Nashua, NH";
     
     var tdf_info = "<strong>TDF Metal Finishing </strong><br/>" + "Metal Plating/Finishing Shop <br/>" + "Danvers, MA";
+    
+    var waste_info = "<strong>All-American Waste </strong><br/>" + "Recycling & Waste Contractor <br/>" + "New Haven, CT";
 
 
 
@@ -999,6 +1002,10 @@ function initMap() {
     
     var tdf_infowindow = new google.maps.InfoWindow({
         content: tdf_info
+    });
+    
+    var waste_infowindow = new google.maps.InfoWindow({
+        content: waste_info
     });
 
 
@@ -1957,6 +1964,13 @@ function initMap() {
         icon: icon,
         title: 'Plating Shop'
     });
+    
+     var waste_marker = new google.maps.Marker({
+        position: waste_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Dumpster Repair Shop'
+    });
 
 
     
@@ -2526,6 +2540,10 @@ function initMap() {
     
     google.maps.event.addListener(tdf_marker, 'click', function () {
         tdf_infowindow.open(harvard_yard_map, tdf_marker);
+    });
+    
+    google.maps.event.addListener(waste_marker, 'click', function () {
+        waste_infowindow.open(harvard_yard_map, waste_marker);
     });
     
     
