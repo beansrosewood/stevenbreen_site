@@ -307,8 +307,8 @@ body {
 .pay_button {
     margin: 1em;
     background-color: #3B5998;
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 .pay_button a:hover {
@@ -319,6 +319,8 @@ body {
 .store_button {
     margin: 1em;
     background-color: #bb0000;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 .store_button a:hover {
