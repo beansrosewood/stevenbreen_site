@@ -307,6 +307,8 @@ body {
 .pay_button {
     margin: 1em;
     background-color: #3B5998;
+    padding-left: 4em;
+    padding-right: 4em;
 }
 
 .pay_button a:hover {
