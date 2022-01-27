@@ -143,6 +143,7 @@ function initMap() {
     var nashua_latlng = new google.maps.LatLng(42.782083, -71.519906);
     var tdf_latlng = new google.maps.LatLng(42.575893, -70.974156);
     var waste_latlng = new google.maps.LatLng(41.299044, -72.896693);
+    var west_latlng = new google.maps.LatLng(42.202715, -72.597964);
 
 
 
@@ -437,6 +438,8 @@ function initMap() {
     var tdf_info = "<strong>TDF Metal Finishing </strong><br/>" + "Metal Plating/Finishing Shop <br/>" + "Danvers, MA";
     
     var waste_info = "<strong>All-American Waste </strong><br/>" + "Recycling & Waste Contractor <br/>" + "New Haven, CT";
+    
+    var west_info = "<strong>Westside Finishing Company </strong><br/>" + "Powder Coating Shop <br/>" + "Holyoke, MA";
 
 
 
@@ -1006,6 +1009,10 @@ function initMap() {
     
     var waste_infowindow = new google.maps.InfoWindow({
         content: waste_info
+    });
+    
+    var west_infowindow = new google.maps.InfoWindow({
+        content: west_info
     });
 
 
@@ -1971,6 +1978,13 @@ function initMap() {
         icon: icon,
         title: 'Dumpster Repair Shop'
     });
+    
+    var west_marker = new google.maps.Marker({
+        position: west_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Metal Finishing Shop'
+    });
 
 
     
@@ -2544,6 +2558,10 @@ function initMap() {
     
     google.maps.event.addListener(waste_marker, 'click', function () {
         waste_infowindow.open(harvard_yard_map, waste_marker);
+    });
+    
+    google.maps.event.addListener(west_marker, 'click', function () {
+        west_infowindow.open(harvard_yard_map, west_marker);
     });
     
     
