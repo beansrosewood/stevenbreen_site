@@ -144,6 +144,7 @@ function initMap() {
     var tdf_latlng = new google.maps.LatLng(42.575893, -70.974156);
     var waste_latlng = new google.maps.LatLng(41.299044, -72.896693);
     var west_latlng = new google.maps.LatLng(42.202715, -72.597964);
+    var lyman_latlng = new google.maps.LatLng(44.073189, -69.178549);
 
 
 
@@ -440,6 +441,8 @@ function initMap() {
     var waste_info = "<strong>All-American Waste </strong><br/>" + "Recycling & Waste Contractor <br/>" + "New Haven, CT";
     
     var west_info = "<strong>Westside Finishing Company </strong><br/>" + "Powder Coating Shop <br/>" + "Holyoke, MA";
+    
+    var lyman_info = "<strong>Lyman-Morse Boatbuilding </strong><br/>" + "Luxury Boat Builder <br/>" + "Thomaston, ME";
 
 
 
@@ -1013,6 +1016,10 @@ function initMap() {
     
     var west_infowindow = new google.maps.InfoWindow({
         content: west_info
+    });
+    
+    var lyman_infowindow = new google.maps.InfoWindow({
+        content: lyman_info
     });
 
 
@@ -1985,6 +1992,13 @@ function initMap() {
         icon: icon,
         title: 'Metal Finishing Shop'
     });
+    
+    var lyman_marker = new google.maps.Marker({
+        position: lyman_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Boatbuilder'
+    });
 
 
     
@@ -2562,6 +2576,10 @@ function initMap() {
     
     google.maps.event.addListener(west_marker, 'click', function () {
         west_infowindow.open(harvard_yard_map, west_marker);
+    });
+    
+    google.maps.event.addListener(lyman_marker, 'click', function () {
+        lyman_infowindow.open(harvard_yard_map, lyman_marker);
     });
     
     
