@@ -95,8 +95,15 @@
     <map name="workmap">
         <area shape="rect" coords="540,102,592,182" alt="Red Crane" href="red_crane.htm">
         <area shape="rect" coords="285,119,346,157" alt="Green Crane" href="green_crane.htm">
-        <area shape="circle" coords="474,638,65" alt="Turbine" href="turbine.htm">
+        <area shape="circle" coords="474,638,65" alt="Turbine" onclick="turbineFunction()" href="turbine.htm">
     </map>
+
+    <script>
+        function turbineFunction() {
+            alert("You clicked the turbine!");
+        }
+
+    </script>
 
     <div class="bottom">
         <h5>Copyright <span class="glyphicon glyphicon-copyright-mark"></span> 1985-<script>
