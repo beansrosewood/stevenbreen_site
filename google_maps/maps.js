@@ -2328,6 +2328,10 @@ function initMap() {
     google.maps.event.addListener(dura_marker, 'click', function () {
         dura_infowindow.open(harvard_yard_map, dura_marker);
     });
+    
+    google.maps.event.addListener(dyna_marker, 'click', function () {
+        dyna_infowindow.open(harvard_yard_map, dyna_marker);
+    });
 
     google.maps.event.addListener(bae_marker, 'click', function () {
         bae_infowindow.open(harvard_yard_map, bae_marker);
