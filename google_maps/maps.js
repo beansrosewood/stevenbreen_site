@@ -145,6 +145,8 @@ function initMap() {
     var waste_latlng = new google.maps.LatLng(41.299044, -72.896693);
     var west_latlng = new google.maps.LatLng(42.202715, -72.597964);
     var lyman_latlng = new google.maps.LatLng(44.073189, -69.178549);
+    var hemenway_latlng = new google.maps.LatLng(42.345515, -71.089647);
+
 
 
 
@@ -443,6 +445,8 @@ function initMap() {
     var west_info = "<strong>Westside Finishing Company </strong><br/>" + "Powder Coating Shop <br/>" + "Holyoke, MA";
     
     var lyman_info = "<strong>Lyman-Morse Boatbuilding </strong><br/>" + "Luxury Boat Builder <br/>" + "Thomaston, ME";
+    
+    var hemenway_info = "<strong>Hemenway </strong><br/>" + "Maker Lab <br/>" + "Boston, MA";
 
 
 
@@ -1020,6 +1024,10 @@ function initMap() {
     
     var lyman_infowindow = new google.maps.InfoWindow({
         content: lyman_info
+    });
+    
+    var hemenway_infowindow = new google.maps.InfoWindow({
+        content: hemenway_info
     });
 
 
@@ -1999,6 +2007,13 @@ function initMap() {
         icon: icon,
         title: 'Boatbuilder'
     });
+    
+    var hemenway_marker = new google.maps.Marker({
+        position: hemenway_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Experimental Start-up'
+    });
 
 
     
@@ -2580,6 +2595,10 @@ function initMap() {
     
     google.maps.event.addListener(lyman_marker, 'click', function () {
         lyman_infowindow.open(harvard_yard_map, lyman_marker);
+    });
+    
+    google.maps.event.addListener(hemenway_marker, 'click', function () {
+        hemenway_infowindow.open(harvard_yard_map, hemenway_marker);
     });
     
     
