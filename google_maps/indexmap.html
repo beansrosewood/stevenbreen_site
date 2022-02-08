@@ -212,10 +212,13 @@
     
     
 
-/*Script below is used to get the lat/long coordinates of a site visiter.*/
+
 
 <script>
-var x = document.getElementById("demo");
+    
+    /*Script below is used to get the lat/long coordinates of a site visiter.*/
+    
+var x = document.getElementById("location_demo");
 
 function getLocation() {
   if (navigator.geolocation) {
@@ -369,12 +372,12 @@ function showPosition(position) {
         <h3>(The green marker is the location of Steven Breen's Shop/Office.)</h3>
     </div>
     
-    <div style="align-items: center" class="your_location">
+    <div class="your_location">
     <p>Click the button to get your coordinates.</p>
 
     <button onclick="getLocation()">Try It</button>
 
-    <p id="demo"></p>
+    <p id="location_demo"></p>
     </div>    
     
     <footer class="bottom">
