@@ -378,7 +378,7 @@
 
         function getLocation() {
             if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition, showError);
+                navigator.geolocation.getCurrentPosition(showPosition);
             } else {
                 x.innerHTML = "Geolocation is not supported by this browser.";
             }
@@ -389,7 +389,7 @@
                 "<br>Longitude: " + position.coords.longitude;
         }
         
-        /* Code below requires "navigator.geolocation.getCurrentPosition(showPosition, showError);" change a few lines above.*/
+        /* Code below requires "navigator.geolocation.getCurrentPosition(showPosition, showError);" change a few lines above.
         function showError(error) {
   switch(error.code) {
     case error.PERMISSION_DENIED:
@@ -404,7 +404,7 @@
     case error.UNKNOWN_ERROR:
       x.innerHTML = "An unknown error occurred."
       break;
-  }
+  }*/
 
     </script>
 
