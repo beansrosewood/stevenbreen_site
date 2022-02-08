@@ -173,7 +173,7 @@
                 display: block;
             }
         }
-        
+
         .your_location {
             text-align: center;
         }
@@ -213,31 +213,13 @@
         });
 
     </script>
-    
-    
 
 
 
-<script>
-    
-    /*Script below is used to get the lat/long coordinates of a site visiter.*/
-    
-var x = document.getElementById("location_demo");
 
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
 
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
-}
-</script>
-    
+
+
 
     <style>
         /*CHEESEBURGER ICON STYLES*/
@@ -298,9 +280,6 @@ function showPosition(position) {
             margin-bottom: -10vh;
             border-radius: 20vh 20vh 2.5vh 2.5vh;
         }
-
-        
-
 
     </style>
 
@@ -375,21 +354,44 @@ function showPosition(position) {
     <div class="map_note">
         <h3>(The green marker is the location of Steven Breen's Shop/Office.)</h3>
     </div>
-    
+
     <div class="your_location">
-    <p>Click the button to get your coordinates.</p>
+        <p>Click the button to get your coordinates.</p>
 
-    <button onclick="getLocation()">Try It</button>
+        <button onclick="getLocation()">Try It</button>
 
-    <p id="location_demo"></p>
-    </div>    
-    
+        <p id="location_demo"></p>
+    </div>
+
+    <script>
+        /*Script below is used to get the lat/long coordinates of a site visiter.*/
+
+        var x = document.getElementById("location_demo");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+
+    </script>
+
     <footer class="bottom">
 
-        <h5>Copyright <span class="glyphicon glyphicon-copyright-mark"></span> 1985-<script>document.write(new Date().getFullYear())</script> - STEVEN BREEN - Industrial Service - All Rights Reserved</h5>
+        <h5>Copyright <span class="glyphicon glyphicon-copyright-mark"></span> 1985-<script>
+                document.write(new Date().getFullYear())
+
+            </script> - STEVEN BREEN - Industrial Service - All Rights Reserved</h5>
 
     </footer>
-    
+
     <script>
         /*CHEESEBURGER ICON SCRIPT*/
 
@@ -406,5 +408,5 @@ function showPosition(position) {
 
     </script>
 
-    
+
 </body>
