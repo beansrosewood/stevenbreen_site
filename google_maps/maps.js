@@ -156,7 +156,23 @@ function initMap() {
         center: starting_center_latlng,
         
         /*Old center for map to include Solaronics: new google.maps.LatLng(42.65, -75.75)*/
-
+        
+    mapTypeControl: true,
+    mapTypeControlOptions: {
+      style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+      position: google.maps.ControlPosition.TOP_CENTER,
+    },
+    zoomControl: true,
+    zoomControlOptions: {
+      position: google.maps.ControlPosition.LEFT_CENTER,
+    },
+    scaleControl: true,
+    streetViewControl: true,
+    streetViewControlOptions: {
+      position: google.maps.ControlPosition.LEFT_TOP,
+    },
+    fullscreenControl: true,
+        
         /*Map type id can also be set to "hybrid" for sat/road. */
         mapTypeId: 'roadmap'
     };
