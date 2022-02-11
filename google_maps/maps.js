@@ -3,6 +3,12 @@ var harvard_yard_map;
 42.374474,-71.117207 */
 
 
+let overview;
+const OVERVIEW_DIFFERENCE = 5;
+const OVERVIEW_MIN_ZOOM = 3;
+const OVERVIEW_MAX_ZOOM = 10;
+
+
 
 function initMap() {
     console.log("I'm in initmap");
@@ -182,6 +188,31 @@ function initMap() {
     harvard_yard_map = new google.maps.Map(document.getElementById('map-canvas'),
         mapOptions);
     
+    
+    // instantiate the overview map without controls
+  overview = new google.maps.Map(document.getElementById("overview"), {
+    ...mapOptions,
+    disableDefaultUI: true,
+    gestureHandling: "none",
+    zoomControl: false,
+  });
+
+  function clamp(num, min, max) {
+    return Math.min(Math.max(num, min), max);
+  }
+
+  map.addListener("bounds_changed", () => {
+    overview.setCenter(map.getCenter());
+    overview.setZoom(
+      clamp(
+        map.getZoom() - OVERVIEW_DIFFERENCE,
+        OVERVIEW_MIN_ZOOM,
+        OVERVIEW_MAX_ZOOM
+      )
+    );
+  });
+
+   //end of overview map. Also, includes the three const. near the top. 
     
             
 
