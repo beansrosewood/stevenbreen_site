@@ -156,42 +156,42 @@ function initMap() {
     var mapOptions = {
         zoom: 4,
         center: starting_center_latlng,
-        
+
         /*Old center for map to include Solaronics: new google.maps.LatLng(42.65, -75.75)*/
-        
-    mapTypeControl: true,
-    mapTypeControlOptions: {
-      style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-      position: google.maps.ControlPosition.TOP_CENTER,
-    },
-    zoomControl: true,
-    zoomControlOptions: {
-      position: google.maps.ControlPosition.LEFT_CENTER,
-    },
-    scaleControl: true,
-    streetViewControl: true,
-    streetViewControlOptions: {
-      position: google.maps.ControlPosition.LEFT_TOP,
-    },
-    fullscreenControl: true,
-        
+
+        mapTypeControl: true,
+        mapTypeControlOptions: {
+            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            position: google.maps.ControlPosition.TOP_CENTER,
+        },
+        zoomControl: true,
+        zoomControlOptions: {
+            position: google.maps.ControlPosition.LEFT_CENTER,
+        },
+        scaleControl: true,
+        streetViewControl: true,
+        streetViewControlOptions: {
+            position: google.maps.ControlPosition.LEFT_TOP,
+        },
+        fullscreenControl: true,
+
         /*Map type id can also be set to "hybrid" for sat/road. */
         mapTypeId: 'roadmap'
     };
-    
+
     /*Below added for the insert map.*/
-    
+
     let harvard_yard_map, overview;
-        const OVERVIEW_DIFFERENCE = 5;
-        const OVERVIEW_MIN_ZOOM = 3;
-        const OVERVIEW_MAX_ZOOM = 10;
+    const OVERVIEW_DIFFERENCE = 5;
+    const OVERVIEW_MIN_ZOOM = 3;
+    const OVERVIEW_MAX_ZOOM = 10;
 
     harvard_yard_map = new google.maps.Map(document.getElementById('map-canvas'),
         mapOptions);
-    
-    
- 
-            
+
+
+
+
 
     var fort_drum_info = "<strong>Fort Drum Aerospace Reset Contractor</strong><br/>" +
         "<a href='https://home.army.mil/drum/index.php'>Blackhawk Helicopter Re-Manufacturing</a>";
@@ -391,88 +391,86 @@ function initMap() {
     var carlos_info = "<strong>Carlos Fencing Corp</strong><br/>" + "Security Fencing Fabricator<br/>" + "Elizabeth, NJ";
 
     var time_info = "<strong>Time Square Lighting</strong><br/>" + "Theatrical Lighting Manufacturer<br/>" + "Stony Point, NY";
-    
+
     var mass_info = "<strong>Mass Cabinets, Inc</strong><br/>" + "Architechural Cabinet Shop<br/>" + "Methuen, MA";
-    
+
     var fresh_info = "<strong>Fresh Coat Finishing</strong><br/>" + "Powder Coating Shop<br/>" + "Plaistow, NH";
-    
+
     var spray_me_info = "<strong>Spray ME Finishing</strong><br/>" + "Powder Coating Shop<br/>" + "South Berwick, ME";
-    
+
     var fuzz_info = "<strong>Hutchinson Sealing Systems</strong><br/>" + "Automotive Parts - OEM <br/>" + "Newfields, NH";
-    
+
     var light_info = "<strong>Light Metal Platers, LLC</strong><br/>" + "Finishing Shop<br/>" + "Waltham, MA";
-    
+
     var foods_info = "<strong>Penobscot Foods</strong><br/>" + "Frozen Food Processor<br/>" + "Belfast, ME";
-    
+
     var silvex_info = "<strong>Silvex Surface Technology</strong><br/>" + "Electroplating Shop<br/>" + "Westbrook, ME";
-    
+
     var triangle_info = "<strong>Triangle Sign</strong><br/>" + "Sign Paint Shop<br/>" + "Baltimore, MD";
-    
+
     var met_atl_info = "<strong>Metso Automation</strong><br/>" + "Valve Manufacturer<br/>" + "Atlanta, GA";
-    
+
     var dorma_info = "<strong>Dormakaba Corp. </strong><br/>" + "Security and Access Control Manufacturer<br/>" + "Stevens, PA";
-    
+
     var classic_info = "<strong>Classic Auto Body</strong><br/>" + "Collision Repair Shop<br/>" + "Salem, MA";
-    
+
     var feeley_info = "<strong>Feeley's Company, Inc.</strong><br/>" + "Powder Coating Shop<br/>" + "Quincy, MA";
-    
+
     var ospc_info = "<strong>Ocean State Powder Coat</strong><br/>" + "Powder Shop<br/>" + "Warwick, RI";
-    
+
     var services_info = "<strong>Services Plus Company</strong><br/>" + "Painter<br/>" + "Holliston, MA";
-    
+
     var mc_shop_info = "<strong>Metal Innovations</strong><br/>" + " Custom Motorcycle Shop<br/>" + "Marshfield, MA";
-    
+
     var master_info = "<strong>Master Millwork</strong><br/>" + " Production Millwork Shop<br/>" + "West Wareham, MA";
-    
+
     var parker_info = "<strong>Parker-Hannifin Fluid Control</strong><br/>" + "Filter/valve research and develpoement<br/>" + "New Britain, CT ";
-    
+
     var pri_info = "<strong>Primetals Technologies</strong><br/>" + "Metallurgical Equipment Manufacturer<br/>" + "Sutton, MA";
-    
+
     var jap_info = "<strong>Finishing Shop</strong><br/>" + "Wet and Powder Applications<br/>" + "Chelmsford, MA";
-    
+
     var app_info = "<strong>Finishing Shop</strong><br/>" + "Norwood, MA";
-    
+
     var pool_info = "<strong>Residential Pool House</strong><br/>" + "Tube heater with WiFi control<br/>" + "Windham, NH";
-    
+
     var sign_info = "<strong>Viewpoint Signs</strong><br/>" + "Signage fabrication shop<br/>" + "Northborough, MA";
-    
+
     var high_info = "<strong>Highland Woodcraft</strong><br/>" + "Cabinet/Millwork Shop<br/>" + "Prospect, CT";
-    
+
     var crowe_info = "<strong>Crowe Collision</strong><br/>" + "Independent Body Shop<br/>" + "Abington, MA";
-    
+
     var rotary_info = "<strong>Rotary Collision Center</strong><br/>" + "Independent Body Shop<br/>" + "Hyannis, MA";
-    
+
     var rex_info = "<strong>Rex Lumber</strong><br/>" + "Millwork-Lumber Wholesaler<br/>" + "South Windsor, CT";
-    
+
     var grid_info = "<strong>National Grid</strong><br/>" + "Gas Meter Re-build Shop<br/>" + "Wilmington, MA";
-    
+
     var c_g_metal_info = "<strong>C&G Metal </strong><br/>" + "Heat Pump Stand Fabricator<br/>" + "Winthrop, ME";
-    
+
     var summit_info = "<strong>Summit Plating Corp. </strong><br/>" + "Electro-Plating and Metal Finishing <br/>" + "Thomaston, CT";
-    
+
     var bae_info = "<strong>BAE Systems </strong><br/>" + "Military/Aerospace Manufacturer <br/>" + "Nashua, NH";
-    
+
     var mich_info = "<strong>Michelle Auto Body </strong><br/>" + "Independent Body Shop <br/>" + "Simsbury, CT";
-    
+
     var psg_info = "<strong>PSG Framing </strong><br/>" + "Artwork Framing Shop <br/>" + "Somerville, MA";
-    
+
     var jfarm_info = "<strong>Jewett Farm </strong><br/>" + "Cabinet Maker Shop <br/>" + "York, ME";
-    
+
     var mcb_info = "<strong>Maine Coast Builders </strong><br/>" + "Custom Home Builder <br/>" + "York, ME";
-    
+
     var nashua_info = "<strong>Nashua Airport </strong><br/>" + "Municipal Aviation Facilities <br/>" + "Nashua, NH";
-    
+
     var tdf_info = "<strong>TDF Metal Finishing </strong><br/>" + "Metal Plating/Finishing Shop <br/>" + "Danvers, MA";
-    
+
     var waste_info = "<strong>All-American Waste </strong><br/>" + "Recycling & Waste Contractor <br/>" + "New Haven, CT";
-    
+
     var west_info = "<strong>Westside Finishing Company </strong><br/>" + "Powder Coating Shop <br/>" + "Holyoke, MA";
-    
+
     var lyman_info = "<strong>Lyman-Morse Boatbuilding </strong><br/>" + "Luxury Boat Builder <br/>" + "Thomaston, ME";
-    
+
     var hemenway_info = "<strong>Hemenway </strong><br/>" + "Maker Lab <br/>" + "Boston, MA";
-
-
 
 
 
@@ -487,14 +485,14 @@ function initMap() {
         url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png", // url
         scaledSize: new google.maps.Size(25, 25), // size
     };
-    
+
     //This var is for the guy with a wrench.
     var icon_man = {
-                url: "..//photo_gallery/manwithwrench.png", // url
-                scaledSize: new google.maps.Size(25, 25), // size
-                //origin: new google.maps.Point(0, 0),
-                //anchor: new google.maps.Point(0, 0), // used to adjust the placement of the marker relative to the point
-            };
+        url: "..//photo_gallery/manwithwrench.png", // url
+        scaledSize: new google.maps.Size(25, 25), // size
+        //origin: new google.maps.Point(0, 0),
+        //anchor: new google.maps.Point(0, 0), // used to adjust the placement of the marker relative to the point
+    };
 
 
 
@@ -893,163 +891,163 @@ function initMap() {
     var time_infowindow = new google.maps.InfoWindow({
         content: time_info
     });
-    
+
     var mass_infowindow = new google.maps.InfoWindow({
         content: mass_info
     });
-    
+
     var fresh_infowindow = new google.maps.InfoWindow({
         content: fresh_info
     });
-    
+
     var spray_me_infowindow = new google.maps.InfoWindow({
         content: spray_me_info
     });
-    
+
     var fuzz_infowindow = new google.maps.InfoWindow({
         content: fuzz_info
     });
-    
+
     var light_infowindow = new google.maps.InfoWindow({
         content: light_info
     });
-    
+
     var foods_infowindow = new google.maps.InfoWindow({
         content: foods_info
     });
-    
+
     var silvex_infowindow = new google.maps.InfoWindow({
         content: silvex_info
     });
-    
+
     var triangle_infowindow = new google.maps.InfoWindow({
         content: triangle_info
     });
-    
+
     var met_atl_infowindow = new google.maps.InfoWindow({
         content: met_atl_info
     });
-    
+
     var dorma_infowindow = new google.maps.InfoWindow({
         content: dorma_info
     });
-    
+
     var classic_infowindow = new google.maps.InfoWindow({
         content: classic_info
     });
-    
+
     var feeley_infowindow = new google.maps.InfoWindow({
         content: feeley_info
     });
-    
+
     var ospc_infowindow = new google.maps.InfoWindow({
         content: ospc_info
     });
-    
+
     var services_infowindow = new google.maps.InfoWindow({
         content: services_info
     });
-    
+
     var mc_shop_infowindow = new google.maps.InfoWindow({
         content: mc_shop_info
     });
-    
+
     var master_infowindow = new google.maps.InfoWindow({
         content: master_info
     });
-    
+
     var parker_infowindow = new google.maps.InfoWindow({
         content: parker_info
     });
-    
+
     var pri_infowindow = new google.maps.InfoWindow({
         content: pri_info
     });
-    
+
     var jap_infowindow = new google.maps.InfoWindow({
         content: jap_info
     });
-    
+
     var app_infowindow = new google.maps.InfoWindow({
         content: app_info
     });
-    
+
     var pool_infowindow = new google.maps.InfoWindow({
         content: pool_info
     });
-    
+
     var sign_infowindow = new google.maps.InfoWindow({
         content: sign_info
     });
-    
+
     var high_infowindow = new google.maps.InfoWindow({
         content: high_info
     });
-    
+
     var crowe_infowindow = new google.maps.InfoWindow({
         content: crowe_info
     });
-    
+
     var rotary_infowindow = new google.maps.InfoWindow({
         content: rotary_info
     });
-    
+
     var rex_infowindow = new google.maps.InfoWindow({
         content: rex_info
     });
-    
+
     var grid_infowindow = new google.maps.InfoWindow({
         content: grid_info
     });
-    
+
     var c_g_metal_infowindow = new google.maps.InfoWindow({
         content: c_g_metal_info
     });
-    
+
     var summit_infowindow = new google.maps.InfoWindow({
         content: summit_info
     });
-    
+
     var bae_infowindow = new google.maps.InfoWindow({
         content: bae_info
     });
-    
+
     var mich_infowindow = new google.maps.InfoWindow({
         content: mich_info
     });
-    
+
     var psg_infowindow = new google.maps.InfoWindow({
         content: psg_info
     });
-    
+
     var jfarm_infowindow = new google.maps.InfoWindow({
         content: jfarm_info
     });
-    
+
     var mcb_infowindow = new google.maps.InfoWindow({
         content: mcb_info
     });
-    
+
     var nashua_infowindow = new google.maps.InfoWindow({
         content: nashua_info
     });
-    
+
     var tdf_infowindow = new google.maps.InfoWindow({
         content: tdf_info
     });
-    
+
     var waste_infowindow = new google.maps.InfoWindow({
         content: waste_info
     });
-    
+
     var west_infowindow = new google.maps.InfoWindow({
         content: west_info
     });
-    
+
     var lyman_infowindow = new google.maps.InfoWindow({
         content: lyman_info
     });
-    
+
     var hemenway_infowindow = new google.maps.InfoWindow({
         content: hemenway_info
     });
@@ -1744,294 +1742,294 @@ function initMap() {
         icon: icon,
         title: 'Server Enclosure Maker'
     });
-    
+
     var time_marker = new google.maps.Marker({
         position: time_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Stage Lighting Maker'
     });
-    
+
     var carlos_marker = new google.maps.Marker({
         position: carlos_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Fence Maker'
     });
-    
+
     var mass_marker = new google.maps.Marker({
         position: mass_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Millwork Shop'
     });
-    
+
     var fresh_marker = new google.maps.Marker({
         position: fresh_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Powder Coating Shop'
     });
-    
+
     var spray_me_marker = new google.maps.Marker({
         position: spray_me_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Powder Coating Shop'
     });
-    
+
     var fuzz_marker = new google.maps.Marker({
         position: fuzz_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Automotive-OEM'
     });
-    
+
     var light_marker = new google.maps.Marker({
         position: light_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Metal Finisher'
     });
-    
+
     var foods_marker = new google.maps.Marker({
         position: foods_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Frozen Food Plant'
     });
-    
+
     var silvex_marker = new google.maps.Marker({
         position: silvex_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Plating Shop'
     });
-    
+
     var triangle_marker = new google.maps.Marker({
         position: triangle_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Sign Shop'
     });
-    
+
     var met_atl_marker = new google.maps.Marker({
         position: met_atl_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Automation Shop'
     });
-    
+
     var dorma_marker = new google.maps.Marker({
         position: dorma_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Door Hardware Maker'
     });
-    
-     var classic_marker = new google.maps.Marker({
+
+    var classic_marker = new google.maps.Marker({
         position: classic_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Auto Body Shop'
     });
-    
+
     var feeley_marker = new google.maps.Marker({
         position: feeley_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Powder Coating Shop'
     });
-    
+
     var ospc_marker = new google.maps.Marker({
         position: ospc_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Powder Coating Shop'
     });
-    
+
     var services_marker = new google.maps.Marker({
         position: services_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Painter'
     });
-    
+
     var mc_shop_marker = new google.maps.Marker({
         position: mc_shop_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Cycle Shop'
     });
-    
+
     var master_marker = new google.maps.Marker({
         position: master_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Millwork Shop'
     });
-    
+
     var parker_marker = new google.maps.Marker({
         position: parker_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Research and Developement'
     });
-    
+
     var pri_marker = new google.maps.Marker({
         position: pri_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Metallurgical Solutions'
     });
-    
+
     var jap_marker = new google.maps.Marker({
         position: jap_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Wet and Powder Finisher'
     });
-    
+
     var app_marker = new google.maps.Marker({
         position: app_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Finishing Applications'
     });
-    
+
     var pool_marker = new google.maps.Marker({
         position: pool_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Pool House'
     });
-    
+
     var sign_marker = new google.maps.Marker({
         position: sign_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Sign Fab Shop'
     });
-    
+
     var high_marker = new google.maps.Marker({
         position: high_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Cabinet Shop'
     });
-    
+
     var crowe_marker = new google.maps.Marker({
         position: crowe_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Autobody Shop'
     });
-    
+
     var rotary_marker = new google.maps.Marker({
         position: rotary_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Autobody Shop'
     });
-    
+
     var rex_marker = new google.maps.Marker({
         position: rex_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Lumber Wholesaler'
     });
-    
+
     var grid_marker = new google.maps.Marker({
         position: grid_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Gas Meter Shop'
     });
-    
-     var c_g_metal_marker = new google.maps.Marker({
+
+    var c_g_metal_marker = new google.maps.Marker({
         position: c_g_metal_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Powder Shop/Metal Fab'
     });
-    
-     var summit_marker = new google.maps.Marker({
+
+    var summit_marker = new google.maps.Marker({
         position: summit_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Electro-plating Shop'
     });
-    
+
     var bae_marker = new google.maps.Marker({
         position: bae_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Military/Aerospace Contractor'
     });
-    
+
     var mich_marker = new google.maps.Marker({
         position: mich_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Auto Body Shop'
     });
-    
+
     var psg_marker = new google.maps.Marker({
         position: psg_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Picture Framer'
     });
-    
+
     var jfarm_marker = new google.maps.Marker({
         position: jfarm_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Cabinet Maker'
     });
-    
+
     var mcb_marker = new google.maps.Marker({
         position: mcb_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Home Builder'
     });
-    
+
     var nashua_marker = new google.maps.Marker({
         position: nashua_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Aircraft Hangers'
     });
-    
+
     var tdf_marker = new google.maps.Marker({
         position: tdf_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Plating Shop'
     });
-    
-     var waste_marker = new google.maps.Marker({
+
+    var waste_marker = new google.maps.Marker({
         position: waste_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Dumpster Repair Shop'
     });
-    
+
     var west_marker = new google.maps.Marker({
         position: west_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Metal Finishing Shop'
     });
-    
+
     var lyman_marker = new google.maps.Marker({
         position: lyman_latlng,
         map: harvard_yard_map,
         icon: icon,
         title: 'Boatbuilder'
     });
-    
+
     var hemenway_marker = new google.maps.Marker({
         position: hemenway_latlng,
         map: harvard_yard_map,
@@ -2040,31 +2038,31 @@ function initMap() {
     });
 
 
-    
 
-    
-    
-    
-    
-            harvard_yard_map.addListener("center_changed", () => {
-                // 10 seconds after the center of the map has changed, pan back to the
-                // marker.
-                window.setTimeout(() => {
-                    harvard_yard_map.panTo(chez_sheridan_marker.getPosition());
-                }, 10000);
-            });
-    
-            chez_sheridan_marker.addListener("mouseover", () => {
-                harvard_yard_map.setZoom(10);
-                harvard_yard_map.setCenter(chez_sheridan_marker.getPosition());
-            });
-    
-            chez_sheridan_marker.addListener("mouseout", () => {
-                harvard_yard_map.setZoom(6);
-                harvard_yard_map.setCenter(chez_sheridan_marker.getPosition());
-            });
-    
-    
+
+
+
+
+
+    harvard_yard_map.addListener("center_changed", () => {
+        // 10 seconds after the center of the map has changed, pan back to the
+        // marker.
+        window.setTimeout(() => {
+            harvard_yard_map.panTo(chez_sheridan_marker.getPosition());
+        }, 10000);
+    });
+
+    chez_sheridan_marker.addListener("mouseover", () => {
+        harvard_yard_map.setZoom(10);
+        harvard_yard_map.setCenter(chez_sheridan_marker.getPosition());
+    });
+
+    chez_sheridan_marker.addListener("mouseout", () => {
+        harvard_yard_map.setZoom(6);
+        harvard_yard_map.setCenter(chez_sheridan_marker.getPosition());
+    });
+
+
 
 
     google.maps.event.addListener(fort_drum_marker, 'click', function () {
@@ -2352,7 +2350,7 @@ function initMap() {
     google.maps.event.addListener(dura_marker, 'click', function () {
         dura_infowindow.open(harvard_yard_map, dura_marker);
     });
-    
+
     google.maps.event.addListener(dyna_marker, 'click', function () {
         dyna_infowindow.open(harvard_yard_map, dyna_marker);
     });
@@ -2468,179 +2466,206 @@ function initMap() {
     google.maps.event.addListener(time_marker, 'click', function () {
         time_infowindow.open(harvard_yard_map, time_marker);
     });
-    
+
     google.maps.event.addListener(mass_marker, 'click', function () {
         mass_infowindow.open(harvard_yard_map, mass_marker);
     });
-    
+
     google.maps.event.addListener(fresh_marker, 'click', function () {
         fresh_infowindow.open(harvard_yard_map, fresh_marker);
     });
-    
+
     google.maps.event.addListener(spray_me_marker, 'click', function () {
         spray_me_infowindow.open(harvard_yard_map, spray_me_marker);
     });
-    
+
     google.maps.event.addListener(fuzz_marker, 'click', function () {
         fuzz_infowindow.open(harvard_yard_map, fuzz_marker);
     });
-    
+
     google.maps.event.addListener(light_marker, 'click', function () {
         light_infowindow.open(harvard_yard_map, light_marker);
     });
-    
+
     google.maps.event.addListener(foods_marker, 'click', function () {
         foods_infowindow.open(harvard_yard_map, foods_marker);
     });
-    
+
     google.maps.event.addListener(silvex_marker, 'click', function () {
         silvex_infowindow.open(harvard_yard_map, silvex_marker);
     });
-    
+
     google.maps.event.addListener(triangle_marker, 'click', function () {
         triangle_infowindow.open(harvard_yard_map, triangle_marker);
     });
-    
+
     google.maps.event.addListener(met_atl_marker, 'click', function () {
         met_atl_infowindow.open(harvard_yard_map, met_atl_marker);
     });
-    
+
     google.maps.event.addListener(dorma_marker, 'click', function () {
         dorma_infowindow.open(harvard_yard_map, dorma_marker);
     });
-    
+
     google.maps.event.addListener(classic_marker, 'click', function () {
         classic_infowindow.open(harvard_yard_map, classic_marker);
     });
-    
+
     google.maps.event.addListener(feeley_marker, 'click', function () {
         feeley_infowindow.open(harvard_yard_map, feeley_marker);
     });
-    
+
     google.maps.event.addListener(ospc_marker, 'click', function () {
         ospc_infowindow.open(harvard_yard_map, ospc_marker);
     });
-    
+
     google.maps.event.addListener(services_marker, 'click', function () {
         services_infowindow.open(harvard_yard_map, services_marker);
     });
-    
+
     google.maps.event.addListener(mc_shop_marker, 'click', function () {
         mc_shop_infowindow.open(harvard_yard_map, mc_shop_marker);
     });
-    
+
     google.maps.event.addListener(master_marker, 'click', function () {
         master_infowindow.open(harvard_yard_map, master_marker);
     });
-    
+
     google.maps.event.addListener(parker_marker, 'click', function () {
         parker_infowindow.open(harvard_yard_map, parker_marker);
     });
-    
+
     google.maps.event.addListener(pri_marker, 'click', function () {
         pri_infowindow.open(harvard_yard_map, pri_marker);
     });
-    
+
     google.maps.event.addListener(jap_marker, 'click', function () {
         jap_infowindow.open(harvard_yard_map, jap_marker);
     });
-    
+
     google.maps.event.addListener(app_marker, 'click', function () {
         app_infowindow.open(harvard_yard_map, app_marker);
     });
-    
+
     google.maps.event.addListener(pool_marker, 'click', function () {
         pool_infowindow.open(harvard_yard_map, pool_marker);
     });
-    
+
     google.maps.event.addListener(sign_marker, 'click', function () {
         sign_infowindow.open(harvard_yard_map, sign_marker);
     });
-    
+
     google.maps.event.addListener(high_marker, 'click', function () {
         high_infowindow.open(harvard_yard_map, high_marker);
     });
-    
+
     google.maps.event.addListener(crowe_marker, 'click', function () {
         crowe_infowindow.open(harvard_yard_map, crowe_marker);
     });
-    
+
     google.maps.event.addListener(rotary_marker, 'click', function () {
         rotary_infowindow.open(harvard_yard_map, rotary_marker);
     });
-    
+
     google.maps.event.addListener(rex_marker, 'click', function () {
         rex_infowindow.open(harvard_yard_map, rex_marker);
     });
-    
+
     google.maps.event.addListener(grid_marker, 'click', function () {
         grid_infowindow.open(harvard_yard_map, grid_marker);
     });
-    
+
     google.maps.event.addListener(c_g_metal_marker, 'click', function () {
         c_g_metal_infowindow.open(harvard_yard_map, c_g_metal_marker);
     });
-    
+
     google.maps.event.addListener(summit_marker, 'click', function () {
         summit_infowindow.open(harvard_yard_map, summit_marker);
     });
-    
+
     google.maps.event.addListener(bae_marker, 'click', function () {
         bae_infowindow.open(harvard_yard_map, bae_marker);
     });
-    
+
     google.maps.event.addListener(mich_marker, 'click', function () {
         mich_infowindow.open(harvard_yard_map, mich_marker);
     });
-    
+
     google.maps.event.addListener(psg_marker, 'click', function () {
         psg_infowindow.open(harvard_yard_map, psg_marker);
     });
-    
+
     google.maps.event.addListener(jfarm_marker, 'click', function () {
         jfarm_infowindow.open(harvard_yard_map, jfarm_marker);
     });
-    
+
     google.maps.event.addListener(mcb_marker, 'click', function () {
         mcb_infowindow.open(harvard_yard_map, mcb_marker);
     });
-    
+
     google.maps.event.addListener(nashua_marker, 'click', function () {
         nashua_infowindow.open(harvard_yard_map, nashua_marker);
     });
-    
+
     google.maps.event.addListener(tdf_marker, 'click', function () {
         tdf_infowindow.open(harvard_yard_map, tdf_marker);
     });
-    
+
     google.maps.event.addListener(waste_marker, 'click', function () {
         waste_infowindow.open(harvard_yard_map, waste_marker);
     });
-    
+
     google.maps.event.addListener(west_marker, 'click', function () {
         west_infowindow.open(harvard_yard_map, west_marker);
     });
-    
+
     google.maps.event.addListener(lyman_marker, 'click', function () {
         lyman_infowindow.open(harvard_yard_map, lyman_marker);
     });
-    
+
     google.maps.event.addListener(hemenway_marker, 'click', function () {
         hemenway_infowindow.open(harvard_yard_map, hemenway_marker);
     });
-    
-    
-    
+
+
+    // instantiate the overview map without controls
+    overview = new google.maps.Map(document.getElementById("overview"), {
+        ...mapOptions,
+        disableDefaultUI: true,
+        gestureHandling: "none",
+        zoomControl: false,
+    });
+
+    function clamp(num, min, max) {
+        return Math.min(Math.max(num, min), max);
+    }
+
+    map.addListener("bounds_changed", () => {
+        overview.setCenter(map.getCenter());
+        overview.setZoom(
+            clamp(
+                map.getZoom() - OVERVIEW_DIFFERENCE,
+                OVERVIEW_MIN_ZOOM,
+                OVERVIEW_MAX_ZOOM
+            )
+        );
+    });
+
+    //end of overview map. Also, includes the three const. near the top. 
+
+
+
+
     /*Timing functions for zoom in to northeast and stop marker bounce. */
-    
-    setTimeout(function() {
-                harvard_yard_map.setZoom(7);
-                harvard_yard_map.panTo(chez_sheridan_marker.getPosition());
-            }, 2500);
-    
-    setTimeout(function() {
-                chez_sheridan_marker.setAnimation(null)
-            }, 5000);
+
+    setTimeout(function () {
+        harvard_yard_map.setZoom(7);
+        harvard_yard_map.panTo(chez_sheridan_marker.getPosition());
+    }, 2500);
+
+    setTimeout(function () {
+        chez_sheridan_marker.setAnimation(null)
+    }, 5000);
 
 
 
