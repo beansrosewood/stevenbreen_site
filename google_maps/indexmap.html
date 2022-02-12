@@ -463,7 +463,8 @@
                 zoom: 7,
             };
 
-            // instantiate the primary map
+            // instantiate the primary map.
+            //If I put "pipes" in front of the "instantiate " 4 lines below, then the main map does not display, but the insert does.
             map = new google.maps.Map(document.getElementById("map"), {
                 ...mapOptions,
             });
