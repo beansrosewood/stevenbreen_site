@@ -190,31 +190,7 @@ function initMap() {
         mapOptions);
     
     
-    // instantiate the overview map without controls
-  overview = new google.maps.Map(document.getElementById("overview"), {
-    ...mapOptions,
-    disableDefaultUI: true,
-    gestureHandling: "none",
-    zoomControl: false,
-  });
-
-  function clamp(num, min, max) {
-    return Math.min(Math.max(num, min), max);
-  }
-
-  map.addListener("bounds_changed", () => {
-    overview.setCenter(map.getCenter());
-    overview.setZoom(
-      clamp(
-        map.getZoom() - OVERVIEW_DIFFERENCE,
-        OVERVIEW_MIN_ZOOM,
-        OVERVIEW_MAX_ZOOM
-      )
-    );
-  });
-
-   //end of overview map. Also, includes the three const. near the top. 
-    
+ 
             
 
     var fort_drum_info = "<strong>Fort Drum Aerospace Reset Contractor</strong><br/>" +
