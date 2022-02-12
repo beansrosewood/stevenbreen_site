@@ -2653,6 +2653,7 @@ function initMap() {
         disableDefaultUI: true,
         gestureHandling: "none",
         zoomControl: false,
+        fullscreenControl: false,
     });
 
     function clamp(num, min, max) {
