@@ -183,7 +183,7 @@ function initMap() {
 
     let harvard_yard_map, overview;
     const OVERVIEW_DIFFERENCE = 5;
-    const OVERVIEW_MIN_ZOOM = 3;
+    const OVERVIEW_MIN_ZOOM = 2;
     const OVERVIEW_MAX_ZOOM = 10;
 
     harvard_yard_map = new google.maps.Map(document.getElementById('map-canvas'),
