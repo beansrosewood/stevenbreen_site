@@ -2628,7 +2628,7 @@ function initMap() {
     });
 
 
-   
+
 
 
 
@@ -2644,9 +2644,12 @@ function initMap() {
     }, 5000);
 
 
- // instantiate the overview map without controls
+    // instantiate the overview map without controls
     overview = new google.maps.Map(document.getElementById("overview"), {
-        ...mapOptions,
+        //...mapOptions,
+        mapTypeControl: false,
+        scaleControl: true,
+        streetViewControl: false,
         disableDefaultUI: true,
         gestureHandling: "none",
         zoomControl: false,
