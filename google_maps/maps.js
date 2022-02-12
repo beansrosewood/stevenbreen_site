@@ -2656,11 +2656,11 @@ function initMap() {
         return Math.min(Math.max(num, min), max);
     }
 
-    map.addListener("bounds_changed", () => {
-        overview.setCenter(map.getCenter());
+    harvard_yard_map.addListener("bounds_changed", () => {
+        overview.setCenter(harvard_yard_map.getCenter());
         overview.setZoom(
             clamp(
-                map.getZoom() - OVERVIEW_DIFFERENCE,
+                harvard_yard_map.getZoom() - OVERVIEW_DIFFERENCE,
                 OVERVIEW_MIN_ZOOM,
                 OVERVIEW_MAX_ZOOM
             )
