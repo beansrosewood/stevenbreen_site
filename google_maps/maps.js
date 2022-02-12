@@ -2628,7 +2628,23 @@ function initMap() {
     });
 
 
-    // instantiate the overview map without controls
+   
+
+
+
+    /*Timing functions for zoom in to northeast and stop marker bounce. */
+
+    setTimeout(function () {
+        harvard_yard_map.setZoom(7);
+        harvard_yard_map.panTo(chez_sheridan_marker.getPosition());
+    }, 2500);
+
+    setTimeout(function () {
+        chez_sheridan_marker.setAnimation(null)
+    }, 5000);
+
+
+ // instantiate the overview map without controls
     overview = new google.maps.Map(document.getElementById("overview"), {
         ...mapOptions,
         disableDefaultUI: true,
@@ -2652,22 +2668,6 @@ function initMap() {
     });
 
     //end of overview map. Also, includes the three const. near the top. 
-
-
-
-
-    /*Timing functions for zoom in to northeast and stop marker bounce. */
-
-    setTimeout(function () {
-        harvard_yard_map.setZoom(7);
-        harvard_yard_map.panTo(chez_sheridan_marker.getPosition());
-    }, 2500);
-
-    setTimeout(function () {
-        chez_sheridan_marker.setAnimation(null)
-    }, 5000);
-
-
 
 
 
