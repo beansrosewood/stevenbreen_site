@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
-        
         /*Style for the inset map.*/
         #overview {
             position: absolute;
@@ -28,8 +27,8 @@
             bottom: 50px;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
         }
-        
-        
+
+
         /*Style for the MOBILE SITE*/
 
 
@@ -294,15 +293,15 @@
         }
 
     </style>
-    
+
     <style>
-    
         .button {
             background-color: crimson;
         }
-        
-    </style>
 
+    </style>
+    
+    
 </head>
 
 <body>
@@ -401,7 +400,7 @@
             x.innerHTML = "Latitude: " + position.coords.latitude +
                 "<br>Longitude: " + position.coords.longitude;
         }
-        
+
         /* Code below requires "navigator.geolocation.getCurrentPosition(showPosition, showError);" change a few lines above.
         function showError(error) {
   switch(error.code) {
@@ -445,6 +444,54 @@
         });
 
     </script>
+    
+    /*Javascript below is for the insert map.*/
+    
+    <script>
+        let map, overview;
+        const OVERVIEW_DIFFERENCE = 5;
+        const OVERVIEW_MIN_ZOOM = 3;
+        const OVERVIEW_MAX_ZOOM = 10;
+
+        function initMap() {
+            const mapOptions = {
+                center: {
+                    lat: 50,
+                    lng: 8
+                },
+                zoom: 7,
+            };
+
+            // instantiate the primary map
+            map = new google.maps.Map(document.getElementById("map"), {
+                ...mapOptions,
+            });
+            // instantiate the overview map without controls
+            overview = new google.maps.Map(document.getElementById("overview"), {
+                ...mapOptions,
+                disableDefaultUI: true,
+                gestureHandling: "none",
+                zoomControl: false,
+            });
+
+            function clamp(num, min, max) {
+                return Math.min(Math.max(num, min), max);
+            }
+
+            map.addListener("bounds_changed", () => {
+                overview.setCenter(map.getCenter());
+                overview.setZoom(
+                    clamp(
+                        map.getZoom() - OVERVIEW_DIFFERENCE,
+                        OVERVIEW_MIN_ZOOM,
+                        OVERVIEW_MAX_ZOOM
+                    )
+                );
+            });
+        }
+
+    </script>
+
 
 
 </body>
