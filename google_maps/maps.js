@@ -1052,9 +1052,7 @@ function initMap() {
         content: hemenway_info
     });
     
-    var chez_overview_infowindow = new google.maps.InfoWindow({
-        content: chez_overview_info
-    });
+    
 
 
 
@@ -1089,18 +1087,7 @@ function initMap() {
         scaledSize: new google.maps.Size(200, 200),
     });
     
-    /*Below marker is for the insert map.*/
-    
-    var chez_overview_marker = new google.maps.Marker({
-        position: chez_sheridan_latlng,
-        map: overview,
-        title: 'Steven Breen-Office/Shop',
-        //icon: icon_man,
-        icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
-        zIndex: 9999,
-        //animation: google.maps.Animation.BOUNCE,
-        scaledSize: new google.maps.Size(50, 50),
-    });
+   
 
     var precision_coating_marker = new google.maps.Marker({
         position: precision_coating_latlng,
@@ -2644,9 +2631,7 @@ function initMap() {
         hemenway_infowindow.open(harvard_yard_map, hemenway_marker);
     });
     
-    google.maps.event.addListener(chez_overview_marker, 'click', function () {
-        chez_overview_infowindow.open(overview, chez_overview_marker);
-    });
+    
 
 
 
