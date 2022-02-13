@@ -1051,6 +1051,10 @@ function initMap() {
     var hemenway_infowindow = new google.maps.InfoWindow({
         content: hemenway_info
     });
+    
+    var chez_overview_infowindow = new google.maps.InfoWindow({
+        content: chez_overview_info
+    });
 
 
 
@@ -2638,6 +2642,10 @@ function initMap() {
 
     google.maps.event.addListener(hemenway_marker, 'click', function () {
         hemenway_infowindow.open(harvard_yard_map, hemenway_marker);
+    });
+    
+    google.maps.event.addListener(chez_overview_marker, 'click', function () {
+        chez_overview_infowindow.open(overview, chez_overview_marker);
     });
 
 
