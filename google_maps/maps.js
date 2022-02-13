@@ -1084,6 +1084,19 @@ function initMap() {
         animation: google.maps.Animation.BOUNCE,
         scaledSize: new google.maps.Size(200, 200),
     });
+    
+    /*Below marker is for the insert map.*/
+    
+    var chez_overview_marker = new google.maps.Marker({
+        position: chez_sheridan_latlng,
+        map: overview,
+        title: 'Steven Breen-Office/Shop',
+        //icon: icon_man,
+        icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+        zIndex: 9999,
+        //animation: google.maps.Animation.BOUNCE,
+        scaledSize: new google.maps.Size(50, 50),
+    });
 
     var precision_coating_marker = new google.maps.Marker({
         position: precision_coating_latlng,
