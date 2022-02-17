@@ -148,6 +148,7 @@ function initMap() {
     var west_latlng = new google.maps.LatLng(42.202715, -72.597964);
     var lyman_latlng = new google.maps.LatLng(44.073189, -69.178549);
     var hemenway_latlng = new google.maps.LatLng(42.345515, -71.089647);
+    var wash5_latlng = new google.maps.LatLng(42.714998, -71.442509);
 
 
 
@@ -471,6 +472,8 @@ function initMap() {
     var lyman_info = "<strong>Lyman-Morse Boatbuilding </strong><br/>" + "Luxury Boat Builder <br/>" + "Thomaston, ME";
 
     var hemenway_info = "<strong>Hemenway </strong><br/>" + "Maker Lab <br/>" + "Boston, MA";
+    
+    var wash5_info = "<strong>Wash Depot Holdings </strong><br/>" + "Car Wash w/doorjet heater <br/>" + "Nashua, NH";
 
 
 
@@ -1050,6 +1053,10 @@ function initMap() {
 
     var hemenway_infowindow = new google.maps.InfoWindow({
         content: hemenway_info
+    });
+    
+    var wash5_infowindow = new google.maps.InfoWindow({
+        content: wash5_info
     });
     
     
@@ -2040,6 +2047,13 @@ function initMap() {
         icon: icon,
         title: 'Experimental Start-up'
     });
+    
+    var wash5_marker = new google.maps.Marker({
+        position: wash5_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Car Wash'
+    });
 
 
 
@@ -2629,6 +2643,10 @@ function initMap() {
 
     google.maps.event.addListener(hemenway_marker, 'click', function () {
         hemenway_infowindow.open(harvard_yard_map, hemenway_marker);
+    });
+    
+    google.maps.event.addListener(wash5_marker, 'click', function () {
+        wash5_infowindow.open(harvard_yard_map, wash5_marker);
     });
     
     
