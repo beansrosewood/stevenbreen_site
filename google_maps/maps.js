@@ -149,6 +149,7 @@ function initMap() {
     var lyman_latlng = new google.maps.LatLng(44.073189, -69.178549);
     var hemenway_latlng = new google.maps.LatLng(42.345515, -71.089647);
     var wash5_latlng = new google.maps.LatLng(42.714998, -71.442509);
+    var wash1_latlng = new google.maps.LatLng(42.451501, -70.962019);
 
 
 
@@ -474,6 +475,8 @@ function initMap() {
     var hemenway_info = "<strong>Hemenway </strong><br/>" + "Maker Lab <br/>" + "Boston, MA";
     
     var wash5_info = "<strong>Wash Depot Holdings </strong><br/>" + "Car Wash w/doorjet heater <br/>" + "Nashua, NH";
+    
+    var wash1_info = "<strong>Wash Depot Holdings </strong><br/>" + "Car Wash w/doorjet heater <br/>" + "Lynn, MA";
 
 
 
@@ -1057,6 +1060,10 @@ function initMap() {
     
     var wash5_infowindow = new google.maps.InfoWindow({
         content: wash5_info
+    });
+    
+    var wash1_infowindow = new google.maps.InfoWindow({
+        content: wash1_info
     });
     
     
@@ -2054,6 +2061,13 @@ function initMap() {
         icon: icon,
         title: 'Car Wash'
     });
+    
+    var wash1_marker = new google.maps.Marker({
+        position: wash1_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Car Wash'
+    });
 
 
 
@@ -2647,6 +2661,10 @@ function initMap() {
     
     google.maps.event.addListener(wash5_marker, 'click', function () {
         wash5_infowindow.open(harvard_yard_map, wash5_marker);
+    });
+    
+    google.maps.event.addListener(wash1_marker, 'click', function () {
+        wash1_infowindow.open(harvard_yard_map, wash1_marker);
     });
     
     
