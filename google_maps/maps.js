@@ -153,6 +153,7 @@ function initMap() {
     var wash4_latlng = new google.maps.LatLng(42.402879, -71.052991);
     var wash3_latlng = new google.maps.LatLng(42.519759, -71.103959);
     var wash2_latlng = new google.maps.LatLng(42.427472, -71.074682);
+    var cmf_latlng = new google.maps.LatLng(42.655958, -71.108693);
 
 
 
@@ -487,6 +488,8 @@ function initMap() {
     var wash3_info = "<strong>Wash Depot Holdings </strong><br/>" + "Car Wash w/doorjet heater <br/>" + "North Reading, MA";
     
     var wash2_info = "<strong>Wash Depot Holdings </strong><br/>" + "Car Wash w/doorjet heater <br/>" + "Malden, MA";
+    
+    var cmf_info = "<strong>Central Metal Finishing </strong><br/>" + "Aerospace Plater <br/>" + "North Andover, MA";
 
 
 
@@ -1086,6 +1089,10 @@ function initMap() {
     
     var wash2_infowindow = new google.maps.InfoWindow({
         content: wash2_info
+    });
+    
+    var cmf_infowindow = new google.maps.InfoWindow({
+        content: cmf_info
     });
     
     
@@ -2111,6 +2118,13 @@ function initMap() {
         icon: icon,
         title: 'Car Wash'
     });
+    
+    var cmf_marker = new google.maps.Marker({
+        position: cmf_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Aerospace Finisher'
+    });
 
 
 
@@ -2720,6 +2734,10 @@ function initMap() {
     
     google.maps.event.addListener(wash2_marker, 'click', function () {
         wash2_infowindow.open(harvard_yard_map, wash2_marker);
+    });
+    
+    google.maps.event.addListener(cmf_marker, 'click', function () {
+        cmf_infowindow.open(harvard_yard_map, cmf_marker);
     });
     
     
