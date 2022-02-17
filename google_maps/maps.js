@@ -99,7 +99,7 @@ function initMap() {
     var minute_latlng = new google.maps.LatLng(42.110344, -71.246050);
     var faniel_latlng = new google.maps.LatLng(42.244642, -70.917666);
     var newton_latlng = new google.maps.LatLng(42.354882, -71.202077);
-    var ab_latlng = new google.maps.LatLng(42.725928, -71.434485);
+    var ab_latlng = new google.maps.LatLng(42.702731, -71.419056);
     var fresh_latlng = new google.maps.LatLng(42.860484, -71.101491);
     var edo_latlng = new google.maps.LatLng(40.710598, -73.399051);
     var buck_latlng = new google.maps.LatLng(42.199430, -71.749115);
