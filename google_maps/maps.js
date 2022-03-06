@@ -205,7 +205,7 @@ function initMap() {
 
     var northwest_info = "<strong>Northwest Science Building</strong><br/>" + "Latitude: 42.3795462<br/>" + "Longitude: -71.1156024";
 
-    var chez_sheridan_info = "<strong>Steven Breen's Office/Shop</strong><br/>" + "9 Sheridan St<br/>" + "Nashua, NH 03064";
+    var chez_sheridan_info = "<div style='float:left'><img src='http://i.stack.imgur.com/g672i.png'></div>" + "<strong>Steven Breen's Office/Shop</strong><br/>" + "9 Sheridan St<br/>" + "Nashua, NH 03064";
 
     var precision_coating_info = "<strong>Medical Device Coater</strong><br/>";
 
