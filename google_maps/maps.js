@@ -524,7 +524,7 @@ function initMap() {
     });
 
     var sheridan_infowindow = new google.maps.InfoWindow({
-        content: chez_sheridan_info
+        content: <div style='float:left'><img src='http://i.stack.imgur.com/g672i.png'></div><div style='float:right'>chez_sheridan_info</div>
     });
 
     var precision_coating_infowindow = new google.maps.InfoWindow({
