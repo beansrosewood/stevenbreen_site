@@ -155,6 +155,7 @@ function initMap() {
     var wash2_latlng = new google.maps.LatLng(42.427472, -71.074682);
     var cmf_latlng = new google.maps.LatLng(42.655958, -71.108693);
     var next_latlng = new google.maps.LatLng(41.696573, -71.272465);
+    var jbi_latlng = new google.maps.LatLng(42.189571, -72.550350);
 
 
 
@@ -492,6 +493,8 @@ function initMap() {
     var cmf_info = "<strong>Central Metal Finishing </strong><br/>" + "Aerospace Plater <br/>" + "North Andover, MA";
     
     var next_info = "<strong>Next Boatworks, LLC </strong><br/>" + "High-Performance Coastal Rowing Craft <br/>" + "Bristol, RI";
+    
+    var jbi_info = "<strong>JBI Parisi, Inc </strong><br/>" + "Point of Sale System Fab Shop <br/>" + "Chicopee, MA";
 
 
 
@@ -1099,6 +1102,10 @@ function initMap() {
     
     var next_infowindow = new google.maps.InfoWindow({
         content: next_info
+    });
+    
+    var jbi_infowindow = new google.maps.InfoWindow({
+        content: jbi_info
     });
     
     
@@ -2138,6 +2145,13 @@ function initMap() {
         icon: icon,
         title: 'Carbon Fiber Boat Maker'
     });
+    
+    var jbi_marker = new google.maps.Marker({
+        position: jbi_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'POS Fab Shop'
+    });
 
 
 
@@ -2755,6 +2769,10 @@ function initMap() {
     
     google.maps.event.addListener(next_marker, 'click', function () {
         next_infowindow.open(harvard_yard_map, next_marker);
+    });
+    
+    google.maps.event.addListener(jbi_marker, 'click', function () {
+        jbi_infowindow.open(harvard_yard_map, jbi_marker);
     });
     
     
