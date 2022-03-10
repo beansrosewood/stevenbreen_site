@@ -154,7 +154,7 @@ function initMap() {
     var wash3_latlng = new google.maps.LatLng(42.519759, -71.103959);
     var wash2_latlng = new google.maps.LatLng(42.427472, -71.074682);
     var cmf_latlng = new google.maps.LatLng(42.655958, -71.108693);
-
+    var next_latlng = new google.maps.LatLng(41.696573, -71.272465);
 
 
 
@@ -490,6 +490,8 @@ function initMap() {
     var wash2_info = "<strong>Wash Depot Holdings </strong><br/>" + "Car Wash w/doorjet heater <br/>" + "Malden, MA";
     
     var cmf_info = "<strong>Central Metal Finishing </strong><br/>" + "Aerospace Plater <br/>" + "North Andover, MA";
+    
+    var next_info = "<strong>Next Boatworks, LLC </strong><br/>" + "High-Performance Coastal Rowing Craft <br/>" + "Bristol, RI";
 
 
 
@@ -1093,6 +1095,10 @@ function initMap() {
     
     var cmf_infowindow = new google.maps.InfoWindow({
         content: cmf_info
+    });
+    
+    var next_infowindow = new google.maps.InfoWindow({
+        content: next_info
     });
     
     
@@ -2125,6 +2131,13 @@ function initMap() {
         icon: icon,
         title: 'Aerospace Finisher'
     });
+    
+    var next_marker = new google.maps.Marker({
+        position: next_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Carbon Fiber Boat Maker'
+    });
 
 
 
@@ -2738,6 +2751,10 @@ function initMap() {
     
     google.maps.event.addListener(cmf_marker, 'click', function () {
         cmf_infowindow.open(harvard_yard_map, cmf_marker);
+    });
+    
+    google.maps.event.addListener(next_marker, 'click', function () {
+        next_infowindow.open(harvard_yard_map, next_marker);
     });
     
     
