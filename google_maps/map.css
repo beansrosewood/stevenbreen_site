@@ -43,3 +43,5 @@ body {
         bottom: 50px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
       }
+
+.googft-info-window td { background-color: yellow }
