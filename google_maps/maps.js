@@ -156,6 +156,7 @@ function initMap() {
     var cmf_latlng = new google.maps.LatLng(42.655958, -71.108693);
     var next_latlng = new google.maps.LatLng(41.696573, -71.272465);
     var jbi_latlng = new google.maps.LatLng(42.189571, -72.550350);
+    var spring_latlng = new google.maps.LatLng(42.581571, -71.195420);
 
 
 
@@ -495,6 +496,8 @@ function initMap() {
     var next_info = "<strong>Next Boatworks, LLC </strong><br/>" + "High-Performance Coastal Rowing Craft <br/>" + "Bristol, RI";
     
     var jbi_info = "<strong>JBI Parisi, Inc </strong><br/>" + "Point of Sale System Fab Shop <br/>" + "Chicopee, MA";
+    
+    var spring_info = "<strong>Spring Manufacturing Corp, Inc. </strong><br/>" + "Spring fabrication shop <br/>" + "Tewksbury, MA";
 
 
 
@@ -1106,6 +1109,10 @@ function initMap() {
     
     var jbi_infowindow = new google.maps.InfoWindow({
         content: jbi_info
+    });
+    
+    var spring_infowindow = new google.maps.InfoWindow({
+        content: spring_info
     });
     
     
@@ -2152,6 +2159,13 @@ function initMap() {
         icon: icon,
         title: 'POS Fab Shop'
     });
+    
+    var spring_marker = new google.maps.Marker({
+        position: spring_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Spring Maker/Heat Treatment'
+    });
 
 
 
@@ -2773,6 +2787,10 @@ function initMap() {
     
     google.maps.event.addListener(jbi_marker, 'click', function () {
         jbi_infowindow.open(harvard_yard_map, jbi_marker);
+    });
+    
+    google.maps.event.addListener(spring_marker, 'click', function () {
+        spring_infowindow.open(harvard_yard_map, spring_marker);
     });
     
     
