@@ -157,6 +157,7 @@ function initMap() {
     var next_latlng = new google.maps.LatLng(41.696573, -71.272465);
     var jbi_latlng = new google.maps.LatLng(42.189571, -72.550350);
     var spring_latlng = new google.maps.LatLng(42.581571, -71.195420);
+    var csi_latlng = new google.maps.LatLng(42.628132, -71.277926);
 
 
 
@@ -498,6 +499,8 @@ function initMap() {
     var jbi_info = "<strong>JBI Parisi, Inc </strong><br/>" + "Point of Sale System Fab Shop <br/>" + "Chicopee, MA";
     
     var spring_info = "<strong>Spring Manufacturing Corp, Inc. </strong><br/>" + "Spring fabrication shop <br/>" + "Tewksbury, MA";
+    
+    var csi_info = "<strong>Coating Systems, Inc. </strong><br/>" + "Industrial metal finisher <br/>" + "Lowell, MA";
 
 
 
@@ -1113,6 +1116,10 @@ function initMap() {
     
     var spring_infowindow = new google.maps.InfoWindow({
         content: spring_info
+    });
+    
+    var csi_infowindow = new google.maps.InfoWindow({
+        content: csi_info
     });
     
     
@@ -2166,6 +2173,13 @@ function initMap() {
         icon: icon,
         title: 'Spring Maker/Heat Treatment'
     });
+    
+    var csi_marker = new google.maps.Marker({
+        position: csi_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Industrial Metal Finisher'
+    });
 
 
 
@@ -2791,6 +2805,10 @@ function initMap() {
     
     google.maps.event.addListener(spring_marker, 'click', function () {
         spring_infowindow.open(harvard_yard_map, spring_marker);
+    });
+    
+    google.maps.event.addListener(csi_marker, 'click', function () {
+        csi_infowindow.open(harvard_yard_map, csi_marker);
     });
     
     
