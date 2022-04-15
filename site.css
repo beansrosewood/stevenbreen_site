@@ -439,8 +439,15 @@ body {
             display: none;
         }
     }
+    
+    /* Below is for annoucement banner near the top of the site homepage.*/
+    
+    .banner {
+        background-color: yellow;
+        text-align: center;
+    }
 
-    /*Below is for a call out box that can be closed if clicked.*/
+    /*Below is for a call out box that can be closed if clicked. NOT ON SITE YET.*/
 
     /* Callout box - fixed position at the bottom of the page */
     .callout {
