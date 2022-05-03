@@ -158,6 +158,7 @@ function initMap() {
     var jbi_latlng = new google.maps.LatLng(42.189571, -72.550350);
     var spring_latlng = new google.maps.LatLng(42.581571, -71.195420);
     var csi_latlng = new google.maps.LatLng(42.628132, -71.277926);
+    var louis_latlng = new google.maps.LatLng(42.514779, -70.888680);
 
 
 
@@ -501,6 +502,9 @@ function initMap() {
     var spring_info = "<strong>Spring Manufacturing Corp, Inc. </strong><br/>" + "Spring fabrication shop <br/>" + "Tewksbury, MA";
     
     var csi_info = "<strong>Coating Systems, Inc. </strong><br/>" + "Industrial metal finisher <br/>" + "Lowell, MA";
+    
+    var louis_info = "<strong>Louis Restoration & Repair </strong><br/>" + "Automobile restoration shop <br/>" + "Salem, MA";
+
 
 
 
@@ -1120,6 +1124,10 @@ function initMap() {
     
     var csi_infowindow = new google.maps.InfoWindow({
         content: csi_info
+    });
+    
+    var louis_infowindow = new google.maps.InfoWindow({
+        content: louis_info
     });
     
     
@@ -2180,6 +2188,13 @@ function initMap() {
         icon: icon,
         title: 'Industrial Metal Finisher'
     });
+    
+     var louis_marker = new google.maps.Marker({
+        position: louis_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Auto Restoration'
+    });
 
 
 
@@ -2809,6 +2824,10 @@ function initMap() {
     
     google.maps.event.addListener(csi_marker, 'click', function () {
         csi_infowindow.open(harvard_yard_map, csi_marker);
+    });
+    
+    google.maps.event.addListener(louis_marker, 'click', function () {
+        louis_infowindow.open(harvard_yard_map, louis_marker);
     });
     
     
