@@ -83,16 +83,6 @@ body {
     opacity: 0;
 }
 
-.phone {
-    font-family: Georgia, serif;
-    font-size: 3em;
-    text-align: center;
-    text-shadow: 2px 2px 1.5px #020203;
-    font-weight: 400;
-    font-variant: small-caps;
-    opacity: 0;
-}
-
 .how {
     font-size: 2em;
     text-shadow: 2px 2px 1.5px #020203;
