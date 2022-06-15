@@ -256,6 +256,17 @@ body {
     transition: all 1.0s ease;
 }
 
+.my_cell {
+    color: #bb0000;
+    font-family: Georgia, serif;
+    font-size: 5em;
+    text-align: center;
+    text-shadow: 2px 2px 1.5px #020203;
+    font-weight: 400;
+    font-variant: small-caps;
+    opacity: 0;   
+}
+
 .my_cell a:hover {
     color: yellow;
     font-weight: bold;
