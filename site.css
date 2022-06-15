@@ -254,7 +254,13 @@ body {
     color: yellow;
     font-weight: bold;
     transition: all 1.0s ease;
+}
 
+.my_cell a:hover {
+    color: yellow;
+    font-weight: bold;
+    transition: all 1.0s ease;
+    
 }
 
 /* Contact Page Styles */
