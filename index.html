@@ -323,6 +323,18 @@
             color: #bb0000;
             transition: all 0.5s ease;
         }
+        
+        /*Below is for second dropdown level on menu.*/
+        
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu {
+            top: 0;
+            left: 100%;
+            margin-top: -1px;
+        }
 
 
         /* THE SNACKBAR!! - position it at the bottom and in the middle of the screen */
@@ -745,6 +757,23 @@ h1 {
                 
                     <ul class="dropdown-menu">
                             <li class="item"><a href="https://www.ebay.com/str/stevenbreenindustrialservice">SPB Temperature Controllers</a></li>
+                        
+                            <!--li below is for dropdown in a dropdown-->
+                                <li class="dropdown-submenu">
+                                    <a class="test" tabindex="-1" href="#">New dropdown <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+                                    <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+                                    <li class="dropdown-submenu">
+                                    <a class="test" href="#">Another dropdown <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                    <li><a href="#">3rd level dropdown</a></li>
+                                    <li><a href="#">3rd level dropdown</a></li>
+                                    </ul>
+                                    </li>
+                                    </ul>
+                                </li>
+                        
                             <li class="item"><a href="https://www.ebay.com/str/stevenbreenindustrialservice">SPB High Limit Controllers</a></li>
                             <li class="item"><a href="./index_qr_code.html">QR Code/Service Label</a></li>
                     </ul>
@@ -1063,7 +1092,18 @@ h1 {
         }, 3500);
 
     </script>
-
+    
+    <!--Below is for dropdown in a dropdown.-->
+    <script>
+        $(document).ready(function(){
+        $('.dropdown-submenu a.test').on("click", function(e){
+        $(this).next('ul').toggle();
+        e.stopPropagation();
+        e.preventDefault();
+        });
+        });
+    </script>
+    
 
 </body>
 
