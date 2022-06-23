@@ -256,6 +256,12 @@ body {
     transition: all 1.0s ease;
 }
 
+.spb_control a:hover {
+    color: yellow;
+    font-weight: bold;
+    transition: all 1.0s ease;
+}
+
 .my_cell {
     color: #bb0000;
     font-family: Georgia, serif;
