@@ -159,6 +159,7 @@ function initMap() {
     var spring_latlng = new google.maps.LatLng(42.581571, -71.195420);
     var csi_latlng = new google.maps.LatLng(42.628132, -71.277926);
     var louis_latlng = new google.maps.LatLng(42.514779, -70.888680);
+    var usa_latlng = new google.maps.LatLng(41.602568, -73.074814);
 
 
 
@@ -504,6 +505,8 @@ function initMap() {
     var csi_info = "<strong>Coating Systems, Inc. </strong><br/>" + "Industrial metal finisher <br/>" + "Lowell, MA";
     
     var louis_info = "<strong>Louis Restoration & Repair </strong><br/>" + "Automobile restoration shop <br/>" + "Salem, MA";
+    
+    var usa_info = "<strong>USA Waste & Recycling </strong><br/>" + "Waste container repair facility <br/>" + "Oakville, CT";
 
 
 
@@ -1128,6 +1131,10 @@ function initMap() {
     
     var louis_infowindow = new google.maps.InfoWindow({
         content: louis_info
+    });
+    
+    var usa_infowindow = new google.maps.InfoWindow({
+        content: usa_info
     });
     
     
@@ -2195,6 +2202,13 @@ function initMap() {
         icon: icon,
         title: 'Auto Restoration'
     });
+    
+     var usa_marker = new google.maps.Marker({
+        position: usa_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Container Repair Shop'
+    });
 
 
 
@@ -2828,6 +2842,10 @@ function initMap() {
     
     google.maps.event.addListener(louis_marker, 'click', function () {
         louis_infowindow.open(harvard_yard_map, louis_marker);
+    });
+    
+    google.maps.event.addListener(usa_marker, 'click', function () {
+        usa_infowindow.open(harvard_yard_map, usa_marker);
     });
     
     
