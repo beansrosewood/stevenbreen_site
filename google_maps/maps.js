@@ -2909,6 +2909,10 @@ function initMap() {
         scaledSize: new google.maps.Size(100, 100),
     });
     
+    setTimeout(function () {
+        chez_sheridan_insert_marker.setAnimation(null)
+    }, 7000);
+    
    /*End of insert map marker.*/
     
 
