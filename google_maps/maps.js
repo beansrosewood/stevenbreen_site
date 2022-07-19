@@ -2915,6 +2915,23 @@ function initMap() {
     
    /*End of insert map marker.*/
     
+   
+   /*Hack to get miles scale on the map rather than kilometers.*/
+    
+    var scaleInterval = setInterval( function() {
+  var spn = document.getElementById('harvard_yard_map').getElementsByTagName('span');
+  var pattern = /\d+\s+(m|km)/i;
+  for(var i in spn) {
+    if ( pattern.test(spn[i].innerHTML) ) {
+      spn[i].click();
+      clearInterval(scaleInterval);
+    }
+  }
+}, 500);
+setTimeout( function() { clearInterval(scaleInterval) }, 20000 );
+    
+    /*End of miles/km hack.*/
+    
 
 
 
