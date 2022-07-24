@@ -2931,11 +2931,11 @@ function initMap() {
         chez_sheridan_insert_marker.setAnimation(null)
     }, 7000);
     
-            /*For Sheridan listener on insert map below*/
+            /*For Sheridan listener on insert map below
     
             google.maps.event.addListener(chez_sheridan_insert_marker, 'click', function () {
             insert_infowindow.open(overview, chez_sheridan_insert_marker);
-            });
+            });*/
     
     
    /*End of insert map marker.*/
