@@ -204,7 +204,6 @@ function initMap() {
 
 
     
-    var insert_info = "<strong>SPB Headquarters!</strong>;
 
 
     var fort_drum_info = "<strong>Fort Drum Aerospace Reset Contractor</strong><br/>" +
@@ -534,9 +533,6 @@ function initMap() {
     };
 
 
-    var insert_infowindow = new google.maps.InfoWindow({
-        content: insert_info
-    });
 
     var fort_drum_infowindow = new google.maps.InfoWindow({
         content: fort_drum_info
