@@ -160,6 +160,7 @@ function initMap() {
     var csi_latlng = new google.maps.LatLng(42.628132, -71.277926);
     var louis_latlng = new google.maps.LatLng(42.514779, -70.888680);
     var usa_latlng = new google.maps.LatLng(41.602568, -73.074814);
+    var gmf_latlng = new google.maps.LatLng(41.919077, -71.323661);
 
 
 
@@ -508,8 +509,8 @@ function initMap() {
     
     var usa_info = "<strong>USA Waste & Recycling </strong><br/>" + "Waste container repair facility <br/>" + "Oakville, CT";
 
-
-
+    var gmf_info = "<strong>General Metal Finishing </strong><br/>" + "Plating Shop <br/>" + "Attleboro, MA";
+    
 
 
 
@@ -1135,6 +1136,10 @@ function initMap() {
     
     var usa_infowindow = new google.maps.InfoWindow({
         content: usa_info
+    });
+    
+    var gmf_infowindow = new google.maps.InfoWindow({
+        content: gmf_info
     });
     
     
@@ -2210,6 +2215,12 @@ function initMap() {
         title: 'Container Repair Shop'
     });
 
+     var gmf_marker = new google.maps.Marker({
+        position: gmf_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Plating Shop'
+    });
 
 
 
@@ -2848,6 +2859,9 @@ function initMap() {
         usa_infowindow.open(harvard_yard_map, usa_marker);
     });
     
+    google.maps.event.addListener(gmf_marker, 'click', function () {
+        gmf_infowindow.open(harvard_yard_map, gmf_marker);
+    });
     
 
 
