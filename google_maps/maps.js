@@ -161,6 +161,7 @@ function initMap() {
     var louis_latlng = new google.maps.LatLng(42.514779, -70.888680);
     var usa_latlng = new google.maps.LatLng(41.602568, -73.074814);
     var gmf_latlng = new google.maps.LatLng(41.919077, -71.323661);
+    var atmo_latlng = new google.maps.LatLng(42.657367, -71.107423);
 
 
 
@@ -510,6 +511,8 @@ function initMap() {
     var usa_info = "<strong>USA Waste & Recycling </strong><br/>" + "Waste container repair facility <br/>" + "Oakville, CT";
 
     var gmf_info = "<strong>General Metal Finishing </strong><br/>" + "Plating Shop <br/>" + "Attleboro, MA";
+    
+    var atmo_info = "<strong>Powder-Tech Associates </strong><br/>" + "Powder Metallurgy Services <br/>" + "North Andover, MA";
     
 
 
@@ -1142,6 +1145,9 @@ function initMap() {
         content: gmf_info
     });
     
+    var atmo_infowindow = new google.maps.InfoWindow({
+        content: atmo_info
+    });
     
 
 
@@ -2221,6 +2227,13 @@ function initMap() {
         icon: icon,
         title: 'Plating Shop'
     });
+    
+     var atmo_marker = new google.maps.Marker({
+        position: atmo_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Metallurgy Lab'
+    });
 
 
 
@@ -2861,6 +2874,10 @@ function initMap() {
     
     google.maps.event.addListener(gmf_marker, 'click', function () {
         gmf_infowindow.open(harvard_yard_map, gmf_marker);
+    });
+    
+     google.maps.event.addListener(atmo_marker, 'click', function () {
+        atmo_infowindow.open(harvard_yard_map, atmo_marker);
     });
     
 
