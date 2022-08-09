@@ -162,6 +162,7 @@ function initMap() {
     var usa_latlng = new google.maps.LatLng(41.602568, -73.074814);
     var gmf_latlng = new google.maps.LatLng(41.919077, -71.323661);
     var atmo_latlng = new google.maps.LatLng(42.657367, -71.107423);
+    var radar2_latlng = new google.maps.LatLng(42.390113, -71.552036);
 
 
 
@@ -513,6 +514,8 @@ function initMap() {
     var gmf_info = "<strong>General Metal Finishing </strong><br/>" + "Plating Shop <br/>" + "Attleboro, MA";
     
     var atmo_info = "<strong>Powder-Tech Associates </strong><br/>" + "Powder Metallurgy Services <br/>" + "North Andover, MA";
+    
+    var radar2_info = "<strong>CPI-Radant, Inc. </strong><br/>" + "Radar dome manufacturer <br/>" + "Hudson, MA";
     
 
 
@@ -1147,6 +1150,10 @@ function initMap() {
     
     var atmo_infowindow = new google.maps.InfoWindow({
         content: atmo_info
+    });
+    
+    var radar2_infowindow = new google.maps.InfoWindow({
+        content: radar2_info
     });
     
 
@@ -2234,6 +2241,13 @@ function initMap() {
         icon: icon,
         title: 'Metallurgy Lab'
     });
+    
+    var radar2_marker = new google.maps.Marker({
+        position: radar2_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Communication Dome Maker'
+    });
 
 
 
@@ -2876,8 +2890,12 @@ function initMap() {
         gmf_infowindow.open(harvard_yard_map, gmf_marker);
     });
     
-     google.maps.event.addListener(atmo_marker, 'click', function () {
+    google.maps.event.addListener(atmo_marker, 'click', function () {
         atmo_infowindow.open(harvard_yard_map, atmo_marker);
+    });
+    
+    google.maps.event.addListener(radar2_marker, 'click', function () {
+        radar2_infowindow.open(harvard_yard_map, radar2_marker);
     });
     
 
