@@ -163,7 +163,7 @@ function initMap() {
     var gmf_latlng = new google.maps.LatLng(41.919077, -71.323661);
     var atmo_latlng = new google.maps.LatLng(42.657367, -71.107423);
     var radar2_latlng = new google.maps.LatLng(42.390113, -71.552036);
-
+    var custmach_latlng = new google.maps.LatLng(42.478913, -71.127122);
 
 
 
@@ -516,6 +516,8 @@ function initMap() {
     var atmo_info = "<strong>Powder-Tech Associates </strong><br/>" + "Powder Metallurgy Services <br/>" + "North Andover, MA";
     
     var radar2_info = "<strong>CPI-Radant, Inc. </strong><br/>" + "Radar dome manufacturer <br/>" + "Hudson, MA";
+    
+    var custmach_info = "<strong>Custom Machine, LLC </strong><br/>" + "Precision aerospace machine shop <br/>" + "Woburn, MA";
     
 
 
@@ -1154,6 +1156,10 @@ function initMap() {
     
     var radar2_infowindow = new google.maps.InfoWindow({
         content: radar2_info
+    });
+    
+     var custmach_infowindow = new google.maps.InfoWindow({
+        content: custmach_info
     });
     
 
@@ -2248,6 +2254,13 @@ function initMap() {
         icon: icon,
         title: 'Communication Dome Maker'
     });
+    
+    var custmach_marker = new google.maps.Marker({
+        position: custmach_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Machine Shop'
+    });
 
 
 
@@ -2896,6 +2909,10 @@ function initMap() {
     
     google.maps.event.addListener(radar2_marker, 'click', function () {
         radar2_infowindow.open(harvard_yard_map, radar2_marker);
+    });
+    
+    google.maps.event.addListener(custmach_marker, 'click', function () {
+        custmach_infowindow.open(harvard_yard_map, custmach_marker);
     });
     
 
