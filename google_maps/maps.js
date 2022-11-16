@@ -164,6 +164,7 @@ function initMap() {
     var atmo_latlng = new google.maps.LatLng(42.657367, -71.107423);
     var radar2_latlng = new google.maps.LatLng(42.390113, -71.552036);
     var custmach_latlng = new google.maps.LatLng(42.478913, -71.127122);
+    var gtr_latlng = new google.maps.LatLng(42.058005, -71.057498);
 
 
 
@@ -518,6 +519,8 @@ function initMap() {
     var radar2_info = "<strong>CPI-Radant, Inc. </strong><br/>" + "Radar dome manufacturer <br/>" + "Hudson, MA";
     
     var custmach_info = "<strong>Custom Machine, LLC </strong><br/>" + "Precision aerospace machine shop <br/>" + "Woburn, MA";
+    
+    var gtr_info = "<strong>GTR Manufacturing </strong><br/>" + "Precision sheet metal fabrication <br/>" + "Brockton, MA";
     
 
 
@@ -1158,8 +1161,12 @@ function initMap() {
         content: radar2_info
     });
     
-     var custmach_infowindow = new google.maps.InfoWindow({
+    var custmach_infowindow = new google.maps.InfoWindow({
         content: custmach_info
+    });
+    
+    var gtr_infowindow = new google.maps.InfoWindow({
+        content: gtr_info
     });
     
 
@@ -2261,6 +2268,13 @@ function initMap() {
         icon: icon,
         title: 'Machine Shop'
     });
+    
+    var gtr_marker = new google.maps.Marker({
+        position: gtr_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Industrial Fabricator'
+    });
 
 
 
@@ -2913,6 +2927,10 @@ function initMap() {
     
     google.maps.event.addListener(custmach_marker, 'click', function () {
         custmach_infowindow.open(harvard_yard_map, custmach_marker);
+    });
+    
+    google.maps.event.addListener(gtr_marker, 'click', function () {
+        gtr_infowindow.open(harvard_yard_map, gtr_marker);
     });
     
 
