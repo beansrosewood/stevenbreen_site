@@ -166,7 +166,7 @@ function initMap() {
     var custmach_latlng = new google.maps.LatLng(42.478913, -71.127122);
     var gtr_latlng = new google.maps.LatLng(42.058005, -71.057498);
     var baker_latlng = new google.maps.LatLng(43.391006, -70.719935);
-
+    var ebm_latlng = new google.maps.LatLng(42.840602, -71.370638);
 
 
 
@@ -524,6 +524,8 @@ function initMap() {
     var gtr_info = "<strong>GTR Manufacturing </strong><br/>" + "Precision sheet metal fabrication <br/>" + "Brockton, MA";
     
     var baker_info = "<strong>Baker Company </strong><br/>" + "Medical equipment manufacturer <br/>" + "Sanford, ME";
+    
+    var ebm_info = "<strong>EB Metals Inc </strong><br/>" + "Rolled metal products manufacturer <br/>" + "Londonderry, NH";
 
 
 
@@ -1173,6 +1175,9 @@ function initMap() {
         content: baker_info
     });
     
+    var ebm_infowindow = new google.maps.InfoWindow({
+        content: ebm_info
+    });
 
 
 
@@ -2286,6 +2291,13 @@ function initMap() {
         icon: icon,
         title: 'Fume Hood Maker'
     });
+    
+    var ebm_marker = new google.maps.Marker({
+        position: ebm_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Rolled Metal Fabricator'
+    });
 
 
 
@@ -2946,6 +2958,10 @@ function initMap() {
     
     google.maps.event.addListener(baker_marker, 'click', function () {
         baker_infowindow.open(harvard_yard_map, baker_marker);
+    });
+    
+    google.maps.event.addListener(ebm_marker, 'click', function () {
+        ebm_infowindow.open(harvard_yard_map, ebm_marker);
     });
     
 
