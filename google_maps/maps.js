@@ -165,6 +165,7 @@ function initMap() {
     var radar2_latlng = new google.maps.LatLng(42.390113, -71.552036);
     var custmach_latlng = new google.maps.LatLng(42.478913, -71.127122);
     var gtr_latlng = new google.maps.LatLng(42.058005, -71.057498);
+    var baker_latlng = new google.maps.LatLng(43.391006, -70.719935);
 
 
 
@@ -522,8 +523,7 @@ function initMap() {
     
     var gtr_info = "<strong>GTR Manufacturing </strong><br/>" + "Precision sheet metal fabrication <br/>" + "Brockton, MA";
     
-
-
+    var baker_info = "<strong>Baker Company </strong><br/>" + "Medical equipment manufacturer <br/>" + "Sanford, ME";
 
 
 
@@ -1167,6 +1167,10 @@ function initMap() {
     
     var gtr_infowindow = new google.maps.InfoWindow({
         content: gtr_info
+    });
+    
+    var baker_infowindow = new google.maps.InfoWindow({
+        content: baker_info
     });
     
 
@@ -2275,6 +2279,13 @@ function initMap() {
         icon: icon,
         title: 'Industrial Fabricator'
     });
+    
+    var baker_marker = new google.maps.Marker({
+        position: baker_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Fume Hood Maker'
+    });
 
 
 
@@ -2931,6 +2942,10 @@ function initMap() {
     
     google.maps.event.addListener(gtr_marker, 'click', function () {
         gtr_infowindow.open(harvard_yard_map, gtr_marker);
+    });
+    
+    google.maps.event.addListener(baker_marker, 'click', function () {
+        baker_infowindow.open(harvard_yard_map, baker_marker);
     });
     
 
