@@ -167,6 +167,7 @@ function initMap() {
     var gtr_latlng = new google.maps.LatLng(42.058005, -71.057498);
     var baker_latlng = new google.maps.LatLng(43.391006, -70.719935);
     var ebm_latlng = new google.maps.LatLng(42.840602, -71.370638);
+    var bandg_latlng = new google.maps.LatLng(41.421720, -71.846165);
 
 
 
@@ -526,6 +527,8 @@ function initMap() {
     var baker_info = "<strong>Baker Company </strong><br/>" + "Medical equipment manufacturer <br/>" + "Sanford, ME";
     
     var ebm_info = "<strong>EB Metals Inc </strong><br/>" + "Rolled metal products manufacturer <br/>" + "Londonderry, NH";
+    
+    var bandg_info = "<strong>Barton & Gray Mariners Club </strong><br/>" + "Day Cruiser Yacht Club <br/>" + "Stonington, CT";
 
 
 
@@ -1177,6 +1180,10 @@ function initMap() {
     
     var ebm_infowindow = new google.maps.InfoWindow({
         content: ebm_info
+    });
+    
+    var bandg_infowindow = new google.maps.InfoWindow({
+        content: bandg_info
     });
 
 
@@ -2298,6 +2305,13 @@ function initMap() {
         icon: icon,
         title: 'Rolled Metal Fabricator'
     });
+    
+    var bandg_marker = new google.maps.Marker({
+        position: bandg_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Yacht Club'
+    });
 
 
 
@@ -2962,6 +2976,10 @@ function initMap() {
     
     google.maps.event.addListener(ebm_marker, 'click', function () {
         ebm_infowindow.open(harvard_yard_map, ebm_marker);
+    });
+    
+    google.maps.event.addListener(bandg_marker, 'click', function () {
+        bandg_infowindow.open(harvard_yard_map, bandg_marker);
     });
     
 
