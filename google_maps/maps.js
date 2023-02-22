@@ -168,6 +168,8 @@ function initMap() {
     var baker_latlng = new google.maps.LatLng(43.391006, -70.719935);
     var ebm_latlng = new google.maps.LatLng(42.840602, -71.370638);
     var bandg_latlng = new google.maps.LatLng(41.421720, -71.846165);
+    var kalow_latlng = new google.maps.LatLng(43.586212, -72.964334);
+    
 
 
 
@@ -528,7 +530,9 @@ function initMap() {
     
     var ebm_info = "<strong>EB Metals Inc </strong><br/>" + "Rolled metal products manufacturer <br/>" + "Londonderry, NH";
     
-    var bandg_info = "<strong>Barton & Gray Mariners Club </strong><br/>" + "Day Cruiser Yacht Club <br/>" + "Stonington, CT";
+    var bandg_info = "<strong>Barton & Gray Mariners Club </strong><br/>" + "Day cruiser yacht club <br/>" + "Stonington, CT";
+    
+    var kalow_info = "<strong>Kalow Technologies </strong><br/>" + " Electro-mechanical contract manufacturer<br/>" + "Rutland, VT";
 
 
 
@@ -1184,6 +1188,10 @@ function initMap() {
     
     var bandg_infowindow = new google.maps.InfoWindow({
         content: bandg_info
+    });
+    
+    var kalow_infowindow = new google.maps.InfoWindow({
+        content: kalow_info
     });
 
 
@@ -2312,6 +2320,13 @@ function initMap() {
         icon: icon,
         title: 'Yacht Club'
     });
+    
+    var kalow_marker = new google.maps.Marker({
+        position: kalow_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Manufacturer'
+    });
 
 
 
@@ -2980,6 +2995,10 @@ function initMap() {
     
     google.maps.event.addListener(bandg_marker, 'click', function () {
         bandg_infowindow.open(harvard_yard_map, bandg_marker);
+    });
+    
+    google.maps.event.addListener(kalow_marker, 'click', function () {
+        kalow_infowindow.open(harvard_yard_map, kalow_marker);
     });
     
 
