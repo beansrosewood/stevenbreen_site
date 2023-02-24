@@ -171,6 +171,7 @@ function initMap() {
     var kalow_latlng = new google.maps.LatLng(43.586212, -72.964334);
     var expc_latlng = new google.maps.LatLng(42.851257, -71.494870);
     var teknor_latlng = new google.maps.LatLng(42.515850, -71.751373);
+    var cil2_latlng = new google.maps.LatLng(42.685490, -71.184150);
     
 
 
@@ -539,6 +540,8 @@ function initMap() {
     var expc_info = "<strong>Extreme Powder Coating </strong><br/>" + " Custom Powder Shop<br/>" + "Merrimack, NH";
     
     var teknor_info = "<strong>Teknor Apex Inc </strong><br/>" + " Thermoplastic Elastomer Manufacturer<br/>" + "Leominster, MA";
+    
+    var cil2_info = "<strong>Anodizer/Electro-Plater</strong><br/>" + "Lawrence, MA";
 
 
 
@@ -1206,6 +1209,10 @@ function initMap() {
     
     var teknor_infowindow = new google.maps.InfoWindow({
         content: teknor_info
+    });
+    
+    var cil2_infowindow = new google.maps.InfoWindow({
+        content: cil2_info
     });
 
 
@@ -2356,6 +2363,13 @@ function initMap() {
         icon: icon,
         title: 'Elastomer R&D Lab'
     });
+    
+    var cil2_marker = new google.maps.Marker({
+        position: cil2_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Anodizer/Electro-Plater'
+    });
 
 
 
@@ -3037,6 +3051,10 @@ function initMap() {
     
     google.maps.event.addListener(teknor_marker, 'click', function () {
         teknor_infowindow.open(harvard_yard_map, teknor_marker);
+    });
+    
+    google.maps.event.addListener(cil2_marker, 'click', function () {
+        cil2_infowindow.open(harvard_yard_map, cil2_marker);
     });
     
 
