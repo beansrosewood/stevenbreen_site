@@ -170,6 +170,7 @@ function initMap() {
     var bandg_latlng = new google.maps.LatLng(41.421720, -71.846165);
     var kalow_latlng = new google.maps.LatLng(43.586212, -72.964334);
     var expc_latlng = new google.maps.LatLng(42.851257, -71.494870);
+    var teknor_latlng = new google.maps.LatLng(42.515850, -71.751373);
     
 
 
@@ -536,6 +537,8 @@ function initMap() {
     var kalow_info = "<strong>Kalow Technologies </strong><br/>" + " Electro-mechanical contract manufacturer<br/>" + "Rutland, VT";
     
     var expc_info = "<strong>Extreme Powder Coating </strong><br/>" + " Custom Powder Shop<br/>" + "Merrimack, NH";
+    
+    var teknor_info = "<strong>Teknor Apex Inc </strong><br/>" + " Thermoplastic Elastomer Manufacturer<br/>" + "Leominster, MA";
 
 
 
@@ -1200,6 +1203,11 @@ function initMap() {
     var expc_infowindow = new google.maps.InfoWindow({
         content: expc_info
     });
+    
+    var teknor_infowindow = new google.maps.InfoWindow({
+        content: teknor_info
+    });
+
 
 
 
@@ -2341,6 +2349,13 @@ function initMap() {
         icon: icon,
         title: 'Powder Coater'
     });
+    
+    var teknor_marker = new google.maps.Marker({
+        position: teknor_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Elastomer R&D Lab'
+    });
 
 
 
@@ -3018,6 +3033,10 @@ function initMap() {
     
     google.maps.event.addListener(expc_marker, 'click', function () {
         expc_infowindow.open(harvard_yard_map, expc_marker);
+    });
+    
+    google.maps.event.addListener(teknor_marker, 'click', function () {
+        teknor_infowindow.open(harvard_yard_map, teknor_marker);
     });
     
 
