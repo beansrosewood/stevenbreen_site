@@ -169,6 +169,7 @@ function initMap() {
     var ebm_latlng = new google.maps.LatLng(42.840602, -71.370638);
     var bandg_latlng = new google.maps.LatLng(41.421720, -71.846165);
     var kalow_latlng = new google.maps.LatLng(43.586212, -72.964334);
+    var expc_latlng = new google.maps.LatLng(42.851257, -71.494870);
     
 
 
@@ -533,6 +534,8 @@ function initMap() {
     var bandg_info = "<strong>Barton & Gray Mariners Club </strong><br/>" + "Day cruiser yacht club <br/>" + "Stonington, CT";
     
     var kalow_info = "<strong>Kalow Technologies </strong><br/>" + " Electro-mechanical contract manufacturer<br/>" + "Rutland, VT";
+    
+    var expc_info = "<strong>Extreme Powder Coating </strong><br/>" + " Custom Powder Shop<br/>" + "Merrimack, NH";
 
 
 
@@ -1192,6 +1195,10 @@ function initMap() {
     
     var kalow_infowindow = new google.maps.InfoWindow({
         content: kalow_info
+    });
+    
+    var expc_infowindow = new google.maps.InfoWindow({
+        content: expc_info
     });
 
 
@@ -2327,6 +2334,14 @@ function initMap() {
         icon: icon,
         title: 'Manufacturer'
     });
+    
+    var expc_marker = new google.maps.Marker({
+        position: expc_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Powder Coater'
+    });
+
 
 
 
@@ -2999,6 +3014,10 @@ function initMap() {
     
     google.maps.event.addListener(kalow_marker, 'click', function () {
         kalow_infowindow.open(harvard_yard_map, kalow_marker);
+    });
+    
+    google.maps.event.addListener(expc_marker, 'click', function () {
+        expc_infowindow.open(harvard_yard_map, expc_marker);
     });
     
 
