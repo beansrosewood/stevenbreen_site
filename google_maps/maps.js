@@ -172,6 +172,7 @@ function initMap() {
     var expc_latlng = new google.maps.LatLng(42.851257, -71.494870);
     var teknor_latlng = new google.maps.LatLng(42.515850, -71.751373);
     var cil2_latlng = new google.maps.LatLng(42.685490, -71.184150);
+    var wagyu_latlng = new google.maps.LatLng(42.897315, -71.910181);
     
 
 
@@ -542,6 +543,8 @@ function initMap() {
     var teknor_info = "<strong>Teknor Apex Inc </strong><br/>" + " Thermoplastic Elastomer Manufacturer<br/>" + "Leominster, MA";
     
     var cil2_info = "<strong>Anodizer/Electro-Plater</strong><br/>" + "Lawrence, MA";
+    
+    var wagyu_info = "<strong>New England Wagyu LLC</strong><br/>" + "Peterborough, NH";
 
 
 
@@ -1213,6 +1216,10 @@ function initMap() {
     
     var cil2_infowindow = new google.maps.InfoWindow({
         content: cil2_info
+    });
+    
+    var wagyu_infowindow = new google.maps.InfoWindow({
+        content: wagyu_info
     });
 
 
@@ -2370,6 +2377,13 @@ function initMap() {
         icon: icon,
         title: 'Anodizer/Electro-Plater'
     });
+    
+    var wagyu_marker = new google.maps.Marker({
+        position: wagyu_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Agri-business'
+    });
 
 
 
@@ -3055,6 +3069,10 @@ function initMap() {
     
     google.maps.event.addListener(cil2_marker, 'click', function () {
         cil2_infowindow.open(harvard_yard_map, cil2_marker);
+    });
+    
+    google.maps.event.addListener(wagyu_marker, 'click', function () {
+        wagyu_infowindow.open(harvard_yard_map, wagyu_marker);
     });
     
 
