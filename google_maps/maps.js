@@ -173,7 +173,7 @@ function initMap() {
     var teknor_latlng = new google.maps.LatLng(42.515850, -71.751373);
     var cil2_latlng = new google.maps.LatLng(42.685490, -71.184150);
     var wagyu_latlng = new google.maps.LatLng(42.897315, -71.910181);
-    
+    var swim_latlng = new google.maps.LatLng(41.751493, -71.118454);
 
 
 
@@ -545,6 +545,8 @@ function initMap() {
     var cil2_info = "<strong>Anodizer/Electro-Plater</strong><br/>" + "Lawrence, MA";
     
     var wagyu_info = "<strong>New England Wagyu LLC</strong><br/>" + "Peterborough, NH";
+    
+    var swim_info = "<strong>SwimEx </strong><br/>" + " hydrotherapy and training pool manufacturer.<br/>" + "Fall River, MA";
 
 
 
@@ -1220,6 +1222,10 @@ function initMap() {
     
     var wagyu_infowindow = new google.maps.InfoWindow({
         content: wagyu_info
+    });
+    
+    var swim_infowindow = new google.maps.InfoWindow({
+        content: swim_info
     });
 
 
@@ -2384,6 +2390,13 @@ function initMap() {
         icon: icon,
         title: 'Agri-business'
     });
+    
+    var swim_marker = new google.maps.Marker({
+        position: swim_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Excercise Pool Manufacturer'
+    });
 
 
 
@@ -3073,6 +3086,10 @@ function initMap() {
     
     google.maps.event.addListener(wagyu_marker, 'click', function () {
         wagyu_infowindow.open(harvard_yard_map, wagyu_marker);
+    });
+    
+    google.maps.event.addListener(swim_marker, 'click', function () {
+        swim_infowindow.open(harvard_yard_map, swim_marker);
     });
     
 
