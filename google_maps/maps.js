@@ -174,6 +174,8 @@ function initMap() {
     var cil2_latlng = new google.maps.LatLng(42.685490, -71.184150);
     var wagyu_latlng = new google.maps.LatLng(42.897315, -71.910181);
     var swim_latlng = new google.maps.LatLng(41.751493, -71.118454);
+    var jmd2_latlng = new google.maps.LatLng(42.779278, -71.386261);
+    var jmd3_latlng = new google.maps.LatLng(42.778294, -71.381248);
 
 
 
@@ -2397,6 +2399,20 @@ function initMap() {
         icon: icon,
         title: 'Excercise Pool Manufacturer'
     });
+    
+     var jmd2_marker = new google.maps.Marker({
+        position: jmd2_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Metal Plater'
+    });
+    
+     var jmd3_marker = new google.maps.Marker({
+        position: jmd3_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Metal Plater'
+    });
 
 
 
@@ -3090,6 +3106,14 @@ function initMap() {
     
     google.maps.event.addListener(swim_marker, 'click', function () {
         swim_infowindow.open(harvard_yard_map, swim_marker);
+    });
+    
+    google.maps.event.addListener(jmd2_marker, 'click', function () {
+        jmd_infowindow.open(harvard_yard_map, jmd2_marker);
+    });
+    
+    google.maps.event.addListener(jmd3_marker, 'click', function () {
+        jmd_infowindow.open(harvard_yard_map, jmd3_marker);
     });
     
 
