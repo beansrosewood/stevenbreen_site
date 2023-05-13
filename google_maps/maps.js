@@ -176,6 +176,7 @@ function initMap() {
     var swim_latlng = new google.maps.LatLng(41.751493, -71.118454);
     var jmd2_latlng = new google.maps.LatLng(42.779278, -71.386261);
     var jmd3_latlng = new google.maps.LatLng(42.778294, -71.381248);
+    var grapek2_latlng = new google.maps.LatLng(42.711357, -71.555410);
 
 
 
@@ -549,6 +550,8 @@ function initMap() {
     var wagyu_info = "<strong>New England Wagyu LLC</strong><br/>" + "Peterborough, NH";
     
     var swim_info = "<strong>SwimEx </strong><br/>" + " hydrotherapy and training pool manufacturer.<br/>" + "Fall River, MA";
+    
+    var grapek2_info = "<strong>Grapek/Bates Finishing</strong><br/>" + "Industrial Equipment Supplier<br/>" + "Hollis, NH";
 
 
 
@@ -1228,6 +1231,10 @@ function initMap() {
     
     var swim_infowindow = new google.maps.InfoWindow({
         content: swim_info
+    });
+    
+    var grapek2_infowindow = new google.maps.InfoWindow({
+        content: grapek2_info
     });
 
 
@@ -2413,6 +2420,13 @@ function initMap() {
         icon: icon,
         title: 'Metal Plater'
     });
+    
+    var grapek2_marker = new google.maps.Marker({
+        position: grapek2_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Finishing Equipment Supplier'
+    });
 
 
 
@@ -3114,6 +3128,10 @@ function initMap() {
     
     google.maps.event.addListener(jmd3_marker, 'click', function () {
         jmd_infowindow.open(harvard_yard_map, jmd3_marker);
+    });
+    
+    google.maps.event.addListener(grapek2_marker, 'click', function () {
+        grapek2_infowindow.open(harvard_yard_map, grapek2_marker);
     });
     
 
