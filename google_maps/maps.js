@@ -177,6 +177,7 @@ function initMap() {
     var jmd2_latlng = new google.maps.LatLng(42.779278, -71.386261);
     var jmd3_latlng = new google.maps.LatLng(42.778294, -71.381248);
     var grapek2_latlng = new google.maps.LatLng(42.711357, -71.555410);
+    var hink_latlng = new google.maps.LatLng(44.267107, -68.307006);
 
 
 
@@ -552,6 +553,8 @@ function initMap() {
     var swim_info = "<strong>SwimEx </strong><br/>" + " hydrotherapy and training pool manufacturer.<br/>" + "Fall River, MA";
     
     var grapek2_info = "<strong>Grapek/Bates Finishing</strong><br/>" + "Industrial Equipment Supplier<br/>" + "Hollis, NH";
+    
+    var hink_info = "<strong>Hinkley Yachts</strong><br/>" + "Luxury Powerboat Builder<br/>" + "Southwest Harbor, ME";
 
 
 
@@ -1235,6 +1238,10 @@ function initMap() {
     
     var grapek2_infowindow = new google.maps.InfoWindow({
         content: grapek2_info
+    });
+    
+    var hink_infowindow = new google.maps.InfoWindow({
+        content: hink_info
     });
 
 
@@ -2427,6 +2434,13 @@ function initMap() {
         icon: icon,
         title: 'Finishing Equipment Supplier'
     });
+    
+    var hink_marker = new google.maps.Marker({
+        position: hink_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Picnic Boat Builder'
+    });
 
 
 
@@ -3132,6 +3146,10 @@ function initMap() {
     
     google.maps.event.addListener(grapek2_marker, 'click', function () {
         grapek2_infowindow.open(harvard_yard_map, grapek2_marker);
+    });
+    
+    google.maps.event.addListener(hink_marker, 'click', function () {
+        hink_infowindow.open(harvard_yard_map, hink_marker);
     });
     
 
