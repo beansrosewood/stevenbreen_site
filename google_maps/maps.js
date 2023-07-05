@@ -178,6 +178,7 @@ function initMap() {
     var jmd3_latlng = new google.maps.LatLng(42.778294, -71.381248);
     var grapek2_latlng = new google.maps.LatLng(42.711357, -71.555410);
     var hink_latlng = new google.maps.LatLng(44.267107, -68.307006);
+    var shutter_latlng = new google.maps.LatLng(41.696303, -69.964489);
 
 
 
@@ -555,6 +556,8 @@ function initMap() {
     var grapek2_info = "<strong>Grapek/Bates Finishing</strong><br/>" + "Industrial Equipment Supplier<br/>" + "Hollis, NH";
     
     var hink_info = "<strong>Hinkley Yachts</strong><br/>" + "Luxury Powerboat Builder<br/>" + "Southwest Harbor, ME";
+    
+    var shutter_info = "<strong>Seaport Shutter Company</strong><br/>" + "Architechurally Correct Shutters<br/>" + "Chatham, MA";
 
 
 
@@ -1242,6 +1245,10 @@ function initMap() {
     
     var hink_infowindow = new google.maps.InfoWindow({
         content: hink_info
+    });
+    
+    var shutter_infowindow = new google.maps.InfoWindow({
+        content: shutter_info
     });
 
 
@@ -2441,6 +2448,13 @@ function initMap() {
         icon: icon,
         title: 'Picnic Boat Builder'
     });
+    
+    var shutter_marker = new google.maps.Marker({
+        position: shutter_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Shutter Maker'
+    });
 
 
 
@@ -3150,6 +3164,10 @@ function initMap() {
     
     google.maps.event.addListener(hink_marker, 'click', function () {
         hink_infowindow.open(harvard_yard_map, hink_marker);
+    });
+    
+    google.maps.event.addListener(shutter_marker, 'click', function () {
+        shutter_infowindow.open(harvard_yard_map, shutter_marker);
     });
     
 
