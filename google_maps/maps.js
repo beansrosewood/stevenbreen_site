@@ -179,6 +179,7 @@ function initMap() {
     var grapek2_latlng = new google.maps.LatLng(42.711357, -71.555410);
     var hink_latlng = new google.maps.LatLng(44.267107, -68.307006);
     var shutter_latlng = new google.maps.LatLng(41.696303, -69.964489);
+    var mastermill_latlng = new google.maps.LatLng(41.799027, -70.747049);
 
 
 
@@ -558,6 +559,8 @@ function initMap() {
     var hink_info = "<strong>Hinkley Yachts</strong><br/>" + "Luxury Powerboat Builder<br/>" + "Southwest Harbor, ME";
     
     var shutter_info = "<strong>Seaport Shutter Company</strong><br/>" + "Architechurally Correct Shutters<br/>" + "Chatham, MA";
+    
+    var mastermill_info = "<strong>Master Millwork</strong><br/>" + "Millwork Fabrication<br/>" + "West Wareham, MA";
 
 
 
@@ -1249,6 +1252,10 @@ function initMap() {
     
     var shutter_infowindow = new google.maps.InfoWindow({
         content: shutter_info
+    });
+    
+    var mastermill_infowindow = new google.maps.InfoWindow({
+        content: mastermill_info
     });
 
 
@@ -2455,6 +2462,13 @@ function initMap() {
         icon: icon,
         title: 'Shutter Maker'
     });
+    
+    var mastermill_marker = new google.maps.Marker({
+        position: mastermill_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Millwork Shop'
+    });
 
 
 
@@ -3168,6 +3182,10 @@ function initMap() {
     
     google.maps.event.addListener(shutter_marker, 'click', function () {
         shutter_infowindow.open(harvard_yard_map, shutter_marker);
+    });
+    
+    google.maps.event.addListener(mastermill_marker, 'click', function () {
+        mastermill_infowindow.open(harvard_yard_map, mastermill_marker);
     });
     
 
