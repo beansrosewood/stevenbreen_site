@@ -180,6 +180,7 @@ function initMap() {
     var hink_latlng = new google.maps.LatLng(44.267107, -68.307006);
     var shutter_latlng = new google.maps.LatLng(41.696303, -69.964489);
     var mastermill_latlng = new google.maps.LatLng(41.799027, -70.747049);
+    var hammar_latlng = new google.maps.LatLng(42.775071, -71.488160);
 
 
 
@@ -561,6 +562,8 @@ function initMap() {
     var shutter_info = "<strong>Seaport Shutter Company</strong><br/>" + "Architechurally Correct Shutters<br/>" + "Chatham, MA";
     
     var mastermill_info = "<strong>Master Millwork</strong><br/>" + "Millwork Fabrication<br/>" + "West Wareham, MA";
+    
+    var hammar_info = "<strong>175 Amherst St</strong><br/>" + "Commercial Building<br/>" + "Nashua, NH";
 
 
 
@@ -1256,6 +1259,10 @@ function initMap() {
     
     var mastermill_infowindow = new google.maps.InfoWindow({
         content: mastermill_info
+    });
+    
+    var hammar_infowindow = new google.maps.InfoWindow({
+        content: hammar_info
     });
 
 
@@ -2469,6 +2476,13 @@ function initMap() {
         icon: icon,
         title: 'Millwork Shop'
     });
+    
+    var hammar_marker = new google.maps.Marker({
+        position: hammar_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Commercial Building'
+    });
 
 
 
@@ -3186,6 +3200,10 @@ function initMap() {
     
     google.maps.event.addListener(mastermill_marker, 'click', function () {
         mastermill_infowindow.open(harvard_yard_map, mastermill_marker);
+    });
+    
+    google.maps.event.addListener(hammar_marker, 'click', function () {
+        hammar_infowindow.open(harvard_yard_map, hammar_marker);
     });
     
 
