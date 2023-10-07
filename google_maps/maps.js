@@ -182,6 +182,7 @@ function initMap() {
     var mastermill_latlng = new google.maps.LatLng(41.799027, -70.747049);
     var hammar_latlng = new google.maps.LatLng(42.775071, -71.488160);
     var eagle_latlng = new google.maps.LatLng(42.688154, -71.187542);
+    var labsphere_latlng = new google.maps.LatLng(43.371477, -71.929472);
 
 
 
@@ -567,6 +568,8 @@ function initMap() {
     var hammar_info = "<strong>175 Amherst St</strong><br/>" + "Commercial Building<br/>" + "Nashua, NH";
     
     var eagle_info = "<strong>Eagle Woodworking</strong><br/>" + "Drawer Box Fabricator<br/>" + "Lawrence, MA";
+    
+    var labsphere_info = "<strong>Labsphere Inc</strong><br/>" + "Optical Products Manufacturer<br/>" + "North Sutton, NH";
 
 
 
@@ -1270,6 +1273,10 @@ function initMap() {
     
     var eagle_infowindow = new google.maps.InfoWindow({
         content: eagle_info
+    });
+    
+    var labsphere_infowindow = new google.maps.InfoWindow({
+        content: labsphere_info
     });
 
 
@@ -2497,6 +2504,13 @@ function initMap() {
         icon: icon,
         title: 'Drawer Box Maker'
     });
+    
+    var labsphere_marker = new google.maps.Marker({
+        position: labsphere_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Optics Maker'
+    });
 
 
 
@@ -3222,6 +3236,10 @@ function initMap() {
     
     google.maps.event.addListener(eagle_marker, 'click', function () {
         eagle_infowindow.open(harvard_yard_map, eagle_marker);
+    });
+    
+    google.maps.event.addListener(labsphere_marker, 'click', function () {
+        labsphere_infowindow.open(harvard_yard_map, labsphere_marker);
     });
     
 
