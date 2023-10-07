@@ -181,7 +181,7 @@ function initMap() {
     var shutter_latlng = new google.maps.LatLng(41.696303, -69.964489);
     var mastermill_latlng = new google.maps.LatLng(41.799027, -70.747049);
     var hammar_latlng = new google.maps.LatLng(42.775071, -71.488160);
-    var eagle_latlng = new google.maps.LatLng(42.775071, -71.488160);
+    var eagle_latlng = new google.maps.LatLng(42.688154, -71.187542);
 
 
 
