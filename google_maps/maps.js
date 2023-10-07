@@ -181,6 +181,7 @@ function initMap() {
     var shutter_latlng = new google.maps.LatLng(41.696303, -69.964489);
     var mastermill_latlng = new google.maps.LatLng(41.799027, -70.747049);
     var hammar_latlng = new google.maps.LatLng(42.775071, -71.488160);
+    var eagle_latlng = new google.maps.LatLng(42.775071, -71.488160);
 
 
 
@@ -564,6 +565,8 @@ function initMap() {
     var mastermill_info = "<strong>Master Millwork</strong><br/>" + "Millwork Fabrication<br/>" + "West Wareham, MA";
     
     var hammar_info = "<strong>175 Amherst St</strong><br/>" + "Commercial Building<br/>" + "Nashua, NH";
+    
+    var eagle_info = "<strong>Eagle Woodworking</strong><br/>" + "Drawer Box Fabricator<br/>" + "Lawrence, MA";
 
 
 
@@ -1263,6 +1266,10 @@ function initMap() {
     
     var hammar_infowindow = new google.maps.InfoWindow({
         content: hammar_info
+    });
+    
+    var eagle_infowindow = new google.maps.InfoWindow({
+        content: eagle_info
     });
 
 
@@ -2483,6 +2490,13 @@ function initMap() {
         icon: icon,
         title: 'Commercial Building'
     });
+    
+    var eagle_marker = new google.maps.Marker({
+        position: eagle_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Drawer Box Maker'
+    });
 
 
 
@@ -3204,6 +3218,10 @@ function initMap() {
     
     google.maps.event.addListener(hammar_marker, 'click', function () {
         hammar_infowindow.open(harvard_yard_map, hammar_marker);
+    });
+    
+    google.maps.event.addListener(eagle_marker, 'click', function () {
+        eagle_infowindow.open(harvard_yard_map, eagle_marker);
     });
     
 
