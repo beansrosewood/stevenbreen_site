@@ -666,6 +666,12 @@ h1 {
         });
 
     </script>
+    
+    <script>
+        if (new Date().getHours() < 18) {
+        document.getElementById("quote").innerHTML = "If you hear hoff beats don't think zebras.";
+        }
+    </script>
 
 
 
@@ -860,7 +866,7 @@ h1 {
                 <!--Announcement Banner Experiment is below.-->
                 <div class="banner">
 
-                    <h3 style="align-content: center">"We cannot solve our problems with the same thinking we used to create them." Albert Einstein</h3>
+                    <h3 id="quote" style="align-content: center">"We cannot solve our problems with the same thinking we used to create them." Albert Einstein</h3>
 
                 </div>
 
