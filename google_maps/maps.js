@@ -183,6 +183,7 @@ function initMap() {
     var hammar_latlng = new google.maps.LatLng(42.775071, -71.488160);
     var eagle_latlng = new google.maps.LatLng(42.688154, -71.187542);
     var labsphere_latlng = new google.maps.LatLng(43.371477, -71.929472);
+    var spec_latlng = new google.maps.LatLng(42.562359, -71.304692);
 
 
 
@@ -570,6 +571,8 @@ function initMap() {
     var eagle_info = "<strong>Eagle Woodworking</strong><br/>" + "Drawer Box Fabricator<br/>" + "Lawrence, MA";
     
     var labsphere_info = "<strong>Labsphere Inc</strong><br/>" + "Optical Products Manufacturer<br/>" + "North Sutton, NH";
+    
+    var spec_info = "<strong>Specialized Coating Services</strong><br/>" + "Conformal Coatings<br/>" + "Billerica, MA";
 
 
 
@@ -1277,6 +1280,10 @@ function initMap() {
     
     var labsphere_infowindow = new google.maps.InfoWindow({
         content: labsphere_info
+    });
+    
+    var spec_infowindow = new google.maps.InfoWindow({
+        content: spec_info
     });
 
 
@@ -2511,6 +2518,13 @@ function initMap() {
         icon: icon,
         title: 'Optics Maker'
     });
+    
+    var spec_marker = new google.maps.Marker({
+        position: spec_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Conformal Coatings Contractor'
+    });
 
 
 
@@ -3240,6 +3254,10 @@ function initMap() {
     
     google.maps.event.addListener(labsphere_marker, 'click', function () {
         labsphere_infowindow.open(harvard_yard_map, labsphere_marker);
+    });
+    
+    google.maps.event.addListener(spec_marker, 'click', function () {
+        spec_infowindow.open(harvard_yard_map, spec_marker);
     });
     
 
