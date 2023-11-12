@@ -184,6 +184,7 @@ function initMap() {
     var eagle_latlng = new google.maps.LatLng(42.688154, -71.187542);
     var labsphere_latlng = new google.maps.LatLng(43.371477, -71.929472);
     var spec_latlng = new google.maps.LatLng(42.562359, -71.304692);
+    var hink2_latlng = new google.maps.LatLng(44.447023, -68.374295);
 
 
 
@@ -573,6 +574,8 @@ function initMap() {
     var labsphere_info = "<strong>Labsphere Inc</strong><br/>" + "Optical Products Manufacturer<br/>" + "North Sutton, NH";
     
     var spec_info = "<strong>Specialized Coating Services</strong><br/>" + "Conformal Coatings<br/>" + "Billerica, MA";
+    
+    var hink2_info = "<strong>Hinkley Yachts</strong><br/>" + "Luxury Powerboat Builder<br/>" + "Trenton, ME";
 
 
 
@@ -1284,6 +1287,10 @@ function initMap() {
     
     var spec_infowindow = new google.maps.InfoWindow({
         content: spec_info
+    });
+    
+    var hink2_infowindow = new google.maps.InfoWindow({
+        content: hink2_info
     });
 
 
@@ -2525,6 +2532,13 @@ function initMap() {
         icon: icon,
         title: 'Conformal Coatings Contractor'
     });
+    
+    var hink2_marker = new google.maps.Marker({
+        position: hink2_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Picnic Boat Builder'
+    });
 
 
 
@@ -3258,6 +3272,10 @@ function initMap() {
     
     google.maps.event.addListener(spec_marker, 'click', function () {
         spec_infowindow.open(harvard_yard_map, spec_marker);
+    });
+    
+    google.maps.event.addListener(hink2_marker, 'click', function () {
+        hink2_infowindow.open(harvard_yard_map, hink2_marker);
     });
     
 
