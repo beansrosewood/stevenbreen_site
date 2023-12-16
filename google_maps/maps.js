@@ -578,7 +578,7 @@ function initMap() {
     
     var hink2_info = "<strong>Hinkley Yachts</strong><br/>" + "Luxury Powerboat Builder<br/>" + "Trenton, ME";
     
-    var biw_info = "<strong>Bath Iron Works</strong><br/>" + "Builder of Aegis and Zumwalt Class Destoyers<br/>" + "Bath, ME";
+    var biw_info = "<strong>Bath Iron Works</strong><br/>" + "Builder of Aegis and Zumwalt Class Destroyers<br/>" + "Bath, ME";
 
 
 
