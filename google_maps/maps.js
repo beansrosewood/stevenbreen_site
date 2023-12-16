@@ -185,6 +185,7 @@ function initMap() {
     var labsphere_latlng = new google.maps.LatLng(43.371477, -71.929472);
     var spec_latlng = new google.maps.LatLng(42.562359, -71.304692);
     var hink2_latlng = new google.maps.LatLng(44.447023, -68.374295);
+    var biw_latlng = new google.maps.LatLng(43.909572, -69.814810);
 
 
 
@@ -576,6 +577,8 @@ function initMap() {
     var spec_info = "<strong>Specialized Coating Services</strong><br/>" + "Conformal Coatings<br/>" + "Billerica, MA";
     
     var hink2_info = "<strong>Hinkley Yachts</strong><br/>" + "Luxury Powerboat Builder<br/>" + "Trenton, ME";
+    
+    var biw_info = "<strong>Bath Iron Works</strong><br/>" + "Builder of Aegis and Zumwalt Class Destoyers<br/>" + "Bath, ME";
 
 
 
@@ -1291,6 +1294,10 @@ function initMap() {
     
     var hink2_infowindow = new google.maps.InfoWindow({
         content: hink2_info
+    });
+    
+    var biw_infowindow = new google.maps.InfoWindow({
+        content: biw_info
     });
 
 
@@ -2539,6 +2546,13 @@ function initMap() {
         icon: icon,
         title: 'Picnic Boat Builder'
     });
+    
+    var biw_marker = new google.maps.Marker({
+        position: biw_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Naval Shipyard'
+    });
 
 
 
@@ -3276,6 +3290,10 @@ function initMap() {
     
     google.maps.event.addListener(hink2_marker, 'click', function () {
         hink2_infowindow.open(harvard_yard_map, hink2_marker);
+    });
+    
+    google.maps.event.addListener(biw_marker, 'click', function () {
+        biw_infowindow.open(harvard_yard_map, biw_marker);
     });
     
 
