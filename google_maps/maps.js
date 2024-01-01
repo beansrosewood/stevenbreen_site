@@ -186,6 +186,7 @@ function initMap() {
     var spec_latlng = new google.maps.LatLng(42.562359, -71.304692);
     var hink2_latlng = new google.maps.LatLng(44.447023, -68.374295);
     var biw_latlng = new google.maps.LatLng(43.909572, -69.814810);
+    var maf_latlng = new google.maps.LatLng(42.765255, -71.466857);
 
 
 
@@ -579,6 +580,8 @@ function initMap() {
     var hink2_info = "<strong>Hinkley Yachts</strong><br/>" + "Luxury Powerboat Builder<br/>" + "Trenton, ME";
     
     var biw_info = "<strong>Bath Iron Works</strong><br/>" + "Builder of Aegis and Zumwalt Class Destroyers<br/>" + "Bath, ME";
+    
+    var maf_info = "<strong>Maffee's Garage</strong><br/>" + "Automotive Repair Shop<br/>" + "Nashua, NH";
 
 
 
@@ -1298,6 +1301,10 @@ function initMap() {
     
     var biw_infowindow = new google.maps.InfoWindow({
         content: biw_info
+    });
+    
+    var maf_infowindow = new google.maps.InfoWindow({
+        content: maf_info
     });
 
 
@@ -2553,6 +2560,13 @@ function initMap() {
         icon: icon,
         title: 'Naval Shipyard'
     });
+    
+    var maf_marker = new google.maps.Marker({
+        position: maf_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Auto Repair Shop'
+    });
 
 
 
@@ -3294,6 +3308,10 @@ function initMap() {
     
     google.maps.event.addListener(biw_marker, 'click', function () {
         biw_infowindow.open(harvard_yard_map, biw_marker);
+    });
+    
+    google.maps.event.addListener(maf_marker, 'click', function () {
+        maf_infowindow.open(harvard_yard_map, maf_marker);
     });
     
 
