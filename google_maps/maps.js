@@ -187,6 +187,7 @@ function initMap() {
     var hink2_latlng = new google.maps.LatLng(44.447023, -68.374295);
     var biw_latlng = new google.maps.LatLng(43.909572, -69.814810);
     var maf_latlng = new google.maps.LatLng(42.765255, -71.466857);
+    var ccf_latlng = new google.maps.LatLng(42.698934, -70.852100);
 
 
 
@@ -582,6 +583,8 @@ function initMap() {
     var biw_info = "<strong>Bath Iron Works</strong><br/>" + "Builder of Aegis and Zumwalt Class Destroyers<br/>" + "Bath, ME";
     
     var maf_info = "<strong>Maffee's Garage</strong><br/>" + "Automotive Repair Shop<br/>" + "Nashua, NH";
+    
+    var ccf_info = "<strong>C&C Fabricators</strong><br/>" + "Fab/Powdercoating Shop<br/>" + "Ipswich, MA";
 
 
 
@@ -1305,6 +1308,10 @@ function initMap() {
     
     var maf_infowindow = new google.maps.InfoWindow({
         content: maf_info
+    });
+    
+    var ccf_infowindow = new google.maps.InfoWindow({
+        content: ccf_info
     });
 
 
@@ -2567,6 +2574,13 @@ function initMap() {
         icon: icon,
         title: 'Auto Repair Shop'
     });
+    
+    var ccf_marker = new google.maps.Marker({
+        position: ccf_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Fabricator Shop'
+    });
 
 
 
@@ -3312,6 +3326,10 @@ function initMap() {
     
     google.maps.event.addListener(maf_marker, 'click', function () {
         maf_infowindow.open(harvard_yard_map, maf_marker);
+    });
+    
+    google.maps.event.addListener(ccf_marker, 'click', function () {
+        ccf_infowindow.open(harvard_yard_map, ccf_marker);
     });
     
 
