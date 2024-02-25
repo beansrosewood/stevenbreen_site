@@ -188,6 +188,7 @@ function initMap() {
     var biw_latlng = new google.maps.LatLng(43.909572, -69.814810);
     var maf_latlng = new google.maps.LatLng(42.765255, -71.466857);
     var ccf_latlng = new google.maps.LatLng(42.698934, -70.852100);
+    var mrww_latlng = new google.maps.LatLng(42.802880, -70.880694);
 
 
 
@@ -585,6 +586,8 @@ function initMap() {
     var maf_info = "<strong>Maffee's Garage</strong><br/>" + "Automotive Repair Shop<br/>" + "Nashua, NH";
     
     var ccf_info = "<strong>C&C Fabricators</strong><br/>" + "Fab/Powdercoating Shop<br/>" + "Ipswich, MA";
+    
+    var mrww_info = "<strong>Mark Richey Woodworking</strong><br/>" + "Commercial Cabinet Shop<br/>" + "Newburyport, MA";
 
 
 
@@ -1312,6 +1315,10 @@ function initMap() {
     
     var ccf_infowindow = new google.maps.InfoWindow({
         content: ccf_info
+    });
+    
+    var mrww_infowindow = new google.maps.InfoWindow({
+        content: mrww_info
     });
 
 
@@ -2581,6 +2588,13 @@ function initMap() {
         icon: icon,
         title: 'Fabricator Shop'
     });
+    
+    var mrww_marker = new google.maps.Marker({
+        position: mrww_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Wind Turbine Project'
+    });
 
 
 
@@ -3330,6 +3344,10 @@ function initMap() {
     
     google.maps.event.addListener(ccf_marker, 'click', function () {
         ccf_infowindow.open(harvard_yard_map, ccf_marker);
+    });
+    
+    google.maps.event.addListener(mrww_marker, 'click', function () {
+        mrww_infowindow.open(harvard_yard_map, mrww_marker);
     });
     
 
