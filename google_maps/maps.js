@@ -189,6 +189,7 @@ function initMap() {
     var maf_latlng = new google.maps.LatLng(42.765255, -71.466857);
     var ccf_latlng = new google.maps.LatLng(42.698934, -70.852100);
     var mrww_latlng = new google.maps.LatLng(42.802880, -70.880694);
+    var awair_latlng = new google.maps.LatLng(42.801365, -70.884288);
 
 
 
@@ -588,6 +589,8 @@ function initMap() {
     var ccf_info = "<strong>C&C Fabricators</strong><br/>" + "Fab/Powdercoating Shop<br/>" + "Ipswich, MA";
     
     var mrww_info = "<strong>Mark Richey Woodworking</strong><br/>" + "Commercial Cabinet Shop<br/>" + "Newburyport, MA";
+    
+    var awair_info = "<strong>A-W Airflo Industries</strong><br/>" + "Fabrication Shop<br/>" + "Newburyport, MA";
 
 
 
@@ -1319,6 +1322,10 @@ function initMap() {
     
     var mrww_infowindow = new google.maps.InfoWindow({
         content: mrww_info
+    });
+    
+    var awair_infowindow = new google.maps.InfoWindow({
+        content: awair_info
     });
 
 
@@ -2595,6 +2602,14 @@ function initMap() {
         icon: icon,
         title: 'Wind Turbine Project'
     });
+    
+    var awair_marker = new google.maps.Marker({
+        position: awair_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Fabricator Shop'
+    });
+
 
 
 
@@ -3348,6 +3363,10 @@ function initMap() {
     
     google.maps.event.addListener(mrww_marker, 'click', function () {
         mrww_infowindow.open(harvard_yard_map, mrww_marker);
+    });
+    
+    google.maps.event.addListener(awair_marker, 'click', function () {
+        awair_infowindow.open(harvard_yard_map, awair_marker);
     });
     
 
