@@ -190,6 +190,7 @@ function initMap() {
     var ccf_latlng = new google.maps.LatLng(42.698934, -70.852100);
     var mrww_latlng = new google.maps.LatLng(42.802880, -70.880694);
     var awair_latlng = new google.maps.LatLng(42.801365, -70.884288);
+    var esi_latlng = new google.maps.LatLng(42.532311, -71.142840);
 
 
 
@@ -591,6 +592,8 @@ function initMap() {
     var mrww_info = "<strong>Mark Richey Woodworking</strong><br/>" + "Commercial Cabinet Shop<br/>" + "Newburyport, MA";
     
     var awair_info = "<strong>A-W Airflo Industries</strong><br/>" + "Fabrication Shop<br/>" + "Newburyport, MA";
+    
+    var esi_info = "<strong>Energy Sciences Inc.</strong><br/>" + "Electron Beam Technology<br/>" + "Wilmington, MA";
 
 
 
@@ -1326,6 +1329,10 @@ function initMap() {
     
     var awair_infowindow = new google.maps.InfoWindow({
         content: awair_info
+    });
+    
+    var esi_infowindow = new google.maps.InfoWindow({
+        content: esi_info
     });
 
 
@@ -2609,6 +2616,13 @@ function initMap() {
         icon: icon,
         title: 'Fabricator Shop'
     });
+    
+    var esi_marker = new google.maps.Marker({
+        position: esi_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Electron Beam Developer'
+    });
 
 
 
@@ -3367,6 +3381,10 @@ function initMap() {
     
     google.maps.event.addListener(awair_marker, 'click', function () {
         awair_infowindow.open(harvard_yard_map, awair_marker);
+    });
+    
+    google.maps.event.addListener(esi_marker, 'click', function () {
+        esi_infowindow.open(harvard_yard_map, esi_marker);
     });
     
 
