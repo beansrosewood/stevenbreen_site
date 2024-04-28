@@ -191,6 +191,7 @@ function initMap() {
     var mrww_latlng = new google.maps.LatLng(42.802880, -70.880694);
     var awair_latlng = new google.maps.LatLng(42.801365, -70.884288);
     var esi_latlng = new google.maps.LatLng(42.532311, -71.142840);
+    var martel_latlng = new google.maps.LatLng(42.611227, -71.285210);
 
 
 
@@ -594,6 +595,8 @@ function initMap() {
     var awair_info = "<strong>A-W Airflo Industries</strong><br/>" + "Fabrication Shop<br/>" + "Newburyport, MA";
     
     var esi_info = "<strong>Energy Sciences Inc.</strong><br/>" + "Electron Beam Technology<br/>" + "Wilmington, MA";
+    
+    var martel_info = "<strong>Martel Welding,Inc.</strong><br/>" + "Truck Body Fab<br/>" + "Tewksbury, MA";
 
 
 
@@ -1333,6 +1336,10 @@ function initMap() {
     
     var esi_infowindow = new google.maps.InfoWindow({
         content: esi_info
+    });
+    
+    var martel_infowindow = new google.maps.InfoWindow({
+        content: martel_info
     });
 
 
@@ -2623,6 +2630,13 @@ function initMap() {
         icon: icon,
         title: 'Electron Beam Developer'
     });
+    
+    var martel_marker = new google.maps.Marker({
+        position: martel_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Weld Shop'
+    });
 
 
 
@@ -3385,6 +3399,10 @@ function initMap() {
     
     google.maps.event.addListener(esi_marker, 'click', function () {
         esi_infowindow.open(harvard_yard_map, esi_marker);
+    });
+    
+    google.maps.event.addListener(martel_marker, 'click', function () {
+        martel_infowindow.open(harvard_yard_map, martel_marker);
     });
     
 
