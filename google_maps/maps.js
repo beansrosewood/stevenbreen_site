@@ -193,7 +193,7 @@ function initMap() {
     var esi_latlng = new google.maps.LatLng(42.532311, -71.142840);
     var martel_latlng = new google.maps.LatLng(42.611227, -71.285210);
     var dcl_latlng = new google.maps.LatLng(42.128915, -71.053089);
-
+    var boyd_latlng = new google.maps.LatLng(43.541518, -71.488820);
 
 
     var mapOptions = {
@@ -600,6 +600,8 @@ function initMap() {
     var martel_info = "<strong>Martel Welding,Inc.</strong><br/>" + "Truck Body Fab<br/>" + "Tewksbury, MA";
     
     var dcl_info = "<strong>Design Communications, LTD</strong><br/>" + "Manufacturer<br/>" + "Avon, MA";
+    
+    var boyd_info = "<strong>Boyd-Laconia</strong><br/>" + "Manufacturer<br/>" + "Laconia, NH";
 
 
 
@@ -1347,6 +1349,10 @@ function initMap() {
     
     var dcl_infowindow = new google.maps.InfoWindow({
         content: dcl_info
+    });
+    
+    var boyd_infowindow = new google.maps.InfoWindow({
+        content: boyd_info
     });
 
 
@@ -2651,6 +2657,13 @@ function initMap() {
         icon: icon,
         title: 'Manufacturer'
     });
+    
+    var boyd_marker = new google.maps.Marker({
+        position: boyd_latlng,
+        map: harvard_yard_map,
+        icon: icon,
+        title: 'Manufacturer'
+    });
 
 
 
@@ -3421,6 +3434,10 @@ function initMap() {
     
     google.maps.event.addListener(dcl_marker, 'click', function () {
         dcl_infowindow.open(harvard_yard_map, dcl_marker);
+    });
+    
+    google.maps.event.addListener(boyd_marker, 'click', function () {
+        boyd_infowindow.open(harvard_yard_map, boyd_marker);
     });
     
 
